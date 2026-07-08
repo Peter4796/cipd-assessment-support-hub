@@ -106,30 +106,63 @@ src/
 
 ---
 
-## Phase 2 — Authority & SEO (ready to add, no redesign needed)
+## Phase 2 — Authority & SEO ✅ built
 
-The content-driven structure is built to extend:
+- **Blog** — `/blog` + `/blog/[slug]`, content in `src/content/blog.ts`, rendered by
+  `RichContent` with Article JSON-LD and related-post linking.
+- **Resource hub** — `/resources`, tying blog, checklist and case studies together.
+- **Lead magnet** — `/resources/cipd-assessment-planning-checklist` (`LeadMagnetForm`) with
+  gated fields (Name, Email, CIPD level, Country, Deadline) → printable file in
+  `public/downloads/`.
+- **Case studies** — `/case-studies` + `/case-studies/[slug]`, content in
+  `src/content/case-studies.ts`.
 
-1. **Blog** — add `src/app/blog/[slug]/page.tsx` + `src/content/blog.ts` (or MDX). The
-   `.rich-text` styles in `globals.css` already style long-form articles. Add `/blog` to
-   `primaryNav` and `sitemap.ts`.
-2. **Resource hub & downloadable checklist** — `src/app/resources/`, reuse cards + CtaBand.
-3. **Lead magnet** ("Free CIPD Assessment Planning Checklist") — reuse `EnquiryForm`
-   pattern with the gated fields (Name, Email, CIPD level, Country, Deadline).
-4. **Case-study pages** — `src/app/case-studies/[slug]/` using the same section components.
+Add a post/case study by appending to the relevant `src/content/*.ts` file — routes and the
+sitemap pick it up automatically.
 
-Blog topics, lead-magnet fields and case-study outlines from the brief map directly onto
-these routes.
+## Phase 3 — Client portal & automation ✅ built (demo mode)
 
-## Phase 3 — Client portal & automation (planned)
+A full client portal and admin dashboard, running on a **swappable demo backend** so it's
+interactive out of the box. **Nothing here is production-secure yet** — see "Going live".
 
-Structure anticipates it:
+### Routes
+| Area | Route | Notes |
+|------|-------|-------|
+| Client login | `/portal/login` | Demo sign-in (no password). Linked from the footer. |
+| Client dashboard | `/portal` | Projects, stats, "needs attention". |
+| New request | `/portal/new` | Submit a brief → **instant automated estimate**. |
+| Project detail | `/portal/[id]` | Status tracker, quote approve, **pay (demo)**, file downloads, request revision, messages, activity. |
+| Admin login | `/admin/login` | Passcode gate. Demo code: `cipd-admin`. |
+| Admin dashboard | `/admin` | All enquiries, **filter by country / level / deadline / status**, search. |
+| Admin project | `/admin/[id]` | Set status, send quote (auto-suggested), upload deliverables, notes (client/internal), email update, WhatsApp client. |
+| Quote API | `POST /api/quote` | Real serverless endpoint: `{level, wordCount, helpType, deadline}` → estimate. |
 
-- **Auth + client dashboard** — new `src/app/(portal)/` route group.
-- **EnquiryForm** already has a single `handleSubmit` hook — swap the WhatsApp/email compose
-  for a `POST` to an API route / CRM / Supabase.
-- **Admin dashboard, status tracking, secure payments, email notifications** — add as
-  route groups + API routes; the design system and components carry straight over.
+### Architecture
+- **Layouts** — marketing pages live in the `(marketing)` route group (header/footer/WhatsApp
+  float). `/portal` and `/admin` have their own app-shell chrome (`PortalTopbar`) and are
+  `noindex` (also disallowed in `robots.ts`).
+- **Data layer** — `src/lib/portal/store.ts` persists projects in `localStorage` and reacts
+  via `useSyncExternalStore`, seeded from `src/lib/portal/seed.ts`. All UI consumes
+  `useProjects()` / `useProject(id)` + mutation helpers, so swapping storage needs **no UI
+  changes**.
+- **Quote engine** — `src/lib/portal/quote.ts` (`estimateQuote`), pure function used by the
+  portal, admin and `/api/quote`.
+- **Auth** — `src/lib/portal/session.ts` is a **demo stub** (localStorage). Not secure.
+
+### Going live (replace demo pieces with real services)
+1. **Database** — create a Supabase/Postgres schema mirroring `src/lib/portal/types.ts`.
+   Move `store.ts` mutations behind API routes (`/api/projects/...`).
+2. **Auth** — replace `session.ts` + the `RequireClient`/`RequireAdmin` gates with a real
+   provider (Supabase Auth, Auth.js or Clerk). Protect `/admin` server-side (or add Vercel
+   password protection immediately as a stopgap).
+3. **Payments** — swap the `markPaid()` demo button for **Stripe Checkout** (create a session
+   in an API route; confirm via webhook).
+4. **File storage** — send the `File` objects from `FileDrop` to Supabase Storage / S3 and
+   store the returned URLs on `FileRef`.
+5. **Email/WhatsApp notifications** — from `/api/quote` and status changes, trigger
+   transactional email (Resend/SendGrid) and optionally WhatsApp Business API.
+
+See `.env.example` for the environment variables these integrations expect.
 
 ---
 

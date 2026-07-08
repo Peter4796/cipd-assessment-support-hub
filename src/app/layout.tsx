@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { site } from "@/lib/site";
 
 const inter = Inter({
@@ -58,12 +55,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-GB" className={`${inter.variable} ${jakarta.variable}`}>
-      <body className="flex min-h-screen flex-col bg-white">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <WhatsAppFloat />
-      </body>
+      <body className="bg-white">{children}</body>
     </html>
   );
 }
