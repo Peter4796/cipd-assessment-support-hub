@@ -9,7 +9,7 @@ export const site = {
   tagline: "Professional CIPD Assessment Support for UK & UAE Learners",
   description:
     "Ethical CIPD assessment support, coaching, review and editing for Level 3, 5 and 7 learners across the UK and UAE. Brief analysis, structure, Harvard referencing and resubmission support.",
-  url: "https://cipdsupporthub.example.com",
+  url: "https://www.cipdguidance.com",
   locale: "en-GB",
 
   // ─── Contact details (placeholders — swap for live values) ───
