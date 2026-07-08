@@ -15,9 +15,10 @@ export const site = {
   // ─── Contact details (placeholders — swap for live values) ───
   contact: {
     // International format without spaces or "+" for the wa.me link
-    whatsappNumber: "447000000000",
-    whatsappDisplay: "+44 7000 000000",
-    email: "hello@cipdsupporthub.example.com",
+    whatsappNumber: "19176191130",
+    whatsappDisplay: "+1 (917) 619-1130",
+    // NOTE: mailbox not created yet — set up hello@cipdguidance.com to receive mail
+    email: "hello@cipdguidance.com",
     // Optional secondary/UAE line
     whatsappUaeNumber: "971500000000",
     whatsappUaeDisplay: "+971 50 000 0000",
