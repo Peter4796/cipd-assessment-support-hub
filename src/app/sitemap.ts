@@ -1,7 +1,9 @@
 import type { MetadataRoute } from "next";
 import { site } from "@/lib/site";
+import { posts } from "@/content/blog";
+import { caseStudies } from "@/content/case-studies";
 
-const routes = [
+const staticRoutes = [
   "",
   "/about",
   "/services",
@@ -13,15 +15,36 @@ const routes = [
   "/samples",
   "/faq",
   "/contact",
+  "/resources",
+  "/resources/cipd-assessment-planning-checklist",
+  "/blog",
+  "/case-studies",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Static build date — update on deploy or wire to CMS in Phase 2.
+  // Static build date — update on deploy or wire to CMS content dates.
   const lastModified = new Date("2026-07-08");
-  return routes.map((path) => ({
+
+  const staticEntries: MetadataRoute.Sitemap = staticRoutes.map((path) => ({
     url: `${site.url}${path}`,
     lastModified,
     changeFrequency: path === "" ? "weekly" : "monthly",
     priority: path === "" ? 1 : path.includes("level") ? 0.9 : 0.7,
   }));
+
+  const blogEntries: MetadataRoute.Sitemap = posts.map((p) => ({
+    url: `${site.url}/blog/${p.slug}`,
+    lastModified: new Date(p.date),
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }));
+
+  const caseEntries: MetadataRoute.Sitemap = caseStudies.map((c) => ({
+    url: `${site.url}/case-studies/${c.slug}`,
+    lastModified,
+    changeFrequency: "yearly",
+    priority: 0.6,
+  }));
+
+  return [...staticEntries, ...blogEntries, ...caseEntries];
 }

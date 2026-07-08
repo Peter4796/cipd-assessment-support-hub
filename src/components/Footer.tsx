@@ -9,8 +9,8 @@ export function Footer() {
   return (
     <footer className="border-t border-navy-800 bg-navy-950 text-navy-200">
       <div className="container-px py-14">
-        <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
-          <div className="max-w-xs">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr_1fr_1fr]">
+          <div className="max-w-xs sm:col-span-2 lg:col-span-1">
             <div className="[&_span]:!text-white">
               <BrandMark invert />
             </div>

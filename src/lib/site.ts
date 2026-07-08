@@ -69,7 +69,17 @@ export const primaryNav: NavItem[] = [
   },
   { label: "How It Works", href: "/how-it-works" },
   { label: "Pricing", href: "/pricing" },
-  { label: "Samples", href: "/samples" },
+  {
+    label: "Resources",
+    href: "/resources",
+    children: [
+      { label: "Resource Hub", href: "/resources" },
+      { label: "Blog", href: "/blog" },
+      { label: "Case Studies", href: "/case-studies" },
+      { label: "Free Checklist", href: "/resources/cipd-assessment-planning-checklist" },
+      { label: "Samples", href: "/samples" },
+    ],
+  },
   { label: "FAQ", href: "/faq" },
 ];
 
@@ -90,6 +100,14 @@ export const footerNav: { title: string; items: NavItem[] }[] = [
       { label: "How It Works", href: "/how-it-works" },
       { label: "Pricing", href: "/pricing" },
       { label: "Samples & Work Quality", href: "/samples" },
+    ],
+  },
+  {
+    title: "Resources",
+    items: [
+      { label: "Blog", href: "/blog" },
+      { label: "Case Studies", href: "/case-studies" },
+      { label: "Free Checklist", href: "/resources/cipd-assessment-planning-checklist" },
     ],
   },
   {
