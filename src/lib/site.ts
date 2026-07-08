@@ -65,6 +65,7 @@ export const primaryNav: NavItem[] = [
       { label: "CIPD Level 3 Support", href: "/cipd-level-3-support" },
       { label: "CIPD Level 5 Support", href: "/cipd-level-5-support" },
       { label: "CIPD Level 7 Support", href: "/cipd-level-7-support" },
+      { label: "CIPD Units (by code)", href: "/cipd-units" },
     ],
   },
   { label: "How It Works", href: "/how-it-works" },
@@ -91,6 +92,7 @@ export const footerNav: { title: string; items: NavItem[] }[] = [
       { label: "CIPD Level 3 Support", href: "/cipd-level-3-support" },
       { label: "CIPD Level 5 Support", href: "/cipd-level-5-support" },
       { label: "CIPD Level 7 Support", href: "/cipd-level-7-support" },
+      { label: "Support by Unit Code", href: "/cipd-units" },
     ],
   },
   {

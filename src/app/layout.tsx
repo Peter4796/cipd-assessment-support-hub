@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { site } from "@/lib/site";
 
@@ -55,7 +56,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-GB" className={`${inter.variable} ${jakarta.variable}`}>
-      <body className="bg-white">{children}</body>
+      <body className="bg-white">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }

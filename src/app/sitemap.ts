@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { site } from "@/lib/site";
 import { posts } from "@/content/blog";
 import { caseStudies } from "@/content/case-studies";
+import { units } from "@/content/units";
 
 const staticRoutes = [
   "",
@@ -19,6 +20,7 @@ const staticRoutes = [
   "/resources/cipd-assessment-planning-checklist",
   "/blog",
   "/case-studies",
+  "/cipd-units",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -46,5 +48,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticEntries, ...blogEntries, ...caseEntries];
+  const unitEntries: MetadataRoute.Sitemap = units.map((u) => ({
+    url: `${site.url}/cipd-units/${u.slug}`,
+    lastModified,
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
+  return [...staticEntries, ...blogEntries, ...caseEntries, ...unitEntries];
 }

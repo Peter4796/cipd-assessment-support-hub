@@ -498,6 +498,276 @@ export const posts: Post[] = [
       "how-to-improve-a-cipd-resubmission",
     ],
   },
+  {
+    slug: "how-many-references-should-a-cipd-assignment-have",
+    title: "How Many References Should a CIPD Assignment Have?",
+    description:
+      "How many references a CIPD assignment needs at Level 3, 5 and 7, what counts as a credible source, and why quality matters more than quantity.",
+    category: "Referencing",
+    keyword: "CIPD assignment references",
+    date: "2026-07-07",
+    readMinutes: 5,
+    body: [
+      {
+        type: "p",
+        text: "One of the most common questions CIPD learners ask is how many references their assignment should have. The honest answer is that there is rarely a fixed number. What matters is that every key claim is supported by a credible source, and that your referencing is consistent and correct.",
+      },
+      { type: "h2", text: "There is usually no set number" },
+      {
+        type: "p",
+        text: "Most CIPD briefs do not state a required number of references. Assessors look for whether your arguments are properly supported, not whether you hit a target. That said, there are sensible ranges that reflect the depth each level expects.",
+      },
+      { type: "h2", text: "A sensible guide by level" },
+      {
+        type: "ul",
+        items: [
+          "Level 3: a handful of credible sources per unit is usually enough, as the focus is on clear explanation.",
+          "Level 5: expect to cite more widely, as evidence-based analysis is central. A well-supported answer often draws on a range of sources across the tasks.",
+          "Level 7: wider reading is essential. Postgraduate work is expected to engage with a broad base of academic and professional literature.",
+        ],
+      },
+      {
+        type: "callout",
+        text: "Quality beats quantity. Ten well-chosen, well-integrated sources are worth far more than thirty listed but barely used.",
+      },
+      { type: "h2", text: "What counts as a credible source?" },
+      {
+        type: "ul",
+        items: [
+          "CIPD factsheets, reports and research",
+          "Academic textbooks and peer-reviewed journals",
+          "Reputable professional bodies and official statistics",
+        ],
+      },
+      {
+        type: "p",
+        text: "Avoid leaning on unreferenced websites, blogs or AI tools as your main evidence. Every in-text citation must also appear in your reference list, formatted consistently in Harvard style.",
+      },
+      {
+        type: "p",
+        text: "If you are unsure whether your referencing is strong enough, our Harvard referencing support reviews your citations and reference list and shows you exactly what to improve.",
+      },
+    ],
+    related: [
+      "how-to-use-harvard-referencing-in-cipd-assessments",
+      "common-mistakes-in-cipd-level-5-assignments",
+      "how-to-structure-a-cipd-assignment",
+    ],
+  },
+  {
+    slug: "what-is-a-cipd-reflective-account",
+    title: "What Is a CIPD Reflective Account and How to Write One",
+    description:
+      "A clear explanation of the CIPD reflective account, why it matters, and a practical structure for writing an honest, evidenced reflection that meets the criteria.",
+    category: "Writing",
+    keyword: "CIPD reflective account",
+    date: "2026-07-05",
+    readMinutes: 5,
+    body: [
+      {
+        type: "p",
+        text: "Several CIPD units ask for a reflective account, and many learners find it the hardest part to get right. A reflective account is not a description of what you did. It is an honest evaluation of your practice, what you learned, and how you will develop.",
+      },
+      { type: "h2", text: "What a reflective account is for" },
+      {
+        type: "p",
+        text: "Reflection shows that you can learn from experience and grow as a professional. CIPD values this because good people practice depends on self-awareness and continuing development. The assessor wants to see genuine insight, not a polished summary of events.",
+      },
+      { type: "h2", text: "A simple structure that works" },
+      {
+        type: "p",
+        text: "A widely used approach is to move through four stages for each experience you reflect on:",
+      },
+      {
+        type: "ol",
+        items: [
+          "What happened: briefly describe the situation.",
+          "How you felt and what you thought at the time.",
+          "What you learned: evaluate what went well and what did not.",
+          "What you will do differently, and how you will develop.",
+        ],
+      },
+      {
+        type: "callout",
+        text: "Keep the description short. Most of your marks come from the evaluation and the learning, not the story.",
+      },
+      { type: "h2", text: "Common pitfalls" },
+      {
+        type: "ul",
+        items: [
+          "Describing events without evaluating them",
+          "Being vague about what you actually learned",
+          "Not linking reflection to your development or the CIPD behaviours",
+        ],
+      },
+      {
+        type: "p",
+        text: "If your reflective account keeps coming back as too descriptive, our draft review can show you exactly where to add the evaluation and insight that a strong reflection needs.",
+      },
+    ],
+    related: [
+      "how-to-structure-a-cipd-assignment",
+      "how-to-respond-to-cipd-tutor-feedback",
+      "common-mistakes-in-cipd-level-5-assignments",
+    ],
+  },
+  {
+    slug: "how-strict-is-the-cipd-word-count",
+    title: "How Strict Is the CIPD Word Count?",
+    description:
+      "How CIPD word counts work, what the usual tolerance is, what counts towards the total, and how to stay within the limit without losing marks.",
+    category: "Writing",
+    keyword: "CIPD word count",
+    date: "2026-07-03",
+    readMinutes: 4,
+    body: [
+      {
+        type: "p",
+        text: "CIPD word counts cause a lot of anxiety. Learners worry about going over and losing marks, or coming in short and missing the criteria. Here is how word counts usually work and how to manage them sensibly.",
+      },
+      { type: "h2", text: "The usual tolerance" },
+      {
+        type: "p",
+        text: "Many study centres allow a tolerance of around ten per cent above or below the stated word count, though this varies. Always check your own centre's rules, as they are the ones that apply to you. Significantly exceeding the limit can suggest a lack of focus, while falling well short often means criteria are not fully addressed.",
+      },
+      { type: "h2", text: "What usually counts, and what does not" },
+      {
+        type: "ul",
+        items: [
+          "Usually counted: the main body of your response.",
+          "Usually not counted: the reference list, appendices, tables and diagrams. Again, confirm with your centre.",
+        ],
+      },
+      {
+        type: "callout",
+        text: "The word count is a guide to the depth expected. If you are far over, you are probably describing too much. If you are far under, you are probably not analysing enough.",
+      },
+      { type: "h2", text: "How to stay on target" },
+      {
+        type: "ol",
+        items: [
+          "Allocate a word budget to each task before you write.",
+          "Draft freely, then edit for concision.",
+          "Cut description and repetition, not analysis or evidence.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Our editing and structure support helps you tighten an over-length draft or add depth to a short one, so your response lands at the right length and covers every criterion.",
+      },
+    ],
+    related: [
+      "how-to-structure-a-cipd-assignment",
+      "how-to-understand-a-cipd-assessment-brief",
+      "common-mistakes-in-cipd-level-5-assignments",
+    ],
+  },
+  {
+    slug: "how-to-pass-cipd-level-5",
+    title: "How to Pass CIPD Level 5: A Practical Guide",
+    description:
+      "Practical, ethical advice on how to pass CIPD Level 5, from understanding the criteria and showing analysis to referencing well and using tutor feedback.",
+    category: "Level 5",
+    keyword: "how to pass CIPD Level 5",
+    date: "2026-07-01",
+    readMinutes: 6,
+    body: [
+      {
+        type: "p",
+        text: "CIPD Level 5, the Associate Diploma, is a step up from Level 3 and the point where many learners face their first referral. Passing is very achievable with the right approach. Here is what consistently makes the difference.",
+      },
+      { type: "h2", text: "1. Answer the criteria, not just the topic" },
+      {
+        type: "p",
+        text: "Every mark at Level 5 is tied to a specific assessment criterion. Map each task to its criteria and make sure every one is clearly evidenced. Missing a criterion is the most common reason for a referral.",
+      },
+      { type: "h2", text: "2. Show analysis, not just description" },
+      {
+        type: "p",
+        text: "Level 5 rewards evidence-based analysis. Do not just explain a model or concept. Compare options, weigh their suitability for your organisation, and reach a justified conclusion. Whenever you make a point, ask yourself 'so what?' and answer it.",
+      },
+      { type: "h2", text: "3. Apply everything to a real workplace" },
+      {
+        type: "p",
+        text: "Generic answers feel thin. Ground your points in a real or realistic organisation, with its own context, so your analysis has something concrete to bite on.",
+      },
+      { type: "h2", text: "4. Reference properly" },
+      {
+        type: "p",
+        text: "Support your claims with credible sources and cite them correctly in Harvard style. Consistent referencing protects marks that are easy to lose.",
+      },
+      {
+        type: "callout",
+        text: "A pass at Level 5 usually comes down to three things: every criterion met, genuine analysis, and clear application to practice.",
+      },
+      { type: "h2", text: "5. Use feedback if you are referred" },
+      {
+        type: "p",
+        text: "A referral is not a failure. It is a clear list of what to improve. Address the exact criteria flagged rather than rewriting everything, and your resubmission should pass with confidence.",
+      },
+      {
+        type: "p",
+        text: "Our Level 5 support helps with every one of these: interpreting your brief, structuring an analytical response, checking your referencing, and turning tutor feedback into a strong resubmission.",
+      },
+    ],
+    related: [
+      "common-mistakes-in-cipd-level-5-assignments",
+      "how-to-improve-a-cipd-resubmission",
+      "cipd-level-3-vs-5-vs-7-whats-the-difference",
+    ],
+  },
+  {
+    slug: "using-the-cipd-profession-map-in-your-assessments",
+    title: "Using the CIPD Profession Map in Your Assessments",
+    description:
+      "What the CIPD Profession Map is and how to use its core knowledge, core behaviours and specialist areas to strengthen your CIPD assignments.",
+    category: "Getting started",
+    keyword: "CIPD Profession Map",
+    date: "2026-06-29",
+    readMinutes: 5,
+    body: [
+      {
+        type: "p",
+        text: "The CIPD Profession Map underpins the whole CIPD qualification framework, yet many learners are unsure how to use it in their assignments. Understanding it helps you write answers that reflect what a professional people practitioner is expected to know and do.",
+      },
+      { type: "h2", text: "What the Profession Map is" },
+      {
+        type: "p",
+        text: "The Profession Map sets out the knowledge, behaviours and specialist expertise that define good people practice. It is built around core knowledge, core behaviours, and specialist knowledge areas, and it describes standards at different levels of impact.",
+      },
+      { type: "h2", text: "Why it matters for your assignments" },
+      {
+        type: "p",
+        text: "Many units, especially the behaviours-focused ones, draw directly on the Map. Referring to it shows the assessor that you understand professional standards and can connect your practice to them.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Core behaviours help you evidence ethical, inclusive and professional practice.",
+          "Core knowledge supports your understanding of people practice and the business context.",
+          "Specialist areas relate to units such as employment relations, reward and talent.",
+        ],
+      },
+      {
+        type: "callout",
+        text: "When a unit asks about professional behaviours, the Profession Map is often the natural reference point to frame your answer.",
+      },
+      { type: "h2", text: "How to use it well" },
+      {
+        type: "p",
+        text: "Do not just name-drop the Map. Use it to structure and evidence your points, connecting a specific behaviour or knowledge area to a real example from your practice. That turns a generic answer into a professional, criteria-aligned one.",
+      },
+      {
+        type: "p",
+        text: "If you are not sure how to weave the Profession Map into your response, our guidance helps you apply it naturally where it strengthens your argument.",
+      },
+    ],
+    related: [
+      "how-to-understand-a-cipd-assessment-brief",
+      "how-to-structure-a-cipd-assignment",
+      "cipd-level-3-vs-5-vs-7-whats-the-difference",
+    ],
+  },
 ];
 
 export function getPost(slug: string) {
