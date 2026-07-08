@@ -4,7 +4,7 @@ import { whatsappLink, cta } from "@/lib/site";
 /** Reusable conversion band — drop into the bottom of any page. */
 export function CtaBand({
   title = "Send your assessment brief today and receive a clear quote",
-  subtitle = "Tell us your level, deadline and word count. We'll reply quickly with a transparent quote and a simple support plan — no obligation.",
+  subtitle = "Tell us your level, deadline and word count. We'll reply quickly with a transparent quote and a simple support plan, with no obligation.",
   primaryHref = "/contact",
   primaryLabel = cta.sendBrief,
 }: {

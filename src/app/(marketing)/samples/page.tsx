@@ -26,7 +26,7 @@ export default function SamplesPage() {
         eyebrow="Samples & work quality"
         breadcrumb="Samples"
         title="See the standard we help you reach"
-        intro="These short sample sections show the clarity, structure and referencing standard our support helps you achieve. They are illustrative extracts — not full assignments."
+        intro="These short sample sections show the clarity, structure and referencing standard our support helps you achieve. They are illustrative extracts, not full assignments."
       />
 
       <Section tone="white">
@@ -88,7 +88,7 @@ export default function SamplesPage() {
             <span>
               <strong className="text-navy-900">Disclaimer: </strong>
               These samples are provided for quality demonstration only. They are short,
-              anonymised illustrative extracts — not complete assignments, and not for
+              anonymised illustrative extracts, not complete assignments, and not for
               submission. All support we provide is intended to help you produce and submit your
               own original work in line with your study centre&apos;s academic integrity policy.
             </span>

@@ -21,7 +21,7 @@ export default function ServicesPage() {
         eyebrow="Our services"
         breadcrumb="Services"
         title="Complete CIPD assessment support, end to end"
-        intro="Whether you need help understanding a brief, improving a draft or preparing a resubmission, our services cover every stage of a CIPD assessment — all aligned to your marking criteria."
+        intro="Whether you need help understanding a brief, improving a draft or preparing a resubmission, our services cover every stage of a CIPD assessment, all aligned to your marking criteria."
       >
         <ButtonLink href="/contact" variant="primary" withArrow>
           {cta.sendBrief}

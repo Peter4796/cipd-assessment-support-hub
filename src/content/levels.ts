@@ -1,5 +1,5 @@
 /**
- * CIPD level content — powers the level cards on Home and the three level pages.
+ * CIPD level content that powers the level cards on Home and the three level pages.
  */
 
 export type Level = {
@@ -26,7 +26,7 @@ export const levels: Level[] = [
     summary:
       "Supportive, straightforward guidance for learners starting their people-practice journey.",
     intro:
-      "CIPD Level 3 is the Foundation level — the starting point for many HR and people-practice careers. If you're new to academic writing or returning to study, the briefs, command verbs and referencing rules can feel unfamiliar. Our CIPD Level 3 assessment support keeps things clear, supportive and jargon-free so you can build confidence with every unit.",
+      "CIPD Level 3 is the Foundation level, the starting point for many HR and people-practice careers. If you're new to academic writing or returning to study, the briefs, command verbs and referencing rules can feel unfamiliar. Our CIPD Level 3 assessment support keeps things clear, supportive and jargon-free so you can build confidence with every unit.",
     who: [
       "HR assistants and administrators new to people practice",
       "Career changers moving into HR",
@@ -74,7 +74,7 @@ export const levels: Level[] = [
     summary:
       "Evidence-based, applied guidance for working HR professionals building deeper capability.",
     intro:
-      "CIPD Level 5 is the Associate Diploma — the equivalent of undergraduate-level study and the most popular qualification for practising HR professionals. Level 5 expects evidence-based practice, analysis and application to your organisation. Our CIPD Level 5 assignment guidance helps you demonstrate that depth while managing a full-time role.",
+      "CIPD Level 5 is the Associate Diploma, the equivalent of undergraduate-level study and the most popular qualification for practising HR professionals. Level 5 expects evidence-based practice, analysis and application to your organisation. Our CIPD Level 5 assignment guidance helps you demonstrate that depth while managing a full-time role.",
     who: [
       "HR officers and HR advisors",
       "People managers and team leaders",
@@ -122,7 +122,7 @@ export const levels: Level[] = [
     summary:
       "Critical, strategic and academically rigorous support at postgraduate level.",
     intro:
-      "CIPD Level 7 is the Advanced Diploma — postgraduate-level study for senior and strategic people professionals. Level 7 demands critical analysis, wider reading, strategic thinking and a strong academic argument. Our CIPD Level 7 assessment review helps you meet that intellectual bar with confidence and clarity.",
+      "CIPD Level 7 is the Advanced Diploma, postgraduate-level study for senior and strategic people professionals. Level 7 demands critical analysis, wider reading, strategic thinking and a strong academic argument. Our CIPD Level 7 assessment review helps you meet that intellectual bar with confidence and clarity.",
     who: [
       "HR managers and senior people professionals",
       "Strategic and business-partner HR roles",

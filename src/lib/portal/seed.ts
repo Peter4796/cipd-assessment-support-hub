@@ -24,7 +24,7 @@ export const seedProjects: Project[] = [
     quote: {
       amount: 180,
       currency: "GBP",
-      summary: "Draft review & improvement — Level 5, 3,500 words",
+      summary: "Draft review & improvement · Level 5, 3,500 words",
       breakdown: [
         { label: "Support type", value: "Draft review & improvement" },
         { label: "Word count", value: "3,500 words" },
@@ -40,7 +40,7 @@ export const seedProjects: Project[] = [
       { id: "f_3", name: "5CO01-reviewed-feedback.docx", sizeLabel: "512 KB", kind: "deliverable", uploadedBy: "admin", uploadedAt: "2026-07-06T14:03:00.000Z" },
     ],
     notes: [
-      { id: "n_1", author: "admin", authorName: "Support Team", body: "Reviewed against all ACs. Main gaps are in AC2.1 and AC3.2 — added comments and suggested restructuring for analysis.", createdAt: "2026-07-06T14:05:00.000Z" },
+      { id: "n_1", author: "admin", authorName: "Support Team", body: "Reviewed against all ACs. Main gaps are in AC2.1 and AC3.2, and added comments and suggested restructuring for analysis.", createdAt: "2026-07-06T14:05:00.000Z" },
     ],
     activity: [
       { id: "a_1", at: "2026-07-06T14:03:00.000Z", label: "Admin uploaded 5CO01-reviewed-feedback.docx", by: "admin" },
@@ -68,7 +68,7 @@ export const seedProjects: Project[] = [
     quote: {
       amount: 420,
       currency: "GBP",
-      summary: "Full guidance package — Level 7, 5,000 words",
+      summary: "Full guidance package · Level 7, 5,000 words",
       breakdown: [
         { label: "Support type", value: "Full guidance package" },
         { label: "Word count", value: "5,000 words" },
@@ -104,7 +104,7 @@ export const seedProjects: Project[] = [
       { id: "f_5", name: "3CO04-brief.pdf", sizeLabel: "266 KB", kind: "brief", uploadedBy: "client", uploadedAt: "2026-07-07T08:05:00.000Z" },
     ],
     notes: [
-      { id: "n_2", author: "admin", authorName: "Support Team", body: "Tight deadline (≤7 days) — flag as priority when quoting.", createdAt: "2026-07-07T08:20:00.000Z", internal: true },
+      { id: "n_2", author: "admin", authorName: "Support Team", body: "Tight deadline (≤7 days), so flag as priority when quoting.", createdAt: "2026-07-07T08:20:00.000Z", internal: true },
     ],
     activity: [{ id: "a_8", at: "2026-07-07T08:05:00.000Z", label: "Brief received", by: "system" }],
     revisionRequested: null,
@@ -122,11 +122,11 @@ export const seedProjects: Project[] = [
     helpType: "Resubmission support",
     wordCount: 3000,
     deadline: "2026-06-30",
-    message: "Referred on 5HR02 — need help understanding the feedback and improving for resubmission.",
+    message: "Referred on 5HR02 and need help understanding the feedback and improving for resubmission.",
     quote: {
       amount: 160,
       currency: "GBP",
-      summary: "Resubmission support — Level 5, 3,000 words",
+      summary: "Resubmission support · Level 5, 3,000 words",
       breakdown: [
         { label: "Support type", value: "Resubmission support" },
         { label: "Word count", value: "3,000 words" },
@@ -141,7 +141,7 @@ export const seedProjects: Project[] = [
       { id: "f_7", name: "5HR02-improvement-plan.docx", sizeLabel: "344 KB", kind: "deliverable", uploadedBy: "admin", uploadedAt: "2026-06-29T09:30:00.000Z" },
     ],
     notes: [
-      { id: "n_3", author: "client", authorName: "Daniel Wright", body: "Thank you — the feedback breakdown made it so much clearer. Resubmitting today.", createdAt: "2026-06-29T18:00:00.000Z" },
+      { id: "n_3", author: "client", authorName: "Daniel Wright", body: "Thank you. The feedback breakdown made it so much clearer. Resubmitting today.", createdAt: "2026-06-29T18:00:00.000Z" },
     ],
     activity: [
       { id: "a_9", at: "2026-06-29T09:30:00.000Z", label: "Status → completed", by: "admin" },

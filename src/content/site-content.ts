@@ -26,7 +26,7 @@ export const problemPoints: { title: string; description: string }[] = [
   {
     title: "Word-count pressure",
     description:
-      "Saying enough to meet the criteria without going far over — or under — the limit.",
+      "Saying enough to meet the criteria without going far over, or under, the limit.",
   },
   {
     title: "Referencing & citations",
@@ -57,13 +57,13 @@ export const howItWorksSteps: { step: number; title: string; description: string
     step: 2,
     title: "Receive a clear quote & plan",
     description:
-      "We review what you need and send a transparent quote with a simple support plan — no obligation, no surprises.",
+      "We review what you need and send a transparent quote with a simple support plan, with no obligation and no surprises.",
   },
   {
     step: 3,
     title: "Get structured guidance",
     description:
-      "You receive tailored support: brief analysis, structure, research direction, draft review or editing — whatever your package covers.",
+      "You receive tailored support: brief analysis, structure, research direction, draft review or editing, whatever your package covers.",
   },
   {
     step: 4,
@@ -79,7 +79,7 @@ export const howItWorksSteps: { step: number; title: string; description: string
   },
 ];
 
-// ─── Pricing packages (no fixed prices — quote-based) ───
+// ─── Pricing packages (no fixed prices; quote-based) ───
 export const pricingPackages: {
   name: string;
   best: string;
@@ -167,7 +167,7 @@ export const samples: {
     title: "Example tutor-feedback improvement note",
     intro:
       "When you're referred, feedback can be hard to action. We translate it into clear, practical improvements like the note below.",
-    body: "Tutor comment: 'AC 2.1 not yet met — more analysis needed.'\n\nWhat this means: The response currently describes the two reward approaches but does not compare their strengths, limitations or suitability for the organisation.\n\nHow to improve: Add a short comparative paragraph that weighs each approach against the organisation's context, supported by one credible source, and state which is more appropriate and why. This moves the answer from description to the analysis AC 2.1 requires.",
+    body: "Tutor comment: 'AC 2.1 not yet met, more analysis needed.'\n\nWhat this means: The response currently describes the two reward approaches but does not compare their strengths, limitations or suitability for the organisation.\n\nHow to improve: Add a short comparative paragraph that weighs each approach against the organisation's context, supported by one credible source, and state which is more appropriate and why. This moves the answer from description to the analysis AC 2.1 requires.",
   },
 ];
 
@@ -176,7 +176,7 @@ export const faqs: { question: string; answer: string }[] = [
   {
     question: "Do you support CIPD Level 3, 5 and 7?",
     answer:
-      "Yes. We provide assessment support across all three levels — Level 3 Foundation, Level 5 Associate Diploma and Level 7 Advanced Diploma — with guidance tailored to the depth each level expects.",
+      "Yes. We provide assessment support across all three levels (Level 3 Foundation, Level 5 Associate Diploma and Level 7 Advanced Diploma), with guidance tailored to the depth each level expects.",
   },
   {
     question: "Do you work with UK learners?",
@@ -201,7 +201,7 @@ export const faqs: { question: string; answer: string }[] = [
   {
     question: "Can you help with Harvard referencing?",
     answer:
-      "Yes. We help you format in-text citations and reference lists correctly in Harvard style and show you how to cite CIPD sources, journals and models properly — an easy place to gain or lose marks.",
+      "Yes. We help you format in-text citations and reference lists correctly in Harvard style and show you how to cite CIPD sources, journals and models properly, which is an easy place to gain or lose marks.",
   },
   {
     question: "How fast can you help?",
@@ -216,6 +216,6 @@ export const faqs: { question: string; answer: string }[] = [
   {
     question: "Do you guarantee a pass?",
     answer:
-      "No — and you should be cautious of anyone who does. What we guarantee is high-quality support that improves your structure, clarity, referencing and alignment with the assessment criteria, so you can submit your strongest, most confident work.",
+      "No, and you should be cautious of anyone who does. What we guarantee is high-quality support that improves your structure, clarity, referencing and alignment with the assessment criteria, so you can submit your strongest, most confident work.",
   },
 ];

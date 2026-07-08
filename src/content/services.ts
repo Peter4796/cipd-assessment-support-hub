@@ -1,5 +1,5 @@
 /**
- * Services content — reused on the Home overview and the full Services page.
+ * Services content, reused on the Home overview and the full Services page.
  */
 
 export type Service = {
@@ -43,7 +43,7 @@ export const services: Service[] = [
     title: "Assessment brief interpretation",
     short: "Understand exactly what your brief is asking.",
     description:
-      "We break down your CIPD assessment brief line by line — command verbs, tasks, word counts and what each question is really asking. You get a plain-English summary so you know exactly what a strong response needs to cover before you write a word.",
+      "We break down your CIPD assessment brief line by line: command verbs, tasks, word counts and what each question is really asking. You get a plain-English summary so you know exactly what a strong response needs to cover before you write a word.",
     icon: "brief",
   },
   {
@@ -59,7 +59,7 @@ export const services: Service[] = [
     title: "Assignment structure & planning",
     short: "A logical plan and outline to write against.",
     description:
-      "We help you build a clear, professional structure — headings, sub-sections, and a word-count allocation for each task. A strong plan keeps your response focused, balanced and easy for an assessor to follow.",
+      "We help you build a clear, professional structure: headings, sub-sections, and a word-count allocation for each task. A strong plan keeps your response focused, balanced and easy for an assessor to follow.",
     icon: "structure",
   },
   {
@@ -75,7 +75,7 @@ export const services: Service[] = [
     title: "Editing & proofreading",
     short: "Clear, professional, error-free writing.",
     description:
-      "We refine grammar, punctuation, tone and readability so your work reads with the professional, academic voice CIPD expects — without changing your ideas or your authentic argument.",
+      "We refine grammar, punctuation, tone and readability so your work reads with the professional, academic voice CIPD expects, without changing your ideas or your authentic argument.",
     icon: "edit",
   },
   {
@@ -107,12 +107,12 @@ export const services: Service[] = [
     title: "Turnitin & plagiarism-risk reduction",
     short: "Stronger originality through better practice.",
     description:
-      "We coach you on originality, effective paraphrasing and correct citation so your work reflects your own understanding and reduces plagiarism risk. This is guidance on good academic practice — not a way to disguise unoriginal work.",
+      "We coach you on originality, effective paraphrasing and correct citation so your work reflects your own understanding and reduces plagiarism risk. This is guidance on good academic practice, not a way to disguise unoriginal work.",
     icon: "originality",
   },
 ];
 
-// "Why choose us" — reused on Home and About
+// "Why choose us", reused on Home and About
 export const whyChooseUs: { title: string; description: string }[] = [
   {
     title: "Assessment-criteria alignment",
@@ -132,7 +132,7 @@ export const whyChooseUs: { title: string; description: string }[] = [
   {
     title: "Practical workplace application",
     description:
-      "We help you connect theory to real organisational examples — the difference between a pass and a strong pass.",
+      "We help you connect theory to real organisational examples, which is the difference between a pass and a strong pass.",
   },
   {
     title: "Confidential communication",

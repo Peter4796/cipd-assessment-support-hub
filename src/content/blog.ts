@@ -1,6 +1,6 @@
 /**
  * Blog content. Each post is a typed block array rendered by <RichContent/>.
- * Add a new post by appending to `posts` — the index, [slug] route and sitemap
+ * Add a new post by appending to `posts`. The index, [slug] route and sitemap
  * pick it up automatically.
  */
 
@@ -29,7 +29,7 @@ export const posts: Post[] = [
     slug: "how-to-understand-a-cipd-assessment-brief",
     title: "How to Understand a CIPD Assessment Brief",
     description:
-      "A step-by-step guide to decoding a CIPD assessment brief — command verbs, tasks, learning outcomes and word counts — so you know exactly what a strong answer needs.",
+      "A step-by-step guide to decoding a CIPD assessment brief, including command verbs, tasks, learning outcomes and word counts, so you know exactly what a strong answer needs.",
     category: "Getting started",
     keyword: "CIPD assessment brief guidance",
     date: "2026-07-08",
@@ -37,30 +37,30 @@ export const posts: Post[] = [
     body: [
       {
         type: "p",
-        text: "The single biggest reason CIPD assignments lose marks isn't weak writing — it's answering a different question to the one that was asked. A CIPD assessment brief is a precise document, and learning to read it properly is the highest-value skill you can build. This guide walks you through how to decode a brief before you write a single word.",
+        text: "The single biggest reason CIPD assignments lose marks isn't weak writing. It's answering a different question to the one that was asked. A CIPD assessment brief is a precise document, and learning to read it properly is the highest-value skill you can build. This guide walks you through how to decode a brief before you write a single word.",
       },
       { type: "h2", text: "Start with the learning outcomes and assessment criteria" },
       {
         type: "p",
-        text: "Every CIPD unit is marked against specific learning outcomes (LOs) and assessment criteria (ACs). These are not background information — they are the exact checklist your assessor uses. Before anything else, list every AC and treat each one as a mini-question you must answer in full.",
+        text: "Every CIPD unit is marked against specific learning outcomes (LOs) and assessment criteria (ACs). These are not background information. They are the exact checklist your assessor uses. Before anything else, list every AC and treat each one as a mini-question you must answer in full.",
       },
       {
         type: "callout",
-        text: "Rule of thumb: if a criterion isn't clearly evidenced somewhere in your response, it hasn't been met — no matter how good the rest of the work is.",
+        text: "Rule of thumb: if a criterion isn't clearly evidenced somewhere in your response, it hasn't been met, no matter how good the rest of the work is.",
       },
       { type: "h2", text: "Decode the command verbs" },
       {
         type: "p",
-        text: "Command verbs tell you the depth of response required. Mixing them up is a common and costly mistake — 'explain' and 'evaluate' demand very different things.",
+        text: "Command verbs tell you the depth of response required. Mixing them up is a common and costly mistake, because 'explain' and 'evaluate' demand very different things.",
       },
       {
         type: "ul",
         items: [
-          "Identify / list — state the relevant points briefly.",
-          "Explain / describe — give reasons, detail and context.",
-          "Analyse — break something into parts and examine how they relate.",
-          "Evaluate / assess — weigh strengths and limitations and reach a judgement.",
-          "Justify — give evidence and reasoning to support a position.",
+          "Identify or list: state the relevant points briefly.",
+          "Explain or describe: give reasons, detail and context.",
+          "Analyse: break something into parts and examine how they relate.",
+          "Evaluate or assess: weigh strengths and limitations and reach a judgement.",
+          "Justify: give evidence and reasoning to support a position.",
         ],
       },
       {
@@ -75,11 +75,11 @@ export const posts: Post[] = [
       { type: "h2", text: "Rewrite the brief in your own words" },
       {
         type: "p",
-        text: "Once you've done the above, write a one-line plain-English summary of what each task is actually asking. If you can't, that's a signal to slow down and re-read — or get a second pair of eyes on it.",
+        text: "Once you've done the above, write a one-line plain-English summary of what each task is actually asking. If you can't, that's a signal to slow down and re-read, or to get a second pair of eyes on it.",
       },
       {
         type: "p",
-        text: "If a brief still feels ambiguous, that's exactly the kind of thing our brief-analysis support is built for: we translate the wording into a clear plan mapped to every criterion, so you start with confidence.",
+        text: "If a brief still feels ambiguous, that's exactly the kind of thing our brief-analysis support is built for. We translate the wording into a clear plan mapped to every criterion, so you start with confidence.",
       },
     ],
     related: [
@@ -92,7 +92,7 @@ export const posts: Post[] = [
     slug: "common-mistakes-in-cipd-level-5-assignments",
     title: "Common Mistakes in CIPD Level 5 Assignments",
     description:
-      "The most frequent reasons CIPD Level 5 assignments get referred — from description over analysis to weak referencing — and how to avoid each one.",
+      "The most frequent reasons CIPD Level 5 assignments get referred, from description over analysis to weak referencing, and how to avoid each one.",
     category: "Level 5",
     keyword: "CIPD Level 5 assignment guidance",
     date: "2026-07-06",
@@ -100,22 +100,22 @@ export const posts: Post[] = [
     body: [
       {
         type: "p",
-        text: "CIPD Level 5, the Associate Diploma, is where many capable HR professionals get their first referral. The jump from Level 3 is real: Level 5 expects evidence-based practice, analysis and application, not just accurate description. Here are the mistakes we see most often — and how to fix them.",
+        text: "CIPD Level 5, the Associate Diploma, is where many capable HR professionals get their first referral. The jump from Level 3 is real. Level 5 expects evidence-based practice, analysis and application, not just accurate description. Here are the mistakes we see most often, and how to fix them.",
       },
       { type: "h2", text: "1. Describing when you should be analysing" },
       {
         type: "p",
-        text: "This is the number one issue. Explaining what a model is earns few marks; showing how it applies, comparing options, and weighing their suitability for a specific organisation is what Level 5 rewards. Whenever you make a point, ask 'so what?' and answer it.",
+        text: "This is the number one issue. Explaining what a model is earns few marks. Showing how it applies, comparing options, and weighing their suitability for a specific organisation is what Level 5 rewards. Whenever you make a point, ask 'so what?' and answer it.",
       },
       { type: "h2", text: "2. Ignoring the organisational context" },
       {
         type: "p",
-        text: "Level 5 answers should be grounded in a real (or realistic) workplace. Generic answers that could apply to any organisation feel thin. Anchor your points to context: sector, size, culture, current challenges.",
+        text: "Level 5 answers should be grounded in a real or realistic workplace. Generic answers that could apply to any organisation feel thin. Anchor your points to context: sector, size, culture, current challenges.",
       },
       { type: "h2", text: "3. Weak or missing evidence" },
       {
         type: "p",
-        text: "Assertions need support. Use credible sources — CIPD factsheets, academic texts, peer-reviewed journals — and cite them properly. 'Research shows…' without a citation is a red flag to an assessor.",
+        text: "Assertions need support. Use credible sources such as CIPD factsheets, academic texts and peer-reviewed journals, and cite them properly. 'Research shows...' without a citation is a red flag to an assessor.",
       },
       {
         type: "callout",
@@ -131,14 +131,14 @@ export const posts: Post[] = [
         type: "p",
         text: "It's surprisingly common to miss a criterion entirely. Map your draft against each AC before submitting and confirm every one is evidenced.",
       },
-      { type: "h2", text: "6. Going over — or under — the word count" },
+      { type: "h2", text: "6. Going over or under the word count" },
       {
         type: "p",
-        text: "Wildly exceeding the limit suggests a lack of focus; falling well short usually means criteria aren't fully addressed. Plan your word budget per task from the start.",
+        text: "Wildly exceeding the limit suggests a lack of focus. Falling well short usually means criteria aren't fully addressed. Plan your word budget per task from the start.",
       },
       {
         type: "p",
-        text: "If you've already had a draft referred, our draft-review service pinpoints exactly which of these issues cost you marks and how to fix them — turning a referral into a confident resubmission.",
+        text: "If you've already had a draft referred, our draft-review service pinpoints exactly which of these issues cost you marks and how to fix them, turning a referral into a confident resubmission.",
       },
     ],
     related: [
@@ -159,17 +159,17 @@ export const posts: Post[] = [
     body: [
       {
         type: "p",
-        text: "Referencing is one of the easiest places to gain — or lose — marks in a CIPD assessment. Harvard is the style most CIPD centres expect, and the good news is that it's rule-based: once you know the patterns, it becomes routine. Here's how to get it right.",
+        text: "Referencing is one of the easiest places to gain or lose marks in a CIPD assessment. Harvard is the style most CIPD centres expect, and the good news is that it's rule-based. Once you know the patterns, it becomes routine. Here's how to get it right.",
       },
       { type: "h2", text: "The two parts of Harvard referencing" },
       {
         type: "p",
-        text: "Harvard has two components that must always match: the in-text citation (in the body of your work) and the full reference (in your reference list at the end). Every in-text citation needs a matching entry, and vice versa.",
+        text: "Harvard has two components that must always match: the in-text citation in the body of your work, and the full reference in your reference list at the end. Every in-text citation needs a matching entry, and vice versa.",
       },
       { type: "h2", text: "In-text citations" },
       {
         type: "p",
-        text: "An in-text citation gives the author's surname and year, for example (Armstrong, 2023). If you quote directly, add a page number: (Armstrong, 2023, p. 45). When the author is named in your sentence, only the year goes in brackets: 'Armstrong (2023) argues that…'.",
+        text: "An in-text citation gives the author's surname and year, for example (Armstrong, 2023). If you quote directly, add a page number: (Armstrong, 2023, p. 45). When the author is named in your sentence, only the year goes in brackets, as in 'Armstrong (2023) argues that...'.",
       },
       { type: "h2", text: "Formatting the reference list" },
       {
@@ -180,27 +180,27 @@ export const posts: Post[] = [
         type: "ul",
         items: [
           "Book: Armstrong, M. and Taylor, S. (2023) Armstrong's Handbook of Human Resource Management Practice. 16th edn. London: Kogan Page.",
-          "Journal article: Guest, D.E. (2017) 'Human resource management and employee well-being', Human Resource Management Journal, 27(1), pp. 22–38.",
+          "Journal article: Guest, D.E. (2017) 'Human resource management and employee well-being', Human Resource Management Journal, 27(1), pp. 22 to 38.",
           "CIPD factsheet (online): CIPD (2024) Evidence-based practice. [online] London: CIPD. Available at: https://www.cipd.org [Accessed 12 May 2024].",
         ],
       },
       {
         type: "callout",
-        text: "Tip: cite CIPD's own factsheets and reports — assessors value them, and they're directly relevant to people-practice topics.",
+        text: "Tip: cite CIPD's own factsheets and reports. Assessors value them, and they're directly relevant to people-practice topics.",
       },
       { type: "h2", text: "Common referencing mistakes" },
       {
         type: "ul",
         items: [
-          "In-text citations with no matching reference (or the reverse).",
-          "Inconsistent formatting — mixing styles across the list.",
+          "In-text citations with no matching reference, or the reverse.",
+          "Inconsistent formatting that mixes styles across the list.",
           "Missing 'Accessed' dates for online sources.",
           "Over-relying on websites instead of academic and CIPD sources.",
         ],
       },
       {
         type: "p",
-        text: "Build your reference list as you write — every time you cite something, add it to the list immediately. It's far easier than reconstructing sources afterwards, and it prevents the mismatches that cost marks.",
+        text: "Build your reference list as you write. Every time you cite something, add it to the list immediately. It's far easier than reconstructing sources afterwards, and it prevents the mismatches that cost marks.",
       },
       {
         type: "p",
@@ -217,7 +217,7 @@ export const posts: Post[] = [
     slug: "how-to-respond-to-cipd-tutor-feedback",
     title: "How to Respond to CIPD Tutor Feedback",
     description:
-      "How to interpret CIPD tutor feedback and turn it into concrete improvements — decoding referral comments, prioritising changes and evidencing each criterion.",
+      "How to interpret CIPD tutor feedback and turn it into concrete improvements: decoding referral comments, prioritising changes and evidencing each criterion.",
     category: "Feedback",
     keyword: "CIPD tutor feedback",
     date: "2026-07-02",
@@ -225,7 +225,7 @@ export const posts: Post[] = [
     body: [
       {
         type: "p",
-        text: "Tutor feedback can feel frustratingly vague — 'needs more analysis', 'AC 2.1 not met', 'develop further'. But behind every comment is a specific, fixable gap. Learning to translate feedback into action is what separates a stressful resubmission from a straightforward one.",
+        text: "Tutor feedback can feel frustratingly vague. 'Needs more analysis', 'AC 2.1 not met', 'develop further'. But behind every comment is a specific, fixable gap. Learning to translate feedback into action is what separates a stressful resubmission from a straightforward one.",
       },
       { type: "h2", text: "Read feedback against the criteria, not your ego" },
       {
@@ -236,11 +236,11 @@ export const posts: Post[] = [
       {
         type: "ul",
         items: [
-          "'More analysis needed' — you've described; now compare, weigh and reach a judgement.",
-          "'AC not met' — a specific criterion isn't evidenced; find it and address it directly.",
-          "'Develop further' — the point is valid but too shallow; add depth, evidence or an example.",
-          "'Unsupported' — add a citation or reasoning to back the claim.",
-          "'Application needed' — connect the theory to a real workplace example.",
+          "'More analysis needed' means you've described; now compare, weigh and reach a judgement.",
+          "'AC not met' means a specific criterion isn't evidenced; find it and address it directly.",
+          "'Develop further' means the point is valid but too shallow; add depth, evidence or an example.",
+          "'Unsupported' means you should add a citation or reasoning to back the claim.",
+          "'Application needed' means you should connect the theory to a real workplace example.",
         ],
       },
       { type: "h2", text: "Make a feedback action list" },
@@ -255,7 +255,7 @@ export const posts: Post[] = [
       { type: "h2", text: "Address feedback visibly" },
       {
         type: "p",
-        text: "When you resubmit, make sure the changes are easy to see. Strengthen the exact areas flagged rather than rewriting everything — targeted improvement is more effective and less risky.",
+        text: "When you resubmit, make sure the changes are easy to see. Strengthen the exact areas flagged rather than rewriting everything. Targeted improvement is more effective and less risky.",
       },
       {
         type: "p",
@@ -272,7 +272,7 @@ export const posts: Post[] = [
     slug: "cipd-level-3-vs-5-vs-7-whats-the-difference",
     title: "CIPD Level 3 vs Level 5 vs Level 7: What's the Difference?",
     description:
-      "A clear comparison of CIPD Level 3, 5 and 7 — who each is for, the depth expected, and how to choose the right qualification for your HR career stage.",
+      "A clear comparison of CIPD Level 3, 5 and 7: who each is for, the depth expected, and how to choose the right qualification for your HR career stage.",
     category: "Choosing a level",
     keyword: "CIPD levels explained",
     date: "2026-06-30",
@@ -280,39 +280,39 @@ export const posts: Post[] = [
     body: [
       {
         type: "p",
-        text: "CIPD qualifications come in three levels, and choosing the right one — or understanding what your current level demands — matters for both your career and your assessments. Here's how Level 3, Level 5 and Level 7 differ.",
+        text: "CIPD qualifications come in three levels, and choosing the right one, or understanding what your current level demands, matters for both your career and your assessments. Here's how Level 3, Level 5 and Level 7 differ.",
       },
-      { type: "h2", text: "CIPD Level 3 — Foundation Certificate" },
+      { type: "h2", text: "CIPD Level 3: Foundation Certificate" },
       {
         type: "p",
-        text: "Level 3 is the entry point, roughly equivalent to A-level study. It's designed for people new to HR — assistants, administrators and career changers. Assessments focus on understanding core concepts and explaining them clearly. The academic bar is supportive: describe, explain and demonstrate awareness.",
+        text: "Level 3 is the entry point, roughly equivalent to A-level study. It's designed for people new to HR, such as assistants, administrators and career changers. Assessments focus on understanding core concepts and explaining them clearly. The academic bar is supportive: describe, explain and demonstrate awareness.",
       },
-      { type: "h2", text: "CIPD Level 5 — Associate Diploma" },
+      { type: "h2", text: "CIPD Level 5: Associate Diploma" },
       {
         type: "p",
-        text: "Level 5 is roughly undergraduate level and the most popular qualification for practising HR professionals — officers, advisors and people managers. It steps up to evidence-based practice, analysis and application. You're expected to link people practice to organisational performance and support arguments with evidence.",
+        text: "Level 5 is roughly undergraduate level and the most popular qualification for practising HR professionals, including officers, advisors and people managers. It steps up to evidence-based practice, analysis and application. You're expected to link people practice to organisational performance and support arguments with evidence.",
       },
-      { type: "h2", text: "CIPD Level 7 — Advanced Diploma" },
+      { type: "h2", text: "CIPD Level 7: Advanced Diploma" },
       {
         type: "p",
-        text: "Level 7 is postgraduate (Master's) level, for senior and strategic HR professionals. It demands critical analysis, wider reading, strategic thinking and a strong academic argument. Description earns almost nothing here — evaluation, critique and original reasoning are everything.",
+        text: "Level 7 is postgraduate, or Master's, level, for senior and strategic HR professionals. It demands critical analysis, wider reading, strategic thinking and a strong academic argument. Description earns almost nothing here. Evaluation, critique and original reasoning are everything.",
       },
       {
         type: "callout",
-        text: "Quick guide: Level 3 = explain and demonstrate. Level 5 = analyse and apply. Level 7 = critically evaluate and argue.",
+        text: "Quick guide: Level 3 is explain and demonstrate. Level 5 is analyse and apply. Level 7 is critically evaluate and argue.",
       },
       { type: "h2", text: "Which level is right for you?" },
       {
         type: "ul",
         items: [
-          "New to HR or in an administrative role → Level 3.",
-          "Practising HR professional wanting recognised, applied capability → Level 5.",
-          "Senior, strategic or aiming for Chartered membership → Level 7.",
+          "New to HR or in an administrative role: Level 3.",
+          "Practising HR professional wanting recognised, applied capability: Level 5.",
+          "Senior, strategic or aiming for Chartered membership: Level 7.",
         ],
       },
       {
         type: "p",
-        text: "Whatever level you're studying, our support is tailored to its expectations — supportive and foundational at Level 3, applied and analytical at Level 5, critical and strategic at Level 7.",
+        text: "Whatever level you're studying, our support is tailored to its expectations: supportive and foundational at Level 3, applied and analytical at Level 5, critical and strategic at Level 7.",
       },
     ],
     related: [
@@ -325,7 +325,7 @@ export const posts: Post[] = [
     slug: "how-to-structure-a-cipd-assignment",
     title: "How to Structure a CIPD Assignment",
     description:
-      "A reliable structure for CIPD assignments — introduction, criteria-led sections, workplace application and conclusion — that keeps your response focused and easy to mark.",
+      "A reliable structure for CIPD assignments, covering the introduction, criteria-led sections, workplace application and conclusion, that keeps your response focused and easy to mark.",
     category: "Writing",
     keyword: "how to structure a CIPD assignment",
     date: "2026-06-28",
@@ -338,7 +338,7 @@ export const posts: Post[] = [
       { type: "h2", text: "1. A focused introduction" },
       {
         type: "p",
-        text: "Set the scope, signpost what the response will cover, and — where relevant — introduce the organisational context. Keep it tight: three or four sentences that orient the reader.",
+        text: "Set the scope, signpost what the response will cover, and where relevant introduce the organisational context. Keep it tight: three or four sentences that orient the reader.",
       },
       { type: "h2", text: "2. Criteria-led main sections" },
       {
@@ -357,7 +357,7 @@ export const posts: Post[] = [
       { type: "h2", text: "4. A conclusion that adds value" },
       {
         type: "p",
-        text: "Summarise the key points and, where the brief asks for it, make clear, justified recommendations. Don't introduce new material here — draw the threads together.",
+        text: "Summarise the key points and, where the brief asks for it, make clear, justified recommendations. Don't introduce new material here. Draw the threads together.",
       },
       { type: "h2", text: "5. A complete reference list" },
       {
@@ -390,7 +390,7 @@ export const posts: Post[] = [
     slug: "how-to-improve-a-cipd-resubmission",
     title: "How to Improve a CIPD Resubmission",
     description:
-      "A calm, practical approach to CIPD resubmissions — how to interpret a referral, target the exact criteria that weren't met, and resubmit with confidence.",
+      "A calm, practical approach to CIPD resubmissions: how to interpret a referral, target the exact criteria that weren't met, and resubmit with confidence.",
     category: "Resubmissions",
     keyword: "CIPD resubmission support",
     date: "2026-06-26",
@@ -398,17 +398,17 @@ export const posts: Post[] = [
     body: [
       {
         type: "p",
-        text: "A referral is not a failure — it's a normal part of CIPD study and a clear opportunity to improve. Many strong professionals are referred at least once. The key is to approach the resubmission methodically rather than anxiously rewriting everything.",
+        text: "A referral is not a failure. It's a normal part of CIPD study and a clear opportunity to improve. Many strong professionals are referred at least once. The key is to approach the resubmission methodically rather than anxiously rewriting everything.",
       },
       { type: "h2", text: "Understand exactly what was referred" },
       {
         type: "p",
-        text: "A referral is almost always tied to specific assessment criteria that weren't fully met — not the whole assignment. Identify precisely which ACs are flagged. Everything that passed can usually stay largely as it is.",
+        text: "A referral is almost always tied to specific assessment criteria that weren't fully met, not the whole assignment. Identify precisely which ACs are flagged. Everything that passed can usually stay largely as it is.",
       },
       { type: "h2", text: "Target, don't rewrite" },
       {
         type: "p",
-        text: "The most common resubmission mistake is rewriting large sections that were already fine — which risks breaking what worked. Focus your energy on the exact gaps identified in the feedback.",
+        text: "The most common resubmission mistake is rewriting large sections that were already fine, which risks breaking what worked. Focus your energy on the exact gaps identified in the feedback.",
       },
       {
         type: "callout",
@@ -431,7 +431,7 @@ export const posts: Post[] = [
       },
       {
         type: "p",
-        text: "Our resubmission support interprets your referral feedback, identifies the exact criteria to target, and guides the improvements needed — so your next submission addresses every point with confidence.",
+        text: "Our resubmission support interprets your referral feedback, identifies the exact criteria to target, and guides the improvements needed, so your next submission addresses every point with confidence.",
       },
     ],
     related: [
@@ -444,7 +444,7 @@ export const posts: Post[] = [
     slug: "managing-cipd-deadlines-while-working-full-time",
     title: "How UK and UAE Learners Can Manage CIPD Deadlines While Working Full-Time",
     description:
-      "Practical strategies for busy HR professionals in the UK and UAE to manage CIPD assignment deadlines alongside a full-time job — planning, focus and knowing when to get support.",
+      "Practical strategies for busy HR professionals in the UK and UAE to manage CIPD assignment deadlines alongside a full-time job: planning, focus and knowing when to get support.",
     category: "Study skills",
     keyword: "managing CIPD deadlines",
     date: "2026-06-24",
@@ -452,12 +452,12 @@ export const posts: Post[] = [
     body: [
       {
         type: "p",
-        text: "Most CIPD learners study while holding down a demanding HR role. Whether you're in the UK, the UAE or studying internationally, the challenge is rarely ability — it's time. Here's how to stay on top of CIPD deadlines without burning out.",
+        text: "Most CIPD learners study while holding down a demanding HR role. Whether you're in the UK, the UAE or studying internationally, the challenge is rarely ability. It's time. Here's how to stay on top of CIPD deadlines without burning out.",
       },
       { type: "h2", text: "Work backwards from the deadline" },
       {
         type: "p",
-        text: "Break each assignment into stages — understanding the brief, research, drafting, review, referencing, final edit — and assign each a date working back from your submission deadline. A deadline you've reverse-engineered feels far more manageable than one looming as a single event.",
+        text: "Break each assignment into stages such as understanding the brief, research, drafting, review, referencing and final edit, and assign each a date working back from your submission deadline. A deadline you've reverse-engineered feels far more manageable than one looming as a single event.",
       },
       { type: "h2", text: "Protect small, regular blocks of time" },
       {
@@ -466,7 +466,7 @@ export const posts: Post[] = [
       },
       {
         type: "callout",
-        text: "A common trap: waiting for a big free weekend that never comes. Small, protected sessions are how busy professionals actually finish assignments.",
+        text: "A common trap is waiting for a big free weekend that never comes. Small, protected sessions are how busy professionals actually finish assignments.",
       },
       { type: "h2", text: "Reduce friction before each session" },
       {
@@ -485,7 +485,7 @@ export const posts: Post[] = [
       { type: "h2", text: "Know when support saves you time" },
       {
         type: "p",
-        text: "Getting stuck on a brief or a referral can cost days of unproductive worry. Targeted support — a clear plan, a draft review, or referencing help — often saves more time than it takes, letting you submit sooner and with less stress.",
+        text: "Getting stuck on a brief or a referral can cost days of unproductive worry. Targeted support, such as a clear plan, a draft review, or referencing help, often saves more time than it takes, letting you submit sooner and with less stress.",
       },
       {
         type: "p",

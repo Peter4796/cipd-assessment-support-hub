@@ -37,7 +37,7 @@ export function LeadMagnetForm() {
         <h3 className="mt-4 text-xl font-bold text-navy-900">Your checklist is ready 🎉</h3>
         <p className="mt-2 text-sm text-navy-600">
           Thanks{form.name ? `, ${form.name.split(" ")[0]}` : ""}! Open your free CIPD Assessment
-          Planning Checklist below — then use “Print / Save as PDF” to keep a copy.
+          Planning Checklist below, then use “Print / Save as PDF” to keep a copy.
         </p>
         <a
           href={DOWNLOAD_URL}

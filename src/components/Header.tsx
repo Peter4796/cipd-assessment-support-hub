@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { primaryNav, whatsappLink, cta } from "@/lib/site";
@@ -173,18 +174,20 @@ export function Header() {
 export function BrandMark({ invert = false }: { invert?: boolean }) {
   return (
     <Link href="/" className="flex items-center gap-2.5">
-      <span className="flex h-10 w-10 flex-none items-center justify-center rounded-xl bg-navy-900 text-gold-400 shadow-soft">
-        <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 3 3 7.5l9 4.5 9-4.5L12 3Z" />
-          <path d="M6 10v5c0 1.3 2.7 3 6 3s6-1.7 6-3v-5" />
-        </svg>
-      </span>
+      <Image
+        src="/logo.png"
+        alt="CIPD Guidance"
+        width={44}
+        height={44}
+        priority
+        className="h-11 w-11 flex-none rounded-xl"
+      />
       <span className="flex flex-col leading-none">
-        <span className={`text-[15px] font-bold tracking-tight ${invert ? "text-white" : "text-navy-900"}`}>
-          CIPD Assessment
+        <span className={`text-[17px] font-bold tracking-tight ${invert ? "text-white" : "text-navy-900"}`}>
+          CIPD Guidance
         </span>
-        <span className={`text-[13px] font-semibold ${invert ? "text-gold-300" : "text-gold-600"}`}>
-          Support Hub
+        <span className={`text-[11px] font-medium ${invert ? "text-navy-300" : "text-navy-500"}`}>
+          Assessment support
         </span>
       </span>
     </Link>

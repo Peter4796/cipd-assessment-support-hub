@@ -7,7 +7,7 @@ import { LeadMagnetForm } from "@/components/LeadMagnetForm";
 export const metadata: Metadata = {
   title: "Free CIPD Assessment Planning Checklist",
   description:
-    "Download a free CIPD Assessment Planning Checklist — a step-by-step guide to planning any CIPD Level 3, 5 or 7 assignment, from understanding the brief to final review.",
+    "Download a free CIPD Assessment Planning Checklist: a step-by-step guide to planning any CIPD Level 3, 5 or 7 assignment, from understanding the brief to final review.",
 };
 
 const inside = [
@@ -26,7 +26,7 @@ export default function ChecklistLandingPage() {
         eyebrow="Free download"
         breadcrumb="Free Checklist"
         title="The Free CIPD Assessment Planning Checklist"
-        intro="Every strong CIPD submission starts with a plan. This free, printable checklist walks you through planning any Level 3, 5 or 7 assignment — step by step, from brief to final review."
+        intro="Every strong CIPD submission starts with a plan. This free, printable checklist walks you through planning any Level 3, 5 or 7 assignment, step by step, from brief to final review."
       />
 
       <Section tone="mist">
@@ -39,7 +39,7 @@ export default function ChecklistLandingPage() {
             </h2>
             <p className="mt-3 body-copy">
               Used alongside your assessment brief, the checklist helps you cover everything an
-              assessor looks for — so nothing gets missed and no easy marks slip away.
+              assessor looks for, so nothing gets missed and no easy marks slip away.
             </p>
             <ul className="mt-6 grid gap-3 sm:grid-cols-2">
               {inside.map((item) => (

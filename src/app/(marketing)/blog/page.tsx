@@ -7,7 +7,7 @@ import { CtaBand } from "@/components/Cta";
 import { postsByDate } from "@/content/blog";
 
 export const metadata: Metadata = {
-  title: "CIPD Assessment Blog — Guides & Tips",
+  title: "CIPD Assessment Blog: Guides & Tips",
   description:
     "Expert guides on CIPD assessments: understanding briefs, Harvard referencing, assignment structure, resubmissions, tutor feedback and managing deadlines for UK & UAE learners.",
 };
@@ -27,7 +27,7 @@ export default function BlogIndexPage() {
         eyebrow="Blog"
         breadcrumb="Blog"
         title="CIPD assessment guides & insights"
-        intro="Practical, ethical guidance on understanding briefs, referencing, structure, resubmissions and more — written for CIPD learners across the UK and UAE."
+        intro="Practical, ethical guidance on understanding briefs, referencing, structure, resubmissions and more, written for CIPD learners across the UK and UAE."
       />
 
       <Section tone="white">

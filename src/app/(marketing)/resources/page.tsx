@@ -8,7 +8,7 @@ import { postsByDate } from "@/content/blog";
 import { caseStudies } from "@/content/case-studies";
 
 export const metadata: Metadata = {
-  title: "CIPD Resource Hub — Guides, Checklist & Case Studies",
+  title: "CIPD Resource Hub: Guides, Checklist & Case Studies",
   description:
     "Free CIPD resources: assessment guides, a downloadable planning checklist, and anonymised case studies for Level 3, 5 and 7 learners across the UK and UAE.",
 };
@@ -22,7 +22,7 @@ export default function ResourcesPage() {
         eyebrow="Resource hub"
         breadcrumb="Resources"
         title="Free CIPD assessment resources"
-        intro="Guides, a planning checklist and real case studies to help you understand your CIPD assessments and submit stronger work — whatever your level."
+        intro="Guides, a planning checklist and real case studies to help you understand your CIPD assessments and submit stronger work, whatever your level."
       />
 
       {/* Lead magnet feature */}
@@ -38,7 +38,7 @@ export default function ResourcesPage() {
                 The CIPD Assessment Planning Checklist
               </h2>
               <p className="mt-3 max-w-xl leading-relaxed text-navy-200">
-                A step-by-step, printable checklist to plan any Level 3, 5 or 7 assignment — from
+                A step-by-step, printable checklist to plan any Level 3, 5 or 7 assignment, from
                 decoding the brief to your final pre-submission review.
               </p>
               <div className="mt-6">

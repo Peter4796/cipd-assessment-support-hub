@@ -6,9 +6,9 @@ import { Accordion } from "@/components/Accordion";
 import { faqs } from "@/content/site-content";
 
 export const metadata: Metadata = {
-  title: "FAQ — CIPD Assessment Support Questions",
+  title: "FAQ: CIPD Assessment Support Questions",
   description:
-    "Answers to common questions about our CIPD assessment support across Levels 3, 5 and 7 for UK and UAE learners — resubmissions, draft review, Harvard referencing, turnaround and confidentiality.",
+    "Answers to common questions about our CIPD assessment support across Levels 3, 5 and 7 for UK and UAE learners: resubmissions, draft review, Harvard referencing, turnaround and confidentiality.",
 };
 
 // FAQ structured data for rich results (SEO)

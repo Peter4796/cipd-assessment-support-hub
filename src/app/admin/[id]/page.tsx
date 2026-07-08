@@ -58,7 +58,7 @@ function AdminProject({ id }: { id: string }) {
     sendQuote(project.id, {
       amount,
       currency: "GBP",
-      summary: `${project.helpType} — Level ${project.level}, ${project.wordCount.toLocaleString()} words`,
+      summary: `${project.helpType} · Level ${project.level}, ${project.wordCount.toLocaleString()} words`,
       breakdown: suggested.breakdown,
     });
     setQuoteAmount("");

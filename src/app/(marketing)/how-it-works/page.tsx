@@ -7,7 +7,7 @@ import { howItWorksSteps } from "@/content/site-content";
 import { integrityNotice } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "How It Works — Simple CIPD Support in 5 Steps",
+  title: "How It Works: Simple CIPD Support in 5 Steps",
   description:
     "How our CIPD assessment support works: send your brief, receive a clear quote and plan, get structured guidance, review and refine, then submit with confidence.",
 };
@@ -19,7 +19,7 @@ export default function HowItWorksPage() {
         eyebrow="How it works"
         breadcrumb="How It Works"
         title="Clear support in five simple steps"
-        intro="No confusion, no pressure. From your first message to your final submission, here's exactly how we help — and where you stay in control."
+        intro="No confusion, no pressure. From your first message to your final submission, here's exactly how we help, and where you stay in control."
       />
 
       <Section tone="white">
@@ -44,7 +44,7 @@ export default function HowItWorksPage() {
       <Section tone="mist">
         <SectionHeading
           eyebrow="You stay in control"
-          title="Guidance and review — your work stays yours"
+          title="Guidance and review: your work stays yours"
           intro="We support and coach; you make the decisions and the final edits. That's what keeps the process ethical and the learning yours."
         />
         <div className="mx-auto grid max-w-4xl gap-5 sm:grid-cols-3">

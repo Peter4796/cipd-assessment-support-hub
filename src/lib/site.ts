@@ -4,8 +4,8 @@
  */
 
 export const site = {
-  name: "CIPD Assessment Support Hub",
-  shortName: "CIPD Support Hub",
+  name: "CIPD Guidance",
+  shortName: "CIPD Guidance",
   tagline: "Professional CIPD Assessment Support for UK & UAE Learners",
   description:
     "Ethical CIPD assessment support, coaching, review and editing for Level 3, 5 and 7 learners across the UK and UAE. Brief analysis, structure, Harvard referencing and resubmission support.",

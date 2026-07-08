@@ -1,5 +1,5 @@
 /**
- * Anonymised case studies — demonstrate the support process and outcomes.
+ * Anonymised case studies that demonstrate the support process and outcomes.
  * All examples are illustrative and anonymised; no client-identifying detail.
  */
 
@@ -34,12 +34,12 @@ export const caseStudies: CaseStudy[] = [
       { type: "h2", text: "The situation" },
       {
         type: "p",
-        text: "An HR advisor studying Level 5 alongside a full-time role sent us a near-complete draft. The writing was clear and the HR knowledge was sound, but on review the work was heavily descriptive — it explained concepts thoroughly but rarely analysed them or applied them to the organisation. At Level 5, that gap is a common cause of referral.",
+        text: "An HR advisor studying Level 5 alongside a full-time role sent us a near-complete draft. The writing was clear and the HR knowledge was sound, but on review the work was heavily descriptive. It explained concepts thoroughly but rarely analysed them or applied them to the organisation. At Level 5, that gap is a common cause of referral.",
       },
       { type: "h2", text: "What we did" },
       {
         type: "p",
-        text: "We reviewed the draft against each assessment criterion and produced a criteria-by-criteria feedback note. For every point marked 'descriptive', we suggested how to move it towards analysis — comparing options, weighing suitability and reaching a judgement — and where a workplace example would demonstrate application.",
+        text: "We reviewed the draft against each assessment criterion and produced a criteria-by-criteria feedback note. For every point marked 'descriptive', we suggested how to move it towards analysis, comparing options, weighing suitability and reaching a judgement, and where a workplace example would demonstrate application.",
       },
       {
         type: "ul",
@@ -53,7 +53,7 @@ export const caseStudies: CaseStudy[] = [
       { type: "h2", text: "The outcome" },
       {
         type: "callout",
-        text: "The learner kept their authentic voice and argument — our role was to guide the improvements, not to write the work.",
+        text: "The learner kept their authentic voice and argument. Our role was to guide the improvements, not to write the work.",
       },
       {
         type: "p",
@@ -77,18 +77,18 @@ export const caseStudies: CaseStudy[] = [
       { type: "h2", text: "The situation" },
       {
         type: "p",
-        text: "An HR assistant new to academic study received their first referral and felt overwhelmed. The tutor's comments — 'develop further', 'AC not fully met' — were hard to translate into action, and the learner was unsure whether they needed to start again.",
+        text: "An HR assistant new to academic study received their first referral and felt overwhelmed. The tutor's comments, 'develop further' and 'AC not fully met', were hard to translate into action, and the learner was unsure whether they needed to start again.",
       },
       { type: "h2", text: "What we did" },
       {
         type: "p",
-        text: "We interpreted the feedback line by line, tying each comment to a specific criterion and a specific place in the work. Crucially, we reassured the learner that most of the assignment had passed — only a few targeted improvements were needed.",
+        text: "We interpreted the feedback line by line, tying each comment to a specific criterion and a specific place in the work. Crucially, we reassured the learner that most of the assignment had passed, and only a few targeted improvements were needed.",
       },
       {
         type: "ul",
         items: [
           "Translated each tutor comment into a plain-English, actionable step.",
-          "Identified exactly which criteria were referred — and which had passed.",
+          "Identified exactly which criteria were referred, and which had passed.",
           "Provided a supportive, step-by-step improvement plan.",
           "Reviewed the revised sections before resubmission.",
         ],
@@ -100,7 +100,7 @@ export const caseStudies: CaseStudy[] = [
       },
       {
         type: "p",
-        text: "The learner resubmitted with a focused, confident set of improvements — and, just as importantly, understood the feedback process well enough to approach future assignments with less anxiety.",
+        text: "The learner resubmitted with a focused, confident set of improvements and, just as importantly, understood the feedback process well enough to approach future assignments with less anxiety.",
       },
     ],
   },
@@ -120,12 +120,12 @@ export const caseStudies: CaseStudy[] = [
       { type: "h2", text: "The situation" },
       {
         type: "p",
-        text: "A senior HR manager studying Level 7 had done extensive reading and had genuinely strong ideas — but the draft sprawled, and much of the 'analysis' summarised sources rather than critically evaluating them. At postgraduate level, that distinction is decisive.",
+        text: "A senior HR manager studying Level 7 had done extensive reading and had genuinely strong ideas, but the draft sprawled, and much of the 'analysis' summarised sources rather than critically evaluating them. At postgraduate level, that distinction is decisive.",
       },
       { type: "h2", text: "What we did" },
       {
         type: "p",
-        text: "We worked on two fronts: structure and criticality. First, we helped shape a coherent line of argument with a structure that built logically towards a justified conclusion. Then we coached on how to move from summarising literature to genuinely critiquing it — comparing perspectives, questioning assumptions and evaluating evidence.",
+        text: "We worked on two fronts: structure and criticality. First, we helped shape a coherent line of argument with a structure that built logically towards a justified conclusion. Then we coached on how to move from summarising literature to genuinely critiquing it: comparing perspectives, questioning assumptions and evaluating evidence.",
       },
       {
         type: "ul",
@@ -143,7 +143,7 @@ export const caseStudies: CaseStudy[] = [
       },
       {
         type: "p",
-        text: "The manager's revised submission read as a coherent, critically argued piece of postgraduate work — the same knowledge, but organised and evaluated in a way that met the demands of the Advanced Diploma.",
+        text: "The manager's revised submission read as a coherent, critically argued piece of postgraduate work: the same knowledge, but organised and evaluated in a way that met the demands of the Advanced Diploma.",
       },
     ],
   },

@@ -51,7 +51,7 @@ const initial: FormState = {
 
 function composeMessage(f: FormState) {
   return [
-    "Hi CIPD Assessment Support Hub, I'd like a quote.",
+    "Hi CIPD Guidance, I'd like a quote.",
     "",
     `Name: ${f.name || "—"}`,
     `Country: ${f.country || "—"}`,
@@ -201,7 +201,7 @@ export function EnquiryForm() {
                 <>
                   <span className="font-medium text-navy-900">Click to select a file</span>
                   <span className="block text-xs text-navy-500">
-                    PDF, Word or image — you&apos;ll attach it when you send
+                    PDF, Word or image. You&apos;ll attach it when you send
                   </span>
                 </>
               )}
@@ -238,10 +238,10 @@ export function EnquiryForm() {
       ) : (
         <div className="mt-6 rounded-2xl border border-teal-200 bg-teal-50 p-5">
           <p className="flex items-center gap-2 font-semibold text-teal-800">
-            <Icon name="check" className="h-5 w-5" /> Almost done — send your enquiry
+            <Icon name="check" className="h-5 w-5" /> Almost done: send your enquiry
           </p>
           <p className="mt-1.5 text-sm text-teal-800/80">
-            Choose how you&apos;d like to send your details. Your answers are pre-filled — just
+            Choose how you&apos;d like to send your details. Your answers are pre-filled, just
             attach your brief if you have one.
           </p>
           <div className="mt-4 flex flex-col gap-2 sm:flex-row">

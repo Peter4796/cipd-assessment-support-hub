@@ -6,9 +6,9 @@ import { EnquiryForm } from "@/components/EnquiryForm";
 import { site, whatsappLink, emailLink, integrityNotice } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Contact — Send Your CIPD Assessment Brief",
+  title: "Contact: Send Your CIPD Assessment Brief",
   description:
-    "Contact the CIPD Assessment Support Hub. Send your assessment brief, deadline and word count via WhatsApp, email or our enquiry form for a fast, confidential quote.",
+    "Contact CIPD Guidance. Send your assessment brief, deadline and word count via WhatsApp, email or our enquiry form for a fast, confidential quote.",
 };
 
 export default function ContactPage() {

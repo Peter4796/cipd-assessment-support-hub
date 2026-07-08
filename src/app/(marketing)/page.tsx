@@ -27,7 +27,7 @@ export default function HomePage() {
               <span className="text-gold-400">UK &amp; UAE</span> Learners
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-navy-200">
-              Get expert guidance with CIPD Level 3, Level 5 and Level 7 assessments — from
+              Get expert guidance with CIPD Level 3, Level 5 and Level 7 assessments, from
               brief analysis and structure to referencing, editing and resubmission support.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -109,7 +109,7 @@ export default function HomePage() {
       <Section tone="white">
         <SectionHeading
           eyebrow="Sound familiar?"
-          title="CIPD assessments are demanding — especially alongside a full-time role"
+          title="CIPD assessments are demanding, especially alongside a full-time role"
           intro="Most learners don't struggle because they lack ability. They struggle with unclear briefs, tight deadlines and academic conventions. That's exactly where we help."
         />
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -224,7 +224,7 @@ export default function HomePage() {
                 </h2>
                 <p className="mt-3 leading-relaxed text-navy-600">{integrityNotice}</p>
                 <p className="mt-3 text-sm leading-relaxed text-navy-500">
-                  We coach, review, edit and guide — we don&apos;t offer guaranteed grades or
+                  We coach, review, edit and guide. We don&apos;t offer guaranteed grades or
                   encourage academic misconduct. Our goal is to help you produce and submit
                   your strongest, most authentic work.
                 </p>

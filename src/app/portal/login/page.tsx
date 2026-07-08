@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { signInClient } from "@/lib/portal/session";
 import { Icon } from "@/components/Icon";
@@ -29,13 +30,8 @@ export default function PortalLoginPage() {
     <div className="flex min-h-screen items-center justify-center px-4 py-12">
       <div className="w-full max-w-md">
         <Link href="/" className="mb-8 flex items-center justify-center gap-2.5">
-          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-navy-900 text-gold-400">
-            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-              <path d="M12 3 3 7.5l9 4.5 9-4.5L12 3Z" />
-              <path d="M6 10v5c0 1.3 2.7 3 6 3s6-1.7 6-3v-5" />
-            </svg>
-          </span>
-          <span className="text-lg font-bold text-navy-900">CIPD Support Hub</span>
+          <Image src="/logo.png" alt="CIPD Guidance" width={40} height={40} className="h-10 w-10 rounded-xl" />
+          <span className="text-lg font-bold text-navy-900">CIPD Guidance</span>
         </Link>
 
         <div className="rounded-3xl border border-mist-200 bg-white p-8 shadow-card">
@@ -66,7 +62,7 @@ export default function PortalLoginPage() {
           </div>
 
           <p className="mt-5 text-center text-xs text-navy-400">
-            Demo sign-in — no password required. Real accounts &amp; security are added when the
+            Demo sign-in, no password required. Real accounts &amp; security are added when the
             live backend is connected.
           </p>
         </div>

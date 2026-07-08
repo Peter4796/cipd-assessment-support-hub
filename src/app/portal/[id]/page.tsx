@@ -15,7 +15,7 @@ function downloadDemo(name: string) {
   if (typeof window === "undefined") return;
   const blob = new Blob(
     [
-      `CIPD Assessment Support Hub — demo deliverable\n\nFile: ${name}\n\n` +
+      `CIPD Guidance, demo deliverable\n\nFile: ${name}\n\n` +
         `In the live portal this downloads the real reviewed document uploaded by your ` +
         `support specialist. This placeholder confirms the download flow works.`,
     ],
@@ -130,7 +130,7 @@ function ProjectDetail({ id }: { id: string }) {
                 <div className="mt-5 rounded-xl border border-mist-200 bg-mist-50 p-4">
                   <p className="text-sm font-medium text-navy-800">Secure payment</p>
                   <p className="mt-0.5 text-xs text-navy-500">
-                    Demo checkout — no real charge. Connect Stripe to take live payments.
+                    Demo checkout. No real charge. Connect Stripe to take live payments.
                   </p>
                   <button onClick={() => markPaid(project.id)} className="btn-navy mt-3 w-full">
                     Pay {formatMoney(project.quote.amount, project.quote.currency)} (demo)
@@ -140,7 +140,7 @@ function ProjectDetail({ id }: { id: string }) {
 
               {project.quote.paidAt && (
                 <p className="mt-5 flex items-center gap-2 rounded-xl bg-teal-50 p-3 text-sm font-medium text-teal-800">
-                  <Icon name="check" className="h-4 w-4" /> Payment received — thank you!
+                  <Icon name="check" className="h-4 w-4" /> Payment received. Thank you!
                 </p>
               )}
             </section>
@@ -186,7 +186,7 @@ function ProjectDetail({ id }: { id: string }) {
               </p>
               {project.revisionRequested && (
                 <p className="mt-3 rounded-xl bg-violet-50 p-3 text-sm text-violet-800">
-                  Revision requested {fmtDate(project.revisionRequested.at, true)} — we&apos;re on it.
+                  Revision requested {fmtDate(project.revisionRequested.at, true)}. We&apos;re on it.
                 </p>
               )}
               {!revising ? (

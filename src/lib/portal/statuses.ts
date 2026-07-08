@@ -37,7 +37,7 @@ export const STATUS_META: Record<
   review_stage: {
     label: "Review stage",
     short: "Review",
-    description: "Ready for your review — download and check the work.",
+    description: "Ready for your review. Download and check the work.",
     tone: "bg-violet-100 text-violet-800 border-violet-200",
     dot: "bg-violet-500",
   },

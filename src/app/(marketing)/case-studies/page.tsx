@@ -9,7 +9,7 @@ import { caseStudies } from "@/content/case-studies";
 export const metadata: Metadata = {
   title: "CIPD Support Case Studies",
   description:
-    "Anonymised examples of our CIPD assessment support in action — Level 5 draft improvement, Level 3 resubmission support, and Level 7 structure and critical-analysis coaching.",
+    "Anonymised examples of our CIPD assessment support in action: Level 5 draft improvement, Level 3 resubmission support, and Level 7 structure and critical-analysis coaching.",
 };
 
 export default function CaseStudiesPage() {
@@ -18,8 +18,8 @@ export default function CaseStudiesPage() {
       <PageHero
         eyebrow="Case studies"
         breadcrumb="Case Studies"
-        title="Support in action — anonymised examples"
-        intro="Real support scenarios across Levels 3, 5 and 7, anonymised for confidentiality. They show how our guidance works in practice — and how the work always stays the learner's own."
+        title="Support in action: anonymised examples"
+        intro="Real support scenarios across Levels 3, 5 and 7, anonymised for confidentiality. They show how our guidance works in practice, and how the work always stays the learner's own."
       />
 
       <Section tone="white">
@@ -47,7 +47,7 @@ export default function CaseStudiesPage() {
         <p className="mx-auto mt-10 max-w-3xl rounded-2xl border border-gold-200 bg-gold-50 p-5 text-center text-sm leading-relaxed text-navy-700">
           <strong className="text-navy-900">Note:</strong> These case studies are anonymised and
           illustrative. They demonstrate our support process and the standard we help learners
-          reach — always through guidance, review and coaching, never by producing work on a
+          reach, always through guidance, review and coaching, never by producing work on a
           learner&apos;s behalf.
         </p>
       </Section>

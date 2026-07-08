@@ -7,7 +7,7 @@ import { whyChooseUs } from "@/content/services";
 import { integrityNotice } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "About — Specialist CIPD Assessment Support",
+  title: "About: Specialist CIPD Assessment Support",
   description:
     "A specialist CIPD assessment support service for international HR learners. Professional, clear, confidential guidance aligned with UK-style academic expectations.",
 };
@@ -16,7 +16,7 @@ const values = [
   {
     title: "Specialist, not generalist",
     description:
-      "We focus solely on CIPD assessments across Levels 3, 5 and 7 — so we understand the units, the criteria and what assessors look for.",
+      "We focus solely on CIPD assessments across Levels 3, 5 and 7, so we understand the units, the criteria and what assessors look for.",
     icon: "coaching" as const,
   },
   {
@@ -34,7 +34,7 @@ const values = [
   {
     title: "Practical HR knowledge",
     description:
-      "Real people-practice insight helps you connect theory to workplace examples — where CIPD marks are won.",
+      "Real people-practice insight helps you connect theory to workplace examples, which is where CIPD marks are won.",
     icon: "map" as const,
   },
 ];
@@ -59,9 +59,9 @@ export default function AboutPage() {
               referencing as it does on HR knowledge itself.
             </p>
             <p>
-              That&apos;s where we come in. The <strong>CIPD Assessment Support Hub</strong> is
+              That&apos;s where we come in. <strong>CIPD Guidance</strong> is
               an independent academic support service built specifically for CIPD learners. We
-              provide coaching, review, editing and assessment guidance — helping you interpret
+              provide coaching, review, editing and assessment guidance, helping you interpret
               your brief, plan a criteria-led response, sharpen your referencing and improve
               drafts and resubmissions.
             </p>
@@ -74,7 +74,7 @@ export default function AboutPage() {
             </p>
             <h2>How we work</h2>
             <p>
-              We&apos;re a guidance and review service — not an essay mill. We don&apos;t sell
+              We&apos;re a guidance and review service, not an essay mill. We don&apos;t sell
               guaranteed grades and we don&apos;t encourage academic misconduct. Instead, we
               help you understand what&apos;s being asked and produce your best authentic work,
               in line with your study centre&apos;s academic integrity policy.

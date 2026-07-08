@@ -69,7 +69,7 @@ export function DemoBanner({ role }: { role: "client" | "admin" }) {
         </span>
         <span>
           <strong>Demo mode.</strong> This {role === "admin" ? "admin dashboard" : "client portal"} runs
-          on sample data stored in your browser — no real accounts, payments or emails. See the README
+          on sample data stored in your browser, with no real accounts, payments or emails. See the README
           to connect a live backend.
         </span>
       </div>

@@ -7,7 +7,7 @@ import { pricingPackages } from "@/content/site-content";
 import { whatsappLink, cta } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Pricing — CIPD Assessment Support Packages",
+  title: "Pricing: CIPD Assessment Support Packages",
   description:
     "Flexible CIPD assessment support packages: Brief Review & Structure, Draft Review & Improvement, and a Full Assessment Guidance Package. Request a tailored quote.",
 };
@@ -133,7 +133,7 @@ export default function PricingPage() {
             ))}
           </div>
           <p className="mt-6 text-sm text-navy-500">
-            Send your brief and deadline and we&apos;ll reply quickly with a transparent quote —
+            Send your brief and deadline and we&apos;ll reply quickly with a transparent quote,
             no obligation, and no pressure.
           </p>
           <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">

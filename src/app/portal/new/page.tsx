@@ -98,7 +98,7 @@ function NewRequest() {
               {formatMoney(est.low, est.currency)} – {formatMoney(est.high, est.currency)}
             </p>
             <p className="mt-1 text-xs text-navy-500">
-              Indicative only — your final quote is confirmed by our team before you approve.
+              Indicative only. Your final quote is confirmed by our team before you approve.
             </p>
             <dl className="mt-4 grid grid-cols-2 gap-2">
               {est.breakdown.map((b) => (
@@ -167,7 +167,7 @@ function NewRequest() {
           </div>
           <div className="sm:col-span-2">
             <label className={labelCls} htmlFor="message">Message</label>
-            <textarea id="message" rows={3} className={inputCls} value={form.message} onChange={(e) => update("message", e.target.value)} placeholder="Anything we should know — tutor feedback, specific concerns…" />
+            <textarea id="message" rows={3} className={inputCls} value={form.message} onChange={(e) => update("message", e.target.value)} placeholder="Anything we should know, such as tutor feedback or specific concerns…" />
           </div>
           <div className="sm:col-span-2">
             <label className={labelCls}>Upload assessment brief</label>
