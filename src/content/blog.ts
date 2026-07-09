@@ -768,6 +768,317 @@ export const posts: Post[] = [
       "cipd-level-3-vs-5-vs-7-whats-the-difference",
     ],
   },
+  {
+    slug: "what-is-cipd-and-why-it-matters",
+    title: "What Is CIPD and Why Does It Matter?",
+    description:
+      "A clear introduction to CIPD: what the Chartered Institute of Personnel and Development is, what its qualifications involve, and why they matter for an HR career.",
+    category: "Getting started",
+    keyword: "what is CIPD",
+    date: "2026-07-09",
+    readMinutes: 5,
+    body: [
+      {
+        type: "p",
+        text: "If you are starting out in HR or people practice, you will hear CIPD mentioned everywhere. Understanding what it is, and why it carries weight, helps you decide whether it is the right step for your career.",
+      },
+      { type: "h2", text: "What CIPD stands for" },
+      {
+        type: "p",
+        text: "CIPD stands for the Chartered Institute of Personnel and Development. It is the professional body for HR and people development, and it sets the standards for the profession. Its qualifications are recognised across the UK and internationally, including in the UAE and the wider Gulf.",
+      },
+      { type: "h2", text: "What a CIPD qualification involves" },
+      {
+        type: "p",
+        text: "CIPD qualifications are awarded by the CIPD but taught through approved study centres. They are usually assessed by written assignments rather than exams, so success depends on understanding assessment briefs, applying theory to practice, and referencing well. There are three levels, from Foundation to Advanced.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Level 3 (Foundation): the entry point for those new to people practice.",
+          "Level 5 (Associate Diploma): for practising HR professionals building deeper capability.",
+          "Level 7 (Advanced Diploma): postgraduate-level study for senior and strategic roles.",
+        ],
+      },
+      { type: "h2", text: "Why it matters" },
+      {
+        type: "p",
+        text: "A CIPD qualification signals credibility. It shows employers that you understand modern people practice and can apply it professionally. Many HR roles list CIPD membership as desirable or essential, and progressing through the levels supports career growth and Chartered membership.",
+      },
+      {
+        type: "callout",
+        text: "In short: CIPD is the recognised professional standard for HR. The qualification proves both knowledge and the ability to apply it in the workplace.",
+      },
+      {
+        type: "p",
+        text: "Whichever level you study, the assessments are where the effort concentrates. Our support helps you understand your briefs, structure strong responses and reference correctly, so your knowledge translates into marks.",
+      },
+    ],
+    related: [
+      "cipd-level-3-vs-5-vs-7-whats-the-difference",
+      "is-cipd-worth-it",
+      "how-to-understand-a-cipd-assessment-brief",
+    ],
+  },
+  {
+    slug: "is-cipd-worth-it",
+    title: "Is CIPD Worth It?",
+    description:
+      "An honest look at whether a CIPD qualification is worth the time and cost, who benefits most, and how to get the most value from it.",
+    category: "Getting started",
+    keyword: "is CIPD worth it",
+    date: "2026-07-09",
+    readMinutes: 5,
+    body: [
+      {
+        type: "p",
+        text: "CIPD qualifications take time, effort and money, so it is fair to ask whether they are worth it. For most people building an HR career, the answer is yes, but it depends on your goals and stage.",
+      },
+      { type: "h2", text: "The case for CIPD" },
+      {
+        type: "ul",
+        items: [
+          "Recognition: it is the standard professional qualification for HR in the UK and is respected internationally.",
+          "Career access: many HR roles ask for CIPD, so it opens doors and supports progression.",
+          "Applied knowledge: the focus on real people practice makes it directly useful at work.",
+          "Membership: progressing through the levels supports Associate and Chartered membership.",
+        ],
+      },
+      { type: "h2", text: "When it may be less essential" },
+      {
+        type: "p",
+        text: "If you are only briefly involved in HR tasks, or you are very senior with a long track record, the return may be smaller. Even then, Level 7 can add academic depth and credibility for strategic roles.",
+      },
+      { type: "h2", text: "Getting the most value" },
+      {
+        type: "p",
+        text: "The value comes from applying what you learn, not just passing. Choose the right level for your stage, connect every unit to your own workplace, and use each assignment to build skills you will actually use.",
+      },
+      {
+        type: "callout",
+        text: "CIPD is usually worth it if you are serious about an HR career. The key is choosing the right level and treating the assessments as practice, not just hurdles.",
+      },
+      {
+        type: "p",
+        text: "If the assessments feel like the barrier rather than the learning, that is exactly where we help, so the qualification pays off without derailing your work and life.",
+      },
+    ],
+    related: [
+      "what-is-cipd-and-why-it-matters",
+      "cipd-level-3-vs-5-vs-7-whats-the-difference",
+      "managing-cipd-deadlines-while-working-full-time",
+    ],
+  },
+  {
+    slug: "cipd-command-verbs-analyse-evaluate-explain",
+    title: "CIPD Command Verbs: Analyse vs Evaluate vs Explain",
+    description:
+      "What CIPD command verbs mean and how to answer them. Understand the difference between explain, analyse and evaluate to match the depth your assessment needs.",
+    category: "Assessment writing",
+    keyword: "CIPD command verbs",
+    date: "2026-07-09",
+    readMinutes: 5,
+    body: [
+      {
+        type: "p",
+        text: "Command verbs are the small words in a brief that tell you how deep your answer needs to go. Misreading them is one of the most common reasons CIPD answers lose marks. Getting them right is one of the fastest ways to improve.",
+      },
+      { type: "h2", text: "Explain and describe" },
+      {
+        type: "p",
+        text: "These ask you to make something clear. Give reasons, detail and context so the reader understands the what and the why. This is the level of depth expected most often at Level 3.",
+      },
+      { type: "h2", text: "Analyse" },
+      {
+        type: "p",
+        text: "To analyse is to break something into parts and examine how they relate. You are not just saying what something is; you are showing how and why it works, and what its components mean for a situation. Analysis is central to Level 5.",
+      },
+      { type: "h2", text: "Evaluate and assess" },
+      {
+        type: "p",
+        text: "To evaluate is to weigh strengths and limitations and reach a judgement. You compare options, consider evidence, and conclude which is more appropriate and why. Critical evaluation dominates Level 7.",
+      },
+      {
+        type: "callout",
+        text: "A simple ladder: explain tells the reader what and why. Analyse breaks it down and shows how. Evaluate weighs it up and reaches a judgement.",
+      },
+      { type: "h2", text: "Other verbs you will meet" },
+      {
+        type: "ul",
+        items: [
+          "Identify or list: state the relevant points briefly.",
+          "Justify: give evidence and reasoning to support a position.",
+          "Compare: set two or more things side by side and draw out similarities and differences.",
+          "Discuss: consider different sides of an issue before reaching a view.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Before you write, underline the command verb in each task and match your depth to it. If you are unsure what a task really wants, our brief-analysis support translates it into a clear plan.",
+      },
+    ],
+    related: [
+      "how-to-understand-a-cipd-assessment-brief",
+      "what-is-critical-analysis-in-cipd",
+      "how-to-structure-a-cipd-assignment",
+    ],
+  },
+  {
+    slug: "what-is-critical-analysis-in-cipd",
+    title: "What Is Critical Analysis in CIPD?",
+    description:
+      "What critical analysis means in CIPD assessments, how it differs from description, and practical ways to add the depth that Level 5 and Level 7 reward.",
+    category: "Critical thinking",
+    keyword: "critical analysis CIPD",
+    date: "2026-07-09",
+    readMinutes: 6,
+    body: [
+      {
+        type: "p",
+        text: "Tutors often write 'needs more critical analysis', but rarely explain what that looks like in practice. Understanding it is the difference between a referral and a strong pass at Level 5 and Level 7.",
+      },
+      { type: "h2", text: "Description versus analysis" },
+      {
+        type: "p",
+        text: "Description tells the reader what something is. Analysis examines why it matters, how it works, and what its strengths and limitations are. Critical analysis goes further still, questioning assumptions, comparing perspectives and weighing evidence before reaching a reasoned judgement.",
+      },
+      { type: "h2", text: "What critical analysis looks like" },
+      {
+        type: "ul",
+        items: [
+          "Comparing two models or approaches rather than describing one",
+          "Weighing the strengths and limitations of an idea",
+          "Questioning whether evidence is strong, relevant and current",
+          "Considering the context, and whether something would work for this organisation",
+          "Reaching a justified conclusion, supported by evidence",
+        ],
+      },
+      {
+        type: "callout",
+        text: "A quick test: after every point, ask 'so what?'. If your answer moves to consequences, comparison or judgement, you are analysing. If it just adds more description, you are not yet.",
+      },
+      { type: "h2", text: "How to build it into your writing" },
+      {
+        type: "p",
+        text: "Introduce a point, support it with evidence, then evaluate it: what does it mean, how does it compare, and what should the organisation do? At Level 7, add wider reading and consider competing viewpoints to show genuine critical engagement.",
+      },
+      {
+        type: "p",
+        text: "If your work keeps coming back as too descriptive, our draft review shows you exactly where to turn description into the analysis your level requires.",
+      },
+    ],
+    related: [
+      "cipd-command-verbs-analyse-evaluate-explain",
+      "common-mistakes-in-cipd-level-5-assignments",
+      "how-to-pass-cipd-level-5",
+    ],
+  },
+  {
+    slug: "finding-credible-sources-for-cipd-google-scholar",
+    title: "How to Find Credible Sources for CIPD (Using Google Scholar)",
+    description:
+      "How to find credible academic sources for CIPD assignments, how to use Google Scholar effectively, and how to judge whether a source is strong enough to cite.",
+    category: "Research skills",
+    keyword: "credible sources for CIPD",
+    date: "2026-07-09",
+    readMinutes: 5,
+    body: [
+      {
+        type: "p",
+        text: "Strong CIPD answers are built on credible evidence. Knowing where to find good sources, and how to judge them, saves time and lifts the quality of your analysis.",
+      },
+      { type: "h2", text: "Where to look" },
+      {
+        type: "ul",
+        items: [
+          "CIPD factsheets, reports and research: directly relevant and valued by assessors",
+          "Academic textbooks and peer-reviewed journals",
+          "Google Scholar: a free search engine for academic literature",
+          "Your study centre's online library, if you have access",
+        ],
+      },
+      { type: "h2", text: "Using Google Scholar effectively" },
+      {
+        type: "p",
+        text: "Search at scholar.google.com using specific terms, for example 'employee engagement HRM journal'. Use the year filter on the left to find recent work, and look for articles with citations, which suggests they are influential. If an article is paywalled, search its title to find an open-access version, or check your library.",
+      },
+      {
+        type: "callout",
+        text: "Tip: click 'Cited by' on a useful article to find related, often more recent, research on the same topic.",
+      },
+      { type: "h2", text: "How to judge a source" },
+      {
+        type: "ul",
+        items: [
+          "Authority: who wrote it, and are they credible?",
+          "Currency: is it recent enough to be relevant?",
+          "Relevance: does it actually support your specific point?",
+          "Evidence: is it based on research, not just opinion?",
+        ],
+      },
+      {
+        type: "p",
+        text: "Avoid leaning on unreferenced websites, commercial blogs or AI tools as your main evidence. When you have found strong sources, cite them correctly in Harvard style. Our referencing support can check that every citation is formatted and matched correctly.",
+      },
+    ],
+    related: [
+      "how-to-use-harvard-referencing-in-cipd-assessments",
+      "how-many-references-should-a-cipd-assignment-have",
+      "what-is-critical-analysis-in-cipd",
+    ],
+  },
+  {
+    slug: "studying-cipd-in-the-uae",
+    title: "Studying CIPD in the UAE: A Practical Guide",
+    description:
+      "A practical guide to studying CIPD in the UAE, covering study centres, online options, UK-style academic expectations and managing study alongside work.",
+    category: "Student guides",
+    keyword: "studying CIPD in the UAE",
+    date: "2026-07-09",
+    readMinutes: 5,
+    body: [
+      {
+        type: "p",
+        text: "CIPD is popular across the UAE and the wider Gulf, where HR professionals value a globally recognised qualification. If you are studying CIPD in the UAE, here is what to keep in mind.",
+      },
+      { type: "h2", text: "How CIPD works in the UAE" },
+      {
+        type: "p",
+        text: "CIPD qualifications in the UAE are delivered through approved study centres, both in person and online. The qualification and standards are the same as in the UK, so your assessments follow UK-style academic expectations, including Harvard referencing and evidence-based analysis.",
+      },
+      { type: "h2", text: "Classroom or online?" },
+      {
+        type: "ul",
+        items: [
+          "Classroom study offers structure and face-to-face support, which suits some learners.",
+          "Online study offers flexibility around demanding roles and travel, which many UAE professionals prefer.",
+        ],
+      },
+      { type: "h2", text: "Things to plan for" },
+      {
+        type: "ul",
+        items: [
+          "Academic writing: UK-style referencing and analysis may be new if you studied elsewhere.",
+          "English writing: if English is not your first language, allow time to refine clarity.",
+          "Time zones and deadlines: confirm submission times in your local time and build in a buffer.",
+          "Workplace examples: use your own organisation to ground your analysis.",
+        ],
+      },
+      {
+        type: "callout",
+        text: "The qualification is the same worldwide. The main adjustment for many UAE learners is the UK-style academic writing and referencing, which is very learnable with the right support.",
+      },
+      {
+        type: "p",
+        text: "We support CIPD learners across the UAE with brief analysis, structure, referencing and draft review, all aligned to UK-style expectations, and we work across time zones with quick replies on WhatsApp.",
+      },
+    ],
+    related: [
+      "what-is-cipd-and-why-it-matters",
+      "managing-cipd-deadlines-while-working-full-time",
+      "how-to-use-harvard-referencing-in-cipd-assessments",
+    ],
+  },
 ];
 
 export function getPost(slug: string) {
