@@ -1079,6 +1079,303 @@ export const posts: Post[] = [
       "how-to-use-harvard-referencing-in-cipd-assessments",
     ],
   },
+  {
+    slug: "studying-cipd-in-the-uk",
+    title: "Studying CIPD in the UK: A Practical Guide",
+    description:
+      "A practical guide to studying CIPD in the UK, covering study centres, online and classroom options, costs, and balancing study with a full-time HR role.",
+    category: "Student guides",
+    keyword: "studying CIPD in the UK",
+    date: "2026-07-09",
+    readMinutes: 5,
+    body: [
+      {
+        type: "p",
+        text: "CIPD is the recognised HR qualification across the UK, and thousands of professionals study it every year while working. If you are considering CIPD in the UK, here is what to expect and how to set yourself up to succeed.",
+      },
+      { type: "h2", text: "How CIPD study works in the UK" },
+      {
+        type: "p",
+        text: "CIPD qualifications are awarded by the CIPD but delivered through approved study centres. You can study in a classroom, fully online, or through blended learning. Assessment is almost always by written assignment rather than exam, so your success depends heavily on academic writing and referencing.",
+      },
+      { type: "h2", text: "Classroom, online or blended?" },
+      {
+        type: "ul",
+        items: [
+          "Classroom: structure and face-to-face tutor support, but less flexible.",
+          "Online: study around work and life, popular with busy professionals.",
+          "Blended: a mix of both, combining flexibility with some live support.",
+        ],
+      },
+      { type: "h2", text: "Balancing study with work" },
+      {
+        type: "p",
+        text: "Most UK learners study part-time alongside a job. The biggest challenge is rarely the content; it is finding consistent time. Working backwards from each deadline and protecting small, regular study blocks is what keeps people on track.",
+      },
+      {
+        type: "callout",
+        text: "Choose a study centre with good tutor support and a delivery style that fits your life. The right format matters as much as the provider's reputation.",
+      },
+      {
+        type: "p",
+        text: "Wherever you study, the assignments are where marks are won or lost. Our support helps UK learners understand briefs, structure responses and reference correctly, so study fits around work rather than taking it over.",
+      },
+    ],
+    related: [
+      "studying-cipd-in-the-uae",
+      "managing-cipd-deadlines-while-working-full-time",
+      "which-cipd-qualification-should-you-choose",
+    ],
+  },
+  {
+    slug: "complete-guide-to-cipd-qualifications",
+    title: "A Complete Guide to CIPD Qualifications",
+    description:
+      "A complete guide to CIPD qualifications: the Foundation, Associate and Advanced Diplomas, what each involves, how they are assessed and how to choose.",
+    category: "Getting started",
+    keyword: "CIPD qualifications guide",
+    date: "2026-07-09",
+    readMinutes: 6,
+    body: [
+      {
+        type: "p",
+        text: "CIPD offers a clear pathway of qualifications for people professionals, from those just starting out to senior strategic leaders. This guide explains the levels, what each involves, and how they fit together.",
+      },
+      { type: "h2", text: "The three levels" },
+      {
+        type: "p",
+        text: "CIPD qualifications are structured into three levels, each building on the last. All are awarded by the CIPD and taught through approved study centres, and all are assessed by written assignments.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Level 3 Foundation Certificate: the entry point, roughly equivalent to A-level, for those new to people practice.",
+          "Level 5 Associate Diploma: undergraduate-level study for practising HR professionals, the most popular qualification.",
+          "Level 7 Advanced Diploma: postgraduate-level study for senior and strategic roles.",
+        ],
+      },
+      { type: "h2", text: "How they are assessed" },
+      {
+        type: "p",
+        text: "Rather than exams, CIPD uses written assignments marked against learning outcomes and assessment criteria. Higher levels expect greater depth: description at Level 3, analysis and application at Level 5, and critical evaluation at Level 7.",
+      },
+      { type: "h2", text: "Membership and progression" },
+      {
+        type: "p",
+        text: "CIPD qualifications link to professional membership. Completing Level 5 supports Associate membership, while Level 7 can lead towards Chartered membership, the profession's senior standard. You do not have to complete every level in sequence, but each builds useful foundations for the next.",
+      },
+      {
+        type: "callout",
+        text: "Think of the levels as a ladder: Foundation for starting out, Associate for practising professionals, and Advanced for strategic leaders.",
+      },
+      {
+        type: "p",
+        text: "Not sure which level fits your stage? Our guide on choosing a qualification can help, and our support is tailored to the depth each level demands.",
+      },
+    ],
+    related: [
+      "cipd-level-3-vs-5-vs-7-whats-the-difference",
+      "which-cipd-qualification-should-you-choose",
+      "what-is-cipd-and-why-it-matters",
+    ],
+  },
+  {
+    slug: "which-cipd-qualification-should-you-choose",
+    title: "Which CIPD Qualification Should You Choose?",
+    description:
+      "How to choose the right CIPD level for your career stage. A practical guide to picking between Level 3, Level 5 and Level 7 based on experience and goals.",
+    category: "Getting started",
+    keyword: "which CIPD level should I do",
+    date: "2026-07-09",
+    readMinutes: 5,
+    body: [
+      {
+        type: "p",
+        text: "Choosing the right CIPD level matters. Start too low and you may be under-challenged; start too high and the academic demands can feel overwhelming. Here is how to pick the level that fits you.",
+      },
+      { type: "h2", text: "Match the level to your stage" },
+      {
+        type: "ul",
+        items: [
+          "New to HR, or in an admin or assistant role: Level 3 Foundation builds the basics.",
+          "A practising HR officer, advisor or people manager: Level 5 Associate Diploma is the natural fit.",
+          "A senior, strategic or aspiring Chartered professional: Level 7 Advanced Diploma adds depth.",
+        ],
+      },
+      { type: "h2", text: "Consider your academic background" },
+      {
+        type: "p",
+        text: "Level reflects academic demand as well as HR seniority. Level 5 is undergraduate level and Level 7 is postgraduate level. If you have not studied for a while, be honest about the step up, especially the analysis and referencing expected at higher levels.",
+      },
+      { type: "h2", text: "Do you need to start at Level 3?" },
+      {
+        type: "p",
+        text: "Not necessarily. Many experienced professionals start at Level 5 without Level 3. Study centres can advise on entry requirements, but as a rule, choose the level that matches both your role and your comfort with academic writing.",
+      },
+      {
+        type: "callout",
+        text: "Rule of thumb: pick the level that matches your current HR responsibilities and your confidence with analytical, referenced writing.",
+      },
+      {
+        type: "p",
+        text: "Whichever level you choose, our support is tailored to its expectations, so you can study at the right level with confidence.",
+      },
+    ],
+    related: [
+      "cipd-level-3-vs-5-vs-7-whats-the-difference",
+      "complete-guide-to-cipd-qualifications",
+      "how-difficult-is-cipd",
+    ],
+  },
+  {
+    slug: "how-difficult-is-cipd",
+    title: "How Difficult Is CIPD?",
+    description:
+      "An honest look at how difficult CIPD is at each level, what learners find hardest, and how to make it more manageable alongside a full-time job.",
+    category: "Getting started",
+    keyword: "how difficult is CIPD",
+    date: "2026-07-09",
+    readMinutes: 5,
+    body: [
+      {
+        type: "p",
+        text: "CIPD is achievable for most people who put in consistent effort, but it is not a rubber stamp. How hard it feels depends on the level, your academic background, and how you manage your time.",
+      },
+      { type: "h2", text: "What learners actually find hard" },
+      {
+        type: "p",
+        text: "Interestingly, the HR content is rarely the barrier, especially for those already working in the field. The common challenges are academic: understanding briefs, writing analytically, referencing correctly, and finding time.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Decoding what a brief and its command verbs are really asking",
+          "Writing with analysis rather than description, especially at Level 5 and 7",
+          "Getting Harvard referencing right and consistent",
+          "Fitting study around a demanding role and life",
+        ],
+      },
+      { type: "h2", text: "Difficulty by level" },
+      {
+        type: "p",
+        text: "Level 3 is supportive and focuses on clear explanation. Level 5 steps up to evidence-based analysis. Level 7 is postgraduate level and demands genuine critical evaluation and wider reading. Each level is a real step up in academic depth.",
+      },
+      {
+        type: "callout",
+        text: "For most learners, CIPD is challenging but very doable. The difficulty is usually academic writing and time, not the HR knowledge itself.",
+      },
+      {
+        type: "p",
+        text: "If the academic side is where it feels hardest, that is exactly where support helps most. We make briefs clearer, strengthen your structure and analysis, and take the referencing stress away.",
+      },
+    ],
+    related: [
+      "which-cipd-qualification-should-you-choose",
+      "how-to-pass-cipd-level-5",
+      "managing-cipd-deadlines-while-working-full-time",
+    ],
+  },
+  {
+    slug: "english-writing-tips-for-cipd-non-native-speakers",
+    title: "English Writing Tips for CIPD (Non-Native Speakers)",
+    description:
+      "Practical English writing tips for CIPD learners whose first language is not English, to help you write clear, professional, criteria-focused assignments.",
+    category: "Student guides",
+    keyword: "CIPD English writing tips",
+    date: "2026-07-09",
+    readMinutes: 5,
+    body: [
+      {
+        type: "p",
+        text: "Many CIPD learners, especially in the UAE and internationally, study in English as a second or third language. Your HR knowledge is not the issue; clear academic English simply takes practice. These tips help your ideas come through clearly.",
+      },
+      { type: "h2", text: "Write in short, clear sentences" },
+      {
+        type: "p",
+        text: "Long, complex sentences are where clarity gets lost. Aim for one main idea per sentence. Clear, simple writing is not less academic; assessors value it because it makes your argument easy to follow.",
+      },
+      { type: "h2", text: "Use a professional, academic tone" },
+      {
+        type: "ul",
+        items: [
+          "Avoid slang and overly casual phrasing",
+          "Prefer precise words over vague ones",
+          "Write mostly in the third person unless a reflective task asks otherwise",
+        ],
+      },
+      { type: "h2", text: "Build your subject vocabulary" },
+      {
+        type: "p",
+        text: "Learn the key HR and academic terms for each unit and use them accurately. Reading CIPD factsheets and journal articles helps you absorb the right vocabulary and phrasing naturally.",
+      },
+      { type: "h2", text: "Always proofread, or ask for a review" },
+      {
+        type: "p",
+        text: "Read your work aloud, or use it to catch awkward phrasing. Then, if you can, have someone review it for clarity and grammar. A second pair of eyes often spots what you cannot.",
+      },
+      {
+        type: "callout",
+        text: "Clarity beats complexity. A simple, well-structured answer in plain English scores better than a complicated one that is hard to follow.",
+      },
+      {
+        type: "p",
+        text: "Our editing and proofreading support refines grammar, tone and clarity while keeping your ideas and voice, so language never gets in the way of your marks.",
+      },
+    ],
+    related: [
+      "studying-cipd-in-the-uae",
+      "how-to-structure-a-cipd-assignment",
+      "how-strict-is-the-cipd-word-count",
+    ],
+  },
+  {
+    slug: "free-harvard-referencing-tools",
+    title: "Free Harvard Referencing Tools for CIPD",
+    description:
+      "A guide to free Harvard referencing tools for CIPD assignments, how to use them well, and why you should always check what they produce.",
+    category: "Referencing",
+    keyword: "free Harvard referencing tools",
+    date: "2026-07-09",
+    readMinutes: 4,
+    body: [
+      {
+        type: "p",
+        text: "Referencing takes time, and free tools can speed it up. Used well, they help you format citations consistently. Used blindly, they introduce errors that cost marks. Here is how to use them sensibly.",
+      },
+      { type: "h2", text: "What referencing tools do" },
+      {
+        type: "p",
+        text: "Referencing generators take the details of a source, such as author, year and title, and format them into a Harvard reference. Reference managers go further, storing your sources and inserting citations as you write.",
+      },
+      { type: "h2", text: "Popular free options" },
+      {
+        type: "ul",
+        items: [
+          "Cite This For Me: a widely used free Harvard citation generator",
+          "Zotero: a free reference manager that stores sources and inserts citations",
+          "Google Scholar: click the quotation mark under a result to get a formatted citation",
+        ],
+      },
+      {
+        type: "callout",
+        text: "Always check the output. Tools frequently get capitalisation, edition, and 'Accessed' dates wrong, and small errors add up across a reference list.",
+      },
+      { type: "h2", text: "Use them as a starting point, not the final word" },
+      {
+        type: "p",
+        text: "Generate the reference, then compare it against a reliable Harvard guide and correct anything that looks off. Make sure every in-text citation has a matching reference, and that formatting is consistent throughout.",
+      },
+      {
+        type: "p",
+        text: "If you would rather be certain your referencing is right, our Harvard referencing support checks your citations and reference list and shows you exactly what to fix.",
+      },
+    ],
+    related: [
+      "how-to-use-harvard-referencing-in-cipd-assessments",
+      "how-many-references-should-a-cipd-assignment-have",
+      "finding-credible-sources-for-cipd-google-scholar",
+    ],
+  },
 ];
 
 export function getPost(slug: string) {
