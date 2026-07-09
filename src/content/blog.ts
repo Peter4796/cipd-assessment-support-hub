@@ -1812,6 +1812,393 @@ export const posts: Post[] = [
       "5co01-assignment-structure",
     ],
   },
+
+  // ─────────────────────────────────────────────────────────────
+  // 5HR01 PILLAR CLUSTER
+  // ─────────────────────────────────────────────────────────────
+  {
+    slug: "5hr01-complete-guide",
+    title: "5HR01 Assignment: The Complete Guide",
+    description:
+      "A complete guide to the CIPD 5HR01 assignment (Employment relationship management): what it covers, how it is assessed, and how to approach each part.",
+    category: "5HR01",
+    keyword: "5HR01 assignment guide",
+    date: "2026-07-09",
+    readMinutes: 7,
+    unit: "5HR01",
+    body: [
+      {
+        type: "p",
+        text: "5HR01, Employment relationship management, is a popular CIPD Level 5 unit focused on how organisations build and maintain positive relationships with their people. This guide is the hub of our 5HR01 series: it gives the full picture, and the linked guides go deeper on each part. Always work from your own current brief for exact outcomes and criteria.",
+      },
+      { type: "h2", text: "What 5HR01 is about" },
+      {
+        type: "p",
+        text: "The unit looks at how the employment relationship is managed day to day: giving employees a voice, keeping them engaged, handling conflict fairly, and doing all of this within the law. It blends practical people management with an understanding of employment law and employee relations.",
+      },
+      { type: "h2", text: "The main themes" },
+      {
+        type: "ul",
+        items: [
+          "Employee voice, engagement and involvement",
+          "Conflict, and how disputes are resolved",
+          "Managing discipline, grievances and performance fairly",
+          "Employment law essentials and the role of employee bodies",
+        ],
+      },
+      {
+        type: "callout",
+        text: "5HR01 rewards applying legal and practical points to workplace scenarios. Do not just state the law; show how it plays out and what a people professional should do.",
+      },
+      { type: "h2", text: "How 5HR01 is assessed" },
+      {
+        type: "p",
+        text: "Like other Level 5 units, 5HR01 is assessed by a written assignment marked against learning outcomes and assessment criteria. Expect to apply employment law accurately, use credible sources, and analyse rather than describe.",
+      },
+      { type: "h2", text: "How to approach it" },
+      {
+        type: "ol",
+        items: [
+          "Break down the brief and map each task to its criteria.",
+          "Refresh the key areas of employment law relevant to the tasks.",
+          "Apply each point to realistic workplace scenarios.",
+          "Support claims with credible, current sources.",
+          "Check your draft against every criterion before submitting.",
+        ],
+      },
+      { type: "h2", text: "Go deeper" },
+      {
+        type: "p",
+        text: "Use the guides in this series for employee voice, conflict and dispute resolution, discipline and grievance, employment law essentials, common mistakes, structure and FAQs. For tailored help, our 5HR01 support covers everything from brief analysis to draft review.",
+      },
+    ],
+    related: ["5hr01-employee-voice-engagement", "5hr01-common-mistakes", "5hr01-assignment-structure"],
+  },
+  {
+    slug: "5hr01-employee-voice-engagement",
+    title: "5HR01: Employee Voice and Engagement Explained",
+    description:
+      "A guide to employee voice and engagement in CIPD 5HR01: what they mean, why they matter, key models, and how to analyse them in your assignment.",
+    category: "5HR01",
+    keyword: "5HR01 employee voice",
+    date: "2026-07-09",
+    readMinutes: 6,
+    unit: "5HR01",
+    body: [
+      {
+        type: "p",
+        text: "A core part of 5HR01 is employee voice and engagement: how organisations give people a say, and how that supports better working lives and performance. Here is how to approach it, and remember to check your own brief for exact wording.",
+      },
+      { type: "h2", text: "What employee voice means" },
+      {
+        type: "p",
+        text: "Employee voice is the ways in which people express their views and influence decisions at work. It ranges from individual channels, such as one-to-ones and surveys, to collective ones, such as forums, representatives and trade unions.",
+      },
+      { type: "h2", text: "Voice and engagement" },
+      {
+        type: "p",
+        text: "Voice and engagement are linked. When people feel heard, they tend to be more engaged, and higher engagement is associated with better performance, wellbeing and retention. Showing that chain of reasoning, supported by evidence, is what earns marks.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Direct voice: surveys, one-to-ones, suggestion schemes, town halls",
+          "Indirect voice: employee forums, representatives, recognised trade unions",
+          "Engagement drivers: meaningful work, good management, involvement and fairness",
+        ],
+      },
+      {
+        type: "callout",
+        text: "Do not just list voice mechanisms. Analyse how effective they are in a real organisation and what impact they have on engagement and performance.",
+      },
+      { type: "h2", text: "Making it analytical" },
+      {
+        type: "p",
+        text: "Apply the ideas to a real organisation: which voice mechanisms does it use, how well do they work, and what could improve them? That application and evaluation is the difference between a descriptive and a strong answer.",
+      },
+      {
+        type: "p",
+        text: "See the complete 5HR01 guide for the full picture, and read on for conflict and dispute resolution.",
+      },
+    ],
+    related: ["5hr01-complete-guide", "5hr01-conflict-dispute-resolution", "5hr01-employment-law-essentials"],
+  },
+  {
+    slug: "5hr01-conflict-dispute-resolution",
+    title: "5HR01: Conflict and Dispute Resolution",
+    description:
+      "A guide to conflict and dispute resolution in CIPD 5HR01: types of conflict, formal and informal resolution, and how to analyse them in your assignment.",
+    category: "5HR01",
+    keyword: "5HR01 conflict resolution",
+    date: "2026-07-09",
+    readMinutes: 5,
+    unit: "5HR01",
+    body: [
+      {
+        type: "p",
+        text: "5HR01 asks you to understand conflict at work and how it is resolved. This covers both individual and collective conflict, and the range of approaches from informal conversations to formal procedures. Check your brief for the exact requirements.",
+      },
+      { type: "h2", text: "Types of conflict" },
+      {
+        type: "ul",
+        items: [
+          "Individual conflict: disagreements, grievances, or issues between a person and the organisation",
+          "Collective conflict: disputes involving groups of employees, such as industrial action",
+          "Organisational versus interpersonal sources of conflict",
+        ],
+      },
+      { type: "h2", text: "Informal and formal resolution" },
+      {
+        type: "p",
+        text: "Good practice resolves issues early and informally where possible, through conversation and mediation. Where that is not enough, formal procedures and, in some cases, third parties such as Acas or arbitration come into play.",
+      },
+      {
+        type: "callout",
+        text: "Show the value of resolving conflict early and informally. Assessors look for an understanding that formal procedures are a last resort, not a first response.",
+      },
+      { type: "h2", text: "Mediation and third parties" },
+      {
+        type: "p",
+        text: "Be ready to explain approaches such as mediation, conciliation and arbitration, and when each is appropriate. Apply them to a scenario: what would a people professional do, and why?",
+      },
+      {
+        type: "p",
+        text: "See the complete 5HR01 guide, and our discipline and grievance article for the formal side of managing individual issues.",
+      },
+    ],
+    related: ["5hr01-complete-guide", "5hr01-discipline-grievance", "5hr01-employee-voice-engagement"],
+  },
+  {
+    slug: "5hr01-discipline-grievance",
+    title: "5HR01: Managing Discipline and Grievance Fairly",
+    description:
+      "A guide to managing discipline and grievance in CIPD 5HR01: fair procedures, the law, and how to analyse handling these matters in your assignment.",
+    category: "5HR01",
+    keyword: "5HR01 discipline and grievance",
+    date: "2026-07-09",
+    readMinutes: 5,
+    unit: "5HR01",
+    body: [
+      {
+        type: "p",
+        text: "Handling discipline and grievance fairly and lawfully is a key part of 5HR01. The focus is on fair procedure, consistency, and staying within the law. As always, check your own brief for the exact criteria.",
+      },
+      { type: "h2", text: "Fair procedures" },
+      {
+        type: "p",
+        text: "Fair handling means following a clear, consistent procedure: investigating properly, letting the employee respond, allowing representation where appropriate, and giving a right of appeal. In the UK, the Acas Code of Practice sets the standard for fair discipline and grievance handling.",
+      },
+      { type: "h2", text: "Why fairness matters" },
+      {
+        type: "ul",
+        items: [
+          "It reduces the risk of claims such as unfair dismissal",
+          "It supports trust and a positive employment relationship",
+          "It ensures decisions are consistent and defensible",
+        ],
+      },
+      {
+        type: "callout",
+        text: "Link procedure to fairness and law. A strong answer explains not just what the steps are, but why each protects fairness and manages legal risk.",
+      },
+      { type: "h2", text: "Applying it" },
+      {
+        type: "p",
+        text: "Use a scenario to show good practice: how should a manager handle a specific grievance or disciplinary issue, step by step, and what are the risks of getting it wrong? That application demonstrates real understanding.",
+      },
+      {
+        type: "p",
+        text: "See the complete 5HR01 guide, and our employment law essentials article for the legal background.",
+      },
+    ],
+    related: ["5hr01-complete-guide", "5hr01-employment-law-essentials", "5hr01-conflict-dispute-resolution"],
+  },
+  {
+    slug: "5hr01-employment-law-essentials",
+    title: "Employment Law Essentials for 5HR01",
+    description:
+      "The key areas of employment law you need for CIPD 5HR01, from contracts to dismissal, and how to apply them accurately in your assignment.",
+    category: "5HR01",
+    keyword: "5HR01 employment law",
+    date: "2026-07-09",
+    readMinutes: 6,
+    unit: "5HR01",
+    body: [
+      {
+        type: "p",
+        text: "5HR01 expects a working understanding of employment law and, importantly, the ability to apply it. You are not expected to be a lawyer, but you should handle the essentials accurately. Always check current law and your own brief, as legislation changes.",
+      },
+      { type: "h2", text: "Key areas to know" },
+      {
+        type: "ul",
+        items: [
+          "Contracts of employment and key terms",
+          "Types of dismissal, including fair and unfair dismissal",
+          "Discrimination and equality at work",
+          "The role of the Acas Code of Practice in discipline and grievance",
+        ],
+      },
+      { type: "h2", text: "Apply, do not just state" },
+      {
+        type: "p",
+        text: "The common trap is describing the law without applying it. Marks come from showing what the law means for a situation: what a people professional must do, what the risks are, and how to act fairly and lawfully.",
+      },
+      {
+        type: "callout",
+        text: "Keep it current and cite reliable sources. Employment law changes, so use up-to-date, credible references and note that specifics can vary by jurisdiction.",
+      },
+      { type: "h2", text: "A note for UAE learners" },
+      {
+        type: "p",
+        text: "If you study 5HR01 in the UAE, your brief may still focus on UK-style principles, but be clear about which legal context you are writing in and check what your centre expects. Apply the principles to your own workplace where you can.",
+      },
+      {
+        type: "p",
+        text: "See the complete 5HR01 guide for how this fits the whole unit, and our discipline and grievance article for law in practice.",
+      },
+    ],
+    related: ["5hr01-complete-guide", "5hr01-discipline-grievance", "finding-credible-sources-for-cipd-google-scholar"],
+  },
+  {
+    slug: "5hr01-common-mistakes",
+    title: "Common Mistakes in 5HR01 (and How to Avoid Them)",
+    description:
+      "The most common mistakes in CIPD 5HR01 assignments, from stating the law without applying it to weak analysis, and how to avoid a referral.",
+    category: "5HR01",
+    keyword: "5HR01 common mistakes",
+    date: "2026-07-09",
+    readMinutes: 5,
+    unit: "5HR01",
+    body: [
+      {
+        type: "p",
+        text: "5HR01 has some predictable pitfalls, especially around employment law. Here are the mistakes we see most, and how to avoid them.",
+      },
+      { type: "h2", text: "1. Stating the law without applying it" },
+      {
+        type: "p",
+        text: "Describing legislation earns little on its own. Apply it: what does it mean for the scenario, and what should a people professional do?",
+      },
+      { type: "h2", text: "2. Out-of-date or unreferenced legal points" },
+      {
+        type: "p",
+        text: "Employment law changes. Using old information, or stating legal points without a source, weakens your answer and your credibility.",
+      },
+      { type: "h2", text: "3. Describing voice mechanisms without evaluating them" },
+      {
+        type: "p",
+        text: "Listing engagement or voice methods is description. Analysing how well they work, and their impact, is what Level 5 rewards.",
+      },
+      { type: "h2", text: "4. Treating formal procedures as the first response" },
+      {
+        type: "p",
+        text: "Good practice resolves issues early and informally. Answers that jump straight to formal procedures miss an important point about managing the relationship.",
+      },
+      {
+        type: "callout",
+        text: "The theme: apply and evaluate. 5HR01 rewards applying law and practice to scenarios and evaluating what works, not describing rules.",
+      },
+      {
+        type: "p",
+        text: "If your 5HR01 draft has been referred, our draft review identifies exactly which of these issues cost marks and how to fix them.",
+      },
+    ],
+    related: ["5hr01-complete-guide", "5hr01-assignment-structure", "common-mistakes-in-cipd-level-5-assignments"],
+  },
+  {
+    slug: "5hr01-assignment-structure",
+    title: "How to Structure Your 5HR01 Assignment",
+    description:
+      "A clear structure for the CIPD 5HR01 assignment, with headings that map to the tasks and criteria so your answer is focused and easy to mark.",
+    category: "5HR01",
+    keyword: "5HR01 assignment structure",
+    date: "2026-07-09",
+    readMinutes: 5,
+    unit: "5HR01",
+    body: [
+      {
+        type: "p",
+        text: "A clear structure keeps 5HR01 focused and makes it easy to mark. Organise your answer around the tasks and criteria in your brief, with headings that show where each point is addressed.",
+      },
+      { type: "h2", text: "A structure that works" },
+      {
+        type: "ol",
+        items: [
+          "A short introduction setting scope and context.",
+          "A section on employee voice and engagement, with analysis.",
+          "A section on conflict and dispute resolution.",
+          "A section on discipline, grievance and fair, lawful handling.",
+          "Employment law applied throughout, not bolted on at the end.",
+          "A brief conclusion, plus recommendations if asked, and a full Harvard reference list.",
+        ],
+      },
+      {
+        type: "callout",
+        text: "Weave the law into each relevant section rather than isolating it. Applying law in context reads far better than a standalone legal summary.",
+      },
+      { type: "h2", text: "Plan your word count" },
+      {
+        type: "p",
+        text: "Allocate a word budget to each task before writing, in proportion to its criteria. This keeps your answer balanced and stops you running short on the parts that carry the most marks.",
+      },
+      { type: "h2", text: "Theory and law to practice" },
+      {
+        type: "p",
+        text: "In every section, move from the concept or legal point to how it applies in a real workplace, then to analysis. That rhythm keeps the whole answer applied and analytical.",
+      },
+      {
+        type: "p",
+        text: "See the complete 5HR01 guide for the full approach, or our structure and planning support can build an outline mapped to your brief.",
+      },
+    ],
+    related: ["5hr01-complete-guide", "5hr01-common-mistakes", "how-to-structure-a-cipd-assignment"],
+  },
+  {
+    slug: "5hr01-faqs",
+    title: "5HR01 FAQs: Your Questions Answered",
+    description:
+      "Answers to frequently asked questions about the CIPD 5HR01 assignment: employment law, using your organisation, word count and avoiding a referral.",
+    category: "5HR01",
+    keyword: "5HR01 FAQ",
+    date: "2026-07-09",
+    readMinutes: 5,
+    unit: "5HR01",
+    body: [
+      {
+        type: "p",
+        text: "Here are answers to the questions learners ask most about 5HR01, Employment relationship management. Always check the specifics against your own current brief and centre guidance.",
+      },
+      { type: "h3", text: "How much employment law do I need to know?" },
+      {
+        type: "p",
+        text: "Enough to handle the essentials accurately and apply them, not the depth of a legal specialist. Focus on contracts, dismissal, discrimination and fair procedure, and always apply the law to scenarios.",
+      },
+      { type: "h3", text: "Can I use my own organisation?" },
+      {
+        type: "p",
+        text: "Yes, and it usually makes your analysis stronger. Use real examples of voice, conflict handling or procedures from your workplace where you can.",
+      },
+      { type: "h3", text: "Does UK law apply if I study in the UAE?" },
+      {
+        type: "p",
+        text: "It depends on your brief and centre. Many briefs use UK-style principles, but be clear which legal context you are writing in and check what your centre expects.",
+      },
+      { type: "h3", text: "Why do people get referred on 5HR01?" },
+      {
+        type: "p",
+        text: "Most often for stating the law without applying it, using out-of-date legal points, or describing rather than analysing. Our common mistakes guide covers how to avoid these.",
+      },
+      {
+        type: "callout",
+        text: "The theme across all of these: apply the law and practice to real scenarios, and analyse what works.",
+      },
+      {
+        type: "p",
+        text: "For the full approach, start with the complete 5HR01 guide. For tailored help, our 5HR01 support covers brief analysis, structure, referencing and draft review.",
+      },
+    ],
+    related: ["5hr01-complete-guide", "5hr01-common-mistakes", "5hr01-employment-law-essentials"],
+  },
 ];
 
 export function getPost(slug: string) {
