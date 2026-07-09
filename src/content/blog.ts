@@ -22,7 +22,13 @@ export type Post = {
   readMinutes: number;
   body: Block[];
   related: string[]; // slugs
+  unit?: string; // optional unit code (e.g. "5CO01"), links this post to a unit pillar hub
 };
+
+/** Posts that form the pillar cluster for a given unit code, newest first. */
+export function postsForUnit(code: string) {
+  return posts.filter((p) => p.unit === code);
+}
 
 export const posts: Post[] = [
   {
@@ -1374,6 +1380,436 @@ export const posts: Post[] = [
       "how-to-use-harvard-referencing-in-cipd-assessments",
       "how-many-references-should-a-cipd-assignment-have",
       "finding-credible-sources-for-cipd-google-scholar",
+    ],
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // 5CO01 PILLAR CLUSTER
+  // ─────────────────────────────────────────────────────────────
+  {
+    slug: "5co01-complete-guide",
+    title: "5CO01 Assignment: The Complete Guide",
+    description:
+      "A complete guide to the CIPD 5CO01 assignment (Organisational performance and culture in practice): what it covers, how it is assessed, and how to approach each part.",
+    category: "5CO01",
+    keyword: "5CO01 assignment guide",
+    date: "2026-07-09",
+    readMinutes: 7,
+    unit: "5CO01",
+    body: [
+      {
+        type: "p",
+        text: "5CO01, Organisational performance and culture in practice, is one of the most widely studied CIPD Level 5 units, and one where many learners are referred. This guide gives you the full picture: what the unit covers, how it is assessed, and how to approach it well. It is the hub of our 5CO01 guides, which go deeper on each part.",
+      },
+      { type: "h2", text: "What 5CO01 is about" },
+      {
+        type: "p",
+        text: "5CO01 connects the bigger picture of an organisation to its people practice. It looks at how structure, strategy and the external environment shape an organisation, how culture and behaviour affect the way people work, and how people practices influence performance. The thread running through it is the link between organisational context and people outcomes.",
+      },
+      { type: "h2", text: "The main themes" },
+      {
+        type: "ul",
+        items: [
+          "Organisational structures and the external business environment",
+          "Strategy, and how people practice connects to it",
+          "Organisational culture and how people behave at work",
+          "How people practices drive performance and support change",
+        ],
+      },
+      {
+        type: "callout",
+        text: "Always work from your own current assessment brief. Learning outcomes and criteria wording can change, so map your tasks to the exact brief you have been given.",
+      },
+      { type: "h2", text: "How 5CO01 is assessed" },
+      {
+        type: "p",
+        text: "Like most Level 5 units, 5CO01 is assessed by a written assignment marked against learning outcomes and assessment criteria. Level 5 expects evidence-based analysis and application to a real organisation, not just description. This is the single biggest reason 5CO01 answers get referred.",
+      },
+      { type: "h2", text: "How to approach it" },
+      {
+        type: "ol",
+        items: [
+          "Break down the brief and map every task to its criteria.",
+          "Choose a real organisation to anchor your analysis.",
+          "For each point, move from description to analysis and application.",
+          "Support your arguments with credible sources and correct Harvard referencing.",
+          "Review your draft against every criterion before submitting.",
+        ],
+      },
+      { type: "h2", text: "Go deeper" },
+      {
+        type: "p",
+        text: "Use the guides in this 5CO01 series to go further on each part: the learning outcomes explained, recommended theories and models, common mistakes to avoid, how to structure your answer, and 5CO01 FAQs. If you would like tailored help, our 5CO01 support covers everything from brief analysis to draft review.",
+      },
+    ],
+    related: [
+      "5co01-learning-outcome-1",
+      "5co01-common-mistakes",
+      "5co01-assignment-structure",
+    ],
+  },
+  {
+    slug: "5co01-learning-outcome-1",
+    title: "5CO01 Learning Outcome 1: Structure, Strategy and the Business Environment",
+    description:
+      "A guide to 5CO01 Learning Outcome 1: organisational structures, strategy and the external business environment, and how to analyse them for your CIPD assignment.",
+    category: "5CO01",
+    keyword: "5CO01 learning outcome 1",
+    date: "2026-07-09",
+    readMinutes: 6,
+    unit: "5CO01",
+    body: [
+      {
+        type: "p",
+        text: "The first part of 5CO01 typically focuses on the organisation itself: its structure, its strategy, and the external environment it operates in. The aim is to show how these connect and shape the way people practice works. Here is how to approach it. Always check your own brief for the exact wording of the outcomes and criteria.",
+      },
+      { type: "h2", text: "Organisational structures" },
+      {
+        type: "p",
+        text: "Be ready to explain your organisation's structure, for example functional, divisional, matrix or flat, and analyse its advantages and disadvantages. The key is not to describe structures in general, but to evaluate how your organisation's structure affects communication, decision-making and people practice.",
+      },
+      { type: "h2", text: "Strategy and the operating environment" },
+      {
+        type: "p",
+        text: "You will usually need to consider how external factors influence the organisation and its strategy. Analytical tools can help you organise this.",
+      },
+      {
+        type: "ul",
+        items: [
+          "PESTLE: political, economic, social, technological, legal and environmental factors",
+          "SWOT: strengths, weaknesses, opportunities and threats",
+          "Porter's Five Forces: for analysing competitive pressures",
+        ],
+      },
+      {
+        type: "callout",
+        text: "Use a model as a lens, not a list. Do not just fill in a PESTLE table; explain what the most significant factors mean for the organisation and its people practice.",
+      },
+      { type: "h2", text: "Making the link to people practice" },
+      {
+        type: "p",
+        text: "The marks come from connection. Show how the structure, strategy and environment shape priorities for the people function, for example how a change in the market drives a need for new skills, restructuring, or a different approach to resourcing.",
+      },
+      {
+        type: "p",
+        text: "For the wider picture, see our complete 5CO01 guide, and read on for Learning Outcome 2 on culture and behaviour.",
+      },
+    ],
+    related: [
+      "5co01-complete-guide",
+      "5co01-learning-outcome-2",
+      "5co01-theories-and-models",
+    ],
+  },
+  {
+    slug: "5co01-learning-outcome-2",
+    title: "5CO01 Learning Outcome 2: Organisational Culture and Behaviour",
+    description:
+      "A guide to 5CO01 organisational culture and behaviour: key theories, how culture affects performance, and how to analyse it for your CIPD Level 5 assignment.",
+    category: "5CO01",
+    keyword: "5CO01 organisational culture",
+    date: "2026-07-09",
+    readMinutes: 6,
+    unit: "5CO01",
+    body: [
+      {
+        type: "p",
+        text: "A central part of 5CO01 is organisational culture and how people behave at work. This is where you show understanding of the theory and, crucially, apply it to your organisation. Check your own brief for the exact outcomes and criteria.",
+      },
+      { type: "h2", text: "What organisational culture means" },
+      {
+        type: "p",
+        text: "Culture is the shared values, beliefs and behaviours that shape how things are done in an organisation. It affects engagement, performance and how well change lands. A strong answer explains not just what culture is, but how it shows up in your organisation.",
+      },
+      { type: "h2", text: "Useful theories and models" },
+      {
+        type: "ul",
+        items: [
+          "Schein's three levels of culture: artefacts, espoused values and basic assumptions",
+          "Handy's cultural types: power, role, task and person cultures",
+          "Hofstede's dimensions: useful for cross-cultural and international contexts",
+        ],
+      },
+      {
+        type: "callout",
+        text: "Pick one or two models and apply them well. Applying Schein's levels to your organisation earns far more than briefly naming several models.",
+      },
+      { type: "h2", text: "Linking culture to behaviour and performance" },
+      {
+        type: "p",
+        text: "Show how culture influences the way people behave, and how that behaviour affects performance. Then connect it to people practice: how could the people function shape or shift the culture to support the organisation's goals? That analysis and application is what Level 5 rewards.",
+      },
+      {
+        type: "p",
+        text: "See the complete 5CO01 guide for the full picture, and our recommended theories article for more models you can use across the unit.",
+      },
+    ],
+    related: [
+      "5co01-learning-outcome-1",
+      "5co01-theories-and-models",
+      "5co01-complete-guide",
+    ],
+  },
+  {
+    slug: "5co01-learning-outcome-3",
+    title: "5CO01 Learning Outcome 3: How People Practices Affect Performance",
+    description:
+      "A guide to how people practices impact organisational performance and culture in 5CO01, and how to evidence that link in your CIPD Level 5 assignment.",
+    category: "5CO01",
+    keyword: "5CO01 people practices performance",
+    date: "2026-07-09",
+    readMinutes: 5,
+    unit: "5CO01",
+    body: [
+      {
+        type: "p",
+        text: "The later part of 5CO01 usually asks you to show how people practices affect wider organisational systems, culture and performance. This is where the unit's threads come together. As always, work from your own brief for exact wording.",
+      },
+      { type: "h2", text: "People practice as a driver, not a support act" },
+      {
+        type: "p",
+        text: "The aim is to show that people practices are not just administrative, but actively shape performance and culture. Think about how resourcing, reward, learning, wellbeing and engagement practices influence how an organisation performs.",
+      },
+      { type: "h2", text: "Evidencing the impact" },
+      {
+        type: "ul",
+        items: [
+          "Use data and examples to show the effect of a practice, not just its existence",
+          "Connect a specific practice to a specific outcome, such as retention or engagement",
+          "Consider both positive impacts and potential risks or limitations",
+        ],
+      },
+      {
+        type: "callout",
+        text: "Strong answers trace a clear line: this people practice, in this context, produces this effect on performance or culture, supported by this evidence.",
+      },
+      { type: "h2", text: "Bringing it together" },
+      {
+        type: "p",
+        text: "By this point you should be linking structure, strategy, environment, culture and people practice into one coherent argument about performance. That integrated analysis is what separates a strong 5CO01 answer from a descriptive one.",
+      },
+      {
+        type: "p",
+        text: "Return to the complete 5CO01 guide for the full structure, or read our common mistakes article to avoid the traps that cost marks.",
+      },
+    ],
+    related: [
+      "5co01-complete-guide",
+      "5co01-common-mistakes",
+      "5co01-learning-outcome-2",
+    ],
+  },
+  {
+    slug: "5co01-common-mistakes",
+    title: "Common Mistakes in 5CO01 (and How to Avoid Them)",
+    description:
+      "The most common mistakes in CIPD 5CO01 assignments, from description over analysis to weak application, and practical ways to avoid a referral.",
+    category: "5CO01",
+    keyword: "5CO01 common mistakes",
+    date: "2026-07-09",
+    readMinutes: 5,
+    unit: "5CO01",
+    body: [
+      {
+        type: "p",
+        text: "5CO01 is a common unit for referrals, but the reasons are predictable and avoidable. Here are the mistakes we see most often, and how to steer clear of them.",
+      },
+      { type: "h2", text: "1. Describing instead of analysing" },
+      {
+        type: "p",
+        text: "The biggest one. Explaining what a structure or culture model is earns few marks. Analysing how it applies to your organisation, and what it means for performance, is what Level 5 wants.",
+      },
+      { type: "h2", text: "2. No real organisation to anchor the analysis" },
+      {
+        type: "p",
+        text: "Generic answers that could apply anywhere feel thin. Ground everything in a real or realistic organisation with its own context.",
+      },
+      { type: "h2", text: "3. Using models as lists" },
+      {
+        type: "p",
+        text: "Filling in a PESTLE or SWOT table without interpretation is a classic trap. Use models as a lens to analyse, and explain what the key factors actually mean.",
+      },
+      { type: "h2", text: "4. Missing the link to people practice" },
+      {
+        type: "p",
+        text: "5CO01 is ultimately about how organisational context connects to people practice and performance. Answers that analyse the organisation but never make that link lose the core of the unit.",
+      },
+      {
+        type: "callout",
+        text: "Quick check: for every point, ask whether you have analysed it and linked it to people practice and performance. If not, it is probably still description.",
+      },
+      { type: "h2", text: "5. Weak evidence and referencing" },
+      {
+        type: "p",
+        text: "Unsupported claims and inconsistent Harvard referencing cost easy marks. Support key points with credible sources and keep your referencing tidy throughout.",
+      },
+      {
+        type: "p",
+        text: "If your 5CO01 draft has already been referred, our draft review pinpoints exactly which of these issues cost you marks and how to fix them.",
+      },
+    ],
+    related: [
+      "5co01-complete-guide",
+      "5co01-assignment-structure",
+      "common-mistakes-in-cipd-level-5-assignments",
+    ],
+  },
+  {
+    slug: "5co01-theories-and-models",
+    title: "Recommended Theories and Models for 5CO01",
+    description:
+      "The most useful theories and models for CIPD 5CO01, covering structure, strategy, culture and behaviour, and how to apply them for higher marks.",
+    category: "5CO01",
+    keyword: "5CO01 theories and models",
+    date: "2026-07-09",
+    readMinutes: 5,
+    unit: "5CO01",
+    body: [
+      {
+        type: "p",
+        text: "Using the right theories and models, and applying them well, is central to a strong 5CO01 answer. Here are the ones most relevant to the unit, grouped by theme. Choose a focused set and apply them to your organisation rather than listing many.",
+      },
+      { type: "h2", text: "Structure and strategy" },
+      {
+        type: "ul",
+        items: [
+          "PESTLE: analysing the external operating environment",
+          "SWOT: internal strengths and weaknesses against external opportunities and threats",
+          "Porter's Five Forces: competitive pressures in the market",
+        ],
+      },
+      { type: "h2", text: "Culture and behaviour" },
+      {
+        type: "ul",
+        items: [
+          "Schein's three levels of culture",
+          "Handy's four cultural types",
+          "Hofstede's cultural dimensions, useful for international contexts",
+        ],
+      },
+      { type: "h2", text: "Change and performance" },
+      {
+        type: "ul",
+        items: [
+          "Lewin's change model, for how change affects people and culture",
+          "The balanced scorecard, for linking people practice to performance measures",
+        ],
+      },
+      {
+        type: "callout",
+        text: "Depth beats breadth. Applying two or three models thoroughly to your organisation earns more than naming six in passing.",
+      },
+      {
+        type: "p",
+        text: "For how these fit into each part of the assignment, see the complete 5CO01 guide and the learning outcome articles in this series.",
+      },
+    ],
+    related: [
+      "5co01-learning-outcome-1",
+      "5co01-learning-outcome-2",
+      "5co01-complete-guide",
+    ],
+  },
+  {
+    slug: "5co01-assignment-structure",
+    title: "How to Structure Your 5CO01 Assignment",
+    description:
+      "A clear structure for the CIPD 5CO01 assignment, with headings that map to the tasks and criteria, so your answer is focused and easy to mark.",
+    category: "5CO01",
+    keyword: "5CO01 assignment structure",
+    date: "2026-07-09",
+    readMinutes: 5,
+    unit: "5CO01",
+    body: [
+      {
+        type: "p",
+        text: "A clear structure makes 5CO01 easier to write and easier to mark. The best approach is to organise your answer around the tasks and criteria in your brief, using headings that make it obvious where each point is addressed.",
+      },
+      { type: "h2", text: "A structure that works" },
+      {
+        type: "ol",
+        items: [
+          "A short introduction that sets scope and introduces your organisation.",
+          "A section on structure, strategy and the operating environment, with analysis.",
+          "A section on organisational culture and behaviour, applying a model or two.",
+          "A section on how people practices affect performance and culture.",
+          "A brief conclusion drawing the threads together, plus recommendations if asked.",
+          "A complete, consistent Harvard reference list.",
+        ],
+      },
+      {
+        type: "callout",
+        text: "Use headings that echo the brief. If a task says 'analyse organisational culture', a heading like 'Analysis of organisational culture' signals exactly where that criterion is met.",
+      },
+      { type: "h2", text: "Plan your word count" },
+      {
+        type: "p",
+        text: "Allocate a word budget to each section before you write, in proportion to the marks or criteria it carries. This stops you over-writing early sections and running short on the analysis that matters most.",
+      },
+      { type: "h2", text: "Move from theory to application in every section" },
+      {
+        type: "p",
+        text: "Within each section, introduce the concept, then apply it to your organisation, then analyse what it means. That rhythm keeps your answer analytical rather than descriptive throughout.",
+      },
+      {
+        type: "p",
+        text: "See the complete 5CO01 guide for the full approach, or our structure and planning support can build you an outline mapped to your specific brief.",
+      },
+    ],
+    related: [
+      "5co01-complete-guide",
+      "5co01-common-mistakes",
+      "how-to-structure-a-cipd-assignment",
+    ],
+  },
+  {
+    slug: "5co01-faqs",
+    title: "5CO01 FAQs: Your Questions Answered",
+    description:
+      "Answers to frequently asked questions about the CIPD 5CO01 assignment: word count, choosing an organisation, referencing, and how to avoid a referral.",
+    category: "5CO01",
+    keyword: "5CO01 FAQ",
+    date: "2026-07-09",
+    readMinutes: 5,
+    unit: "5CO01",
+    body: [
+      {
+        type: "p",
+        text: "Here are answers to the questions learners ask most about 5CO01, Organisational performance and culture in practice. Always check the specifics against your own current brief and study centre guidance.",
+      },
+      { type: "h3", text: "Can I use my own organisation for 5CO01?" },
+      {
+        type: "p",
+        text: "Yes, and it is usually the best approach. Using a real organisation you know well makes your analysis and application far stronger. If you cannot use your own, a well-researched organisation you understand works too.",
+      },
+      { type: "h3", text: "How many words is 5CO01?" },
+      {
+        type: "p",
+        text: "Word counts vary by centre, so check your brief. Whatever the limit, allocate it across the tasks in proportion to their criteria, and stay within the tolerance your centre allows.",
+      },
+      { type: "h3", text: "Which models should I use?" },
+      {
+        type: "p",
+        text: "Choose a focused set and apply them well. PESTLE or SWOT for the environment, and Schein or Handy for culture, are commonly used. Applying two or three thoroughly beats naming many.",
+      },
+      { type: "h3", text: "Why do people get referred on 5CO01?" },
+      {
+        type: "p",
+        text: "Most often for describing rather than analysing, not applying points to a real organisation, or missing the link between organisational context and people practice. Our common mistakes guide covers how to avoid these.",
+      },
+      {
+        type: "callout",
+        text: "The theme across all of these: analyse and apply. 5CO01 rewards analysis linked to a real organisation, not description.",
+      },
+      {
+        type: "p",
+        text: "For the full approach, start with the complete 5CO01 guide. If you would like tailored help, our 5CO01 support covers brief analysis, structure, referencing and draft review.",
+      },
+    ],
+    related: [
+      "5co01-complete-guide",
+      "5co01-common-mistakes",
+      "5co01-assignment-structure",
     ],
   },
 ];

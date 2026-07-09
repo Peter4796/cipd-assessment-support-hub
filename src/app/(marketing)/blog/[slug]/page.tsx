@@ -7,6 +7,7 @@ import { Icon } from "@/components/Icon";
 import { CtaBand } from "@/components/Cta";
 import { RichContent } from "@/components/RichContent";
 import { posts, getPost } from "@/content/blog";
+import { getUnit } from "@/content/units";
 import { site } from "@/lib/site";
 
 export function generateStaticParams() {
@@ -75,6 +76,21 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
       <Section tone="white">
         <div className="mx-auto max-w-3xl">
+          {/* Unit pillar banner */}
+          {post.unit && getUnit(post.unit.toLowerCase()) && (
+            <Link
+              href={`/cipd-units/${post.unit.toLowerCase()}`}
+              className="mb-8 flex items-center justify-between gap-4 rounded-2xl border border-teal-200 bg-teal-50/60 p-4 transition-colors hover:border-teal-300"
+            >
+              <span className="text-sm text-navy-700">
+                Part of our complete{" "}
+                <span className="font-semibold text-navy-900">{post.unit} guide</span>. See all{" "}
+                {post.unit} support and guides.
+              </span>
+              <Icon name="arrow" className="h-5 w-5 flex-none text-teal-600" />
+            </Link>
+          )}
+
           <RichContent blocks={post.body} />
 
           {/* Back link */}

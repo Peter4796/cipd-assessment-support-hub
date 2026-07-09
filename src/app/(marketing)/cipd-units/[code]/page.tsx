@@ -6,6 +6,7 @@ import { Section, ButtonLink, CheckList } from "@/components/ui";
 import { Icon } from "@/components/Icon";
 import { CtaBand } from "@/components/Cta";
 import { units, getUnit } from "@/content/units";
+import { postsForUnit } from "@/content/blog";
 import { cta, site, whatsappLink } from "@/lib/site";
 
 export function generateStaticParams() {
@@ -16,7 +17,7 @@ export function generateMetadata({ params }: { params: { code: string } }): Meta
   const unit = getUnit(params.code);
   if (!unit) return {};
   return {
-    title: `${unit.code} Assignment Help — ${unit.title}`,
+    title: `${unit.code} Assignment Help: ${unit.title}`,
     description: `${unit.code} (${unit.title}) assignment support for CIPD ${unit.qualification}. Brief analysis, structure, Harvard referencing and draft review for UK and UAE learners.`,
     keywords: [unit.keyword, `${unit.code} assignment`, `CIPD ${unit.code}`, `${unit.code} example`],
     alternates: { canonical: `${site.url}/cipd-units/${unit.slug}` },
@@ -50,6 +51,7 @@ export default function UnitPage({ params }: { params: { code: string } }) {
 
   const related = units.filter((u) => u.level === unit.level && u.slug !== unit.slug).slice(0, 3);
   const levelSlug = `/cipd-level-${unit.level}-support`;
+  const guides = postsForUnit(unit.code);
 
   return (
     <>
@@ -122,9 +124,38 @@ export default function UnitPage({ params }: { params: { code: string } }) {
         </div>
       </Section>
 
+      {/* In-depth guides (pillar cluster) */}
+      {guides.length > 0 && (
+        <Section tone="mist">
+          <div className="mb-8 max-w-2xl">
+            <span className="eyebrow">Free {unit.code} guides</span>
+            <h2 className="text-2xl font-bold text-navy-900">
+              In-depth guides for {unit.code}
+            </h2>
+            <p className="mt-2 body-copy">
+              Free, detailed articles to help you understand and tackle every part of {unit.code}.
+            </p>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {guides.map((g) => (
+              <Link key={g.slug} href={`/blog/${g.slug}`} className="card card-hover group flex flex-col">
+                <span className="chip border-teal-200 bg-teal-50 text-teal-700">{unit.code} guide</span>
+                <h3 className="mt-3 text-base font-bold text-navy-900 group-hover:text-gold-600">
+                  {g.title}
+                </h3>
+                <p className="mt-1.5 flex-1 text-sm leading-relaxed text-navy-600">{g.description}</p>
+                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-navy-700">
+                  Read guide <Icon name="arrow" className="h-4 w-4" />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </Section>
+      )}
+
       {/* Related units */}
       {related.length > 0 && (
-        <Section tone="mist">
+        <Section tone="white">
           <h2 className="mb-8 text-2xl font-bold text-navy-900">Other Level {unit.level} units</h2>
           <div className="grid gap-6 md:grid-cols-3">
             {related.map((r) => (
