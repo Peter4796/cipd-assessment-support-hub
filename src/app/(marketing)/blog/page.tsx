@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "CIPD Assessment Blog: Guides & Tips",
   description:
     "Expert guides on CIPD assessments: understanding briefs, Harvard referencing, assignment structure, resubmissions, tutor feedback and managing deadlines for UK & UAE learners.",
+  alternates: { canonical: "/blog" },
 };
 
 function formatDate(iso: string) {

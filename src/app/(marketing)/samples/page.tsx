@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Samples & Work Quality",
   description:
     "See the standard of our CIPD assessment support: example introduction, criteria mapping table, Harvard reference formatting and tutor-feedback improvement notes. Quality demonstration only.",
+  alternates: { canonical: "/samples" },
 };
 
 // Illustrative criteria-mapping rows (anonymised, for demonstration only)

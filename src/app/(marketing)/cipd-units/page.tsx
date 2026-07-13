@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "CIPD Unit Assignment Support (Level 3, 5 & 7)",
   description:
     "Assignment support for CIPD units across Levels 3, 5 and 7, including 5CO01, 5HR01, 7CO01 and more. Brief analysis, structure, referencing and draft review for each unit.",
+  alternates: { canonical: "/cipd-units" },
 };
 
 const levelName: Record<string, string> = {

@@ -7,6 +7,7 @@ import { Icon } from "@/components/Icon";
 import { CtaBand } from "@/components/Cta";
 import { units, getUnit } from "@/content/units";
 import { postsForUnit } from "@/content/blog";
+import { enquiryUrl } from "@/lib/leads/context";
 import { cta, site, whatsappLink } from "@/lib/site";
 
 export function generateStaticParams() {
@@ -62,7 +63,7 @@ export default function UnitPage({ params }: { params: { code: string } }) {
         intro={`Specialist support for ${unit.code} (${unit.title}), part of the ${unit.qualification}.`}
       >
         <div className="flex flex-col gap-3 sm:flex-row">
-          <ButtonLink href="/contact" variant="primary" withArrow>
+          <ButtonLink href={enquiryUrl({ level: unit.level, unit: unit.code })} variant="primary" withArrow>
             {cta.sendBrief}
           </ButtonLink>
           <ButtonLink href={whatsappLink(`Hi, I need help with CIPD ${unit.code}.`)} variant="ghost-light" external>
@@ -109,7 +110,7 @@ export default function UnitPage({ params }: { params: { code: string } }) {
               </h3>
               <CheckList items={levelHelp[unit.level]} className="mt-4" />
               <div className="mt-6 space-y-2">
-                <ButtonLink href="/contact" variant="navy" className="w-full" withArrow>
+                <ButtonLink href={enquiryUrl({ level: unit.level, unit: unit.code })} variant="navy" className="w-full" withArrow>
                   Get a quote for {unit.code}
                 </ButtonLink>
                 <ButtonLink href={levelSlug} variant="outline" className="w-full">
@@ -174,6 +175,8 @@ export default function UnitPage({ params }: { params: { code: string } }) {
       <CtaBand
         title={`Get expert support with ${unit.code}`}
         subtitle={`Send us your ${unit.code} brief, deadline and word count for a clear, no-obligation quote.`}
+        primaryHref={enquiryUrl({ level: unit.level, unit: unit.code })}
+        location="unit"
       />
     </>
   );

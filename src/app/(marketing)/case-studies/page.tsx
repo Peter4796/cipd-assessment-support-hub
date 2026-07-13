@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "CIPD Support Case Studies",
   description:
     "Anonymised examples of our CIPD assessment support in action: Level 5 draft improvement, Level 3 resubmission support, and Level 7 structure and critical-analysis coaching.",
+  alternates: { canonical: "/case-studies" },
 };
 
 export default function CaseStudiesPage() {

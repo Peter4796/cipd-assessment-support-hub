@@ -1,34 +1,73 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import { Icon } from "@/components/Icon";
+import { trackEvent } from "@/lib/analytics";
+import { buildAcquisitionContext } from "@/lib/leads/context";
 
 /**
- * Lead-magnet gate for the free checklist.
- * Phase 1/2: captures details client-side and reveals the download.
- * Phase 3: POST `form` to your CRM / email list in `handleSubmit` before revealing.
+ * Lead-magnet gate for the free checklist (NURTURE funnel, not a sales lead).
+ *
+ * Capture: POST /api/subscribe → stored as a Resend Audience contact (when
+ * configured) + low-priority internal notification. This is deliberately a
+ * separate endpoint from /api/leads so resource downloads never enter the
+ * assessment lead-scoring system.
+ *
+ * The visitor's promise is the free checklist, so the download is unlocked
+ * even if capture delivery fails — we just never claim a subscription
+ * happened when it didn't (the confirmation copy stays download-focused).
  */
 
 const DOWNLOAD_URL = "/downloads/cipd-assessment-planning-checklist.html";
+const RESOURCE_SLUG = "cipd-assessment-planning-checklist";
 const levelOptions = ["CIPD Level 3", "CIPD Level 5", "CIPD Level 7", "Not sure yet"];
 
 export function LeadMagnetForm() {
-  const [form, setForm] = useState({ name: "", email: "", level: levelOptions[0], country: "", deadline: "" });
-  const [unlocked, setUnlocked] = useState(false);
+  const pathname = usePathname();
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    level: levelOptions[0],
+    country: "",
+    website: "", // honeypot
+  });
+  const [status, setStatus] = useState<"idle" | "submitting" | "unlocked">("idle");
+  const startedAt = useRef<number>(Date.now());
 
   const update = (k: string, v: string) => setForm((p) => ({ ...p, [k]: v }));
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Phase 3 hook: POST `form` to your email list / CRM here.
-    setUnlocked(true);
+    setStatus("submitting");
+    trackEvent("lead_magnet_submitted", { resource: RESOURCE_SLUG });
+
+    try {
+      await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          level: form.level.replace(/\D/g, "") || undefined,
+          country: form.country,
+          resource: RESOURCE_SLUG,
+          website: form.website,
+          startedAt: startedAt.current,
+          context: buildAcquisitionContext(pathname),
+        }),
+      });
+    } catch {
+      // Capture is best-effort; the visitor still gets the resource.
+    }
+    setStatus("unlocked");
   };
 
   const inputCls =
     "w-full rounded-xl border border-mist-300 bg-white px-3.5 py-2.5 text-sm text-navy-900 placeholder:text-navy-400 focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-500/20";
   const labelCls = "mb-1.5 block text-sm font-medium text-navy-800";
 
-  if (unlocked) {
+  if (status === "unlocked") {
     return (
       <div className="rounded-3xl border border-teal-200 bg-white p-8 text-center shadow-card">
         <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-teal-100 text-teal-700">
@@ -64,11 +103,13 @@ export function LeadMagnetForm() {
       <div className="mt-5 grid gap-4">
         <div>
           <label className={labelCls} htmlFor="lm-name">Name</label>
-          <input id="lm-name" className={inputCls} required value={form.name} onChange={(e) => update("name", e.target.value)} placeholder="Your full name" />
+          <input id="lm-name" className={inputCls} required value={form.name} autoComplete="name"
+            onChange={(e) => update("name", e.target.value)} placeholder="Your full name" />
         </div>
         <div>
           <label className={labelCls} htmlFor="lm-email">Email</label>
-          <input id="lm-email" type="email" className={inputCls} required value={form.email} onChange={(e) => update("email", e.target.value)} placeholder="you@example.com" />
+          <input id="lm-email" type="email" className={inputCls} required value={form.email} autoComplete="email"
+            onChange={(e) => update("email", e.target.value)} placeholder="you@example.com" />
         </div>
         <div className="grid gap-4 sm:grid-cols-2">
           <div>
@@ -79,20 +120,25 @@ export function LeadMagnetForm() {
           </div>
           <div>
             <label className={labelCls} htmlFor="lm-country">Country</label>
-            <input id="lm-country" className={inputCls} value={form.country} onChange={(e) => update("country", e.target.value)} placeholder="e.g. UK / UAE" />
+            <input id="lm-country" className={inputCls} value={form.country}
+              onChange={(e) => update("country", e.target.value)} placeholder="e.g. UK / UAE" />
           </div>
         </div>
-        <div>
-          <label className={labelCls} htmlFor="lm-deadline">Deadline <span className="text-navy-400">(optional)</span></label>
-          <input id="lm-deadline" type="date" className={inputCls} value={form.deadline} onChange={(e) => update("deadline", e.target.value)} />
+        {/* Honeypot — hidden from humans */}
+        <div className="hidden" aria-hidden="true">
+          <label htmlFor="lm-website">Website</label>
+          <input id="lm-website" tabIndex={-1} autoComplete="off" value={form.website}
+            onChange={(e) => update("website", e.target.value)} />
         </div>
       </div>
-      <button type="submit" className="btn-primary mt-6 w-full">
-        Download the checklist
-        <Icon name="arrow" className="h-4 w-4" />
+      <button type="submit" disabled={status === "submitting"} className="btn-primary mt-6 w-full">
+        {status === "submitting" ? "Unlocking…" : (
+          <>Download the checklist <Icon name="arrow" className="h-4 w-4" /></>
+        )}
       </button>
       <p className="mt-3 text-center text-xs text-navy-400">
-        We&apos;ll only use your details to send your checklist and helpful CIPD tips. No spam.
+        We&apos;ll only use your details to send your checklist and occasional CIPD study tips. No
+        spam, unsubscribe any time.
       </p>
     </form>
   );

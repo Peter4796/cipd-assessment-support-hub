@@ -4,6 +4,7 @@ import { Section, SectionHeading, CheckList, ButtonLink } from "@/components/ui"
 import { Icon } from "@/components/Icon";
 import { CtaBand } from "@/components/Cta";
 import { levels, type Level } from "@/content/levels";
+import { enquiryUrl } from "@/lib/leads/context";
 import { cta } from "@/lib/site";
 
 /** Shared template rendering a single CIPD level support page. */
@@ -21,7 +22,7 @@ export function LevelPage({ level }: { level: Level }) {
         intro={level.audience}
       >
         <div className="flex flex-col gap-3 sm:flex-row">
-          <ButtonLink href="/contact" variant="primary" withArrow>
+          <ButtonLink href={enquiryUrl({ level: level.number })} variant="primary" withArrow>
             {cta.sendBrief}
           </ButtonLink>
           <ButtonLink href="/pricing" variant="ghost-light">
@@ -116,7 +117,7 @@ export function LevelPage({ level }: { level: Level }) {
         </div>
       </Section>
 
-      <CtaBand />
+      <CtaBand primaryHref={enquiryUrl({ level: level.number })} location="level" />
     </>
   );
 }

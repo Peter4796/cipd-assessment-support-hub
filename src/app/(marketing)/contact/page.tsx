@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/ui";
 import { Icon } from "@/components/Icon";
 import { EnquiryForm } from "@/components/EnquiryForm";
+import { TrackedLink } from "@/components/track/TrackedLink";
 import { site, whatsappLink, emailLink, integrityNotice } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact: Send Your CIPD Assessment Brief",
   description:
-    "Contact CIPD Guidance. Send your assessment brief, deadline and word count via WhatsApp, email or our enquiry form for a fast, confidential quote.",
+    "Contact CIPD Guidance. Send your assessment details via our enquiry form, WhatsApp or email for a fast, confidential quote.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {
@@ -17,7 +20,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Contact"
         breadcrumb="Contact"
-        title="Send your assessment brief for a free quote"
+        title="Send your assessment details for a free quote"
         intro="Share your CIPD level, deadline and word count and we'll reply quickly with a clear, no-obligation quote. Prefer to chat first? Message us on WhatsApp."
       />
 
@@ -25,10 +28,11 @@ export default function ContactPage() {
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           {/* Contact options */}
           <div className="space-y-4">
-            <a
+            <TrackedLink
               href={whatsappLink()}
-              target="_blank"
-              rel="noopener noreferrer"
+              external
+              event="whatsapp_clicked"
+              eventProps={{ location: "contact_card" }}
               className="card card-hover flex items-center gap-4"
             >
               <span className="flex h-12 w-12 flex-none items-center justify-center rounded-2xl bg-[#25D366] text-white">
@@ -38,9 +42,14 @@ export default function ContactPage() {
                 <p className="font-semibold text-navy-900">Chat on WhatsApp</p>
                 <p className="text-sm text-navy-600">{site.contact.whatsappDisplay}</p>
               </div>
-            </a>
+            </TrackedLink>
 
-            <a href={emailLink()} className="card card-hover flex items-center gap-4">
+            <TrackedLink
+              href={emailLink()}
+              event="email_clicked"
+              eventProps={{ location: "contact_card" }}
+              className="card card-hover flex items-center gap-4"
+            >
               <span className="flex h-12 w-12 flex-none items-center justify-center rounded-2xl bg-navy-900 text-gold-400">
                 <Icon name="feedback" className="h-6 w-6" />
               </span>
@@ -48,7 +57,7 @@ export default function ContactPage() {
                 <p className="font-semibold text-navy-900">Email us</p>
                 <p className="text-sm text-navy-600">{site.contact.email}</p>
               </div>
-            </a>
+            </TrackedLink>
 
             <div className="card">
               <h3 className="text-sm font-semibold uppercase tracking-wider text-teal-600">
@@ -76,9 +85,17 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Form */}
+          {/* Form — Suspense is required because it reads ?level/?unit/?support context params */}
           <div>
-            <EnquiryForm />
+            <Suspense
+              fallback={
+                <div className="rounded-3xl border border-mist-200 bg-white p-10 text-center text-sm text-navy-500 shadow-card">
+                  Loading enquiry form…
+                </div>
+              }
+            >
+              <EnquiryForm />
+            </Suspense>
           </div>
         </div>
       </Section>

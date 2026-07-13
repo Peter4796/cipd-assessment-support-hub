@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: "CIPD Assessment Support Services",
   description:
     "Full CIPD assessment support: brief interpretation, criteria mapping, structure and planning, draft review, editing, Harvard referencing, resubmission and originality guidance.",
+  alternates: { canonical: "/services" },
 };
 
 export default function ServicesPage() {

@@ -118,7 +118,6 @@ export const footerNav: { title: string; items: NavItem[] }[] = [
       { label: "About Us", href: "/about" },
       { label: "FAQ", href: "/faq" },
       { label: "Contact", href: "/contact" },
-      { label: "Client Portal", href: "/portal/login" },
     ],
   },
 ];

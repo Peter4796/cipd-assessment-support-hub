@@ -3,18 +3,23 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { primaryNav, whatsappLink, cta } from "@/lib/site";
 import { Icon } from "@/components/Icon";
+import { trackEvent } from "@/lib/analytics";
 
 export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  // Which desktop dropdown is open (keyboard/click); hover is handled in CSS.
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const navRef = useRef<HTMLElement>(null);
 
-  // Close mobile menu on route change
+  // Close menus on route change
   useEffect(() => {
     setOpen(false);
+    setOpenDropdown(null);
   }, [pathname]);
 
   useEffect(() => {
@@ -23,6 +28,18 @@ export function Header() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Close an open dropdown on outside click
+  useEffect(() => {
+    if (!openDropdown) return;
+    const onPointerDown = (e: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+        setOpenDropdown(null);
+      }
+    };
+    document.addEventListener("mousedown", onPointerDown);
+    return () => document.removeEventListener("mousedown", onPointerDown);
+  }, [openDropdown]);
 
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
@@ -39,30 +56,70 @@ export function Header() {
         <BrandMark />
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-1 lg:flex">
+        <nav
+          ref={navRef}
+          className="hidden items-center gap-1 lg:flex"
+          aria-label="Primary"
+          onKeyDown={(e) => {
+            if (e.key === "Escape" && openDropdown) {
+              setOpenDropdown(null);
+            }
+          }}
+        >
           {primaryNav.map((item) =>
             item.children ? (
-              <div key={item.href} className="group relative">
-                <Link
-                  href={item.href}
-                  className={`flex items-center gap-1 rounded-full px-3.5 py-2 text-sm font-medium transition-colors ${
+              <div
+                key={item.href}
+                className="group relative"
+                onBlur={(e) => {
+                  // Close when focus leaves the whole dropdown region
+                  if (!e.currentTarget.contains(e.relatedTarget as Node)) {
+                    setOpenDropdown(null);
+                  }
+                }}
+              >
+                <button
+                  type="button"
+                  aria-expanded={openDropdown === item.href}
+                  aria-haspopup="true"
+                  aria-controls={`nav-menu-${item.label.toLowerCase()}`}
+                  onClick={() =>
+                    setOpenDropdown((cur) => (cur === item.href ? null : item.href))
+                  }
+                  className={`flex items-center gap-1 rounded-full px-3.5 py-2 text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 ${
                     isActive(item.href)
                       ? "text-navy-900"
                       : "text-navy-600 hover:text-navy-900"
                   }`}
                 >
                   {item.label}
-                  <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth={2}>
+                  <svg
+                    viewBox="0 0 24 24"
+                    className={`h-3.5 w-3.5 transition-transform ${
+                      openDropdown === item.href ? "rotate-180" : ""
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                    aria-hidden="true"
+                  >
                     <path d="m6 9 6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-                </Link>
-                <div className="invisible absolute left-0 top-full w-64 translate-y-1 pt-2 opacity-0 transition-all group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+                </button>
+                <div
+                  id={`nav-menu-${item.label.toLowerCase()}`}
+                  className={`absolute left-0 top-full w-64 pt-2 transition-all ${
+                    openDropdown === item.href
+                      ? "visible translate-y-0 opacity-100"
+                      : "invisible translate-y-1 opacity-0 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100"
+                  }`}
+                >
                   <div className="overflow-hidden rounded-2xl border border-mist-200 bg-white p-2 shadow-card-hover">
                     {item.children.map((child) => (
                       <Link
                         key={child.href}
                         href={child.href}
-                        className={`block rounded-xl px-3 py-2.5 text-sm font-medium transition-colors ${
+                        className={`block rounded-xl px-3 py-2.5 text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 ${
                           pathname === child.href
                             ? "bg-mist-100 text-navy-900"
                             : "text-navy-600 hover:bg-mist-50 hover:text-navy-900"
@@ -78,7 +135,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`rounded-full px-3.5 py-2 text-sm font-medium transition-colors ${
+                className={`rounded-full px-3.5 py-2 text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 ${
                   isActive(item.href)
                     ? "text-navy-900"
                     : "text-navy-600 hover:text-navy-900"
@@ -95,12 +152,17 @@ export function Header() {
             href={whatsappLink()}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackEvent("whatsapp_clicked", { location: "header" })}
             className="btn-whatsapp px-4 py-2 text-sm"
           >
             <Icon name="whatsapp" className="h-4 w-4" />
             WhatsApp
           </a>
-          <Link href="/contact" className="btn-primary px-4 py-2 text-sm">
+          <Link
+            href="/contact"
+            onClick={() => trackEvent("service_cta_clicked", { location: "header" })}
+            className="btn-primary px-4 py-2 text-sm"
+          >
             {cta.getQuote}
           </Link>
         </div>
@@ -122,7 +184,7 @@ export function Header() {
       {/* Mobile menu */}
       {open && (
         <div className="border-t border-mist-200 bg-white lg:hidden">
-          <nav className="container-px flex flex-col gap-1 py-4">
+          <nav className="container-px flex flex-col gap-1 py-4" aria-label="Primary mobile">
             {primaryNav.map((item) => (
               <div key={item.href}>
                 <Link
@@ -155,6 +217,7 @@ export function Header() {
                 href={whatsappLink()}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackEvent("whatsapp_clicked", { location: "mobile_menu" })}
                 className="btn-whatsapp w-full"
               >
                 <Icon name="whatsapp" className="h-4 w-4" />

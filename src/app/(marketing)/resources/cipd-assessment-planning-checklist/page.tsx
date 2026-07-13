@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Free CIPD Assessment Planning Checklist",
   description:
     "Download a free CIPD Assessment Planning Checklist: a step-by-step guide to planning any CIPD Level 3, 5 or 7 assignment, from understanding the brief to final review.",
+  alternates: { canonical: "/resources/cipd-assessment-planning-checklist" },
 };
 
 const inside = [

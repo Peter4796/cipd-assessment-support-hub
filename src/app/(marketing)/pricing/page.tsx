@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "Pricing: CIPD Assessment Support Packages",
   description:
     "Flexible CIPD assessment support packages: Brief Review & Structure, Draft Review & Improvement, and a Full Assessment Guidance Package. Request a tailored quote.",
+  alternates: { canonical: "/pricing" },
 };
 
 const factors = ["CIPD level", "Word count", "Deadline", "Complexity of the brief"];

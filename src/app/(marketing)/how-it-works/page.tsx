@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "How It Works: Simple CIPD Support in 5 Steps",
   description:
     "How our CIPD assessment support works: send your brief, receive a clear quote and plan, get structured guidance, review and refine, then submit with confidence.",
+  alternates: { canonical: "/how-it-works" },
 };
 
 export default function HowItWorksPage() {

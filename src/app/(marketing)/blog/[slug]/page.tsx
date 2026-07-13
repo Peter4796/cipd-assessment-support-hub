@@ -125,7 +125,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         </Section>
       )}
 
-      <CtaBand />
+      <CtaBand location="article" />
     </>
   );
 }

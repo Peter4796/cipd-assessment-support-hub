@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "FAQ: CIPD Assessment Support Questions",
   description:
     "Answers to common questions about our CIPD assessment support across Levels 3, 5 and 7 for UK and UAE learners: resubmissions, draft review, Harvard referencing, turnaround and confidentiality.",
+  alternates: { canonical: "/faq" },
 };
 
 // FAQ structured data for rich results (SEO)

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ButtonLink, Section, SectionHeading } from "@/components/ui";
 import { Icon } from "@/components/Icon";
@@ -6,6 +7,10 @@ import { homeServices, whyChooseUs } from "@/content/services";
 import { levels } from "@/content/levels";
 import { trustPoints, problemPoints } from "@/content/site-content";
 import { whatsappLink, cta, integrityNotice } from "@/lib/site";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function HomePage() {
   return (

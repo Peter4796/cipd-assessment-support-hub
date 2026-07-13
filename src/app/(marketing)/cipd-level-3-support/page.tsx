@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "CIPD Level 3 Assessment Support (Foundation)",
   description:
     "Supportive CIPD Level 3 assessment support for HR assistants and new people-practice learners in the UK and UAE: brief analysis, structure, referencing and resubmission help.",
+  alternates: { canonical: "/cipd-level-3-support" },
 };
 
 export default function Page() {

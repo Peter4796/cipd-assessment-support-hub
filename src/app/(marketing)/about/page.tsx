@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "About: Specialist CIPD Assessment Support",
   description:
     "A specialist CIPD assessment support service for international HR learners. Professional, clear, confidential guidance aligned with UK-style academic expectations.",
+  alternates: { canonical: "/about" },
 };
 
 const values = [

@@ -120,7 +120,19 @@ src/
 Add a post/case study by appending to the relevant `src/content/*.ts` file — routes and the
 sitemap pick it up automatically.
 
-## Phase 3 — Client portal & automation ✅ built (demo mode)
+## Lead acquisition (P0 — LIVE system)
+
+**Leads are captured server-side** via `POST /api/leads` (validate → score → email
+notification via Resend), with the enquiry form at `/contact` supporting contextual
+prefill (`?level=5&unit=5CO01&support=resubmission` — build links with `enquiryUrl()`
+from `src/lib/leads/context.ts`). WhatsApp is an optional continuation after capture,
+never the capture mechanism. Full architecture, scoring rules, env vars, analytics
+events and persistence limitations: **[docs/lead-acquisition.md](docs/lead-acquisition.md)**.
+
+Requires `RESEND_API_KEY`, `EMAIL_FROM`, `LEAD_NOTIFY_EMAIL` (see `.env.example`).
+Until configured, the form degrades honestly to the direct WhatsApp/email flow.
+
+## Phase 3 — Client portal & automation (demo — PARKED)
 
 A full client portal and admin dashboard, running on a **swappable demo backend** so it's
 interactive out of the box. **Nothing here is production-secure yet** — see "Going live".
@@ -128,14 +140,14 @@ interactive out of the box. **Nothing here is production-secure yet** — see "G
 ### Routes
 | Area | Route | Notes |
 |------|-------|-------|
-| Client login | `/portal/login` | Demo sign-in (no password). Linked from the footer. |
+| Client login | `/portal/login` | Demo sign-in (no password). Footer link removed — portal is parked. |
 | Client dashboard | `/portal` | Projects, stats, "needs attention". |
-| New request | `/portal/new` | Submit a brief → **instant automated estimate**. |
+| New request | `/portal/new` | Submit a request (quotes are confirmed manually — no client-facing estimates). |
 | Project detail | `/portal/[id]` | Status tracker, quote approve, **pay (demo)**, file downloads, request revision, messages, activity. |
 | Admin login | `/admin/login` | Passcode gate. Demo code: `cipd-admin`. |
 | Admin dashboard | `/admin` | All enquiries, **filter by country / level / deadline / status**, search. |
 | Admin project | `/admin/[id]` | Set status, send quote (auto-suggested), upload deliverables, notes (client/internal), email update, WhatsApp client. |
-| Quote API | `POST /api/quote` | Real serverless endpoint: `{level, wordCount, helpType, deadline}` → estimate. |
+| Lead API | `POST /api/leads` | LIVE lead capture (see Lead acquisition section above). `/api/quote` was removed — pricing suggestions are internal-only (`src/lib/portal/quote.ts`). |
 
 ### Architecture
 - **Layouts** — marketing pages live in the `(marketing)` route group (header/footer/WhatsApp
