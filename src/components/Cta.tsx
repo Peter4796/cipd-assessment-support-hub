@@ -1,6 +1,7 @@
 import { TrackedLink } from "@/components/track/TrackedLink";
 import { Icon } from "@/components/Icon";
 import { whatsappLink, cta } from "@/lib/site";
+import { FUNNEL_PATH } from "@/lib/leads/context";
 
 /**
  * Reusable conversion band — drop into the bottom of any page.
@@ -12,7 +13,7 @@ import { whatsappLink, cta } from "@/lib/site";
 export function CtaBand({
   title = "Send your assessment details today and receive a clear quote",
   subtitle = "Tell us your level, deadline and word count. We'll reply quickly with a transparent quote and a simple support plan, with no obligation.",
-  primaryHref = "/contact",
+  primaryHref = `${FUNNEL_PATH}?cta=cta_band`,
   primaryLabel = cta.sendBrief,
   location = "cta_band",
 }: {

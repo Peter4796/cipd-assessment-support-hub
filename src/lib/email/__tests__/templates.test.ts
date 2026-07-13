@@ -22,17 +22,21 @@ const lead: Lead = {
   },
   score: 70,
   classification: "PRIORITY",
+  submissionType: "resubmission",
+  schemaVersion: 2,
 };
 
-describe("leadNotificationSubject", () => {
-  it("follows the [CLASSIFICATION] level — unit — support format", () => {
+describe("leadNotificationSubject (P1 format)", () => {
+  it("follows '[CLS] CIPD Level N What — unit — Due date'", () => {
     expect(leadNotificationSubject(lead)).toBe(
-      "[PRIORITY] New CIPD Lead — Level 5 — 5HR01 — Resubmission support"
+      "[PRIORITY] CIPD Level 5 Resubmission — 5HR01 — Due 16 July"
     );
-    expect(leadNotificationSubject(lead)).toContain("[PRIORITY]");
-    expect(leadNotificationSubject(lead)).toContain("Level 5");
-    expect(leadNotificationSubject(lead)).toContain("5HR01");
-    expect(leadNotificationSubject(lead)).toContain("Resubmission support");
+  });
+  it("omits missing parts gracefully", () => {
+    const minimal = { ...lead, unitCode: undefined, deadline: undefined, supportType: "draft_review" as const, submissionType: undefined };
+    expect(leadNotificationSubject(minimal)).toBe(
+      "[PRIORITY] CIPD Level 5 Draft review and improvement"
+    );
   });
 });
 
@@ -66,6 +70,60 @@ describe("leadNotificationHtml", () => {
     const noWa = leadNotificationHtml({ ...lead, whatsapp: undefined });
     expect(noWa).toContain("mailto:amira@example.com");
     expect(noWa).not.toContain("wa.me/");
+  });
+});
+
+describe("leadNotificationHtml — documents (P1)", () => {
+  it("warns when the assessment brief is missing", () => {
+    const html = leadNotificationHtml(lead); // fixture has no attachments
+    expect(html).toContain("Assessment brief not uploaded");
+    expect(html).toContain("Resubmission without tutor feedback");
+  });
+
+  it("lists uploaded files as links and drops the warnings", () => {
+    const withFiles = leadNotificationHtml({
+      ...lead,
+      attachments: [
+        {
+          id: "att_1",
+          originalFileName: "5HR01-brief.pdf",
+          pathname: "enquiries/2026-07/assessment_brief/5HR01-brief.pdf",
+          mimeType: "application/pdf",
+          sizeBytes: 300000,
+          uploadStatus: "uploaded",
+          url: "https://abc123.public.blob.vercel-storage.com/enquiries/2026-07/assessment_brief/5HR01-brief-x8f2.pdf",
+          uploadedAt: "2026-07-13T12:00:00.000Z",
+          category: "ASSESSMENT_BRIEF",
+        },
+        {
+          id: "att_2",
+          originalFileName: "feedback.png",
+          pathname: "enquiries/2026-07/tutor_feedback/feedback.png",
+          mimeType: "image/png",
+          sizeBytes: 120000,
+          uploadStatus: "uploaded",
+          url: "https://abc123.public.blob.vercel-storage.com/enquiries/2026-07/tutor_feedback/feedback-k2j9.png",
+          uploadedAt: "2026-07-13T12:00:00.000Z",
+          category: "TUTOR_FEEDBACK",
+        },
+      ],
+    });
+    expect(withFiles).toContain("DOCUMENTS (2)");
+    expect(withFiles).toContain("5HR01-brief.pdf");
+    expect(withFiles).toContain("blob.vercel-storage.com");
+    expect(withFiles).not.toContain("Assessment brief not uploaded");
+    expect(withFiles).not.toContain("Resubmission without tutor feedback");
+  });
+
+  it("shows submission type, referred criteria and provider", () => {
+    const html = leadNotificationHtml({
+      ...lead,
+      referredCriteria: "AC 2.1 and AC 3.2",
+      provider: "ICS Learn",
+    });
+    expect(html).toContain("RESUBMISSION");
+    expect(html).toContain("AC 2.1 and AC 3.2");
+    expect(html).toContain("ICS Learn");
   });
 });
 

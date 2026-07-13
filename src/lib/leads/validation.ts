@@ -8,20 +8,29 @@
  */
 
 import {
+  ATTACHMENT_CATEGORY_KEYS,
   CIPD_LEVELS,
+  SUBMISSION_TYPES,
   SUPPORT_TYPE_KEYS,
   SOURCE_PAGE_TYPES,
   type AcquisitionContext,
+  type AttachmentCategory,
   type CipdLevel,
+  type FunnelMeta,
+  type LeadAttachment,
   type LeadInput,
   type SourcePageType,
+  type SubmissionType,
   type SubscriberInput,
   type SupportType,
 } from "@/lib/leads/types";
+import { ALLOWED_MIME_TYPES, MAX_FILES, MAX_FILE_BYTES, sanitiseFileName } from "@/lib/leads/uploads";
 
 // ─── Limits ───
 const MAX = {
   name: 120,
+  provider: 120,
+  referredCriteria: 1500,
   email: 254,
   whatsapp: 32,
   country: 80,
@@ -112,6 +121,81 @@ export function normaliseContext(raw: Partial<AcquisitionContext> | undefined): 
   };
 }
 
+export function normaliseSubmissionType(raw: unknown): SubmissionType | undefined {
+  const v = cleanText(raw, 20);
+  return (SUBMISSION_TYPES as readonly string[]).includes(v) ? (v as SubmissionType) : undefined;
+}
+
+/**
+ * Blob URL allowlist — attachments are echoed into the internal notification
+ * email as links, so ONLY URLs on Vercel Blob storage hosts are accepted.
+ * Anything else (attacker-supplied phishing links, javascript: URLs) is
+ * rejected outright. Pathnames must sit under our enquiries/ namespace.
+ */
+export function isTrustedBlobUrl(raw: string): boolean {
+  try {
+    const u = new URL(raw);
+    return u.protocol === "https:" && u.hostname.endsWith(".public.blob.vercel-storage.com");
+  } catch {
+    return false;
+  }
+}
+
+export function normaliseAttachments(raw: unknown): LeadAttachment[] | { error: string } {
+  if (raw === undefined || raw === null) return [];
+  if (!Array.isArray(raw)) return { error: "invalid_attachments" };
+  if (raw.length > MAX_FILES) return { error: "too_many_files" };
+  const out: LeadAttachment[] = [];
+  for (const item of raw) {
+    if (typeof item !== "object" || item === null) return { error: "invalid_attachments" };
+    const a = item as Record<string, unknown>;
+    const url = typeof a.url === "string" ? a.url.trim() : "";
+    const pathname = cleanText(a.pathname, 300);
+    const category = cleanText(a.category, 30) as AttachmentCategory;
+    const mimeType = cleanText(a.mimeType, 100);
+    const sizeBytes = typeof a.sizeBytes === "number" ? Math.round(a.sizeBytes) : NaN;
+    if (!isTrustedBlobUrl(url)) return { error: "invalid_attachments" };
+    if (!pathname.startsWith("enquiries/")) return { error: "invalid_attachments" };
+    if (!(ATTACHMENT_CATEGORY_KEYS as readonly string[]).includes(category)) {
+      return { error: "invalid_attachments" };
+    }
+    if (!ALLOWED_MIME_TYPES.includes(mimeType)) return { error: "invalid_attachments" };
+    if (!Number.isFinite(sizeBytes) || sizeBytes <= 0 || sizeBytes > MAX_FILE_BYTES) {
+      return { error: "invalid_attachments" };
+    }
+    out.push({
+      id: cleanText(a.id, 40) || `att_${out.length + 1}`,
+      originalFileName: sanitiseFileName(String(a.originalFileName ?? "document")),
+      pathname,
+      mimeType,
+      sizeBytes,
+      uploadStatus: "uploaded",
+      url,
+      uploadedAt: new Date().toISOString(),
+      category,
+    });
+  }
+  return out;
+}
+
+export function normaliseFunnel(raw: Partial<FunnelMeta> | undefined): FunnelMeta | undefined {
+  if (!raw || typeof raw !== "object") return undefined;
+  const startedAt = cleanText(raw.startedAt, 30);
+  const startedDate = startedAt ? new Date(startedAt) : null;
+  const started = startedDate && !Number.isNaN(startedDate.getTime()) ? startedDate : null;
+  const completed = new Date();
+  const duration = started
+    ? Math.max(0, Math.min(86400, Math.round((completed.getTime() - started.getTime()) / 1000)))
+    : undefined;
+  const meta: FunnelMeta = {
+    entryCta: cleanText(raw.entryCta, 40) || undefined,
+    startedAt: started ? started.toISOString() : undefined,
+    completedAt: completed.toISOString(),
+    durationSeconds: duration,
+  };
+  return meta.entryCta || meta.startedAt ? meta : undefined;
+}
+
 // ─── Anti-spam checks shared by both endpoints ───
 export function spamCheck(input: { website?: string; startedAt?: number }): string | null {
   // Honeypot: real users never see or fill this field.
@@ -135,6 +219,13 @@ export type ValidatedLead = {
   wordCount?: number;
   deadline?: string;
   message?: string;
+  provider?: string;
+  submissionType?: SubmissionType;
+  referredCriteria?: string;
+  attachments: LeadAttachment[];
+  funnel?: FunnelMeta;
+  reachedReview: boolean;
+  schemaVersion: 1 | 2;
   acquisition: AcquisitionContext;
 };
 
@@ -157,6 +248,11 @@ export function validateLeadInput(body: unknown): ValidationResult<ValidatedLead
   const supportType = normaliseSupportType(input.supportType);
   if (!supportType) return { ok: false, error: "invalid_support_type" };
 
+  const attachments = normaliseAttachments(input.attachments);
+  if (!Array.isArray(attachments)) return { ok: false, error: attachments.error };
+
+  const funnel = normaliseFunnel(input.funnel);
+
   return {
     ok: true,
     value: {
@@ -170,6 +266,15 @@ export function validateLeadInput(body: unknown): ValidationResult<ValidatedLead
       wordCount: normaliseWordCount(input.wordCount),
       deadline: normaliseDeadline(input.deadline),
       message: cleanText(input.message, MAX.message) || undefined,
+      provider: cleanText(input.provider, MAX.provider) || undefined,
+      submissionType: normaliseSubmissionType(input.submissionType),
+      referredCriteria: cleanText(input.referredCriteria, MAX.referredCriteria) || undefined,
+      attachments,
+      funnel,
+      reachedReview: input.reachedReview === true,
+      // Funnel submissions (v2) carry funnel meta or attachments; plain
+      // contact-form submissions remain v1.
+      schemaVersion: funnel || attachments.length > 0 || input.reachedReview === true ? 2 : 1,
       acquisition: normaliseContext(input.context),
     },
   };

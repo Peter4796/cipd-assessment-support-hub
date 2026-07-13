@@ -97,6 +97,10 @@ export async function addAudienceContact(params: {
         unsubscribed: false,
       }),
     });
+    if (res.status === 409) {
+      // Contact already exists — a repeat download is a success, not an error.
+      return { ok: true };
+    }
     if (!res.ok) {
       console.error(`[email] Resend contact add failed: HTTP ${res.status}`);
       return { ok: false, error: "send_failed" };

@@ -11,22 +11,48 @@
  * trusted by the API.
  */
 
-import type { CipdLevel, SourcePageType, SupportType } from "@/lib/leads/types";
+import type { CipdLevel, SourcePageType, SubmissionType, SupportType } from "@/lib/leads/types";
 
 // ─── Contextual enquiry URLs ───
+/**
+ * CTA location tokens (P1.10) — used both as the `cta` query param and as the
+ * analytics `location` property so entry attribution lines up end to end.
+ */
+export type CtaLocation =
+  | "hero"
+  | "mid_page"
+  | "sidebar"
+  | "article_end"
+  | "cta_band"
+  | "sticky_mobile"
+  | "footer"
+  | "header"
+  | "float";
+
 export type EnquiryContext = {
   level?: CipdLevel;
   unit?: string; // e.g. "5CO01"
   support?: SupportType;
+  submission?: SubmissionType;
+  cta?: CtaLocation;
 };
+
+/**
+ * The single builder for assessment-funnel links. All "Send Your Assessment
+ * Brief" / quote-intent CTAs point at the multi-step funnel; the plain
+ * /contact page remains for general contact.
+ */
+export const FUNNEL_PATH = "/send-your-brief";
 
 export function enquiryUrl(ctx: EnquiryContext = {}): string {
   const params = new URLSearchParams();
   if (ctx.level) params.set("level", ctx.level);
   if (ctx.unit) params.set("unit", ctx.unit.toUpperCase());
   if (ctx.support) params.set("support", ctx.support);
+  if (ctx.submission) params.set("submission", ctx.submission);
+  if (ctx.cta) params.set("cta", ctx.cta);
   const qs = params.toString();
-  return qs ? `/contact?${qs}` : "/contact";
+  return qs ? `${FUNNEL_PATH}?${qs}` : FUNNEL_PATH;
 }
 
 // ─── Source-page classification ───

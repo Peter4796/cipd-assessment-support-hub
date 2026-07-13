@@ -5,6 +5,7 @@ import { Icon } from "@/components/Icon";
 import { CtaBand } from "@/components/Cta";
 import { pricingPackages } from "@/content/site-content";
 import { whatsappLink, cta } from "@/lib/site";
+import { enquiryUrl } from "@/lib/leads/context";
 
 export const metadata: Metadata = {
   title: "Pricing: CIPD Assessment Support Packages",
@@ -106,11 +107,11 @@ export default function PricingPage() {
 
               <div className="mt-7">
                 {pkg.featured ? (
-                  <ButtonLink href="/contact" variant="primary" className="w-full" withArrow>
+                  <ButtonLink href={enquiryUrl({ cta: "mid_page" })} variant="primary" className="w-full" withArrow>
                     {cta.requestQuote}
                   </ButtonLink>
                 ) : (
-                  <ButtonLink href="/contact" variant="outline" className="w-full">
+                  <ButtonLink href={enquiryUrl({ cta: "mid_page" })} variant="outline" className="w-full">
                     {cta.requestQuote}
                   </ButtonLink>
                 )}
@@ -138,7 +139,7 @@ export default function PricingPage() {
             no obligation, and no pressure.
           </p>
           <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <ButtonLink href="/contact" variant="navy" withArrow>
+            <ButtonLink href={enquiryUrl({ cta: "mid_page" })} variant="navy" withArrow>
               {cta.sendBrief}
             </ButtonLink>
             <ButtonLink href={whatsappLink()} variant="whatsapp" external>

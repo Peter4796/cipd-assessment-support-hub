@@ -37,6 +37,49 @@ export const SOURCE_PAGE_TYPES = [
 ] as const;
 export type SourcePageType = (typeof SOURCE_PAGE_TYPES)[number];
 
+// ─── Attachments (P1 — real uploads via Vercel Blob) ───
+export const ATTACHMENT_CATEGORIES = {
+  ASSESSMENT_BRIEF: "Assessment brief",
+  EXISTING_DRAFT: "Existing draft",
+  TUTOR_FEEDBACK: "Tutor / assessor feedback",
+  SUPPORTING_DOCUMENT: "Supporting document",
+  OTHER: "Other",
+} as const;
+export type AttachmentCategory = keyof typeof ATTACHMENT_CATEGORIES;
+export const ATTACHMENT_CATEGORY_KEYS = Object.keys(
+  ATTACHMENT_CATEGORIES
+) as AttachmentCategory[];
+
+export type LeadAttachment = {
+  id: string;
+  originalFileName: string; // sanitised display name
+  pathname: string; // blob pathname (internal reference)
+  mimeType: string;
+  sizeBytes: number;
+  uploadStatus: "uploaded"; // only successfully uploaded files reach the lead
+  /**
+   * Unguessable (random-suffixed) blob URL. SECURITY MODEL: Vercel Blob
+   * client uploads are public-with-unguessable-URL (capability URL). These
+   * URLs are shown ONLY in the internal notification email — never to
+   * visitors, never in analytics, never logged. See docs/lead-acquisition.md.
+   */
+  url: string;
+  uploadedAt: string; // ISO
+  category: AttachmentCategory;
+};
+
+// ─── Submission type ───
+export const SUBMISSION_TYPES = ["first", "resubmission"] as const;
+export type SubmissionType = (typeof SUBMISSION_TYPES)[number];
+
+// ─── Funnel metadata (P1 multi-step form) ───
+export type FunnelMeta = {
+  entryCta?: string; // CTA location token, e.g. "hero" | "sidebar" | "article_end"
+  startedAt?: string; // ISO — first step rendered
+  completedAt?: string; // ISO — submission time
+  durationSeconds?: number;
+};
+
 // ─── Lead classification ───
 export const LEAD_CLASSIFICATIONS = ["LOW_INTENT", "WARM", "HIGH_INTENT", "PRIORITY"] as const;
 export type LeadClassification = (typeof LEAD_CLASSIFICATIONS)[number];
@@ -63,6 +106,13 @@ export type LeadInput = {
   wordCount?: string | number;
   deadline?: string; // ISO date
   message?: string;
+  // ── P1 funnel fields (all optional — P0 contact-form payloads stay valid) ──
+  provider?: string; // study centre / provider
+  submissionType?: string; // validated → SubmissionType
+  referredCriteria?: string; // free text, resubmissions only
+  attachments?: unknown; // validated → LeadAttachment[]
+  funnel?: Partial<FunnelMeta>;
+  reachedReview?: boolean;
   context?: Partial<AcquisitionContext>;
   // Anti-spam (never persisted): honeypot + client render timestamp
   website?: string; // honeypot — must be empty
@@ -83,9 +133,16 @@ export type Lead = {
   wordCount?: number;
   deadline?: string; // ISO date
   message?: string;
+  provider?: string;
+  submissionType?: SubmissionType;
+  referredCriteria?: string;
+  attachments?: LeadAttachment[];
+  funnel?: FunnelMeta;
   acquisition: AcquisitionContext;
   score: number;
   classification: LeadClassification;
+  /** 1 = P0 contact form · 2 = P1 multi-step funnel */
+  schemaVersion: 1 | 2;
   /**
    * Whether the visitor clicked "Continue on WhatsApp" after capture.
    * Unknown at capture time (the email is sent first); tracked via analytics
@@ -96,7 +153,6 @@ export type Lead = {
   status?: LeadStatus;
   internalNotes?: { at: string; body: string }[];
   quote?: { amount: number; currency: string; sentAt?: string };
-  attachments?: { name: string; url: string; kind: "brief" | "feedback" }[];
 };
 
 // ─── Operational status pipeline (used by the future admin; defined here so

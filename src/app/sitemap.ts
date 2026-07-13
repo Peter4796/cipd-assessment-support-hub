@@ -21,6 +21,9 @@ const staticRoutes = [
   "/blog",
   "/case-studies",
   "/cipd-units",
+  "/cipd-resubmission-support",
+  "/send-your-brief",
+  "/privacy",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

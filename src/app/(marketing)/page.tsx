@@ -7,6 +7,7 @@ import { homeServices, whyChooseUs } from "@/content/services";
 import { levels } from "@/content/levels";
 import { trustPoints, problemPoints } from "@/content/site-content";
 import { whatsappLink, cta, integrityNotice } from "@/lib/site";
+import { enquiryUrl } from "@/lib/leads/context";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -36,7 +37,7 @@ export default function HomePage() {
               brief analysis and structure to referencing, editing and resubmission support.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <ButtonLink href="/contact" variant="primary" withArrow>
+              <ButtonLink href={enquiryUrl({ cta: "hero" })} variant="primary" withArrow>
                 {cta.sendBrief}
               </ButtonLink>
               <ButtonLink href="/pricing" variant="ghost-light">

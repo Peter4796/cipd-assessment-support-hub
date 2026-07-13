@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+  attachmentPoints,
   classify,
   deadlinePoints,
   scoreLead,
@@ -52,27 +53,27 @@ describe("wordCountPoints", () => {
   });
 });
 
-describe("classify (boundary values)", () => {
-  it("0–20 is LOW_INTENT", () => {
+describe("classify (P1 boundary values)", () => {
+  it("0–25 is LOW_INTENT", () => {
     expect(classify(0)).toBe("LOW_INTENT");
-    expect(classify(20)).toBe("LOW_INTENT");
+    expect(classify(25)).toBe("LOW_INTENT");
   });
-  it("21–40 is WARM", () => {
-    expect(classify(21)).toBe("WARM");
-    expect(classify(40)).toBe("WARM");
+  it("26–55 is WARM", () => {
+    expect(classify(26)).toBe("WARM");
+    expect(classify(55)).toBe("WARM");
   });
-  it("41–60 is HIGH_INTENT", () => {
-    expect(classify(41)).toBe("HIGH_INTENT");
-    expect(classify(60)).toBe("HIGH_INTENT");
+  it("56–90 is HIGH_INTENT", () => {
+    expect(classify(56)).toBe("HIGH_INTENT");
+    expect(classify(90)).toBe("HIGH_INTENT");
   });
-  it("61+ is PRIORITY", () => {
-    expect(classify(61)).toBe("PRIORITY");
-    expect(classify(95)).toBe("PRIORITY");
+  it("91+ is PRIORITY", () => {
+    expect(classify(91)).toBe("PRIORITY");
+    expect(classify(147)).toBe("PRIORITY");
   });
 });
 
 describe("scoreLead", () => {
-  it("reproduces the spec example: L5 resubmission, 3 days, ~3k words, unit + WhatsApp = 70 PRIORITY", () => {
+  it("scores the P0 spec example at 70 (now HIGH_INTENT under P1 thresholds)", () => {
     const result = scoreLead(
       {
         level: "5", // +15
@@ -86,7 +87,7 @@ describe("scoreLead", () => {
       NOW
     );
     expect(result.score).toBe(70);
-    expect(result.classification).toBe("PRIORITY");
+    expect(result.classification).toBe("HIGH_INTENT");
   });
 
   it("scores a minimal low-intent lead", () => {
@@ -108,7 +109,7 @@ describe("scoreLead", () => {
     expect(detailed.score - short.score).toBe(5);
   });
 
-  it("caps at the theoretical maximum (95)", () => {
+  it("scores a complete P0-style lead (no attachments) at 95 = PRIORITY", () => {
     const result = scoreLead(
       {
         level: "7",
@@ -123,6 +124,142 @@ describe("scoreLead", () => {
     );
     expect(result.score).toBe(95);
     expect(result.classification).toBe("PRIORITY");
+  });
+});
+
+describe("P1 scoring additions", () => {
+  it("attachmentPoints: brief +15, draft +10, feedback +15 only for resubmissions", () => {
+    expect(attachmentPoints(["ASSESSMENT_BRIEF"], false)).toEqual({ brief: 15, draft: 0, feedback: 0 });
+    expect(attachmentPoints(["EXISTING_DRAFT"], false)).toEqual({ brief: 0, draft: 10, feedback: 0 });
+    expect(attachmentPoints(["TUTOR_FEEDBACK"], true)).toEqual({ brief: 0, draft: 0, feedback: 15 });
+    expect(attachmentPoints(["TUTOR_FEEDBACK"], false)).toEqual({ brief: 0, draft: 0, feedback: 0 });
+    expect(attachmentPoints(undefined, true)).toEqual({ brief: 0, draft: 0, feedback: 0 });
+  });
+
+  it("provider +2 and referred criteria +5 (resubmission only) and review +5", () => {
+    const base = { level: "3", supportType: "assessment_guidance" } as const;
+    expect(scoreLead({ ...base, provider: "ICS Learn" }, NOW).score).toBe(12);
+    expect(scoreLead({ ...base, referredCriteria: "AC 2.1" }, NOW).score).toBe(10); // not resub → no bonus
+    expect(
+      scoreLead({ ...base, submissionType: "resubmission", referredCriteria: "AC 2.1" }, NOW).score
+    ).toBe(15);
+    expect(scoreLead({ ...base, reachedReview: true }, NOW).score).toBe(15);
+  });
+});
+
+describe("P1 persona distribution", () => {
+  it("new Level 3 informational enquiry stays LOW_INTENT", () => {
+    const r = scoreLead({ level: "3", supportType: "assessment_guidance" }, NOW);
+    expect(r.score).toBe(10);
+    expect(r.classification).toBe("LOW_INTENT");
+  });
+
+  it("partial Level 5 enquiry without files is WARM/HIGH border territory", () => {
+    // L5(15) + guidance(5) + 30d deadline(5) + 2k words(10) = 35 → WARM
+    const r = scoreLead(
+      { level: "5", supportType: "assessment_guidance", deadline: "2026-08-12", wordCount: 2000 },
+      NOW
+    );
+    expect(r.score).toBe(35);
+    expect(r.classification).toBe("WARM");
+  });
+
+  it("complete Level 5 assessment enquiry with brief is HIGH_INTENT", () => {
+    // 15+10+10(6d)+10+5+5+5 + brief 15 + review 5 = 80
+    const r = scoreLead(
+      {
+        level: "5",
+        supportType: "draft_review",
+        deadline: "2026-07-19",
+        wordCount: 3500,
+        unitCode: "5CO01",
+        whatsapp: "+44 7700 900123",
+        message: "Here is a detailed description of exactly what I need help with.",
+        attachmentCategories: ["ASSESSMENT_BRIEF"],
+        reachedReview: true,
+      },
+      NOW
+    );
+    expect(r.score).toBe(80);
+    expect(r.classification).toBe("HIGH_INTENT");
+  });
+
+  it("complete Level 5 resubmission with tutor feedback is PRIORITY", () => {
+    // 15+20+15(3d)+10+5+5+5 + brief15 + feedback15 + criteria5 + review5 = 115
+    const r = scoreLead(
+      {
+        level: "5",
+        supportType: "resubmission",
+        submissionType: "resubmission",
+        deadline: "2026-07-16",
+        wordCount: 3000,
+        unitCode: "5HR01",
+        whatsapp: "+971501234567",
+        message: "Referred on two criteria, feedback attached, deadline is tight.",
+        referredCriteria: "AC 2.1 and AC 3.2",
+        attachmentCategories: ["ASSESSMENT_BRIEF", "TUTOR_FEEDBACK"],
+        reachedReview: true,
+      },
+      NOW
+    );
+    expect(r.score).toBe(115);
+    expect(r.classification).toBe("PRIORITY");
+  });
+
+  it("urgent complete Level 7 enquiry is PRIORITY", () => {
+    // 20+5+20(today)+15+5+5+5 + brief15 + review5 = 95
+    const r = scoreLead(
+      {
+        level: "7",
+        supportType: "assessment_guidance",
+        deadline: "2026-07-13",
+        wordCount: 4500,
+        unitCode: "7CO01",
+        whatsapp: "+44 7700 900123",
+        message: "Urgent support needed with critical analysis for this unit.",
+        attachmentCategories: ["ASSESSMENT_BRIEF"],
+        reachedReview: true,
+      },
+      NOW
+    );
+    expect(r.score).toBe(95);
+    expect(r.classification).toBe("PRIORITY");
+  });
+
+  it("incomplete enquiry (missing brief) scores below its with-brief equivalent", () => {
+    const base = {
+      level: "5",
+      supportType: "draft_review",
+      deadline: "2026-07-19",
+      wordCount: 3500,
+      unitCode: "5CO01",
+      reachedReview: true,
+    } as const;
+    const withBrief = scoreLead({ ...base, attachmentCategories: ["ASSESSMENT_BRIEF"] }, NOW);
+    const without = scoreLead(base, NOW);
+    expect(withBrief.score - without.score).toBe(15);
+  });
+
+  it("theoretical maximum is 147", () => {
+    const r = scoreLead(
+      {
+        level: "7",
+        supportType: "resubmission",
+        submissionType: "resubmission",
+        deadline: "2026-07-13",
+        wordCount: 8000,
+        unitCode: "7CO04",
+        whatsapp: "+971501234567",
+        message: "A long, detailed message about the assessment context and the feedback received.",
+        provider: "Avado",
+        referredCriteria: "AC 1.1, 2.2, 3.1",
+        attachmentCategories: ["ASSESSMENT_BRIEF", "EXISTING_DRAFT", "TUTOR_FEEDBACK"],
+        reachedReview: true,
+      },
+      NOW
+    );
+    expect(r.score).toBe(147);
+    expect(r.classification).toBe("PRIORITY");
   });
 });
 

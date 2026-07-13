@@ -60,12 +60,16 @@ export async function POST(request: Request) {
   }
 
   const v = validated.value;
-  const { score, classification } = scoreLead(v);
+  const { score, classification } = scoreLead({
+    ...v,
+    attachmentCategories: v.attachments.map((a) => a.category),
+  });
 
   const lead: Lead = {
     id: newReference(),
     createdAt: new Date().toISOString(),
     ...v,
+    attachments: v.attachments.length > 0 ? v.attachments : undefined,
     score,
     classification,
   };

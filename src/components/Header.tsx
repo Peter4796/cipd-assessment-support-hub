@@ -5,6 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { primaryNav, whatsappLink, cta } from "@/lib/site";
+import { enquiryUrl } from "@/lib/leads/context";
 import { Icon } from "@/components/Icon";
 import { trackEvent } from "@/lib/analytics";
 
@@ -159,7 +160,7 @@ export function Header() {
             WhatsApp
           </a>
           <Link
-            href="/contact"
+            href={enquiryUrl({ cta: "header" })}
             onClick={() => trackEvent("service_cta_clicked", { location: "header" })}
             className="btn-primary px-4 py-2 text-sm"
           >
@@ -223,7 +224,7 @@ export function Header() {
                 <Icon name="whatsapp" className="h-4 w-4" />
                 Chat on WhatsApp
               </a>
-              <Link href="/contact" className="btn-primary w-full">
+              <Link href={enquiryUrl({ cta: "sticky_mobile" })} className="btn-primary w-full">
                 {cta.getQuote}
               </Link>
             </div>

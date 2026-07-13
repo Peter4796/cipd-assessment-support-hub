@@ -8,6 +8,7 @@ import { CtaBand } from "@/components/Cta";
 import { RichContent } from "@/components/RichContent";
 import { posts, getPost } from "@/content/blog";
 import { getUnit } from "@/content/units";
+import { enquiryUrl, type EnquiryContext } from "@/lib/leads/context";
 import { site } from "@/lib/site";
 
 export function generateStaticParams() {
@@ -125,7 +126,32 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         </Section>
       )}
 
-      <CtaBand location="article" />
+      <CtaBand location="article" primaryHref={enquiryUrl(articleCtaContext(post))} />
     </>
   );
+}
+
+/**
+ * Contextual funnel prefill from article topic (P1.10). Only unambiguous
+ * categories prefill a support type; everything else sends no assumption.
+ */
+function articleCtaContext(post: { category: string; unit?: string }): EnquiryContext {
+  const ctx: EnquiryContext = { cta: "article_end" };
+  if (post.unit && /^[357][A-Za-z]{2}\d{2}$/.test(post.unit)) {
+    ctx.unit = post.unit;
+    ctx.level = post.unit[0] as EnquiryContext["level"];
+  }
+  switch (post.category) {
+    case "Referencing":
+      ctx.support = "harvard_referencing";
+      break;
+    case "Feedback":
+      ctx.support = "feedback_interpretation";
+      break;
+    case "Resubmissions":
+      ctx.support = "resubmission";
+      ctx.submission = "resubmission";
+      break;
+  }
+  return ctx;
 }
