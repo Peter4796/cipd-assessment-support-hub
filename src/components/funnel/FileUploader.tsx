@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { upload } from "@vercel/blob/client";
+import { uploadPresigned } from "@vercel/blob/client";
 import { Icon } from "@/components/Icon";
 import { trackEvent } from "@/lib/analytics";
 import {
@@ -82,8 +82,12 @@ export function FileUploader({
     trackEvent("brief_upload_started", { file_category: category });
     try {
       const pathname = buildBlobPathname(file.name, category);
-      const result = await upload(pathname, file, {
-        access: "public",
+      // Presigned flow: the ONLY client-upload path that supports the private
+      // store's OIDC auth (see /api/uploads). The browser receives a
+      // short-lived presigned URL, never store credentials, and no blob URL
+      // is kept client-side — the server derives access from the pathname.
+      const result = await uploadPresigned(pathname, file, {
+        access: "private",
         handleUploadUrl: "/api/uploads",
         contentType: file.type || undefined,
         onUploadProgress: ({ percentage }) => {
@@ -99,7 +103,6 @@ export function FileUploader({
         mimeType: file.type || result.contentType || "application/octet-stream",
         sizeBytes: file.size,
         uploadStatus: "uploaded",
-        url: result.url,
         uploadedAt: new Date().toISOString(),
         category,
       };

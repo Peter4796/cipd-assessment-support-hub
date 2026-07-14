@@ -53,17 +53,16 @@ export const ATTACHMENT_CATEGORY_KEYS = Object.keys(
 export type LeadAttachment = {
   id: string;
   originalFileName: string; // sanitised display name
-  pathname: string; // blob pathname (internal reference)
+  /**
+   * Blob pathname within the PRIVATE store — the only storage reference we
+   * keep. Access is always server-mediated via /admin/files/[...pathname]
+   * (Basic-Auth protected, streams the blob with OIDC credentials). Raw blob
+   * URLs are never stored, emailed, logged or sent to analytics.
+   */
+  pathname: string;
   mimeType: string;
   sizeBytes: number;
   uploadStatus: "uploaded"; // only successfully uploaded files reach the lead
-  /**
-   * Unguessable (random-suffixed) blob URL. SECURITY MODEL: Vercel Blob
-   * client uploads are public-with-unguessable-URL (capability URL). These
-   * URLs are shown ONLY in the internal notification email — never to
-   * visitors, never in analytics, never logged. See docs/lead-acquisition.md.
-   */
-  url: string;
   uploadedAt: string; // ISO
   category: AttachmentCategory;
 };

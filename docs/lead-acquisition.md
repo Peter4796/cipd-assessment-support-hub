@@ -175,13 +175,35 @@ so attacker-supplied URLs can never be injected into the notification email.
 Filenames are sanitised; pathnames are namespaced
 `enquiries/YYYY-MM/<category>/<name>` with a random suffix always appended.
 
-### Upload security model (documented decision)
-Vercel Blob client uploads are **public-with-unguessable-URL** (capability
-URLs); private/authenticated blob access is not available in this setup. The
-mitigations: random suffixes, no directory listing, URLs surfaced only inside
-the internal notification email, never logged, never sent to analytics, never
-shown to visitors. Practical equivalence: "anyone with the link" sharing.
-The P2 upgrade is files behind the admin dashboard with authenticated access.
+### Upload security model (PRIVATE store + OIDC — updated 2026-07-14)
+The store (`cipd-assessment-files`) is **private**. Authentication was audited
+against the installed `@vercel/blob@2.6.1`:
+
+- **Production/Preview:** the SDK's credential resolver uses **Vercel OIDC**
+  (`VERCEL_OIDC_TOKEN` supplied at runtime + `BLOB_STORE_ID` from the
+  connected store). No static `BLOB_READ_WRITE_TOKEN` exists or is needed.
+- **Uploads** use the **presigned flow** — the only client-upload path that
+  supports OIDC in this SDK (`uploadPresigned` → `POST /api/uploads` →
+  `handleUploadPresigned` + `issueSignedToken`). The server pins allowed
+  content types, the 10 MB limit, put-only scope and a 10-minute expiry into
+  the signed token; upload-completed callbacks are signature-verified against
+  the provisioned `BLOB_WEBHOOK_PUBLIC_KEY`. The classic `handleUpload` flow
+  is NOT used: in every published SDK version it can only mint client tokens
+  from a static read-write token.
+- **Downloads are server-mediated:** notification emails link to
+  `/admin/files/[...pathname]`, which sits behind the HTTP Basic Auth
+  middleware, validates the `enquiries/` namespace, reads the blob with
+  `get(pathname, { access: "private" })` (OIDC) and streams it. Raw blob URLs
+  are never stored, emailed, logged or sent to analytics — the client-supplied
+  `url` field is discarded during validation, making email link injection
+  impossible by construction.
+- **Local development:** `vercel env pull .env.local` provides
+  `BLOB_STORE_ID` + a short-lived `VERCEL_OIDC_TOKEN`. `BLOB_READ_WRITE_TOKEN`
+  remains an optional legacy fallback only and is not used by the private store.
+- **Deletion/cleanup:** no automated deletion exists yet (P2, needs the DB);
+  when added it will use the same server-side SDK auth (`del()`/presigned
+  delete). Manual retention policy unchanged (~90 days via Vercel dashboard).
+
 **Malware scanning is not implemented** — documents are never executed or
 rendered server-side and are opened deliberately by the owner; a scan-on-upload
 queue is the correct future approach if volume grows.
@@ -237,7 +259,10 @@ bottom of `src/lib/analytics.ts`. PII rules unchanged and enforced by type.
 
 | Variable | Purpose |
 |---|---|
-| `BLOB_READ_WRITE_TOKEN` | Vercel Blob uploads — create a Blob store in Vercel → Storage; auto-injected in production |
+| `BLOB_STORE_ID` (auto) | Provisioned by the connected private store; enables SDK OIDC auth |
+| `VERCEL_OIDC_TOKEN` (auto) | Supplied by Vercel at runtime (and via `vercel env pull` locally); never exposed to clients |
+| `BLOB_WEBHOOK_PUBLIC_KEY` (auto) | Verifies presigned upload-completion callbacks (SDK default) |
+| `BLOB_READ_WRITE_TOKEN` | Legacy fallback only — not required and not provisioned for the private store |
 
 ## P2 boundaries (unchanged)
 Database (Neon) → persistent leads, blob-lead linking, automated retention;

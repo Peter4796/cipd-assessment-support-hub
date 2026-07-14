@@ -127,20 +127,12 @@ export function normaliseSubmissionType(raw: unknown): SubmissionType | undefine
 }
 
 /**
- * Blob URL allowlist — attachments are echoed into the internal notification
- * email as links, so ONLY URLs on Vercel Blob storage hosts are accepted.
- * Anything else (attacker-supplied phishing links, javascript: URLs) is
- * rejected outright. Pathnames must sit under our enquiries/ namespace.
+ * Attachment re-validation. The PRIVATE store means no URL is ever accepted
+ * from the client — any `url` field in the payload is discarded outright, so
+ * link injection into the notification email is impossible by construction.
+ * The only storage reference kept is the pathname, which must sit inside our
+ * enquiries/ namespace (it becomes a Basic-Auth-mediated /admin/files link).
  */
-export function isTrustedBlobUrl(raw: string): boolean {
-  try {
-    const u = new URL(raw);
-    return u.protocol === "https:" && u.hostname.endsWith(".public.blob.vercel-storage.com");
-  } catch {
-    return false;
-  }
-}
-
 export function normaliseAttachments(raw: unknown): LeadAttachment[] | { error: string } {
   if (raw === undefined || raw === null) return [];
   if (!Array.isArray(raw)) return { error: "invalid_attachments" };
@@ -149,13 +141,13 @@ export function normaliseAttachments(raw: unknown): LeadAttachment[] | { error: 
   for (const item of raw) {
     if (typeof item !== "object" || item === null) return { error: "invalid_attachments" };
     const a = item as Record<string, unknown>;
-    const url = typeof a.url === "string" ? a.url.trim() : "";
     const pathname = cleanText(a.pathname, 300);
     const category = cleanText(a.category, 30) as AttachmentCategory;
     const mimeType = cleanText(a.mimeType, 100);
     const sizeBytes = typeof a.sizeBytes === "number" ? Math.round(a.sizeBytes) : NaN;
-    if (!isTrustedBlobUrl(url)) return { error: "invalid_attachments" };
-    if (!pathname.startsWith("enquiries/")) return { error: "invalid_attachments" };
+    if (!pathname.startsWith("enquiries/") || pathname.includes("..")) {
+      return { error: "invalid_attachments" };
+    }
     if (!(ATTACHMENT_CATEGORY_KEYS as readonly string[]).includes(category)) {
       return { error: "invalid_attachments" };
     }
@@ -170,7 +162,6 @@ export function normaliseAttachments(raw: unknown): LeadAttachment[] | { error: 
       mimeType,
       sizeBytes,
       uploadStatus: "uploaded",
-      url,
       uploadedAt: new Date().toISOString(),
       category,
     });

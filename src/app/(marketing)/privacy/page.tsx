@@ -37,10 +37,11 @@ export default function PrivacyPage() {
           <h2>Assessment documents</h2>
           <p>
             If you upload documents (an assessment brief, a draft, or assessor feedback), they
-            are stored with Vercel&apos;s file storage service (Vercel Blob) at unguessable,
-            non-indexed web addresses, and are accessed only by us to review your enquiry. Only
-            upload documents relevant to your enquiry, and remove unnecessary personal or
-            confidential workplace information where possible.
+            are stored in a private file store (Vercel Blob). The documents are not publicly
+            accessible; they can only be retrieved through our own authenticated systems, and
+            are accessed only by us to review your enquiry. Only upload documents relevant to
+            your enquiry, and remove unnecessary personal or confidential workplace information
+            where possible.
           </p>
 
           <h2>Email notifications</h2>

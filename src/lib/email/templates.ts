@@ -15,6 +15,15 @@ import { ATTACHMENT_CATEGORIES, SUPPORT_TYPES } from "@/lib/leads/types";
 import { classificationLabel } from "@/lib/leads/scoring";
 import { getUnit } from "@/content/units";
 import { humanFileSize } from "@/lib/leads/uploads";
+import { site } from "@/lib/site";
+
+/**
+ * Server-mediated download link for a private blob: Basic-Auth-protected
+ * route that streams the file. No storage URL or credential is ever emailed.
+ */
+function mediatedFileUrl(pathname: string): string {
+  return `${site.url}/admin/files/${pathname.split("/").map(encodeURIComponent).join("/")}`;
+}
 
 // ─── Escaping ───
 export function esc(value: unknown): string {
@@ -116,7 +125,7 @@ export function leadNotificationHtml(lead: Lead): string {
   const fileRows = files
     .map(
       (f) =>
-        `<tr><td style="padding:4px 12px 4px 0;color:${GREY};font-size:13px;white-space:nowrap;vertical-align:top;">${esc(ATTACHMENT_CATEGORIES[f.category])}</td><td style="padding:4px 0;font-size:13px;"><a href="${esc(f.url)}" style="color:#227069;font-weight:600;">${esc(f.originalFileName)}</a> <span style="color:${GREY};">(${esc(humanFileSize(f.sizeBytes))})</span></td></tr>`
+        `<tr><td style="padding:4px 12px 4px 0;color:${GREY};font-size:13px;white-space:nowrap;vertical-align:top;">${esc(ATTACHMENT_CATEGORIES[f.category])}</td><td style="padding:4px 0;font-size:13px;"><a href="${esc(mediatedFileUrl(f.pathname))}" style="color:#227069;font-weight:600;">${esc(f.originalFileName)}</a> <span style="color:${GREY};">(${esc(humanFileSize(f.sizeBytes))})</span></td></tr>`
     )
     .join("");
   const warnings: string[] = [];

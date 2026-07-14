@@ -2,12 +2,12 @@
  * Upload rules + pure helpers — shared by the client uploader and the
  * server-side Blob token handler so limits can never drift apart.
  *
- * SECURITY MODEL (documented decision — see docs/lead-acquisition.md):
- * Vercel Blob client uploads are public-with-unguessable-URL. Every stored
- * file gets a random suffix (capability URL); there is no directory listing;
- * URLs are surfaced ONLY inside the internal lead-notification email. This is
- * equivalent to "anyone with the link" sharing. True private/authenticated
- * storage is the P2 upgrade (files behind the admin dashboard + DB).
+ * SECURITY MODEL (see docs/lead-acquisition.md): the store is PRIVATE.
+ * Uploads use the OIDC-authenticated presigned flow (uploadPresigned →
+ * handleUploadPresigned → issueSignedToken); blobs are never publicly
+ * fetchable. Downloads are server-mediated through the Basic-Auth-protected
+ * /admin/files/[...pathname] route. Raw blob URLs are never stored, emailed,
+ * logged or sent to analytics.
  *
  * Malware scanning is NOT implemented — files are never executed or rendered
  * server-side, and the only consumer is the business owner opening them
@@ -16,6 +16,23 @@
  */
 
 import type { AttachmentCategory } from "@/lib/leads/types";
+
+/**
+ * Server-side Blob configuration detection.
+ *
+ * Production/Preview (Vercel-connected PRIVATE store): the connection
+ * provisions BLOB_STORE_ID, and Vercel supplies VERCEL_OIDC_TOKEN at runtime;
+ * the SDK then authenticates via OIDC (verified against @vercel/blob 2.6.1's
+ * resolveBlobAuth). No static BLOB_READ_WRITE_TOKEN is required.
+ * Local dev: `vercel env pull .env.local` provides the same pair.
+ * BLOB_READ_WRITE_TOKEN remains an optional legacy fallback only.
+ *
+ * Server-only: returns false in client bundles (non-public env vars inline
+ * to undefined) — only API routes may call it.
+ */
+export function isBlobConfigured(): boolean {
+  return Boolean(process.env.BLOB_STORE_ID || process.env.BLOB_READ_WRITE_TOKEN);
+}
 
 // ─── Limits (single source of truth) ───
 export const MAX_FILE_BYTES = 10 * 1024 * 1024; // 10 MB

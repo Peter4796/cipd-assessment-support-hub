@@ -87,22 +87,20 @@ describe("leadNotificationHtml — documents (P1)", () => {
         {
           id: "att_1",
           originalFileName: "5HR01-brief.pdf",
-          pathname: "enquiries/2026-07/assessment_brief/5HR01-brief.pdf",
+          pathname: "enquiries/2026-07/assessment_brief/5HR01-brief-x8f2.pdf",
           mimeType: "application/pdf",
           sizeBytes: 300000,
           uploadStatus: "uploaded",
-          url: "https://abc123.public.blob.vercel-storage.com/enquiries/2026-07/assessment_brief/5HR01-brief-x8f2.pdf",
           uploadedAt: "2026-07-13T12:00:00.000Z",
           category: "ASSESSMENT_BRIEF",
         },
         {
           id: "att_2",
           originalFileName: "feedback.png",
-          pathname: "enquiries/2026-07/tutor_feedback/feedback.png",
+          pathname: "enquiries/2026-07/tutor_feedback/feedback-k2j9.png",
           mimeType: "image/png",
           sizeBytes: 120000,
           uploadStatus: "uploaded",
-          url: "https://abc123.public.blob.vercel-storage.com/enquiries/2026-07/tutor_feedback/feedback-k2j9.png",
           uploadedAt: "2026-07-13T12:00:00.000Z",
           category: "TUTOR_FEEDBACK",
         },
@@ -110,7 +108,12 @@ describe("leadNotificationHtml — documents (P1)", () => {
     });
     expect(withFiles).toContain("DOCUMENTS (2)");
     expect(withFiles).toContain("5HR01-brief.pdf");
-    expect(withFiles).toContain("blob.vercel-storage.com");
+    // Links are server-mediated through the Basic-Auth admin route — never a
+    // storage URL or credential.
+    expect(withFiles).toContain("/admin/files/enquiries/2026-07/assessment_brief/5HR01-brief-x8f2.pdf");
+    expect(withFiles).not.toContain("blob.vercel-storage.com");
+    expect(withFiles).not.toContain("BLOB_READ_WRITE_TOKEN");
+    expect(withFiles).not.toContain("vercel_blob_rw");
     expect(withFiles).not.toContain("Assessment brief not uploaded");
     expect(withFiles).not.toContain("Resubmission without tutor feedback");
   });

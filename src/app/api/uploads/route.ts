@@ -1,62 +1,69 @@
 import { NextResponse } from "next/server";
-import { handleUpload, type HandleUploadBody } from "@vercel/blob/client";
+import { handleUploadPresigned, type HandleUploadPresignedBody } from "@vercel/blob/client";
+import { issueSignedToken } from "@vercel/blob";
 import { clientKey, rateLimit } from "@/lib/leads/rate-limit";
 import {
+  ALLOWED_EXTENSIONS,
   ALLOWED_MIME_TYPES,
   MAX_FILE_BYTES,
   fileExtension,
-  ALLOWED_EXTENSIONS,
+  isBlobConfigured,
 } from "@/lib/leads/uploads";
 
 /**
- * POST /api/uploads — authorises client-side uploads to Vercel Blob.
+ * POST /api/uploads — authorises client uploads to the PRIVATE Blob store.
  *
- * Flow (the canonical @vercel/blob client-upload pattern):
- *   1. The funnel's uploader calls upload() with handleUploadUrl = this route.
- *   2. onBeforeGenerateToken validates the pathname extension and pins the
- *      allowed content types + size limit into the short-lived client token —
- *      the Blob service itself then enforces them during the direct upload.
- *   3. The browser uploads straight to Blob storage (never through us).
+ * AUTHENTICATION (verified against @vercel/blob 2.6.1):
+ * This route uses the presigned flow — the only client-upload path that
+ * supports Vercel OIDC. `issueSignedToken` → `requestApi` → `resolveBlobAuth`
+ * authenticates with VERCEL_OIDC_TOKEN (runtime) + BLOB_STORE_ID (from the
+ * connected store). No static BLOB_READ_WRITE_TOKEN is required; if one is
+ * present it is used as a legacy fallback by the same resolver. The classic
+ * `handleUpload` flow is NOT used because it can only mint client tokens from
+ * a static read-write token.
  *
- * SECURITY MODEL: blobs are public-with-unguessable-URL (random suffix always
- * on). URLs are surfaced only in the internal lead notification. See
- * docs/lead-acquisition.md for the full review and retention policy.
+ * Flow:
+ *   1. Browser calls uploadPresigned() with handleUploadUrl = this route.
+ *   2. getSignedToken validates the pathname and issues a short-lived signed
+ *      token with server-pinned constraints (content types, max size, put-only).
+ *   3. handleUploadPresigned returns a presigned control-plane PUT URL.
+ *   4. The browser uploads directly to the private store; the browser never
+ *      receives store credentials, only the single-use presigned URL.
+ *   5. Upload-completed callbacks are signature-verified against
+ *      BLOB_WEBHOOK_PUBLIC_KEY (SDK default), provisioned with the store.
  *
- * GET /api/uploads — availability probe: tells the funnel whether document
- * upload is configured (BLOB_READ_WRITE_TOKEN present) so the UI can degrade
- * honestly to "share via WhatsApp/email after submitting" when it is not.
+ * GET /api/uploads — availability probe for honest UI degradation.
  */
 
 export const runtime = "nodejs";
 
+const TOKEN_TTL_MS = 10 * 60 * 1000; // presigned tokens live 10 minutes
+
 export function GET() {
-  return NextResponse.json({ available: Boolean(process.env.BLOB_READ_WRITE_TOKEN) });
+  return NextResponse.json({ available: isBlobConfigured() });
 }
 
 export async function POST(request: Request) {
-  if (!process.env.BLOB_READ_WRITE_TOKEN) {
+  if (!isBlobConfigured()) {
     return NextResponse.json({ ok: false, error: "upload_unavailable" }, { status: 503 });
   }
-  // Generous but real: an enquiry needs ≤5 files; allow retries and multiple
-  // enquiries per office/NAT without letting a bot hammer the token endpoint.
   if (!rateLimit(`uploads:${clientKey(request.headers)}`).allowed) {
     return NextResponse.json({ ok: false, error: "rate_limited" }, { status: 429 });
   }
 
-  let body: HandleUploadBody;
+  let body: HandleUploadPresignedBody;
   try {
-    body = (await request.json()) as HandleUploadBody;
+    body = (await request.json()) as HandleUploadPresignedBody;
   } catch {
     return NextResponse.json({ ok: false, error: "invalid_payload" }, { status: 400 });
   }
 
   try {
-    const result = await handleUpload({
+    const result = await handleUploadPresigned({
       body,
       request,
-      onBeforeGenerateToken: async (pathname) => {
-        // The pathname was built client-side by buildBlobPathname(); verify
-        // the namespace and extension server-side regardless.
+      getSignedToken: async (pathname) => {
+        // Server-side validation regardless of what the client built.
         if (!pathname.startsWith("enquiries/")) {
           throw new Error("invalid_pathname");
         }
@@ -64,15 +71,21 @@ export async function POST(request: Request) {
         if (!ALLOWED_EXTENSIONS.includes(ext)) {
           throw new Error("file_type_not_allowed");
         }
-        return {
+        const token = await issueSignedToken({
+          pathname,
+          operations: ["put"],
           allowedContentTypes: ALLOWED_MIME_TYPES,
           maximumSizeInBytes: MAX_FILE_BYTES,
-          addRandomSuffix: true, // unguessable capability URLs — never disable
-          tokenPayload: "", // no PII in token payloads
+          validUntil: Date.now() + TOKEN_TTL_MS,
+        });
+        return {
+          token,
+          urlOptions: {
+            addRandomSuffix: true, // never allow pathname collisions/guessing
+          },
         };
       },
-      // Upload completion is recorded on the lead itself at submission time;
-      // nothing to persist here yet (no DB in P1).
+      // No DB yet — attachment metadata is carried on the lead submission.
       onUploadCompleted: async () => {},
     });
     return NextResponse.json(result);
@@ -80,6 +93,7 @@ export async function POST(request: Request) {
     const code = err instanceof Error ? err.message : "upload_failed";
     const known = ["invalid_pathname", "file_type_not_allowed"];
     // Never leak internals; return a known code or a generic one.
+    console.error(`[uploads] presign failed (${known.includes(code) ? code : "internal"})`);
     return NextResponse.json(
       { ok: false, error: known.includes(code) ? code : "upload_failed" },
       { status: 400 }

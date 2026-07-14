@@ -6,7 +6,9 @@ import {
   validateFile,
   MAX_FILE_BYTES,
 } from "@/lib/leads/uploads";
-import { normaliseAttachments, isTrustedBlobUrl } from "@/lib/leads/validation";
+import { normaliseAttachments } from "@/lib/leads/validation";
+import { isBlobConfigured } from "@/lib/leads/uploads";
+import { afterEach } from "vitest";
 import { enquiryUrl } from "@/lib/leads/context";
 
 describe("validateFile", () => {
@@ -77,25 +79,41 @@ describe("fileExtension", () => {
   });
 });
 
-describe("isTrustedBlobUrl", () => {
-  it("accepts only https Vercel Blob hosts", () => {
-    expect(isTrustedBlobUrl("https://abc123.public.blob.vercel-storage.com/x.pdf")).toBe(true);
-    expect(isTrustedBlobUrl("http://abc123.public.blob.vercel-storage.com/x.pdf")).toBe(false);
-    expect(isTrustedBlobUrl("https://evil.com/x.pdf")).toBe(false);
-    expect(isTrustedBlobUrl("https://evil.com/?u=public.blob.vercel-storage.com")).toBe(false);
-    expect(isTrustedBlobUrl("javascript:alert(1)")).toBe(false);
-    expect(isTrustedBlobUrl("not a url")).toBe(false);
+describe("isBlobConfigured (OIDC-aware availability)", () => {
+  const saved = { storeId: process.env.BLOB_STORE_ID, rw: process.env.BLOB_READ_WRITE_TOKEN };
+  afterEach(() => {
+    if (saved.storeId === undefined) delete process.env.BLOB_STORE_ID;
+    else process.env.BLOB_STORE_ID = saved.storeId;
+    if (saved.rw === undefined) delete process.env.BLOB_READ_WRITE_TOKEN;
+    else process.env.BLOB_READ_WRITE_TOKEN = saved.rw;
+  });
+
+  it("recognises a Vercel-connected private store (BLOB_STORE_ID, no RW token)", () => {
+    delete process.env.BLOB_READ_WRITE_TOKEN;
+    process.env.BLOB_STORE_ID = "store_test123";
+    expect(isBlobConfigured()).toBe(true);
+  });
+
+  it("recognises the legacy RW-token configuration", () => {
+    delete process.env.BLOB_STORE_ID;
+    process.env.BLOB_READ_WRITE_TOKEN = "vercel_blob_rw_test";
+    expect(isBlobConfigured()).toBe(true);
+  });
+
+  it("reports unavailable when neither is present", () => {
+    delete process.env.BLOB_STORE_ID;
+    delete process.env.BLOB_READ_WRITE_TOKEN;
+    expect(isBlobConfigured()).toBe(false);
   });
 });
 
-describe("normaliseAttachments (server re-validation)", () => {
+describe("normaliseAttachments (private store: pathname-only, URLs discarded)", () => {
   const good = {
     id: "att_1",
     originalFileName: "brief.pdf",
     pathname: "enquiries/2026-07/assessment_brief/brief.pdf",
     mimeType: "application/pdf",
     sizeBytes: 300000,
-    url: "https://abc123.public.blob.vercel-storage.com/enquiries/2026-07/assessment_brief/brief-x1.pdf",
     category: "ASSESSMENT_BRIEF",
   };
 
@@ -112,12 +130,18 @@ describe("normaliseAttachments (server re-validation)", () => {
     expect(normaliseAttachments(undefined)).toEqual([]);
   });
 
-  it("rejects non-blob URLs (link injection into the notification email)", () => {
-    expect(normaliseAttachments([{ ...good, url: "https://phish.example/doc.pdf" }])).toMatchObject({ error: "invalid_attachments" });
+  it("discards any client-supplied URL — link injection is impossible by construction", () => {
+    const r = normaliseAttachments([{ ...good, url: "https://phish.example/doc.pdf" }]);
+    expect(Array.isArray(r)).toBe(true);
+    if (Array.isArray(r)) {
+      expect(JSON.stringify(r)).not.toContain("phish.example");
+      expect("url" in r[0]).toBe(false);
+    }
   });
 
-  it("rejects out-of-namespace pathnames, bad categories, bad MIME, bad sizes", () => {
+  it("rejects out-of-namespace and traversal pathnames, bad categories, bad MIME, bad sizes", () => {
     expect(normaliseAttachments([{ ...good, pathname: "secrets/file.pdf" }])).toMatchObject({ error: "invalid_attachments" });
+    expect(normaliseAttachments([{ ...good, pathname: "enquiries/../secrets/file.pdf" }])).toMatchObject({ error: "invalid_attachments" });
     expect(normaliseAttachments([{ ...good, category: "MALWARE" }])).toMatchObject({ error: "invalid_attachments" });
     expect(normaliseAttachments([{ ...good, mimeType: "text/html" }])).toMatchObject({ error: "invalid_attachments" });
     expect(normaliseAttachments([{ ...good, sizeBytes: 999999999 }])).toMatchObject({ error: "invalid_attachments" });
