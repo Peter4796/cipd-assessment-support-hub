@@ -114,10 +114,13 @@ export function leadNotificationHtml(lead: Lead): string {
   const files = lead.attachments ?? [];
   const hasBrief = files.some((f) => f.category === "ASSESSMENT_BRIEF");
   const hasFeedback = files.some((f) => f.category === "TUTOR_FEEDBACK");
+  // Plain, current-tab anchors by design: no target attribute, no scripting.
+  // Label format: "Download Assessment brief — file.pdf" so the action is
+  // explicit even in webmail clients that restyle links.
   const fileRows = files
     .map(
       (f) =>
-        `<tr><td style="padding:4px 12px 4px 0;color:${GREY};font-size:13px;white-space:nowrap;vertical-align:top;">${esc(ATTACHMENT_CATEGORIES[f.category])}</td><td style="padding:4px 0;font-size:13px;"><a href="${esc(mediatedFileUrl(f.pathname))}" style="color:#227069;font-weight:600;">${esc(f.originalFileName)}</a> <span style="color:${GREY};">(${esc(humanFileSize(f.sizeBytes))})</span></td></tr>`
+        `<tr><td style="padding:5px 0;font-size:13px;"><a href="${esc(mediatedFileUrl(f.pathname))}" style="color:#227069;font-weight:600;">Download ${esc(ATTACHMENT_CATEGORIES[f.category])} — ${esc(f.originalFileName)}</a> <span style="color:${GREY};">(${esc(humanFileSize(f.sizeBytes))})</span></td></tr>`
     )
     .join("");
   const warnings: string[] = [];

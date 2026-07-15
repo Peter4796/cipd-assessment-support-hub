@@ -107,15 +107,45 @@ describe("leadNotificationHtml — documents (P1)", () => {
       ],
     });
     expect(withFiles).toContain("DOCUMENTS (2)");
-    expect(withFiles).toContain("5HR01-brief.pdf");
+    // Explicit download-action labels: "Download <category> — <filename>"
+    expect(withFiles).toContain("Download Assessment brief — 5HR01-brief.pdf");
+    expect(withFiles).toContain("Download Tutor / assessor feedback — feedback.png");
     // Links are server-mediated through the Basic-Auth admin route — never a
-    // storage URL or credential.
-    expect(withFiles).toContain("/admin/files/enquiries/2026-07/assessment_brief/5HR01-brief-x8f2.pdf");
+    // storage URL or credential — and always the direct HTTPS URL.
+    expect(withFiles).toContain(
+      'href="https://www.cipdguidance.com/admin/files/enquiries/2026-07/assessment_brief/5HR01-brief-x8f2.pdf"'
+    );
     expect(withFiles).not.toContain("blob.vercel-storage.com");
     expect(withFiles).not.toContain("BLOB_READ_WRITE_TOKEN");
     expect(withFiles).not.toContain("vercel_blob_rw");
     expect(withFiles).not.toContain("Assessment brief not uploaded");
     expect(withFiles).not.toContain("Resubmission without tutor feedback");
+    // Plain current-tab anchors: webmail must not receive any excuse to spawn
+    // orphaned tabs, and no scripting behaviour may ever appear in email HTML.
+    expect(withFiles).not.toContain("target=");
+    expect(withFiles).not.toContain("_blank");
+    expect(withFiles).not.toContain("window.open");
+    expect(withFiles).not.toContain("javascript:");
+  });
+
+  it("escapes hostile filenames inside the download label", () => {
+    const html = leadNotificationHtml({
+      ...lead,
+      attachments: [
+        {
+          id: "att_x",
+          originalFileName: 'Brief "<img src=x onerror=alert(1)>".pdf',
+          pathname: "enquiries/2026-07/assessment_brief/brief-x9.pdf",
+          mimeType: "application/pdf",
+          sizeBytes: 1000,
+          uploadStatus: "uploaded",
+          uploadedAt: "2026-07-14T12:00:00.000Z",
+          category: "ASSESSMENT_BRIEF",
+        },
+      ],
+    });
+    expect(html).not.toContain("<img src=x");
+    expect(html).toContain("&lt;img src=x onerror=alert(1)&gt;");
   });
 
   it("shows submission type, referred criteria and provider", () => {
