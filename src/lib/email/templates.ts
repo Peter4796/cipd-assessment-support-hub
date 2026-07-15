@@ -15,15 +15,7 @@ import { ATTACHMENT_CATEGORIES, SUPPORT_TYPES } from "@/lib/leads/types";
 import { classificationLabel } from "@/lib/leads/scoring";
 import { getUnit } from "@/content/units";
 import { humanFileSize } from "@/lib/leads/uploads";
-import { site } from "@/lib/site";
-
-/**
- * Server-mediated download link for a private blob: Basic-Auth-protected
- * route that streams the file. No storage URL or credential is ever emailed.
- */
-function mediatedFileUrl(pathname: string): string {
-  return `${site.url}/admin/files/${pathname.split("/").map(encodeURIComponent).join("/")}`;
-}
+import { mediatedFileUrl } from "@/lib/urls";
 
 // ─── Escaping ───
 export function esc(value: unknown): string {
