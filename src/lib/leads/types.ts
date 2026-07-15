@@ -137,6 +137,8 @@ export type Lead = {
   referredCriteria?: string;
   attachments?: LeadAttachment[];
   funnel?: FunnelMeta;
+  /** Visitor reached the funnel review step before submitting. */
+  reachedReview?: boolean;
   acquisition: AcquisitionContext;
   score: number;
   classification: LeadClassification;
@@ -154,20 +156,38 @@ export type Lead = {
   quote?: { amount: number; currency: string; sentAt?: string };
 };
 
-// ─── Operational status pipeline (used by the future admin; defined here so
-//     the model is stable from day one) ───
+// ─── Operational status pipeline (owner-approved P2 model) ───
+// Statuses are flexible admin state, not a hard state machine: every change
+// is recorded in lead_status_events and milestone timestamps are stamped on
+// first entry, but an authenticated admin can always correct a mistake.
+// Archiving is deliberately NOT a status — it is the orthogonal `archivedAt`
+// field, so a lead keeps its final outcome (COMPLETED or LOST) when archived.
 export const LEAD_STATUSES = [
-  "NEW_LEAD",
-  "BRIEF_REVIEWED",
+  "NEW",
+  "REVIEWING",
+  "CONTACTED",
   "QUOTE_SENT",
   "AWAITING_PAYMENT",
   "IN_PROGRESS",
   "QUALITY_REVIEW",
   "DELIVERED",
-  "REVISION",
   "COMPLETED",
+  "LOST",
 ] as const;
 export type LeadStatus = (typeof LEAD_STATUSES)[number];
+
+/** Terminal outcomes: leaving one requires a deliberate reopen action. */
+export const TERMINAL_LEAD_STATUSES = ["COMPLETED", "LOST"] as const satisfies
+  readonly LeadStatus[];
+
+/** Statuses from which a lead may be marked LOST (pre-fulfilment stages). */
+export const LOSABLE_LEAD_STATUSES = [
+  "NEW",
+  "REVIEWING",
+  "CONTACTED",
+  "QUOTE_SENT",
+  "AWAITING_PAYMENT",
+] as const satisfies readonly LeadStatus[];
 
 // ─── Subscriber (lead-magnet) capture — a different funnel stage from a
 //     sales lead; kept deliberately separate so resource downloads never
