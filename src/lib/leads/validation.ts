@@ -25,6 +25,7 @@ import {
   type SupportType,
 } from "@/lib/leads/types";
 import { ALLOWED_MIME_TYPES, MAX_FILES, MAX_FILE_BYTES, sanitiseFileName } from "@/lib/leads/uploads";
+import { parsePhoneNumberFromString } from "libphonenumber-js";
 
 // ─── Limits ───
 const MAX = {
@@ -66,8 +67,20 @@ export function normaliseEmail(raw: unknown): string | null {
   return EMAIL_RE.test(email) ? email : null;
 }
 
+/**
+ * Phone normalisation. The forms submit E.164 (international phone input),
+ * which parses and is stored canonically ("+254712345678"). Anything else —
+ * legacy payloads from cached clients, or free-form input — falls back to
+ * the previous lenient digit-bounds acceptance rather than being discarded:
+ * an imperfectly formatted number on a captured lead beats a lost contact
+ * channel (capture-first). Validation uses libphonenumber-js metadata, not
+ * a custom regex.
+ */
 export function normaliseWhatsapp(raw: unknown): string | undefined {
   const cleaned = cleanText(raw, MAX.whatsapp).replace(/[^\d+() -]/g, "");
+  if (!cleaned) return undefined;
+  const parsed = parsePhoneNumberFromString(cleaned);
+  if (parsed?.isValid()) return parsed.number; // E.164
   const digits = cleaned.replace(/\D/g, "");
   if (digits.length < 7 || digits.length > 15) return undefined;
   return cleaned;

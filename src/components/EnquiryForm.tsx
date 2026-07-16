@@ -3,6 +3,8 @@
 import { useMemo, useRef, useState } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import { site, whatsappLink, emailLink } from "@/lib/site";
+import { PhoneNumberField } from "@/components/PhoneNumberField";
+import { isValidPhoneNumber } from "react-phone-number-input";
 import { Icon } from "@/components/Icon";
 import { trackEvent } from "@/lib/analytics";
 import { buildAcquisitionContext, derivePageType } from "@/lib/leads/context";
@@ -109,6 +111,12 @@ export function EnquiryForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setFieldError(null);
+    if (form.whatsapp && !isValidPhoneNumber(form.whatsapp)) {
+      setFieldError(
+        "Please check your WhatsApp number. It doesn't look complete for the selected country."
+      );
+      return;
+    }
     setStatus("submitting");
     trackEvent("lead_form_submitted", {
       source_page_type: sourcePageType,
@@ -308,8 +316,11 @@ export function EnquiryForm() {
           <label className={labelCls} htmlFor="whatsapp">
             WhatsApp number <span className="text-navy-400">(optional, fastest)</span>
           </label>
-          <input id="whatsapp" type="tel" className={inputCls} value={form.whatsapp} autoComplete="tel"
-            onChange={(e) => update("whatsapp", e.target.value)} placeholder="+44 or +971…" />
+          <PhoneNumberField
+            id="whatsapp"
+            value={form.whatsapp}
+            onChange={(v) => update("whatsapp", v)}
+          />
         </div>
         <div>
           <label className={labelCls} htmlFor="country">Country</label>

@@ -12,6 +12,8 @@ import {
   saveFunnelProgress,
 } from "@/lib/funnel/persistence";
 import { whatsappLink, emailLink, site } from "@/lib/site";
+import { PhoneNumberField } from "@/components/PhoneNumberField";
+import { isValidPhoneNumber, formatPhoneNumberIntl } from "react-phone-number-input";
 import { units } from "@/content/units";
 import {
   ATTACHMENT_CATEGORIES,
@@ -46,19 +48,6 @@ const SUPPORT_HINTS: Record<SupportType | "other", string> = {
   other: "Something else. Describe what you need in the next step.",
 };
 
-const PHONE_CODES = [
-  { code: "+44", label: "UK +44" },
-  { code: "+971", label: "UAE +971" },
-  { code: "+966", label: "KSA +966" },
-  { code: "+974", label: "Qatar +974" },
-  { code: "+965", label: "Kuwait +965" },
-  { code: "+968", label: "Oman +968" },
-  { code: "+973", label: "Bahrain +973" },
-  { code: "+353", label: "IE +353" },
-  { code: "+1", label: "US/CA +1" },
-  { code: "other", label: "Other" },
-];
-
 type FunnelState = {
   level: CipdLevel | "unsure" | "";
   unitCode: string;
@@ -72,8 +61,7 @@ type FunnelState = {
   referredCriteria: string;
   name: string;
   email: string;
-  phoneCode: string;
-  phoneNumber: string;
+  phone: string; // E.164 (e.g. "+254712345678") or ""
   country: string;
   website: string; // honeypot
 };
@@ -91,8 +79,7 @@ const INITIAL: FunnelState = {
   referredCriteria: "",
   name: "",
   email: "",
-  phoneCode: "+44",
-  phoneNumber: "",
+  phone: "",
   country: "",
   website: "",
 };
@@ -241,6 +228,10 @@ export function AssessmentFunnel() {
         if (state.name.trim().length < 2) return "Please enter your name.";
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(state.email.trim()))
           return "Please check your email address.";
+        // Optional field, but if a number was entered it must be valid for
+        // its selected country (libphonenumber rules, not a custom regex).
+        if (state.phone && !isValidPhoneNumber(state.phone))
+          return "Please check your WhatsApp number. It doesn't look complete for the selected country.";
         return null;
       }
       default:
@@ -296,12 +287,8 @@ export function AssessmentFunnel() {
   };
 
   // ─── Submission ───
-  const whatsappValue =
-    state.phoneNumber.trim() === ""
-      ? ""
-      : state.phoneCode === "other"
-        ? state.phoneNumber.trim()
-        : `${state.phoneCode} ${state.phoneNumber.trim()}`;
+  // Already E.164 from the phone field (e.g. "+254712345678").
+  const whatsappValue = state.phone;
 
   const handleSubmit = async () => {
     setStatus("submitting");
@@ -799,21 +786,14 @@ export function AssessmentFunnel() {
                 <label className={labelCls} htmlFor="f-phone">
                   WhatsApp number <span className="text-navy-400">(recommended, fastest replies)</span>
                 </label>
-                <div className="flex gap-2">
-                  <select
-                    aria-label="Country code"
-                    className={`${inputCls} w-32 flex-none`}
-                    value={state.phoneCode}
-                    onChange={(e) => update("phoneCode", e.target.value)}
-                  >
-                    {PHONE_CODES.map((c) => (
-                      <option key={c.code} value={c.code}>{c.label}</option>
-                    ))}
-                  </select>
-                  <input id="f-phone" type="tel" className={inputCls} value={state.phoneNumber} autoComplete="tel"
-                    onChange={(e) => update("phoneNumber", e.target.value)}
-                    placeholder={state.phoneCode === "other" ? "Full number incl. country code" : "7700 900123"} />
-                </div>
+                <PhoneNumberField
+                  id="f-phone"
+                  value={state.phone}
+                  onChange={(v) => update("phone", v)}
+                />
+                <p className="mt-1.5 text-xs text-navy-400">
+                  Choose your country, then enter your number without the country code.
+                </p>
               </div>
               <div>
                 <label className={labelCls} htmlFor="f-country">Country</label>
@@ -870,7 +850,7 @@ export function AssessmentFunnel() {
               />
               <ReviewRow
                 label="Contact"
-                value={[state.name, state.email, whatsappValue || null, state.country || null]
+                value={[state.name, state.email, (whatsappValue && formatPhoneNumberIntl(whatsappValue)) || whatsappValue || null, state.country || null]
                   .filter(Boolean)
                   .join(" · ")}
                 onEdit={() => jumpTo("contact")}

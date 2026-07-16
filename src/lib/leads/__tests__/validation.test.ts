@@ -124,9 +124,25 @@ describe("primitives", () => {
     expect(normaliseUnitCode("5os01")).toBe("5OS01");
     expect(normaliseUnitCode("")).toBeUndefined();
   });
-  it("normaliseWhatsapp enforces digit bounds", () => {
-    expect(normaliseWhatsapp("+44 7700 900123")).toBeTruthy();
+  it("normaliseWhatsapp canonicalises valid international numbers to E.164", () => {
+    expect(normaliseWhatsapp("+44 7912 345678")).toBe("+447912345678"); // UK
+    expect(normaliseWhatsapp("+971 50 123 4567")).toBe("+971501234567"); // UAE
+    expect(normaliseWhatsapp("+254 712 345678")).toBe("+254712345678"); // Kenya
+    expect(normaliseWhatsapp("+1 (415) 555-2671")).toBe("+14155552671"); // US
+    expect(normaliseWhatsapp("+234 803 123 4567")).toBe("+2348031234567"); // Nigeria
+    expect(normaliseWhatsapp("+49 151 23456789")).toBe("+4915123456789"); // Germany
+  });
+  it("normaliseWhatsapp rejects garbage", () => {
     expect(normaliseWhatsapp("123")).toBeUndefined();
+    expect(normaliseWhatsapp("++++")).toBeUndefined();
+    expect(normaliseWhatsapp("abc")).toBeUndefined();
+    expect(normaliseWhatsapp("+999999")).toBeUndefined();
+    expect(normaliseWhatsapp("")).toBeUndefined();
+  });
+  it("normaliseWhatsapp keeps plausible legacy input it cannot parse (capture-first)", () => {
+    // Old cached clients could submit national digits with no country signal;
+    // an unparsed-but-plausible number is kept rather than silently dropped.
+    expect(normaliseWhatsapp("0712345678")).toBe("0712345678");
   });
   it("normaliseWordCount parses text and caps", () => {
     expect(normaliseWordCount("about 3,500 words")).toBe(3500);
