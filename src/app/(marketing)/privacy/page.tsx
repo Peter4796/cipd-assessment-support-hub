@@ -61,10 +61,12 @@ export default function PrivacyPage() {
 
           <h2>Retention and deletion</h2>
           <p>
-            Enquiry emails are retained as our record of your enquiry. Uploaded documents for
-            enquiries that do not proceed are deleted periodically, normally within 90 days.
-            You can ask us to delete your enquiry details and documents at any time by
-            messaging us on WhatsApp or emailing us, and we will do so.
+            Your enquiry details are retained securely as our record of your enquiry. Uploaded
+            documents for enquiries that do not proceed are deleted automatically, typically
+            within 90 days. Documents relating to completed support are deleted approximately
+            180 days after completion. You may request deletion of your enquiry details and
+            uploaded documents at any time by contacting us via WhatsApp or email, and we will
+            process your request promptly.
           </p>
 
           <h2>What we don&apos;t do</h2>
