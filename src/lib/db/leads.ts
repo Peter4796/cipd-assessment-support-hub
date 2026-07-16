@@ -14,12 +14,15 @@ import { and, asc, desc, eq, gt, gte, ilike, isNotNull, lt, lte, or, sql } from 
 import { db } from "@/lib/db/client";
 import {
   leadAttachments,
+  leadNotes,
   leads,
   leadStatusEvents,
   type LeadAttachmentRow,
+  type LeadNoteRow,
   type LeadRow,
   type LeadStatusEventRow,
 } from "@/lib/db/schema";
+import { planStatusChange, type StatusChangeError } from "@/lib/leads/status";
 import { attachmentRowsForLead, leadToRow, rowToLead } from "@/lib/db/mappers";
 import { urgencyDeadlineRange, type LeadListFilters } from "@/lib/admin/filters";
 import type { Lead } from "@/lib/leads/types";
@@ -173,12 +176,13 @@ export type LeadDetail = {
   lead: Lead;
   attachments: LeadAttachmentRow[];
   events: LeadStatusEventRow[];
+  notes: LeadNoteRow[];
 };
 
 export async function getLeadDetail(id: string): Promise<LeadDetail | null> {
   const [row] = await db().select().from(leads).where(eq(leads.id, id)).limit(1);
   if (!row) return null;
-  const [attachments, events] = await Promise.all([
+  const [attachments, events, notes] = await Promise.all([
     db()
       .select()
       .from(leadAttachments)
@@ -189,8 +193,79 @@ export async function getLeadDetail(id: string): Promise<LeadDetail | null> {
       .from(leadStatusEvents)
       .where(eq(leadStatusEvents.leadId, id))
       .orderBy(desc(leadStatusEvents.at), desc(leadStatusEvents.id)),
+    db()
+      .select()
+      .from(leadNotes)
+      .where(eq(leadNotes.leadId, id))
+      .orderBy(desc(leadNotes.createdAt), desc(leadNotes.id)),
   ]);
-  return { row, lead: rowToLead(row, attachments), attachments, events };
+  return { row, lead: rowToLead(row, attachments), attachments, events, notes };
+}
+
+// ─── Admin operations (P2.4) ───
+
+/**
+ * Change a lead's status: plans the transition (pure logic in
+ * src/lib/leads/status.ts — first-entry milestone stamps, terminal reopen
+ * guard), then atomically updates the row and appends the history event.
+ */
+export async function updateLeadStatus(
+  id: string,
+  to: string,
+  opts: { reopen?: boolean; lostReason?: string } = {}
+): Promise<{ ok: true } | { ok: false; error: StatusChangeError | "not_found" }> {
+  const client = db();
+  const [row] = await client.select().from(leads).where(eq(leads.id, id)).limit(1);
+  if (!row) return { ok: false, error: "not_found" };
+
+  const now = new Date();
+  const plan = planStatusChange(row, to, now, opts);
+  if (!plan.ok) return plan;
+
+  await client.batch([
+    client
+      .update(leads)
+      .set({ ...plan.set, updatedAt: now })
+      .where(eq(leads.id, id)),
+    client.insert(leadStatusEvents).values({
+      leadId: id,
+      at: now,
+      fromStatus: row.status,
+      toStatus: plan.set.status,
+    }),
+  ]);
+  return { ok: true };
+}
+
+export async function addLeadNote(id: string, body: string): Promise<void> {
+  const client = db();
+  await client.batch([
+    client.insert(leadNotes).values({ leadId: id, body }),
+    client.update(leads).set({ updatedAt: new Date() }).where(eq(leads.id, id)),
+  ]);
+}
+
+/**
+ * Record the actual quote (owner decision 4): the manually chosen amount,
+ * currency and notes, alongside a snapshot of the internal recommendation
+ * at that moment — recommendation and actual stay permanently
+ * distinguishable. quoted_at reflects the latest save.
+ */
+export async function saveQuote(
+  id: string,
+  quote: { amount: number; currency: string; notes?: string; recommendedMid: number }
+): Promise<void> {
+  await db()
+    .update(leads)
+    .set({
+      quotedAmount: quote.amount,
+      quoteCurrency: quote.currency,
+      quoteNotes: quote.notes || null,
+      quoteRecommendedMid: quote.recommendedMid,
+      quotedAt: new Date(),
+      updatedAt: new Date(),
+    })
+    .where(eq(leads.id, id));
 }
 
 export async function recordNotifyResult(leadId: string, result: SendResult): Promise<void> {

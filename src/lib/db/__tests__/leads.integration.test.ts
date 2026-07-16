@@ -159,6 +159,59 @@ describe.skipIf(!hasDb)("lead repository against live Neon", () => {
     expect(await getLeadDetail("CG-NOPE99")).toBeNull();
   });
 
+  it("walks the status pipeline with milestone stamps and history (P2.4)", async () => {
+    const { getLeadDetail, updateLeadStatus } = await import("@/lib/db/leads");
+
+    expect(await updateLeadStatus(TEST_ID, "CONTACTED")).toEqual({ ok: true });
+    expect(await updateLeadStatus(TEST_ID, "AWAITING_PAYMENT")).toEqual({ ok: true });
+    expect(await updateLeadStatus(TEST_ID, "IN_PROGRESS")).toEqual({ ok: true });
+
+    let detail = await getLeadDetail(TEST_ID);
+    expect(detail!.row.status).toBe("IN_PROGRESS");
+    expect(detail!.row.contactedAt).not.toBeNull();
+    expect(detail!.row.paymentConfirmedAt).not.toBeNull();
+    expect(detail!.row.workStartedAt).not.toBeNull();
+    expect(detail!.row.quoteSentAt).toBeNull(); // never entered QUOTE_SENT
+    expect(detail!.events).toHaveLength(4); // initial NEW + 3 transitions
+    expect(detail!.events[0].toStatus).toBe("IN_PROGRESS");
+
+    // Terminal guard: COMPLETED locks, reopen releases.
+    expect(await updateLeadStatus(TEST_ID, "COMPLETED")).toEqual({ ok: true });
+    expect(await updateLeadStatus(TEST_ID, "REVIEWING")).toEqual({
+      ok: false,
+      error: "terminal_requires_reopen",
+    });
+    expect(await updateLeadStatus(TEST_ID, "REVIEWING", { reopen: true })).toEqual({ ok: true });
+
+    detail = await getLeadDetail(TEST_ID);
+    expect(detail!.row.completedAt).not.toBeNull(); // milestone survives reopen
+    expect(await updateLeadStatus("CG-NOPE99", "CONTACTED")).toEqual({
+      ok: false,
+      error: "not_found",
+    });
+  });
+
+  it("stores internal notes and the quote with its recommendation snapshot (P2.4)", async () => {
+    const { addLeadNote, getLeadDetail, saveQuote } = await import("@/lib/db/leads");
+
+    await addLeadNote(TEST_ID, "Quoted via WhatsApp, waiting on client.");
+    await saveQuote(TEST_ID, {
+      amount: 180,
+      currency: "USD",
+      notes: "Includes two feedback rounds.",
+      recommendedMid: 205,
+    });
+
+    const detail = await getLeadDetail(TEST_ID);
+    expect(detail!.notes).toHaveLength(1);
+    expect(detail!.notes[0].body).toContain("Quoted via WhatsApp");
+    expect(detail!.row.quotedAmount).toBe(180);
+    expect(detail!.row.quoteCurrency).toBe("USD");
+    expect(detail!.row.quoteNotes).toContain("feedback rounds");
+    expect(detail!.row.quoteRecommendedMid).toBe(205); // actual vs recommendation distinct
+    expect(detail!.row.quotedAt).not.toBeNull();
+  });
+
   it("cascade delete removes child rows with the lead", async () => {
     const { db } = await import("@/lib/db/client");
     const { leadAttachments, leads, leadStatusEvents } = await import("@/lib/db/schema");
