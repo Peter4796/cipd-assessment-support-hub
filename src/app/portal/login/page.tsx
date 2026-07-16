@@ -69,8 +69,8 @@ export default function PortalLoginPage() {
 
         <p className="mt-6 text-center text-sm text-navy-500">
           Are you an administrator?{" "}
-          <Link href="/admin/login" className="font-semibold text-navy-700 hover:text-gold-600">
-            Admin sign in
+          <Link href="/admin" className="font-semibold text-navy-700 hover:text-gold-600">
+            Admin dashboard
           </Link>
         </p>
       </div>

@@ -15,7 +15,7 @@ import { ATTACHMENT_CATEGORIES, SUPPORT_TYPES } from "@/lib/leads/types";
 import { classificationLabel } from "@/lib/leads/scoring";
 import { getUnit } from "@/content/units";
 import { humanFileSize } from "@/lib/leads/uploads";
-import { mediatedFileUrl } from "@/lib/urls";
+import { absoluteUrl, mediatedFileUrl } from "@/lib/urls";
 
 // ─── Escaping ───
 export function esc(value: unknown): string {
@@ -162,6 +162,7 @@ export function leadNotificationHtml(lead: Lead): string {
   const body = `${header}${contact}${assessment}${documents}${message}${acquisition}
     <p style="margin:18px 0 6px;font-size:11px;font-weight:700;letter-spacing:.1em;color:${GOLD};">NEXT ACTION</p>
     <p style="margin:6px 0 0;">${action}</p>
+    <p style="margin:14px 0 0;font-size:13px;"><a href="${esc(absoluteUrl(`/admin/leads/${lead.id}`))}" style="color:#227069;font-weight:600;">Open lead ${esc(lead.id)} in the dashboard</a></p>
     <p style="margin:16px 0 0;font-size:11px;color:${GREY};">Reference ${esc(lead.id)} · received ${esc(lead.createdAt)}</p>`;
 
   return shell("New CIPD Guidance lead", lead.id, body);

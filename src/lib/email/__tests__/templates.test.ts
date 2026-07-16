@@ -128,6 +128,12 @@ describe("leadNotificationHtml — documents (P1)", () => {
     expect(withFiles).not.toContain("javascript:");
   });
 
+  it("links to the lead in the admin dashboard (P2.3), canonical HTTPS only", () => {
+    const withLink = leadNotificationHtml(lead);
+    expect(withLink).toContain("Open lead CG-TEST01 in the dashboard");
+    expect(withLink).toContain('href="https://www.cipdguidance.com/admin/leads/CG-TEST01"');
+  });
+
   it("escapes hostile filenames inside the download label", () => {
     const html = leadNotificationHtml({
       ...lead,

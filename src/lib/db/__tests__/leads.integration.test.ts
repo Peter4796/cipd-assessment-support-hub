@@ -128,6 +128,37 @@ describe.skipIf(!hasDb)("lead repository against live Neon", () => {
     expect(row.notifyAttempts).toBe(2);
   });
 
+  it("serves the admin list with filters and counts (P2.3)", async () => {
+    const { listLeads, statusCounts, getLeadDetail } = await import("@/lib/db/leads");
+
+    const all = await listLeads({ sort: "newest" });
+    expect(all.some((r) => r.id === TEST_ID)).toBe(true);
+
+    const filtered = await listLeads({
+      sort: "deadline",
+      status: "NEW",
+      classification: "PRIORITY",
+      level: "7",
+      q: "integration",
+    });
+    expect(filtered.some((r) => r.id === TEST_ID)).toBe(true);
+
+    const excluded = await listLeads({ sort: "newest", level: "3" });
+    expect(excluded.some((r) => r.id === TEST_ID)).toBe(false);
+
+    const counts = await statusCounts();
+    expect(counts.NEW).toBeGreaterThanOrEqual(1);
+
+    const detail = await getLeadDetail(TEST_ID);
+    expect(detail).not.toBeNull();
+    expect(detail!.lead.email).toBe("integration-test@invalid.example");
+    expect(detail!.attachments).toHaveLength(1);
+    expect(detail!.events[0].toStatus).toBe("NEW");
+    expect(detail!.row.notifyAttempts).toBe(2); // from the notify-state test above
+
+    expect(await getLeadDetail("CG-NOPE99")).toBeNull();
+  });
+
   it("cascade delete removes child rows with the lead", async () => {
     const { db } = await import("@/lib/db/client");
     const { leadAttachments, leads, leadStatusEvents } = await import("@/lib/db/schema");

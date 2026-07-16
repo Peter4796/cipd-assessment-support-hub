@@ -10,10 +10,18 @@
  * event either all commit or none do.
  */
 
-import { and, eq, gte, sql } from "drizzle-orm";
+import { and, asc, desc, eq, gt, gte, ilike, isNotNull, lt, lte, or, sql } from "drizzle-orm";
 import { db } from "@/lib/db/client";
-import { leadAttachments, leads, leadStatusEvents } from "@/lib/db/schema";
-import { attachmentRowsForLead, leadToRow } from "@/lib/db/mappers";
+import {
+  leadAttachments,
+  leads,
+  leadStatusEvents,
+  type LeadAttachmentRow,
+  type LeadRow,
+  type LeadStatusEventRow,
+} from "@/lib/db/schema";
+import { attachmentRowsForLead, leadToRow, rowToLead } from "@/lib/db/mappers";
+import { urgencyDeadlineRange, type LeadListFilters } from "@/lib/admin/filters";
 import type { Lead } from "@/lib/leads/types";
 import type { SendResult } from "@/lib/email/resend";
 
@@ -66,6 +74,125 @@ export async function findRecentLeadIdByFingerprint(
  * an alert, not the record: failures are stored (for the admin badge and the
  * P2.5 retry job), never propagated as a request failure.
  */
+// ─── Admin reads (P2.3) ───
+
+/** Columns the admin list needs — never the full row over the wire. */
+export type LeadListItem = {
+  id: string;
+  createdAt: Date;
+  name: string;
+  email: string;
+  level: string;
+  unitCode: string | null;
+  supportType: string;
+  submissionType: string | null;
+  classification: string;
+  score: number;
+  status: string;
+  deadline: string | null;
+  country: string | null;
+  notifyError: string | null;
+  archivedAt: Date | null;
+};
+
+export const LEAD_LIST_LIMIT = 100;
+
+/**
+ * Filtered, sorted admin list. Filters arrive pre-validated from
+ * parseLeadFilters(); user search text is parameterised by Drizzle.
+ */
+export async function listLeads(
+  filters: LeadListFilters,
+  today: Date = new Date()
+): Promise<LeadListItem[]> {
+  const conditions = [];
+  if (filters.status) conditions.push(eq(leads.status, filters.status));
+  if (filters.classification) conditions.push(eq(leads.classification, filters.classification));
+  if (filters.level) conditions.push(eq(leads.level, filters.level));
+  if (filters.urgency) {
+    const range = urgencyDeadlineRange(filters.urgency, today);
+    conditions.push(isNotNull(leads.deadline));
+    if (range.before) conditions.push(lt(leads.deadline, range.before));
+    if (range.from) conditions.push(gte(leads.deadline, range.from));
+    if (range.to) conditions.push(lte(leads.deadline, range.to));
+    if (range.after) conditions.push(gt(leads.deadline, range.after));
+  }
+  if (filters.q) {
+    const like = `%${filters.q}%`;
+    conditions.push(
+      or(
+        ilike(leads.id, like),
+        ilike(leads.name, like),
+        ilike(leads.email, like),
+        ilike(leads.unitCode, like)
+      )
+    );
+  }
+
+  return db()
+    .select({
+      id: leads.id,
+      createdAt: leads.createdAt,
+      name: leads.name,
+      email: leads.email,
+      level: leads.level,
+      unitCode: leads.unitCode,
+      supportType: leads.supportType,
+      submissionType: leads.submissionType,
+      classification: leads.classification,
+      score: leads.score,
+      status: leads.status,
+      deadline: leads.deadline,
+      country: leads.country,
+      notifyError: leads.notifyError,
+      archivedAt: leads.archivedAt,
+    })
+    .from(leads)
+    .where(conditions.length > 0 ? and(...conditions) : undefined)
+    .orderBy(
+      ...(filters.sort === "deadline"
+        ? [sql`${leads.deadline} asc nulls last`, desc(leads.createdAt)]
+        : [desc(leads.createdAt)])
+    )
+    .limit(LEAD_LIST_LIMIT);
+}
+
+/** Status → lead count, for the dashboard pills. */
+export async function statusCounts(): Promise<Record<string, number>> {
+  const rows = await db()
+    .select({ status: leads.status, count: sql<number>`count(*)::int` })
+    .from(leads)
+    .groupBy(leads.status);
+  return Object.fromEntries(rows.map((r) => [r.status, r.count]));
+}
+
+export type LeadDetail = {
+  /** Raw row — operational fields (notify state, timestamps, quote). */
+  row: LeadRow;
+  /** Reconstructed domain lead (attachments included). */
+  lead: Lead;
+  attachments: LeadAttachmentRow[];
+  events: LeadStatusEventRow[];
+};
+
+export async function getLeadDetail(id: string): Promise<LeadDetail | null> {
+  const [row] = await db().select().from(leads).where(eq(leads.id, id)).limit(1);
+  if (!row) return null;
+  const [attachments, events] = await Promise.all([
+    db()
+      .select()
+      .from(leadAttachments)
+      .where(eq(leadAttachments.leadId, id))
+      .orderBy(asc(leadAttachments.id)),
+    db()
+      .select()
+      .from(leadStatusEvents)
+      .where(eq(leadStatusEvents.leadId, id))
+      .orderBy(desc(leadStatusEvents.at), desc(leadStatusEvents.id)),
+  ]);
+  return { row, lead: rowToLead(row, attachments), attachments, events };
+}
+
 export async function recordNotifyResult(leadId: string, result: SendResult): Promise<void> {
   await db()
     .update(leads)
