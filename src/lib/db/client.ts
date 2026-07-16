@@ -30,7 +30,13 @@ export function db(): NeonHttpDatabase<typeof schema> {
   if (!instance) {
     const url = process.env.DATABASE_URL;
     if (!url) throw new Error("db_unconfigured");
-    instance = drizzle(neon(url), { schema });
+    // cache: "no-store" is LOAD-BEARING. The Neon HTTP driver issues every
+    // query through fetch(), and Next patches fetch with its Data Cache on
+    // Vercel — without this, identical SELECTs (admin list, status counts)
+    // can be served stale from cache even on force-dynamic pages. Database
+    // reads must always hit the database. (Observed in production 2026-07-17:
+    // a captured lead was invisible to cached admin queries.)
+    instance = drizzle(neon(url, { fetchOptions: { cache: "no-store" } }), { schema });
   }
   return instance;
 }
