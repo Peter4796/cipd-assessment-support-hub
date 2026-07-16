@@ -2,11 +2,11 @@
  * Lead domain model — the single source of truth for lead shapes across
  * forms, the API, scoring, notifications and (later) the database + admin.
  *
- * PERSISTENCE NOTE (P0): leads are NOT stored anywhere yet. A lead exists
- * only for the duration of the /api/leads request and is then delivered by
- * email (Resend). The shapes below are deliberately DB-ready so the P2
- * database tranche can persist them without remodelling: `id`, `createdAt`,
- * `status`, notes/quotes/attachments extension points are already defined.
+ * PERSISTENCE (P2.2): leads are persisted to Postgres in /api/leads (see
+ * src/lib/db/schema.ts + src/lib/db/leads.ts) — the database is the system
+ * of record and the Resend notification is an operational alert. When the
+ * database is unavailable the email falls back to being the record for that
+ * lead (capture-first, never silently dropped).
  */
 
 // ─── CIPD level ───

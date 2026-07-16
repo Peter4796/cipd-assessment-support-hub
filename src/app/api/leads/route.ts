@@ -4,25 +4,43 @@ import { validateLeadInput } from "@/lib/leads/validation";
 import { scoreLead } from "@/lib/leads/scoring";
 import { notifyLead } from "@/lib/leads/notify";
 import { clientKey, rateLimit } from "@/lib/leads/rate-limit";
+import { DEDUP_WINDOW_MS, leadFingerprint } from "@/lib/leads/fingerprint";
+import { isDbConfigured } from "@/lib/db/client";
+import {
+  findRecentLeadIdByFingerprint,
+  insertLead,
+  recordNotifyResult,
+} from "@/lib/db/leads";
 import type { Lead } from "@/lib/leads/types";
 
 /**
  * POST /api/leads — capture an assessment-support enquiry.
  *
- * ARCHITECTURE NOTE (P0): there is intentionally no database yet. The flow is
- *   validate → score → email the lead to LEAD_NOTIFY_EMAIL (Resend) → respond.
- * The notification email IS the persistence for now. If delivery cannot be
- * guaranteed (missing config or a failed send), this endpoint returns an
- * error so the client can fall back to direct WhatsApp/email — we never
- * pretend a lead was captured. The P2 database tranche adds an insert before
- * the notification without changing this contract.
+ * ARCHITECTURE (P2.2): the database is the system of record; the Resend
+ * notification is an operational alert. Flow:
+ *   validate → score → dedup check → INSERT (lead + attachments + status
+ *   event, atomic) → notify → record notify outcome → respond.
+ *
+ * A lead counts as captured when EITHER durable channel holds it:
+ *   DB ok + email ok    → 201 (normal)
+ *   DB ok + email fail  → 201; notify_error stored on the row (admin badge,
+ *                          P2.5 retry). Never roll back a persisted lead.
+ *   DB fail + email ok  → 201; the email carries a [NOT PERSISTED] marker
+ *                          and is the record for that one lead (P0 contract).
+ *   DB fail + email fail→ 5xx; the client falls back to direct channels.
+ * With no DATABASE_URL configured the endpoint behaves exactly like P0/P1
+ * (email-as-persistence), which keeps the rollout additive.
+ *
+ * DEDUP (owner decision 10): an identical submission fingerprint within 15
+ * minutes returns the ORIGINAL reference with 200 — no duplicate row, no
+ * duplicate email. Fingerprints are multi-field; never email alone.
  *
  * Responses (structured JSON, no internals):
- *   201 { ok: true, reference }
+ *   201/200 { ok: true, reference }
  *   4xx/5xx { ok: false, error: <code> }
  *
  * The lead score/classification are computed here and included ONLY in the
- * internal email — never in the response body.
+ * internal email + database — never in the response body.
  */
 
 export const runtime = "nodejs";
@@ -74,9 +92,52 @@ export async function POST(request: Request) {
     classification,
   };
 
-  const sent = await notifyLead(lead);
+  const fingerprint = leadFingerprint(v);
+  let persisted = false;
+
+  if (isDbConfigured()) {
+    // Dedup: same fingerprint captured within the window → original reference.
+    try {
+      const existingId = await findRecentLeadIdByFingerprint(
+        fingerprint,
+        new Date(Date.now() - DEDUP_WINDOW_MS)
+      );
+      if (existingId) {
+        console.warn(`[leads] duplicate submission suppressed ref=${existingId}`);
+        return NextResponse.json({ ok: true, reference: existingId }, { status: 200 });
+      }
+    } catch {
+      // A failed dedup lookup must never block capture; proceed to insert.
+      console.error("[leads] dedup lookup failed");
+    }
+
+    try {
+      await insertLead(lead, fingerprint);
+      persisted = true;
+    } catch {
+      // Machine code only — never lead content.
+      console.error(`[leads] db insert failed ref=${lead.id}`);
+    }
+  }
+
+  const sent = await notifyLead(lead, { persisted: isDbConfigured() ? persisted : undefined });
+
+  if (persisted) {
+    // Never roll back a persisted lead; store the alert outcome on the row.
+    try {
+      await recordNotifyResult(lead.id, sent);
+    } catch {
+      console.error(`[leads] notify-state update failed ref=${lead.id}`);
+    }
+    if (!sent.ok) {
+      console.error(`[leads] alert email failed (${sent.error}) ref=${lead.id} — lead persisted`);
+    }
+    return NextResponse.json({ ok: true, reference: lead.id }, { status: 201 });
+  }
+
+  // Not persisted (DB unconfigured or insert failed): the email is the
+  // record, exactly the P0/P1 contract.
   if (!sent.ok) {
-    // Log the failure class only — never assessment content or PII.
     console.error(`[leads] capture failed (${sent.error}) ref=${lead.id}`);
     const status = sent.error === "unconfigured" ? 503 : 502;
     return NextResponse.json({ ok: false, error: "delivery_failed" }, { status });

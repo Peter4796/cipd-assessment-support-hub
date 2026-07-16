@@ -22,16 +22,24 @@ export { emailConfigured };
 /**
  * Deliver the internal lead notification.
  *
- * P0 PERSISTENCE BOUNDARY: this email IS the lead record. If it cannot be
- * delivered, the lead is not captured and callers must report failure so the
- * client can fall back to a direct channel. Never swallow a failed send.
+ * P2 CONTRACT: the database is the system of record and this email is the
+ * operational alert. When the lead row is safely persisted, a failed send is
+ * recorded on the row (admin badge + retry) and never fails the request.
+ * When persistence itself failed, the email falls back to being the record
+ * for that one lead — the subject carries a [NOT PERSISTED] marker so the
+ * owner knows no admin row exists — and only if BOTH channels fail does the
+ * API report failure so the client can use a direct channel.
  */
-export async function notifyLead(lead: Lead): Promise<SendResult> {
+export async function notifyLead(
+  lead: Lead,
+  options?: { persisted?: boolean }
+): Promise<SendResult> {
   const to = notifyRecipient();
   if (!to) return { ok: false, error: "unconfigured" };
+  const marker = options?.persisted === false ? "[NOT PERSISTED] " : "";
   return sendEmail({
     to,
-    subject: leadNotificationSubject(lead),
+    subject: `${marker}${leadNotificationSubject(lead)}`,
     html: leadNotificationHtml(lead),
     replyTo: lead.email, // reply lands directly with the client
   });
