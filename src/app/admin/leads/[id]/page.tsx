@@ -37,7 +37,7 @@ import {
   type LeadStatus,
   type SupportType,
 } from "@/lib/leads/types";
-import { addNote, changeLeadStatus, recordQuote } from "./actions";
+import { addNote, changeLeadStatus, deleteAttachmentNow, recordQuote } from "./actions";
 
 export const dynamic = "force-dynamic";
 
@@ -284,12 +284,25 @@ export default async function AdminLeadDetailPage({ params }: { params: { id: st
                     </div>
                     {a.deletedAt ? (
                       <span className="text-xs font-medium text-navy-400">
-                        Deleted under retention policy {fmt(a.deletedAt, false)}
+                        Deleted ({a.deletionReason === "owner_request" ? "on request" : "retention policy"}) {fmt(a.deletedAt, false)}
                       </span>
                     ) : (
-                      <a href={mediatedFileUrl(a.pathname)} className="btn-outline px-3 py-1.5 text-xs">
-                        Download
-                      </a>
+                      <span className="flex items-center gap-2">
+                        <a href={mediatedFileUrl(a.pathname)} className="btn-outline px-3 py-1.5 text-xs">
+                          Download
+                        </a>
+                        <form action={deleteAttachmentNow}>
+                          <input type="hidden" name="leadId" value={lead.id} />
+                          <input type="hidden" name="attachmentId" value={a.id} />
+                          <button
+                            type="submit"
+                            className="rounded-full border border-red-200 bg-red-50 px-3 py-1.5 text-xs font-medium text-red-700 hover:bg-red-100"
+                            title="Permanently delete this file from storage (client deletion request)"
+                          >
+                            Delete now
+                          </button>
+                        </form>
+                      </span>
                     )}
                   </li>
                 ))}

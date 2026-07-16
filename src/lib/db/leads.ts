@@ -287,3 +287,96 @@ export async function recordNotifyResult(leadId: string, result: SendResult): Pr
     )
     .where(eq(leads.id, leadId));
 }
+
+// ─── Retention + alert retry (P2.5) ───
+
+export type RetentionCandidate = {
+  attachmentId: number;
+  pathname: string;
+  deleteAttempts: number;
+  deletedAt: Date | null;
+  leadId: string;
+  status: string;
+  createdAt: Date;
+  lostAt: Date | null;
+  completedAt: Date | null;
+};
+
+/**
+ * Attachments whose leads are in retention-relevant statuses and whose blobs
+ * still exist (deleted_at null, attempts below cap). Final eligibility is
+ * decided by the pure policy in src/lib/leads/retention.ts.
+ */
+export async function listRetentionCandidates(limit = 200): Promise<RetentionCandidate[]> {
+  const rows = await db()
+    .select({
+      attachmentId: leadAttachments.id,
+      pathname: leadAttachments.pathname,
+      deleteAttempts: leadAttachments.deleteAttempts,
+      deletedAt: leadAttachments.deletedAt,
+      leadId: leads.id,
+      status: leads.status,
+      createdAt: leads.createdAt,
+      lostAt: leads.lostAt,
+      completedAt: leads.completedAt,
+    })
+    .from(leadAttachments)
+    .innerJoin(leads, eq(leadAttachments.leadId, leads.id))
+    .where(sql`${leadAttachments.deletedAt} is null`)
+    .limit(limit);
+  return rows;
+}
+
+/** Mark a blob as deleted (called ONLY after the storage deletion succeeded). */
+export async function markAttachmentDeleted(
+  attachmentId: number,
+  reason: string
+): Promise<void> {
+  await db()
+    .update(leadAttachments)
+    .set({
+      deletedAt: new Date(),
+      deletionReason: reason,
+      lastDeleteAttemptAt: new Date(),
+      lastDeleteError: null,
+    })
+    .where(eq(leadAttachments.id, attachmentId));
+}
+
+/** Record a failed deletion attempt (machine code only) for the next run's retry. */
+export async function recordAttachmentDeleteFailure(
+  attachmentId: number,
+  errorCode: string
+): Promise<void> {
+  await db()
+    .update(leadAttachments)
+    .set({
+      deleteAttempts: sql`${leadAttachments.deleteAttempts} + 1`,
+      lastDeleteAttemptAt: new Date(),
+      lastDeleteError: errorCode.slice(0, 100),
+    })
+    .where(eq(leadAttachments.id, attachmentId));
+}
+
+/** Every pathname the database knows about — tracked blobs are never orphans. */
+export async function allKnownPathnames(): Promise<Set<string>> {
+  const rows = await db().select({ pathname: leadAttachments.pathname }).from(leadAttachments);
+  return new Set(rows.map((r) => r.pathname));
+}
+
+/** Leads whose alert email failed recently and is worth retrying. */
+export async function listUnnotifiedLeads(hours = 48, maxAttempts = 5): Promise<LeadRow[]> {
+  const since = new Date(Date.now() - hours * 60 * 60 * 1000);
+  return db()
+    .select()
+    .from(leads)
+    .where(
+      and(
+        sql`${leads.notifiedAt} is null`,
+        sql`${leads.notifyError} is not null`,
+        lt(leads.notifyAttempts, maxAttempts),
+        gte(leads.createdAt, since)
+      )
+    )
+    .limit(10);
+}

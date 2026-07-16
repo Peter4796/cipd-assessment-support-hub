@@ -94,3 +94,29 @@ export async function recordQuote(formData: FormData): Promise<void> {
   revalidatePath(`/admin/leads/${id}`);
   revalidatePath("/admin");
 }
+
+export async function deleteAttachmentNow(formData: FormData): Promise<void> {
+  if (!isDbConfigured()) return;
+  const id = leadId(formData);
+  if (!id) return;
+  const attachmentId = parseInt(cleanText(formData.get("attachmentId"), 12), 10);
+  if (!Number.isInteger(attachmentId) || attachmentId < 1) return;
+
+  // Resolve through the lead so a tampered attachmentId can never delete
+  // another lead's file.
+  const detail = await getLeadDetail(id);
+  const attachment = detail?.attachments.find((a) => a.id === attachmentId);
+  if (!attachment || attachment.deletedAt) return;
+
+  try {
+    const { del } = await import("@vercel/blob");
+    await del(attachment.pathname);
+    const { markAttachmentDeleted } = await import("@/lib/db/leads");
+    await markAttachmentDeleted(attachmentId, "owner_request");
+  } catch {
+    console.error(`[admin] manual attachment delete failed att=${attachmentId}`);
+    const { recordAttachmentDeleteFailure } = await import("@/lib/db/leads");
+    await recordAttachmentDeleteFailure(attachmentId, "blob_delete_failed").catch(() => undefined);
+  }
+  revalidatePath(`/admin/leads/${id}`);
+}
