@@ -6,6 +6,7 @@ category: "Getting started"
 keyword: "how difficult is CIPD"
 date: "2026-07-09"
 readMinutes: 5
+pillar: "complete-guide-to-cipd-qualifications"
 related: ["which-cipd-qualification-should-you-choose","how-to-pass-cipd-level-5","managing-cipd-deadlines-while-working-full-time"]
 ---
 CIPD is achievable for most people who put in consistent effort, but it is not a rubber stamp. How hard it feels depends on the level, your academic background, and how you manage your time.

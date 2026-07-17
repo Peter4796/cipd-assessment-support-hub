@@ -6,6 +6,7 @@ category: "Student guides"
 keyword: "studying CIPD in the UK"
 date: "2026-07-09"
 readMinutes: 5
+pillar: "complete-guide-to-cipd-qualifications"
 related: ["studying-cipd-in-the-uae","managing-cipd-deadlines-while-working-full-time","which-cipd-qualification-should-you-choose"]
 ---
 CIPD is the recognised HR qualification across the UK, and thousands of professionals study it every year while working. If you are considering CIPD in the UK, here is what to expect and how to set yourself up to succeed.

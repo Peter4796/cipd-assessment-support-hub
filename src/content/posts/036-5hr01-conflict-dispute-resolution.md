@@ -7,6 +7,7 @@ keyword: "5HR01 conflict resolution"
 date: "2026-07-09"
 readMinutes: 5
 unit: "5HR01"
+pillar: "5HR01"
 related: ["5hr01-complete-guide","5hr01-discipline-grievance","5hr01-employee-voice-engagement"]
 ---
 5HR01 asks you to understand conflict at work and how it is resolved. This covers both individual and collective conflict, and the range of approaches from informal conversations to formal procedures. Check your brief for the exact requirements.

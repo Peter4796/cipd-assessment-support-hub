@@ -6,6 +6,7 @@ category: "Research skills"
 keyword: "credible sources for CIPD"
 date: "2026-07-09"
 readMinutes: 5
+pillar: "what-is-critical-analysis-in-cipd"
 related: ["how-to-use-harvard-referencing-in-cipd-assessments","how-many-references-should-a-cipd-assignment-have","what-is-critical-analysis-in-cipd"]
 ---
 Strong CIPD answers are built on credible evidence. Knowing where to find good sources, and how to judge them, saves time and lifts the quality of your analysis.

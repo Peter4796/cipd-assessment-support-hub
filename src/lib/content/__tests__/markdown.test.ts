@@ -17,6 +17,9 @@ const meta: PostMeta = {
   readMinutes: 6,
   related: ["another-post", "third-post"],
   unit: "5CO01",
+  pillar: "5CO01",
+  tags: ["level-5", "assignment-guides"],
+  reviewed: "2026-07-17",
 };
 
 const body: Block[] = [
@@ -54,6 +57,31 @@ describe("block markdown codec", () => {
     const raw = serializePost(noUnit, body);
     expect(raw).not.toContain("unit:");
     expect(parsePost(raw, "x.md").meta.unit).toBeUndefined();
+  });
+
+  it("omits optional tags/reviewed cleanly", () => {
+    const bare = { ...meta, tags: undefined, reviewed: undefined };
+    const raw = serializePost(bare, body);
+    expect(raw).not.toContain("tags:");
+    expect(raw).not.toContain("reviewed:");
+    const back = parsePost(raw, "x.md").meta;
+    expect(back.tags).toBeUndefined();
+    expect(back.reviewed).toBeUndefined();
+  });
+
+  it("enforces pillar presence and unit consistency", () => {
+    expect(() =>
+      parsePost(serializePost(meta, body).replace('pillar: "5CO01"\n', ""), "p.md")
+    ).toThrow(/"pillar"/);
+    expect(() =>
+      parsePost(serializePost(meta, body).replace('pillar: "5CO01"', 'pillar: "5HR01"'), "p.md")
+    ).toThrow(/must equal "unit"/);
+    expect(() =>
+      parsePost(serializePost(meta, body).replace('reviewed: "2026-07-17"', 'reviewed: "17/07/2026"'), "r.md")
+    ).toThrow(/"reviewed"/);
+    expect(() =>
+      parsePost(serializePost(meta, body).replace('tags: ["level-5","assignment-guides"]', 'tags: ["ok",42]'), "t.md")
+    ).toThrow(/"tags"/);
   });
 
   it("rejects malformed files with actionable errors", () => {

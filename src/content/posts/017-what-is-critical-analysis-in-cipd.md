@@ -6,6 +6,7 @@ category: "Critical thinking"
 keyword: "critical analysis CIPD"
 date: "2026-07-09"
 readMinutes: 6
+pillar: "what-is-critical-analysis-in-cipd"
 related: ["cipd-command-verbs-analyse-evaluate-explain","common-mistakes-in-cipd-level-5-assignments","how-to-pass-cipd-level-5"]
 ---
 Tutors often write 'needs more critical analysis', but rarely explain what that looks like in practice. Understanding it is the difference between a referral and a strong pass at Level 5 and Level 7.

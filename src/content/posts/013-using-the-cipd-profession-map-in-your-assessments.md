@@ -6,6 +6,7 @@ category: "Getting started"
 keyword: "CIPD Profession Map"
 date: "2026-06-29"
 readMinutes: 5
+pillar: "how-to-structure-a-cipd-assignment"
 related: ["how-to-understand-a-cipd-assessment-brief","how-to-structure-a-cipd-assignment","cipd-level-3-vs-5-vs-7-whats-the-difference"]
 ---
 The CIPD Profession Map underpins the whole CIPD qualification framework, yet many learners are unsure how to use it in their assignments. Understanding it helps you write answers that reflect what a professional people practitioner is expected to know and do.

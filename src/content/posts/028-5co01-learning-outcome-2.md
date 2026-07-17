@@ -7,6 +7,7 @@ keyword: "5CO01 organisational culture"
 date: "2026-07-09"
 readMinutes: 6
 unit: "5CO01"
+pillar: "5CO01"
 related: ["5co01-learning-outcome-1","5co01-theories-and-models","5co01-complete-guide"]
 ---
 A central part of 5CO01 is organisational culture and how people behave at work. This is where you show understanding of the theory and, crucially, apply it to your organisation. Check your own brief for the exact outcomes and criteria.

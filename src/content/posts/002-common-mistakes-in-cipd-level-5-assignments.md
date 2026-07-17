@@ -6,6 +6,7 @@ category: "Level 5"
 keyword: "CIPD Level 5 assignment guidance"
 date: "2026-07-06"
 readMinutes: 7
+pillar: "/cipd-level-5-support"
 related: ["how-to-improve-a-cipd-resubmission","how-to-use-harvard-referencing-in-cipd-assessments","how-to-structure-a-cipd-assignment"]
 ---
 CIPD Level 5, the Associate Diploma, is where many capable HR professionals get their first referral. The jump from Level 3 is real. Level 5 expects evidence-based practice, analysis and application, not just accurate description. Here are the mistakes we see most often, and how to fix them.

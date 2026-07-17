@@ -6,6 +6,7 @@ category: "Getting started"
 keyword: "is CIPD worth it"
 date: "2026-07-09"
 readMinutes: 5
+pillar: "complete-guide-to-cipd-qualifications"
 related: ["what-is-cipd-and-why-it-matters","cipd-level-3-vs-5-vs-7-whats-the-difference","managing-cipd-deadlines-while-working-full-time"]
 ---
 CIPD qualifications take time, effort and money, so it is fair to ask whether they are worth it. For most people building an HR career, the answer is yes, but it depends on your goals and stage.

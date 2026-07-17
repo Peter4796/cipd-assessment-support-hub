@@ -6,6 +6,7 @@ category: "Student guides"
 keyword: "CIPD English writing tips"
 date: "2026-07-09"
 readMinutes: 5
+pillar: "how-to-structure-a-cipd-assignment"
 related: ["studying-cipd-in-the-uae","how-to-structure-a-cipd-assignment","how-strict-is-the-cipd-word-count"]
 ---
 Many CIPD learners, especially in the UAE and internationally, study in English as a second or third language. Your HR knowledge is not the issue; clear academic English simply takes practice. These tips help your ideas come through clearly.

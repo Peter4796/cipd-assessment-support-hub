@@ -1,0 +1,63 @@
+/**
+ * Pillar registry (Blueprint Part 5/7/9). Every post's `pillar` frontmatter
+ * key must resolve to exactly one of:
+ *   1. a unit code ("5CO02")            → pillar page /cipd-units/5co02
+ *   2. a pillar page path (below)       → that service/support page
+ *   3. a hub article slug               → /blog/<slug> (the hub self-references)
+ * The corpus test enforces resolution for every post, so an article cannot
+ * ship outside a cluster ("no isolated posts" rule).
+ *
+ * Lead magnets (Part 9): each magnet maps to one cluster and surfaces
+ * automatically on that cluster's articles only, via `magnetForPillar`.
+ */
+
+import { units } from "@/content/units";
+
+/** Non-unit, non-article pillar targets: route path → banner label. */
+export const PILLAR_PAGES: Record<string, string> = {
+  "/cipd-level-3-support": "CIPD Level 3 support",
+  "/cipd-level-5-support": "CIPD Level 5 support",
+  "/cipd-level-7-support": "CIPD Level 7 support",
+  "/cipd-resubmission-support": "CIPD resubmission support",
+};
+
+const unitByCode = new Map(units.map((u) => [u.code, u]));
+
+export type PillarTarget = { href: string; label: string };
+
+/**
+ * Resolves a pillar key to its link target, or null when it does not
+ * resolve (the corpus test treats null as a failure). `slugTitle` looks up
+ * hub-article titles; passing post data in keeps this module free of a
+ * circular import on posts.ts.
+ */
+export function resolvePillar(
+  pillar: string,
+  slugTitle: (slug: string) => string | undefined
+): PillarTarget | null {
+  const unit = unitByCode.get(pillar);
+  if (unit) return { href: `/cipd-units/${unit.slug}`, label: `${unit.code} guide` };
+  if (pillar in PILLAR_PAGES) return { href: pillar, label: PILLAR_PAGES[pillar] };
+  const title = slugTitle(pillar);
+  if (title !== undefined) return { href: `/blog/${pillar}`, label: title };
+  return null;
+}
+
+export type Magnet = {
+  title: string;
+  description: string;
+  href: string; // download landing page
+};
+
+const PLANNING_CHECKLIST: Magnet = {
+  title: "Free CIPD Assessment Planning Checklist",
+  description:
+    "A step-by-step checklist for planning any CIPD assignment, from decoding the brief to the final pre-submission review.",
+  href: "/resources/cipd-assessment-planning-checklist",
+};
+
+/** Cluster → magnet map. Unit clusters share the planning checklist. */
+export function magnetForPillar(pillar: string): Magnet | undefined {
+  if (unitByCode.has(pillar)) return PLANNING_CHECKLIST;
+  return undefined;
+}

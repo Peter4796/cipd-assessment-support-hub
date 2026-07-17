@@ -6,6 +6,7 @@ category: "Study skills"
 keyword: "managing CIPD deadlines"
 date: "2026-06-24"
 readMinutes: 6
+pillar: "managing-cipd-deadlines-while-working-full-time"
 related: ["how-to-understand-a-cipd-assessment-brief","how-to-structure-a-cipd-assignment","how-to-improve-a-cipd-resubmission"]
 ---
 Most CIPD learners study while holding down a demanding HR role. Whether you're in the UK, the UAE or studying internationally, the challenge is rarely ability. It's time. Here's how to stay on top of CIPD deadlines without burning out.

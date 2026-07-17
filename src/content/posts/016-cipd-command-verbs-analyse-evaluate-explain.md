@@ -6,6 +6,7 @@ category: "Assessment writing"
 keyword: "CIPD command verbs"
 date: "2026-07-09"
 readMinutes: 5
+pillar: "how-to-structure-a-cipd-assignment"
 related: ["how-to-understand-a-cipd-assessment-brief","what-is-critical-analysis-in-cipd","how-to-structure-a-cipd-assignment"]
 ---
 Command verbs are the small words in a brief that tell you how deep your answer needs to go. Misreading them is one of the most common reasons CIPD answers lose marks. Getting them right is one of the fastest ways to improve.

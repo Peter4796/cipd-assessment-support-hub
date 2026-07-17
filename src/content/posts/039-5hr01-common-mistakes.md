@@ -7,6 +7,7 @@ keyword: "5HR01 common mistakes"
 date: "2026-07-09"
 readMinutes: 5
 unit: "5HR01"
+pillar: "5HR01"
 related: ["5hr01-complete-guide","5hr01-assignment-structure","common-mistakes-in-cipd-level-5-assignments"]
 ---
 5HR01 has some predictable pitfalls, especially around employment law. Here are the mistakes we see most, and how to avoid them.

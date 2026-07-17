@@ -109,6 +109,9 @@ const META_KEYS = [
   "date",
   "readMinutes",
   "unit",
+  "pillar",
+  "tags",
+  "reviewed",
   "related",
 ] as const;
 
@@ -162,6 +165,23 @@ export function parsePost(raw: string, file: string): { meta: PostMeta; body: Bl
   }
   if (meta.unit !== undefined && typeof meta.unit !== "string") {
     throw new Error(`invalid "unit" in ${file}`);
+  }
+  if (typeof meta.pillar !== "string" || meta.pillar === "") {
+    throw new Error(`missing/invalid "pillar" in ${file}`);
+  }
+  if (meta.unit !== undefined && meta.pillar !== meta.unit) {
+    throw new Error(`"pillar" must equal "unit" when unit is set in ${file}`);
+  }
+  if (
+    meta.tags !== undefined &&
+    (!Array.isArray(meta.tags) || meta.tags.some((t) => typeof t !== "string" || t === ""))
+  ) {
+    throw new Error(`invalid "tags" in ${file}`);
+  }
+  if (meta.reviewed !== undefined) {
+    if (typeof meta.reviewed !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(meta.reviewed)) {
+      throw new Error(`invalid "reviewed" date in ${file}`);
+    }
   }
 
   return { meta: meta as PostMeta, body: markdownToBlocks(raw.slice(match[0].length)) };

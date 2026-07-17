@@ -6,6 +6,7 @@ category: "Getting started"
 keyword: "CIPD qualifications guide"
 date: "2026-07-09"
 readMinutes: 6
+pillar: "complete-guide-to-cipd-qualifications"
 related: ["cipd-level-3-vs-5-vs-7-whats-the-difference","which-cipd-qualification-should-you-choose","what-is-cipd-and-why-it-matters"]
 ---
 CIPD offers a clear pathway of qualifications for people professionals, from those just starting out to senior strategic leaders. This guide explains the levels, what each involves, and how they fit together.

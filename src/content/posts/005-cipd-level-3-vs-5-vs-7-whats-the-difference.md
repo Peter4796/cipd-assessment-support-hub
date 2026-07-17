@@ -6,6 +6,7 @@ category: "Choosing a level"
 keyword: "CIPD levels explained"
 date: "2026-06-30"
 readMinutes: 6
+pillar: "complete-guide-to-cipd-qualifications"
 related: ["how-to-understand-a-cipd-assessment-brief","common-mistakes-in-cipd-level-5-assignments","how-to-structure-a-cipd-assignment"]
 ---
 CIPD qualifications come in three levels, and choosing the right one, or understanding what your current level demands, matters for both your career and your assessments. Here's how Level 3, Level 5 and Level 7 differ.

@@ -7,6 +7,7 @@ keyword: "5CO01 assignment structure"
 date: "2026-07-09"
 readMinutes: 5
 unit: "5CO01"
+pillar: "5CO01"
 related: ["5co01-complete-guide","5co01-common-mistakes","how-to-structure-a-cipd-assignment"]
 ---
 A clear structure makes 5CO01 easier to write and easier to mark. The best approach is to organise your answer around the tasks and criteria in your brief, using headings that make it obvious where each point is addressed.

@@ -6,6 +6,7 @@ category: "Student guides"
 keyword: "studying CIPD in the UAE"
 date: "2026-07-09"
 readMinutes: 5
+pillar: "complete-guide-to-cipd-qualifications"
 related: ["what-is-cipd-and-why-it-matters","managing-cipd-deadlines-while-working-full-time","how-to-use-harvard-referencing-in-cipd-assessments"]
 ---
 CIPD is popular across the UAE and the wider Gulf, where HR professionals value a globally recognised qualification. If you are studying CIPD in the UAE, here is what to keep in mind.

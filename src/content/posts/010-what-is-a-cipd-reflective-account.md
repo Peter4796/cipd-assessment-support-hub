@@ -6,6 +6,7 @@ category: "Writing"
 keyword: "CIPD reflective account"
 date: "2026-07-05"
 readMinutes: 5
+pillar: "what-is-a-cipd-reflective-account"
 related: ["how-to-structure-a-cipd-assignment","how-to-respond-to-cipd-tutor-feedback","common-mistakes-in-cipd-level-5-assignments"]
 ---
 Several CIPD units ask for a reflective account, and many learners find it the hardest part to get right. A reflective account is not a description of what you did. It is an honest evaluation of your practice, what you learned, and how you will develop.

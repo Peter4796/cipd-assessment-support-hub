@@ -7,6 +7,7 @@ keyword: "5HR01 discipline and grievance"
 date: "2026-07-09"
 readMinutes: 5
 unit: "5HR01"
+pillar: "5HR01"
 related: ["5hr01-complete-guide","5hr01-employment-law-essentials","5hr01-conflict-dispute-resolution"]
 ---
 Handling discipline and grievance fairly and lawfully is a key part of 5HR01. The focus is on fair procedure, consistency, and staying within the law. As always, check your own brief for the exact criteria.

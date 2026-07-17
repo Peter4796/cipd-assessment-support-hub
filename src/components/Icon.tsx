@@ -77,6 +77,7 @@ const paths: Record<string, JSX.Element> = {
   ),
   check: <path d="m5 13 4 4L19 7" />,
   arrow: <path d="M5 12h14M13 6l6 6-6 6" />,
+  download: <path d="M12 4v11m0 0 4-4m-4 4-4-4M5 20h14" />,
   whatsapp: (
     <path d="M12 2a10 10 0 0 0-8.7 15l-1.3 5 5.2-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.7-1.2-4.5-4-4.6-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5.2.6.8 2 .9 2.1.1.1.1.3 0 .5-.1.2-.1.3-.3.5-.1.2-.3.4-.4.5-.1.1-.3.3-.1.6.1.3.7 1.1 1.4 1.8.9.8 1.7 1.1 2 1.2.2.1.4.1.5-.1.1-.2.6-.7.8-.9.2-.3.3-.2.6-.1.2.1 1.5.7 1.7.8.3.1.4.2.5.3.1.2.1.7-.1 1.3Z" />
   ),
@@ -87,7 +88,7 @@ export function Icon({
   className = "h-6 w-6",
   filled = false,
   ...props
-}: { name: IconName | "check" | "arrow" | "whatsapp"; className?: string; filled?: boolean } & SVGProps<SVGSVGElement>) {
+}: { name: IconName | "check" | "arrow" | "whatsapp" | "download"; className?: string; filled?: boolean } & SVGProps<SVGSVGElement>) {
   const isFilled = filled || name === "whatsapp";
   return (
     <svg

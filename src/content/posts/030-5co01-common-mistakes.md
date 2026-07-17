@@ -7,6 +7,7 @@ keyword: "5CO01 common mistakes"
 date: "2026-07-09"
 readMinutes: 5
 unit: "5CO01"
+pillar: "5CO01"
 related: ["5co01-complete-guide","5co01-assignment-structure","common-mistakes-in-cipd-level-5-assignments"]
 ---
 5CO01 is a common unit for referrals, but the reasons are predictable and avoidable. Here are the mistakes we see most often, and how to steer clear of them.

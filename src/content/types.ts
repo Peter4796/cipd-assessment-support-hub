@@ -23,6 +23,9 @@ export type PostMeta = {
   readMinutes: number;
   related: string[]; // slugs
   unit?: string; // optional unit code (e.g. "5CO01") — links the post into a unit pillar cluster
+  pillar: string; // cluster spine (Blueprint Part 5): a unit code, a pillar page path ("/cipd-resubmission-support"), or a hub article slug (a hub self-references)
+  tags?: string[]; // topical tags for future topic hubs
+  reviewed?: string; // ISO date of last editorial review; presence marks a Phase 3 production article and enables the stricter corpus gates
 };
 
 export type Post = PostMeta & { body: Block[] };

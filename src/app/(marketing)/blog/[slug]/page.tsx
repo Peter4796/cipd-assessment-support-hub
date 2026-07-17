@@ -6,7 +6,8 @@ import { Section } from "@/components/ui";
 import { Icon } from "@/components/Icon";
 import { CtaBand } from "@/components/Cta";
 import { RichContent } from "@/components/RichContent";
-import { posts, getPost } from "@/content/posts";
+import { posts, getPost, relatedWithClusterFallback } from "@/content/posts";
+import { magnetForPillar, resolvePillar } from "@/content/pillars";
 import { getUnit } from "@/content/units";
 import { enquiryUrl, type EnquiryContext } from "@/lib/leads/context";
 import { site } from "@/lib/site";
@@ -45,9 +46,10 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const post = getPost(params.slug);
   if (!post) notFound();
 
-  const related = post.related
-    .map((slug) => posts.find((p) => p.slug === slug))
-    .filter((p): p is NonNullable<typeof p> => Boolean(p));
+  // Curated related links topped up with cluster siblings (Part 7 fallback).
+  const related = relatedWithClusterFallback(post);
+  const pillarTarget = resolvePillar(post.pillar, (slug) => getPost(slug)?.title);
+  const magnet = magnetForPillar(post.pillar);
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -89,7 +91,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       <Section tone="white">
         <div className="mx-auto max-w-3xl">
           {/* Unit pillar banner */}
-          {post.unit && getUnit(post.unit.toLowerCase()) && (
+          {post.unit && getUnit(post.unit.toLowerCase()) ? (
             <Link
               href={`/cipd-units/${post.unit.toLowerCase()}`}
               className="mb-8 flex items-center justify-between gap-4 rounded-2xl border border-teal-200 bg-teal-50/60 p-4 transition-colors hover:border-teal-300"
@@ -101,9 +103,45 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               </span>
               <Icon name="arrow" className="h-5 w-5 flex-none text-teal-600" />
             </Link>
+          ) : (
+            // Non-unit clusters: the "up" link to the pillar (Part 7). A hub
+            // article resolves to itself, so it renders no banner.
+            pillarTarget &&
+            pillarTarget.href !== `/blog/${post.slug}` && (
+              <Link
+                href={pillarTarget.href}
+                className="mb-8 flex items-center justify-between gap-4 rounded-2xl border border-teal-200 bg-teal-50/60 p-4 transition-colors hover:border-teal-300"
+              >
+                <span className="text-sm text-navy-700">
+                  Part of our{" "}
+                  <span className="font-semibold text-navy-900">{pillarTarget.label}</span>{" "}
+                  series. See the full guide.
+                </span>
+                <Icon name="arrow" className="h-5 w-5 flex-none text-teal-600" />
+              </Link>
+            )
           )}
 
           <RichContent blocks={post.body} />
+
+          {/* Cluster lead magnet (Part 9): rendered from the pillar mapping,
+              never hand-coded per article. */}
+          {magnet && (
+            <Link
+              href={magnet.href}
+              className="mt-10 flex items-start gap-4 rounded-2xl border border-gold-200 bg-gold-50/60 p-5 transition-colors hover:border-gold-300"
+            >
+              <span className="mt-0.5 flex h-9 w-9 flex-none items-center justify-center rounded-full bg-gold-500 text-white">
+                <Icon name="download" className="h-5 w-5" />
+              </span>
+              <span>
+                <span className="block text-base font-bold text-navy-900">{magnet.title}</span>
+                <span className="mt-1 block text-sm leading-relaxed text-navy-600">
+                  {magnet.description}
+                </span>
+              </span>
+            </Link>
+          )}
 
           {/* Back link */}
           <div className="mt-10 border-t border-mist-200 pt-6">

@@ -55,4 +55,32 @@ export function postsForUnit(code: string) {
   return posts.filter((p) => p.unit === code);
 }
 
+/**
+ * Spokes of a pillar, in curated order. A hub article self-references its
+ * own slug as `pillar`, so it is excluded from its own spoke list.
+ */
+export function postsForPillar(pillar: string) {
+  return posts.filter((p) => p.pillar === pillar && p.slug !== pillar);
+}
+
+/**
+ * Curated `related` posts topped up with cluster siblings ("more in this
+ * cluster" fallback, Blueprint Part 7) until `min` links exist. Curated
+ * order wins; siblings fill in curated corpus order; never the post itself,
+ * never duplicates.
+ */
+export function relatedWithClusterFallback(post: Post, min = 3): Post[] {
+  const picked = post.related
+    .map((slug) => getPost(slug))
+    .filter((p): p is Post => Boolean(p));
+  const seen = new Set([post.slug, ...picked.map((p) => p.slug)]);
+  for (const sibling of postsForPillar(post.pillar)) {
+    if (picked.length >= min) break;
+    if (seen.has(sibling.slug)) continue;
+    picked.push(sibling);
+    seen.add(sibling.slug);
+  }
+  return picked;
+}
+
 export const postsByDate = [...posts].sort((a, b) => (a.date < b.date ? 1 : -1));

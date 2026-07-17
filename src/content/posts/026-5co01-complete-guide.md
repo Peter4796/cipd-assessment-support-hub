@@ -7,6 +7,7 @@ keyword: "5CO01 assignment guide"
 date: "2026-07-09"
 readMinutes: 7
 unit: "5CO01"
+pillar: "5CO01"
 related: ["5co01-learning-outcome-1","5co01-common-mistakes","5co01-assignment-structure"]
 ---
 5CO01, Organisational performance and culture in practice, is one of the most widely studied CIPD Level 5 units, and one where many learners are referred. This guide gives you the full picture: what the unit covers, how it is assessed, and how to approach it well. It is the hub of our 5CO01 guides, which go deeper on each part.

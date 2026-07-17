@@ -6,6 +6,7 @@ category: "Feedback"
 keyword: "CIPD tutor feedback"
 date: "2026-07-02"
 readMinutes: 5
+pillar: "/cipd-resubmission-support"
 related: ["how-to-improve-a-cipd-resubmission","common-mistakes-in-cipd-level-5-assignments","how-to-understand-a-cipd-assessment-brief"]
 ---
 Tutor feedback can feel frustratingly vague. 'Needs more analysis', 'AC 2.1 not met', 'develop further'. But behind every comment is a specific, fixable gap. Learning to translate feedback into action is what separates a stressful resubmission from a straightforward one.

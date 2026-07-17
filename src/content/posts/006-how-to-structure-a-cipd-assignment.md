@@ -6,6 +6,7 @@ category: "Writing"
 keyword: "how to structure a CIPD assignment"
 date: "2026-06-28"
 readMinutes: 6
+pillar: "how-to-structure-a-cipd-assignment"
 related: ["how-to-understand-a-cipd-assessment-brief","how-to-use-harvard-referencing-in-cipd-assessments","common-mistakes-in-cipd-level-5-assignments"]
 ---
 A clear structure does two things: it keeps your thinking organised, and it makes your work easy for an assessor to mark against the criteria. A well-structured average answer often outperforms a brilliant but chaotic one. Here's a structure that works across CIPD levels.

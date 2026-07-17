@@ -7,6 +7,7 @@ keyword: "5HR01 employment law"
 date: "2026-07-09"
 readMinutes: 6
 unit: "5HR01"
+pillar: "5HR01"
 related: ["5hr01-complete-guide","5hr01-discipline-grievance","finding-credible-sources-for-cipd-google-scholar"]
 ---
 5HR01 expects a working understanding of employment law and, importantly, the ability to apply it. You are not expected to be a lawyer, but you should handle the essentials accurately. Always check current law and your own brief, as legislation changes.
