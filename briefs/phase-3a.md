@@ -5,8 +5,8 @@ Part 6; voice: no em-dashes, UK spelling, guidance-not-writing CTAs, no CIPD
 verbatim text, no unsourced statistics. Mark each done with the commit hash.
 
 ## Batch 0 — infrastructure (before first articles)
-- [ ] Codec: add `pillar`, `tags[]`, `reviewed` frontmatter keys + `postsForPillar()`
-- [ ] Corpus test: pillar required + resolves; "more in this cluster" fallback links
+- [x] Codec: add `pillar`, `tags[]`, `reviewed` frontmatter keys + `postsForPillar()` — e09a758
+- [x] Corpus test: pillar required + resolves; "more in this cluster" fallback links — e09a758
 
 ## Batch 1 — 5CO02 + 5CO03 clusters (6)
 1. 5co02-complete-guide · pillar 5CO02 · kw "5CO02 assignment guide" · magnet: assignment checklist
