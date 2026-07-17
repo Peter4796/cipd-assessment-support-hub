@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ButtonLink, Section, SectionHeading } from "@/components/ui";
+import { Testimonials } from "@/components/Testimonials";
 import { Icon } from "@/components/Icon";
 import { CtaBand } from "@/components/Cta";
 import { homeServices, whyChooseUs } from "@/content/services";
@@ -215,6 +216,9 @@ export default function HomePage() {
           ))}
         </div>
       </Section>
+
+      {/* ─── Social proof ─── */}
+      <Testimonials />
 
       {/* ─── Ethical support notice ─── */}
       <Section tone="mist">

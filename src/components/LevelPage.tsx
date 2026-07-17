@@ -8,6 +8,7 @@ import { enquiryUrl } from "@/lib/leads/context";
 import { cta } from "@/lib/site";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/schema";
+import { Testimonials } from "@/components/Testimonials";
 
 /** Shared template rendering a single CIPD level support page. */
 export function LevelPage({ level }: { level: Level }) {
@@ -132,6 +133,8 @@ export function LevelPage({ level }: { level: Level }) {
           ))}
         </div>
       </Section>
+
+      <Testimonials count={3} tone="mist" />
 
       <CtaBand primaryHref={enquiryUrl({ level: level.number })} location="level" />
     </>
