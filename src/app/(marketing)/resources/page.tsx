@@ -10,7 +10,7 @@ import { caseStudies } from "@/content/case-studies";
 export const metadata: Metadata = {
   title: "CIPD Resource Hub: Guides, Checklist & Case Studies",
   description:
-    "Free CIPD resources: assessment guides, a downloadable planning checklist, and anonymised case studies for Level 3, 5 and 7 learners across the UK and UAE.",
+    "Free CIPD resources: assessment guides, a downloadable planning checklist, and anonymised case studies for Level 3, 5 and 7 learners worldwide.",
   alternates: { canonical: "/resources" },
 };
 

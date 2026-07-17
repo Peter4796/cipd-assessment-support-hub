@@ -16,7 +16,7 @@ export function Footer() {
             </div>
             <p className="mt-4 text-sm leading-relaxed text-navy-300">
               Ethical CIPD assessment support, coaching, review and editing for Level 3, 5
-              and 7 learners across the UK and UAE.
+              and 7 learners worldwide, with particular expertise across the UK and Gulf region.
             </p>
             <div className="mt-5 flex flex-wrap gap-2">
               <a

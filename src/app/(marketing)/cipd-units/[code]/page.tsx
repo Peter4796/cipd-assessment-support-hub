@@ -23,7 +23,7 @@ export function generateMetadata({ params }: { params: { code: string } }): Meta
   if (!unit) return {};
   return {
     title: `${unit.code} Assignment Help: ${unit.title}`,
-    description: `${unit.code} (${unit.title}) assignment support for CIPD ${unit.qualification}. Brief analysis, structure, Harvard referencing and draft review for UK and UAE learners.`,
+    description: `${unit.code} (${unit.title}) assignment support for CIPD ${unit.qualification}. Brief analysis, structure, Harvard referencing and draft review for learners worldwide.`,
     keywords: [unit.keyword, `${unit.code} assignment`, `CIPD ${unit.code}`, `${unit.code} example`],
     alternates: { canonical: `${site.url}/cipd-units/${unit.slug}` },
   };

@@ -57,7 +57,7 @@ export function CtaBand({
               </TrackedLink>
             </div>
             <p className="mt-5 text-sm text-navy-400">
-              Confidential · UK &amp; UAE · CIPD Level 3, 5 &amp; 7
+              Confidential · Learners worldwide · CIPD Level 3, 5 &amp; 7
             </p>
           </div>
         </div>

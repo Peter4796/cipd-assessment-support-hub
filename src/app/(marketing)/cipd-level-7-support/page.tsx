@@ -7,7 +7,7 @@ const level = getLevel("cipd-level-7-support")!;
 export const metadata: Metadata = {
   title: "CIPD Level 7 Assessment Review (Advanced Diploma)",
   description:
-    "CIPD Level 7 assessment review for senior and strategic HR professionals in the UK and UAE: critical analysis, strategic thinking, academic depth, referencing and resubmission support.",
+    "CIPD Level 7 assessment review for senior and strategic HR professionals in the UK, the Gulf and worldwide: critical analysis, strategic thinking, academic depth, referencing and resubmission support.",
   alternates: { canonical: "/cipd-level-7-support" },
 };
 

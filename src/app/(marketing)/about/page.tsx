@@ -47,7 +47,7 @@ export default function AboutPage() {
         eyebrow="About us"
         breadcrumb="About"
         title="A specialist CIPD assessment support service for HR learners"
-        intro="We help busy HR professionals, working adults and international learners across the UK and UAE understand their assessments and submit their strongest, most confident work."
+        intro="We help busy HR professionals, working adults and international learners across the UK, the Gulf region and worldwide understand their assessments and submit their strongest, most confident work."
       />
 
       <Section tone="white">
@@ -91,7 +91,7 @@ export default function AboutPage() {
               <dl className="mt-4 space-y-4">
                 {[
                   { k: "Levels supported", v: "CIPD 3, 5 & 7" },
-                  { k: "Primary markets", v: "UK & UAE" },
+                  { k: "Clients", v: "Worldwide · deep UK & Gulf expertise" },
                   { k: "Referencing style", v: "Harvard" },
                   { k: "Approach", v: "Ethical & confidential" },
                 ].map((row) => (

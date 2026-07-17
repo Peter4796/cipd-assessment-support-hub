@@ -4,7 +4,7 @@
 
 // ─── Trust strip (Home) ───
 export const trustPoints = [
-  "UK & UAE clients",
+  "Clients across the UK, Gulf & worldwide",
   "CIPD Level 3, 5 & 7",
   "Harvard referencing support",
   "Assessment-criteria focused",
@@ -182,6 +182,11 @@ export const faqs: { question: string; answer: string }[] = [
     question: "Do you work with UK learners?",
     answer:
       "Absolutely. Many of our learners are based in the UK, and our support is aligned with UK-style academic expectations and Harvard referencing conventions.",
+  },
+  {
+    question: "Do you support learners outside the UK?",
+    answer:
+      "Yes. We work with CIPD learners worldwide. Study centres set their own briefs, but the qualifications and assessment standards are the same wherever you study, and everything runs over WhatsApp and email in your time zone.",
   },
   {
     question: "Do you work with UAE learners?",

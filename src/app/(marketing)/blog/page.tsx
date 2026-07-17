@@ -9,7 +9,7 @@ import { postsByDate } from "@/content/posts";
 export const metadata: Metadata = {
   title: "CIPD Assessment Blog: Guides & Tips",
   description:
-    "Expert guides on CIPD assessments: understanding briefs, Harvard referencing, assignment structure, resubmissions, tutor feedback and managing deadlines for UK & UAE learners.",
+    "Expert guides on CIPD assessments: understanding briefs, Harvard referencing, assignment structure, resubmissions, tutor feedback and managing deadlines for learners worldwide.",
   alternates: { canonical: "/blog" },
 };
 
@@ -28,7 +28,7 @@ export default function BlogIndexPage() {
         eyebrow="Blog"
         breadcrumb="Blog"
         title="CIPD assessment guides & insights"
-        intro="Practical, ethical guidance on understanding briefs, referencing, structure, resubmissions and more, written for CIPD learners across the UK and UAE."
+        intro="Practical, ethical guidance on understanding briefs, referencing, structure, resubmissions and more, written for CIPD learners worldwide."
       />
 
       <Section tone="white">

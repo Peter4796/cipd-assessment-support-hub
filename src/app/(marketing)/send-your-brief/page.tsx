@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const reassurance = [
   "Confidential: your documents are used only to review your enquiry",
   "No obligation: you'll receive a clear quote to consider",
-  "Fast replies on WhatsApp and email, UK & UAE time zones",
+  "Fast replies on WhatsApp and email, whatever your time zone",
 ];
 
 export default function SendYourBriefPage() {

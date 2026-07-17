@@ -31,11 +31,11 @@ export default function HomePage() {
             </span>
             <h1 className="mt-5 text-4xl font-bold leading-[1.1] text-white sm:text-5xl lg:text-6xl">
               Professional CIPD Assessment Support for{" "}
-              <span className="text-gold-400">UK &amp; UAE</span> Learners
+              <span className="text-gold-400">Learners Worldwide</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-navy-200">
               Get expert guidance with CIPD Level 3, Level 5 and Level 7 assessments, from
-              brief analysis and structure to referencing, editing and resubmission support.
+              brief analysis and structure to referencing, editing and resubmission support. Particular expertise supporting students and professionals across the UK and Gulf region.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <ButtonLink href={enquiryUrl({ cta: "hero" })} variant="primary" withArrow>
