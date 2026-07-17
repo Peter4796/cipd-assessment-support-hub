@@ -3,7 +3,9 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 import { JsonLd } from "@/components/JsonLd";
-import { breadcrumbJsonLd } from "@/lib/schema";
+import { breadcrumbJsonLd, faqJsonLd } from "@/lib/schema";
+import { Accordion } from "@/components/Accordion";
+import { getUnitGuidance } from "@/content/unit-guidance";
 import { Section, ButtonLink, CheckList } from "@/components/ui";
 import { Icon } from "@/components/Icon";
 import { CtaBand } from "@/components/Cta";
@@ -55,9 +57,11 @@ export default function UnitPage({ params }: { params: { code: string } }) {
   const related = units.filter((u) => u.level === unit.level && u.slug !== unit.slug).slice(0, 3);
   const levelSlug = `/cipd-level-${unit.level}-support`;
   const guides = postsForUnit(unit.code);
+  const guidance = getUnitGuidance(unit.code);
 
   return (
     <>
+      {guidance && <JsonLd data={faqJsonLd(guidance.faqs)} />}
       <JsonLd
         data={breadcrumbJsonLd([
           { name: "Home", path: "/" },
@@ -109,6 +113,45 @@ export default function UnitPage({ params }: { params: { code: string } }) {
                 </li>
               ))}
             </ul>
+
+            {guidance && (
+              <>
+                <h3 className="mt-10 text-xl font-bold text-navy-900">
+                  What strong {unit.code} submissions demonstrate
+                </h3>
+                <p className="mt-2 text-sm text-navy-500">
+                  Our guidance on what assessors reward, in our own words. Always work from your
+                  own current brief and assessment criteria.
+                </p>
+                <CheckList items={guidance.demonstrate} className="mt-4" />
+
+                <h3 className="mt-10 text-xl font-bold text-navy-900">
+                  Command verbs to watch in {unit.code}
+                </h3>
+                <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                  {guidance.verbs.map((v) => (
+                    <div key={v.verb} className="rounded-2xl border border-mist-200 bg-mist-50 p-4">
+                      <span className="text-sm font-bold text-navy-900">{v.verb}</span>
+                      <p className="mt-1 text-sm leading-relaxed text-navy-600">{v.meaning}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <h3 className="mt-10 text-xl font-bold text-navy-900">
+                  Assessment criteria tips
+                </h3>
+                <ul className="mt-4 space-y-2.5">
+                  {guidance.criteriaTips.map((tip) => (
+                    <li key={tip} className="flex items-start gap-3">
+                      <span className="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-teal-100 text-teal-700">
+                        <Icon name="check" className="h-3.5 w-3.5" />
+                      </span>
+                      <span className="body-copy text-navy-700">{tip}</span>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
           </div>
 
           {/* Sidebar: how we help */}
@@ -178,6 +221,17 @@ export default function UnitPage({ params }: { params: { code: string } }) {
               </Link>
             ))}
           </div>
+        </Section>
+      )}
+
+      {/* Unit FAQs (also emitted as FAQPage JSON-LD above) */}
+      {guidance && (
+        <Section tone="mist">
+          <div className="mb-8 text-center">
+            <span className="eyebrow">FAQ</span>
+            <h2 className="text-2xl font-bold text-navy-900">{unit.code} questions, answered</h2>
+          </div>
+          <Accordion items={guidance.faqs} />
         </Section>
       )}
 
