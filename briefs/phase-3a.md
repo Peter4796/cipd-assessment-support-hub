@@ -8,21 +8,21 @@ verbatim text, no unsourced statistics. Mark each done with the commit hash.
 - [x] Codec: add `pillar`, `tags[]`, `reviewed` frontmatter keys + `postsForPillar()` — e09a758
 - [x] Corpus test: pillar required + resolves; "more in this cluster" fallback links — e09a758
 
-## Batch 1 — 5CO02 + 5CO03 clusters (6)
-1. 5co02-complete-guide · pillar 5CO02 · kw "5CO02 assignment guide" · magnet: assignment checklist
-2. 5co02-common-mistakes · pillar 5CO02 · kw "5CO02 common mistakes"
-3. 5co02-faqs · pillar 5CO02 · kw "5CO02 FAQ" · FAQ template (h3 pattern)
-4. 5co03-complete-guide · pillar 5CO03 · kw "5CO03 assignment guide"
-5. 5co03-reflective-examples-discussion · pillar 5CO03 · kw "5CO03 reflective writing"
-6. 5co03-faqs · pillar 5CO03 · kw "5CO03 FAQ" · FAQ template
+## Batch 1 — 5CO02 + 5CO03 clusters (6) — DONE c98bc17
+1. [x] 5co02-complete-guide · pillar 5CO02 · kw "5CO02 assignment guide" · magnet: assignment checklist
+2. [x] 5co02-common-mistakes · pillar 5CO02 · kw "5CO02 common mistakes"
+3. [x] 5co02-faqs · pillar 5CO02 · kw "5CO02 FAQ" · FAQ template (h3 pattern)
+4. [x] 5co03-complete-guide · pillar 5CO03 · kw "5CO03 assignment guide"
+5. [x] 5co03-reflective-examples-discussion · pillar 5CO03 · kw "5CO03 reflective writing"
+6. [x] 5co03-faqs · pillar 5CO03 · kw "5CO03 FAQ" · FAQ template
 
-## Batch 2 — 5HR02 + 5HR03 clusters (6)
-7. 5hr02-complete-guide · kw "5HR02 assignment guide"
-8. 5hr02-workforce-planning-explained · kw "5HR02 workforce planning"
-9. 5hr02-faqs · FAQ template
-10. 5hr03-complete-guide · kw "5HR03 assignment guide"
-11. 5hr03-reward-principles-explained · kw "5HR03 reward assignment"
-12. 5hr03-faqs · FAQ template
+## Batch 2 — 5HR02 + 5HR03 clusters (6) — DONE (see git log)
+7. [x] 5hr02-complete-guide · kw "5HR02 assignment guide"
+8. [x] 5hr02-workforce-planning-explained · kw "5HR02 workforce planning"
+9. [x] 5hr02-faqs · FAQ template
+10. [x] 5hr03-complete-guide · kw "5HR03 assignment guide"
+11. [x] 5hr03-reward-principles-explained · kw "5HR03 reward assignment"
+12. [x] 5hr03-faqs · FAQ template
 
 ## Batch 3 — 7CO03 + 3CO04 clusters (6)
 13. 7co03-complete-guide · kw "7CO03 assignment guide" (resubmission-heavy unit)
