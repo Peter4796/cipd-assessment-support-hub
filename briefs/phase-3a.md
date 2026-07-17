@@ -24,13 +24,13 @@ verbatim text, no unsourced statistics. Mark each done with the commit hash.
 11. [x] 5hr03-reward-principles-explained · kw "5HR03 reward assignment"
 12. [x] 5hr03-faqs · FAQ template
 
-## Batch 3 — 7CO03 + 3CO04 clusters (6)
-13. 7co03-complete-guide · kw "7CO03 assignment guide" (resubmission-heavy unit)
-14. 7co03-reflective-writing-masters-level · kw "7CO03 reflective writing"
-15. 7co03-faqs · FAQ template
-16. 3co04-complete-guide · kw "3CO04 assignment guide"
-17. 3co04-employee-lifecycle-explained · kw "3CO04 employee lifecycle"
-18. 3co04-faqs · FAQ template
+## Batch 3 — 7CO03 + 3CO04 clusters (6) — DONE (see git log)
+13. [x] 7co03-complete-guide · kw "7CO03 assignment guide" (resubmission-heavy unit)
+14. [x] 7co03-reflective-writing-masters-level · kw "7CO03 reflective writing"
+15. [x] 7co03-faqs · FAQ template
+16. [x] 3co04-complete-guide · kw "3CO04 assignment guide"
+17. [x] 3co04-employee-lifecycle-explained · kw "3CO04 employee lifecycle"
+18. [x] 3co04-faqs · FAQ template
 
 ## Batch 4 — Harvard referencing core (4) + resubmission spokes (3)
 19. harvard-referencing-complete-guide (PILLAR article) · kw "CIPD Harvard referencing" · magnet: referencing checklist (build with this batch)
