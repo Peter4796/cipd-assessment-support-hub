@@ -7,6 +7,8 @@ import { CtaBand } from "@/components/Cta";
 import { services } from "@/content/services";
 import { levels } from "@/content/levels";
 import { cta } from "@/lib/site";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "CIPD Assessment Support Services",
@@ -18,6 +20,23 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
+      {/* One Service node per offering, anchored to its section on this page. */}
+      {services.map((s) => (
+        <JsonLd
+          key={s.slug}
+          data={serviceJsonLd({
+            name: s.title,
+            description: s.description,
+            path: `/services#${s.slug}`,
+          })}
+        />
+      ))}
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Services", path: "/services" },
+        ])}
+      />
       <PageHero
         eyebrow="Our services"
         breadcrumb="Services"

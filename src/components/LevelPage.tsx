@@ -6,6 +6,8 @@ import { CtaBand } from "@/components/Cta";
 import { levels, type Level } from "@/content/levels";
 import { enquiryUrl } from "@/lib/leads/context";
 import { cta } from "@/lib/site";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/schema";
 
 /** Shared template rendering a single CIPD level support page. */
 export function LevelPage({ level }: { level: Level }) {
@@ -15,6 +17,20 @@ export function LevelPage({ level }: { level: Level }) {
 
   return (
     <>
+      <JsonLd
+        data={serviceJsonLd({
+          name: level.title,
+          description: level.summary,
+          path: `/${level.slug}`,
+          serviceType: `CIPD Level ${level.number} assessment support`,
+        })}
+      />
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: `Level ${level.number} Support`, path: `/${level.slug}` },
+        ])}
+      />
       <PageHero
         eyebrow={`CIPD Level ${level.number}`}
         breadcrumb={`Level ${level.number} Support`}

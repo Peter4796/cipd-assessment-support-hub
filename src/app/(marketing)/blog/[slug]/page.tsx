@@ -10,6 +10,8 @@ import { posts, getPost } from "@/content/posts";
 import { getUnit } from "@/content/units";
 import { enquiryUrl, type EnquiryContext } from "@/lib/leads/context";
 import { site } from "@/lib/site";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbJsonLd, faqJsonLd, faqPairsFromBlocks, ORGANIZATION_ID } from "@/lib/schema";
 
 export function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));
@@ -53,17 +55,26 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     headline: post.title,
     description: post.description,
     datePublished: post.date,
-    author: { "@type": "Organization", name: site.name },
-    publisher: { "@type": "Organization", name: site.name },
+    author: { "@id": ORGANIZATION_ID },
+    publisher: { "@id": ORGANIZATION_ID },
     mainEntityOfPage: `${site.url}/blog/${post.slug}`,
   };
 
+  // FAQ-pattern articles (### question / paragraph answers) earn FAQPage
+  // rich-result markup; derivation returns [] for everything else.
+  const faqPairs = post.slug.endsWith("-faqs") ? faqPairsFromBlocks(post.body) : [];
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+          { name: post.title, path: `/blog/${post.slug}` },
+        ])}
       />
+      {faqPairs.length >= 3 && <JsonLd data={faqJsonLd(faqPairs)} />}
+      <JsonLd data={articleJsonLd} />
       <PageHero
         eyebrow={post.category}
         breadcrumb="Blog"

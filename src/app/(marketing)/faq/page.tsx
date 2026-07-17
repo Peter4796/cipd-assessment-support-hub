@@ -4,6 +4,8 @@ import { Section } from "@/components/ui";
 import { CtaBand } from "@/components/Cta";
 import { Accordion } from "@/components/Accordion";
 import { faqs } from "@/content/site-content";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbJsonLd, faqJsonLd } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "FAQ: CIPD Assessment Support Questions",
@@ -12,23 +14,15 @@ export const metadata: Metadata = {
   alternates: { canonical: "/faq" },
 };
 
-// FAQ structured data for rich results (SEO)
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqs.map((f) => ({
-    "@type": "Question",
-    name: f.question,
-    acceptedAnswer: { "@type": "Answer", text: f.answer },
-  })),
-};
-
 export default function FaqPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      <JsonLd data={faqJsonLd(faqs)} />
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "FAQ", path: "/faq" },
+        ])}
       />
       <PageHero
         eyebrow="FAQ"

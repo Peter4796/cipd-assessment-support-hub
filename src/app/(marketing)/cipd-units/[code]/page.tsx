@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbJsonLd } from "@/lib/schema";
 import { Section, ButtonLink, CheckList } from "@/components/ui";
 import { Icon } from "@/components/Icon";
 import { CtaBand } from "@/components/Cta";
@@ -56,6 +58,13 @@ export default function UnitPage({ params }: { params: { code: string } }) {
 
   return (
     <>
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "CIPD Units", path: "/cipd-units" },
+          { name: unit.code, path: `/cipd-units/${unit.slug}` },
+        ])}
+      />
       <PageHero
         eyebrow={`CIPD ${unit.code}`}
         breadcrumb={`${unit.code}`}

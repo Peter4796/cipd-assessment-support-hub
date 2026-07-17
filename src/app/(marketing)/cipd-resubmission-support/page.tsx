@@ -6,7 +6,9 @@ import { Icon } from "@/components/Icon";
 import { CtaBand } from "@/components/Cta";
 import { Accordion } from "@/components/Accordion";
 import { enquiryUrl } from "@/lib/leads/context";
-import { site, whatsappLink } from "@/lib/site";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/lib/schema";
+import { whatsappLink } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "CIPD Resubmission Support (Level 3, 5 & 7)",
@@ -91,37 +93,27 @@ const faqs = [
   },
 ];
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqs.map((f) => ({
-    "@type": "Question",
-    name: f.question,
-    acceptedAnswer: { "@type": "Answer", text: f.answer },
-  })),
-};
-
-const breadcrumbJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: site.url },
-    {
-      "@type": "ListItem",
-      position: 2,
-      name: "CIPD Resubmission Support",
-      item: `${site.url}/cipd-resubmission-support`,
-    },
-  ],
-};
-
 const funnelCta = enquiryUrl({ support: "resubmission", submission: "resubmission", cta: "hero" });
 
 export default function ResubmissionSupportPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <JsonLd data={faqJsonLd(faqs)} />
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "CIPD Resubmission Support", path: "/cipd-resubmission-support" },
+        ])}
+      />
+      <JsonLd
+        data={serviceJsonLd({
+          name: "CIPD Resubmission Support",
+          description:
+            "Help interpreting assessor feedback, identifying referred assessment criteria, and improving your response with focused academic guidance.",
+          path: "/cipd-resubmission-support",
+          serviceType: "CIPD resubmission support",
+        })}
+      />
 
       <PageHero
         eyebrow="Resubmission support"
