@@ -65,6 +65,41 @@ export default function ResourcesPage() {
         </div>
       </Section>
 
+      {/* More free downloads */}
+      <Section tone="white" className="!pt-0">
+        <div className="grid gap-6 md:grid-cols-2">
+          {[
+            {
+              href: "/resources/harvard-referencing-checklist",
+              title: "Harvard Referencing Checklist",
+              blurb:
+                "Run every citation, quote and reference-list entry through a final check before you submit.",
+            },
+            {
+              href: "/resources/cipd-resubmission-planner",
+              title: "CIPD Resubmission Planner",
+              blurb:
+                "Turn tutor feedback into a phased revision plan, from decoding comments to the final criterion check.",
+            },
+          ].map((d) => (
+            <Link key={d.href} href={d.href} className="card card-hover group flex items-start gap-4">
+              <span className="mt-0.5 flex h-11 w-11 flex-none items-center justify-center rounded-xl bg-gold-100 text-gold-700">
+                <Icon name="download" className="h-5 w-5" />
+              </span>
+              <span>
+                <span className="block text-base font-bold text-navy-900 group-hover:text-gold-600">
+                  {d.title}
+                </span>
+                <span className="mt-1.5 block body-copy text-sm">{d.blurb}</span>
+                <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-navy-700">
+                  Free download <Icon name="arrow" className="h-4 w-4" />
+                </span>
+              </span>
+            </Link>
+          ))}
+        </div>
+      </Section>
+
       {/* Latest guides */}
       <Section tone="mist">
         <div className="flex items-end justify-between">

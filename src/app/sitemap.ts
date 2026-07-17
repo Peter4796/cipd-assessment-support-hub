@@ -18,6 +18,8 @@ const staticRoutes = [
   "/contact",
   "/resources",
   "/resources/cipd-assessment-planning-checklist",
+  "/resources/harvard-referencing-checklist",
+  "/resources/cipd-resubmission-planner",
   "/blog",
   "/case-studies",
   "/cipd-units",

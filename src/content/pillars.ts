@@ -56,8 +56,24 @@ const PLANNING_CHECKLIST: Magnet = {
   href: "/resources/cipd-assessment-planning-checklist",
 };
 
-/** Cluster → magnet map. Unit clusters share the planning checklist. */
+const REFERENCING_CHECKLIST: Magnet = {
+  title: "Free CIPD Harvard Referencing Checklist",
+  description:
+    "A printable checklist covering in-text citations, the reference list, source quality and a final referencing-only review pass.",
+  href: "/resources/harvard-referencing-checklist",
+};
+
+const RESUBMISSION_PLANNER: Magnet = {
+  title: "Free CIPD Resubmission Planner",
+  description:
+    "A phased planner for turning tutor feedback into a stronger resubmission, from decoding comments to the final criterion check.",
+  href: "/resources/cipd-resubmission-planner",
+};
+
+/** Cluster → magnet map (Part 9: one magnet per cluster, shown only there). */
 export function magnetForPillar(pillar: string): Magnet | undefined {
   if (unitByCode.has(pillar)) return PLANNING_CHECKLIST;
+  if (pillar === "harvard-referencing-complete-guide") return REFERENCING_CHECKLIST;
+  if (pillar === "/cipd-resubmission-support") return RESUBMISSION_PLANNER;
   return undefined;
 }

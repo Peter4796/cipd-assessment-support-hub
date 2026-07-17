@@ -19,11 +19,25 @@ import { buildAcquisitionContext } from "@/lib/leads/context";
  * happened when it didn't (the confirmation copy stays download-focused).
  */
 
-const DOWNLOAD_URL = "/downloads/cipd-assessment-planning-checklist.html";
-const RESOURCE_SLUG = "cipd-assessment-planning-checklist";
 const levelOptions = ["CIPD Level 3", "CIPD Level 5", "CIPD Level 7", "Not sure yet"];
 
-export function LeadMagnetForm() {
+export type LeadMagnetProps = {
+  /** Subscribe capture identifier AND landing-page slug. */
+  resourceSlug?: string;
+  /** Printable resource the form unlocks (public/downloads/*.html). */
+  downloadUrl?: string;
+  /** Short noun used in copy, e.g. "checklist", "planner". */
+  resourceNoun?: string;
+  /** Resource title used in the unlocked confirmation. */
+  resourceTitle?: string;
+};
+
+export function LeadMagnetForm({
+  resourceSlug = "cipd-assessment-planning-checklist",
+  downloadUrl = "/downloads/cipd-assessment-planning-checklist.html",
+  resourceNoun = "checklist",
+  resourceTitle = "CIPD Assessment Planning Checklist",
+}: LeadMagnetProps = {}) {
   const pathname = usePathname();
   const [form, setForm] = useState({
     name: "",
@@ -40,7 +54,7 @@ export function LeadMagnetForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("submitting");
-    trackEvent("lead_magnet_submitted", { resource: RESOURCE_SLUG });
+    trackEvent("lead_magnet_submitted", { resource: resourceSlug });
 
     try {
       await fetch("/api/subscribe", {
@@ -51,7 +65,7 @@ export function LeadMagnetForm() {
           email: form.email,
           level: form.level.replace(/\D/g, "") || undefined,
           country: form.country,
-          resource: RESOURCE_SLUG,
+          resource: resourceSlug,
           website: form.website,
           startedAt: startedAt.current,
           context: buildAcquisitionContext(pathname),
@@ -73,18 +87,18 @@ export function LeadMagnetForm() {
         <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-teal-100 text-teal-700">
           <Icon name="check" className="h-7 w-7" />
         </span>
-        <h3 className="mt-4 text-xl font-bold text-navy-900">Your checklist is ready 🎉</h3>
+        <h3 className="mt-4 text-xl font-bold text-navy-900">Your {resourceNoun} is ready 🎉</h3>
         <p className="mt-2 text-sm text-navy-600">
-          Thanks{form.name ? `, ${form.name.split(" ")[0]}` : ""}! Open your free CIPD Assessment
-          Planning Checklist below, then use “Print / Save as PDF” to keep a copy.
+          Thanks{form.name ? `, ${form.name.split(" ")[0]}` : ""}! Open your free {resourceTitle}{" "}
+          below, then use “Print / Save as PDF” to keep a copy.
         </p>
         <a
-          href={DOWNLOAD_URL}
+          href={downloadUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="btn-primary mt-6 w-full"
         >
-          Open my checklist
+          Open my {resourceNoun}
           <Icon name="arrow" className="h-4 w-4" />
         </a>
         <p className="mt-4 text-xs text-navy-400">
@@ -96,7 +110,7 @@ export function LeadMagnetForm() {
 
   return (
     <form onSubmit={handleSubmit} className="rounded-3xl border border-mist-200 bg-white p-6 shadow-card sm:p-8">
-      <h3 className="text-lg font-bold text-navy-900">Get the free checklist</h3>
+      <h3 className="text-lg font-bold text-navy-900">Get the free {resourceNoun}</h3>
       <p className="mt-1 text-sm text-navy-600">
         Tell us a little about you and we&apos;ll unlock your download instantly.
       </p>
@@ -133,12 +147,12 @@ export function LeadMagnetForm() {
       </div>
       <button type="submit" disabled={status === "submitting"} className="btn-primary mt-6 w-full">
         {status === "submitting" ? "Unlocking…" : (
-          <>Download the checklist <Icon name="arrow" className="h-4 w-4" /></>
+          <>Download the {resourceNoun} <Icon name="arrow" className="h-4 w-4" /></>
         )}
       </button>
       <p className="mt-3 text-center text-xs text-navy-400">
-        We&apos;ll only use your details to send your checklist and occasional CIPD study tips. No
-        spam, unsubscribe any time.
+        We&apos;ll only use your details to send your {resourceNoun} and occasional CIPD study
+        tips. No spam, unsubscribe any time.
       </p>
     </form>
   );

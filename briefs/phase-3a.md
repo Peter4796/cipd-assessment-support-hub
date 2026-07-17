@@ -32,14 +32,17 @@ verbatim text, no unsourced statistics. Mark each done with the commit hash.
 17. [x] 3co04-employee-lifecycle-explained · kw "3CO04 employee lifecycle"
 18. [x] 3co04-faqs · FAQ template
 
-## Batch 4 — Harvard referencing core (4) + resubmission spokes (3)
-19. harvard-referencing-complete-guide (PILLAR article) · kw "CIPD Harvard referencing" · magnet: referencing checklist (build with this batch)
-20. harvard-referencing-common-errors · kw "Harvard referencing mistakes"
-21. referencing-cipd-sources · kw "referencing CIPD factsheets"
-22. secondary-referencing-explained · kw "secondary referencing Harvard"
-23. resubmission-word-count-strategy · pillar /cipd-resubmission-support
-24. resubmission-timeline-planning · pillar /cipd-resubmission-support · magnet: resubmission planner (build with this batch)
-25. interpreting-assessor-feedback-phrases · pillar /cipd-resubmission-support · kw "CIPD assessor feedback meaning"
+## Batch 4 — Harvard referencing core (4) + resubmission spokes (3) — DONE (see git log)
+19. [x] harvard-referencing-complete-guide (PILLAR article) · kw "CIPD Harvard referencing" · magnet: referencing checklist (built)
+20. [x] harvard-referencing-common-errors · kw "Harvard referencing mistakes"
+21. [x] referencing-cipd-sources · kw "referencing CIPD factsheets"
+22. [x] secondary-referencing-explained · kw "secondary referencing Harvard"
+23. [x] resubmission-word-count-strategy · pillar /cipd-resubmission-support
+24. [x] resubmission-timeline-planning · pillar /cipd-resubmission-support · magnet: resubmission planner (built)
+25. [x] interpreting-assessor-feedback-phrases · pillar /cipd-resubmission-support · kw "CIPD assessor feedback meaning"
+
+Phase 3A complete: 25/25 articles live, 2 new lead magnets, referencing
+pillar re-pointed (003/009/025 → harvard-referencing-complete-guide).
 
 Each article: `related` links within its cluster + one cross-cluster link;
 contextual CTA prefilled with the unit/level (enquiryUrl); FAQs section in
