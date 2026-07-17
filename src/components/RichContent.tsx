@@ -1,4 +1,4 @@
-import type { Block } from "@/content/blog";
+import type { Block } from "@/content/types";
 import { Icon } from "@/components/Icon";
 
 /** Renders a typed block array (blog posts, case studies) as styled long-form content. */

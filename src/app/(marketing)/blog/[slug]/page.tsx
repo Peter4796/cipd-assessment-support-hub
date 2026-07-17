@@ -6,7 +6,7 @@ import { Section } from "@/components/ui";
 import { Icon } from "@/components/Icon";
 import { CtaBand } from "@/components/Cta";
 import { RichContent } from "@/components/RichContent";
-import { posts, getPost } from "@/content/blog";
+import { posts, getPost } from "@/content/posts";
 import { getUnit } from "@/content/units";
 import { enquiryUrl, type EnquiryContext } from "@/lib/leads/context";
 import { site } from "@/lib/site";

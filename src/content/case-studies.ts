@@ -3,7 +3,7 @@
  * All examples are illustrative and anonymised; no client-identifying detail.
  */
 
-import type { Block } from "@/content/blog";
+import type { Block } from "@/content/types";
 
 export type CaseStudy = {
   slug: string;

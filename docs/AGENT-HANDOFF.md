@@ -50,7 +50,7 @@ with clients from the UK, UAE, Kenya, Nigeria, the US and elsewhere.
 | Retention | Daily Vercel Cron (03:00 UTC) at `GET /api/cron/retention`: policy deletion (90/180-day windows), 48h orphan sweep, alert-email retry — see §8 |
 | Email | Resend REST via `src/lib/email/resend.ts` (fetch-based, no SDK). Sending domain `notifications.cipdguidance.com` (mail-only DNS; keep click-tracking OFF). Recipient `LEAD_NOTIFY_EMAIL` |
 | Phone input | `react-phone-number-input` + `libphonenumber-js`: all ~245 countries, searchable selector, E.164 values end-to-end (`src/components/PhoneNumberField.tsx`); server normalisation in `normaliseWhatsapp` |
-| Content | Typed data modules in `src/content/` (`blog.ts` 41 posts / 2,209 lines, `units.ts` 17 units). **MDX migration is the accepted next tranche** for the 100–300 article plan |
+| Content | **Blog: one markdown file per post** in `src/content/posts/NNN-slug.md` (41 posts; numeric prefix = curated order, slug in frontmatter = URL). Loader `src/content/posts.ts` parses a strict markdown subset (dependency-free codec in `src/lib/content/markdown.ts`: `##`/`###`/`>` callout/`-`/`1.` lists/paragraphs, frontmatter values are JSON literals) into the same Block model rendered by `RichContent`; a malformed post fails tests AND the build. Other collections stay typed TS modules (`units.ts`, `case-studies.ts` etc., types in `src/content/types.ts`). Migration was proven lossless (round-trip + rendered-output parity vs production). Inline formatting (links/bold) is deliberately not supported yet; adding it is the next content-model step if SEO internal linking demands it |
 | Analytics | Vercel Web Analytics; typed `src/lib/analytics.ts` (PII excluded by construction) |
 | SEO | Site-wide OG image, canonicals everywhere, dynamic sitemap, robots disallowing `/portal` `/admin` `/api` |
 
@@ -276,7 +276,7 @@ dashboard link, database row, admin operations.
 
 ## 12. NEXT WORK (priority order, owner-approved sequencing)
 
-1. **MDX content migration** — mandatory before the 100–300 article scale-up
+1. ~~MDX content migration~~ — DONE (this tranche): one .md per post, provably lossless.
    (blog.ts at 2,209 lines is the bottleneck). Native `@next/mdx`, one file per
    post, typed frontmatter. Contentlayer rejected (unmaintained).
 2. Outstanding AUDIT P1 items: social proof block, structured-data expansion

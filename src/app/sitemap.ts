@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { site } from "@/lib/site";
-import { posts } from "@/content/blog";
+import { posts } from "@/content/posts";
 import { caseStudies } from "@/content/case-studies";
 import { units } from "@/content/units";
 

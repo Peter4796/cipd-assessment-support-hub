@@ -6,7 +6,7 @@ import { Section, ButtonLink, CheckList } from "@/components/ui";
 import { Icon } from "@/components/Icon";
 import { CtaBand } from "@/components/Cta";
 import { units, getUnit } from "@/content/units";
-import { postsForUnit } from "@/content/blog";
+import { postsForUnit } from "@/content/posts";
 import { enquiryUrl } from "@/lib/leads/context";
 import { cta, site, whatsappLink } from "@/lib/site";
 

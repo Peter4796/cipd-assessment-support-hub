@@ -4,7 +4,7 @@ import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/ui";
 import { Icon } from "@/components/Icon";
 import { CtaBand } from "@/components/Cta";
-import { postsByDate } from "@/content/blog";
+import { postsByDate } from "@/content/posts";
 
 export const metadata: Metadata = {
   title: "CIPD Assessment Blog: Guides & Tips",
