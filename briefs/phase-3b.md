@@ -11,13 +11,13 @@ Sequencing: finish unit authority first (L7 then L3), then skills cores,
 then level/choosing, then country guides. ~66 articles + 3 magnets here;
 remaining thickening rolls into the monthly refresh sweep.
 
-## Batch 1 — 7CO01 + 7CO02 clusters (6)
-1. 7co01-complete-guide · pillar 7CO01 · kw "7CO01 assignment guide"
-2. 7co01-building-critical-arguments · pillar 7CO01 · kw "7CO01 critical evaluation"
-3. 7co01-faqs · pillar 7CO01 · kw "7CO01 FAQ" · FAQ template
-4. 7co02-complete-guide · pillar 7CO02 · kw "7CO02 assignment guide"
-5. 7co02-aligning-people-strategy · pillar 7CO02 · kw "7CO02 people strategy"
-6. 7co02-faqs · pillar 7CO02 · kw "7CO02 FAQ" · FAQ template
+## Batch 1 — 7CO01 + 7CO02 clusters (6) — DONE (see git log)
+1. [x] 7co01-complete-guide · pillar 7CO01 · kw "7CO01 assignment guide"
+2. [x] 7co01-building-critical-arguments · pillar 7CO01 · kw "7CO01 critical evaluation"
+3. [x] 7co01-faqs · pillar 7CO01 · kw "7CO01 FAQ" · FAQ template
+4. [x] 7co02-complete-guide · pillar 7CO02 · kw "7CO02 assignment guide"
+5. [x] 7co02-aligning-people-strategy · pillar 7CO02 · kw "7CO02 people strategy"
+6. [x] 7co02-faqs · pillar 7CO02 · kw "7CO02 FAQ" · FAQ template
 
 ## Batch 2 — 7CO04 + 7HR01 clusters (6)
 7. 7co04-complete-guide · kw "7CO04 assignment guide" (research project unit)
