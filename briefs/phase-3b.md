@@ -43,14 +43,14 @@ remaining thickening rolls into the monthly refresh sweep.
 23. [x] 3co02-using-people-data · kw "3CO02 people analytics"
 24. [x] 3co02-faqs · FAQ template
 
-## Batch 5 — 3CO03 cluster (3) + Reflective Writing core (3)
-25. 3co03-complete-guide · kw "3CO03 assignment guide"
-26. 3co03-professional-behaviours-explained · kw "3CO03 professional behaviours"
-27. 3co03-faqs · FAQ template
-28. UPGRADE what-is-a-cipd-reflective-account → Reflective Writing PILLAR (2,500+, reviewed, keep slug)
-29. reflective-models-compared · pillar what-is-a-cipd-reflective-account · kw "reflective models comparison"
-30. reflective-writing-at-each-cipd-level · same pillar · kw "reflective writing CIPD levels"
-    (magnet: reflective writing model bank — build with this batch; map cluster in pillars.ts)
+## Batch 5 — 3CO03 cluster (3) + Reflective Writing core (3) — DONE (see git log)
+25. [x] 3co03-complete-guide · kw "3CO03 assignment guide"
+26. [x] 3co03-professional-behaviours-explained · kw "3CO03 professional behaviours"
+27. [x] 3co03-faqs · FAQ template
+28. [x] UPGRADE what-is-a-cipd-reflective-account → Reflective Writing PILLAR (2,500+, reviewed, keep slug)
+29. [x] reflective-models-compared · pillar what-is-a-cipd-reflective-account · kw "reflective models comparison"
+30. [x] reflective-writing-at-each-cipd-level · same pillar · kw "reflective writing CIPD levels"
+    (magnet: reflective writing model bank — BUILT: landing page + download + pillars.ts map)
 
 ## Batch 6 — Academic Writing core (5) + command verb magnet
 31. UPGRADE how-to-structure-a-cipd-assignment → Academic Writing PILLAR (2,500+, reviewed, keep slug)

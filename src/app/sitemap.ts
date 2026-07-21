@@ -20,6 +20,7 @@ const staticRoutes = [
   "/resources/cipd-assessment-planning-checklist",
   "/resources/harvard-referencing-checklist",
   "/resources/cipd-resubmission-planner",
+  "/resources/reflective-writing-model-bank",
   "/blog",
   "/case-studies",
   "/cipd-units",

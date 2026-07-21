@@ -70,10 +70,18 @@ const RESUBMISSION_PLANNER: Magnet = {
   href: "/resources/cipd-resubmission-planner",
 };
 
+const REFLECTIVE_MODEL_BANK: Magnet = {
+  title: "Free CIPD Reflective Writing Model Bank",
+  description:
+    "Driscoll, Gibbs, Kolb and Schon structures with ready-to-adapt sentence stems for genuine, well-evidenced reflective accounts.",
+  href: "/resources/reflective-writing-model-bank",
+};
+
 /** Cluster → magnet map (Part 9: one magnet per cluster, shown only there). */
 export function magnetForPillar(pillar: string): Magnet | undefined {
   if (unitByCode.has(pillar)) return PLANNING_CHECKLIST;
   if (pillar === "harvard-referencing-complete-guide") return REFERENCING_CHECKLIST;
   if (pillar === "/cipd-resubmission-support") return RESUBMISSION_PLANNER;
+  if (pillar === "what-is-a-cipd-reflective-account") return REFLECTIVE_MODEL_BANK;
   return undefined;
 }
