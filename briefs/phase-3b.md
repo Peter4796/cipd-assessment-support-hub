@@ -35,13 +35,13 @@ remaining thickening rolls into the monthly refresh sweep.
 17. [x] 7hr03-reward-fairness-transparency · kw "7HR03 reward strategy"
 18. [x] 7hr03-faqs · FAQ template
 
-## Batch 4 — 3CO01 + 3CO02 clusters (6)
-19. 3co01-complete-guide · kw "3CO01 assignment guide"
-20. 3co01-external-factors-explained · kw "3CO01 external factors"
-21. 3co01-faqs · FAQ template
-22. 3co02-complete-guide · kw "3CO02 assignment guide"
-23. 3co02-using-people-data · kw "3CO02 people analytics"
-24. 3co02-faqs · FAQ template
+## Batch 4 — 3CO01 + 3CO02 clusters (6) — DONE (see git log)
+19. [x] 3co01-complete-guide · kw "3CO01 assignment guide"
+20. [x] 3co01-external-factors-explained · kw "3CO01 external factors"
+21. [x] 3co01-faqs · FAQ template
+22. [x] 3co02-complete-guide · kw "3CO02 assignment guide"
+23. [x] 3co02-using-people-data · kw "3CO02 people analytics"
+24. [x] 3co02-faqs · FAQ template
 
 ## Batch 5 — 3CO03 cluster (3) + Reflective Writing core (3)
 25. 3co03-complete-guide · kw "3CO03 assignment guide"
