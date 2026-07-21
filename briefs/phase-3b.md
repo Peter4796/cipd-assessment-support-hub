@@ -27,13 +27,13 @@ remaining thickening rolls into the monthly refresh sweep.
 11. [x] 7hr01-employee-voice-perspectives · kw "7HR01 employee voice"
 12. [x] 7hr01-faqs · FAQ template
 
-## Batch 3 — 7HR02 + 7HR03 clusters (6)
-13. 7hr02-complete-guide · kw "7HR02 assignment guide"
-14. 7hr02-strategic-workforce-planning · kw "7HR02 strategic workforce planning"
-15. 7hr02-faqs · FAQ template
-16. 7hr03-complete-guide · kw "7HR03 assignment guide"
-17. 7hr03-reward-fairness-transparency · kw "7HR03 reward strategy"
-18. 7hr03-faqs · FAQ template
+## Batch 3 — 7HR02 + 7HR03 clusters (6) — DONE (see git log)
+13. [x] 7hr02-complete-guide · kw "7HR02 assignment guide"
+14. [x] 7hr02-strategic-workforce-planning · kw "7HR02 strategic workforce planning"
+15. [x] 7hr02-faqs · FAQ template
+16. [x] 7hr03-complete-guide · kw "7HR03 assignment guide"
+17. [x] 7hr03-reward-fairness-transparency · kw "7HR03 reward strategy"
+18. [x] 7hr03-faqs · FAQ template
 
 ## Batch 4 — 3CO01 + 3CO02 clusters (6)
 19. 3co01-complete-guide · kw "3CO01 assignment guide"
