@@ -19,13 +19,13 @@ remaining thickening rolls into the monthly refresh sweep.
 5. [x] 7co02-aligning-people-strategy · pillar 7CO02 · kw "7CO02 people strategy"
 6. [x] 7co02-faqs · pillar 7CO02 · kw "7CO02 FAQ" · FAQ template
 
-## Batch 2 — 7CO04 + 7HR01 clusters (6)
-7. 7co04-complete-guide · kw "7CO04 assignment guide" (research project unit)
-8. 7co04-choosing-research-question · kw "7CO04 research question"
-9. 7co04-faqs · FAQ template
-10. 7hr01-complete-guide · kw "7HR01 assignment guide"
-11. 7hr01-employee-voice-perspectives · kw "7HR01 employee voice"
-12. 7hr01-faqs · FAQ template
+## Batch 2 — 7CO04 + 7HR01 clusters (6) — DONE (see git log)
+7. [x] 7co04-complete-guide · kw "7CO04 assignment guide" (research project unit)
+8. [x] 7co04-choosing-research-question · kw "7CO04 research question"
+9. [x] 7co04-faqs · FAQ template
+10. [x] 7hr01-complete-guide · kw "7HR01 assignment guide"
+11. [x] 7hr01-employee-voice-perspectives · kw "7HR01 employee voice"
+12. [x] 7hr01-faqs · FAQ template
 
 ## Batch 3 — 7HR02 + 7HR03 clusters (6)
 13. 7hr02-complete-guide · kw "7HR02 assignment guide"
