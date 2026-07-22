@@ -22,6 +22,7 @@ const staticRoutes = [
   "/resources/cipd-resubmission-planner",
   "/resources/reflective-writing-model-bank",
   "/resources/cipd-command-verb-cheat-sheet",
+  "/resources/critical-analysis-self-check",
   "/blog",
   "/case-studies",
   "/cipd-units",

@@ -60,13 +60,13 @@ remaining thickening rolls into the monthly refresh sweep.
 35. [x] cipd-introductions-and-conclusions · kw "assignment introduction conclusion"
     (magnet: command verb cheat sheet — BUILT: landing page + download + pillars.ts map)
 
-## Batch 7 — Critical Analysis core (5) + self-check magnet
-36. UPGRADE what-is-critical-analysis-in-cipd → Critical Analysis PILLAR (2,500+, reviewed, keep slug)
-37. descriptive-vs-critical-writing-examples · kw "descriptive vs critical writing"
-38. evaluating-hr-theories-critically · kw "evaluating HR theories"
-39. using-counterarguments-in-cipd-assignments · kw "counterarguments assignments"
-40. critical-analysis-self-check · kw "critical analysis checklist"
-    (magnet: critical analysis self-check — build with this batch)
+## Batch 7 — Critical Analysis core (5) + self-check magnet — DONE (see git log)
+36. [x] UPGRADE what-is-critical-analysis-in-cipd → Critical Analysis PILLAR (3,000 words, reviewed, slug kept)
+37. [x] descriptive-vs-critical-writing-examples · kw "descriptive vs critical writing"
+38. [x] evaluating-hr-theories-critically · kw "evaluating HR theories"
+39. [x] using-counterarguments-in-cipd-assignments · kw "counterarguments assignments"
+40. [x] critical-analysis-self-check · kw "critical analysis checklist"
+    (magnet: critical analysis self-check — BUILT: landing page + download + pillars.ts map)
 
 ## Batch 8 — Study Skills core (3) + unit thickening wave 1 (3)
 41. UPGRADE managing-cipd-deadlines-while-working-full-time → Study Skills PILLAR (reviewed, keep slug)

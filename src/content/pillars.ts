@@ -84,6 +84,13 @@ const COMMAND_VERB_CHEAT_SHEET: Magnet = {
   href: "/resources/cipd-command-verb-cheat-sheet",
 };
 
+const CRITICAL_ANALYSIS_SELF_CHECK: Magnet = {
+  title: "Free CIPD Critical Analysis Self-Check",
+  description:
+    "Six draft-audit checks, from verbs to counterviews, that catch descriptive writing before your assessor does, with a fix for each.",
+  href: "/resources/critical-analysis-self-check",
+};
+
 /** Cluster → magnet map (Part 9: one magnet per cluster, shown only there). */
 export function magnetForPillar(pillar: string): Magnet | undefined {
   if (unitByCode.has(pillar)) return PLANNING_CHECKLIST;
@@ -91,5 +98,6 @@ export function magnetForPillar(pillar: string): Magnet | undefined {
   if (pillar === "/cipd-resubmission-support") return RESUBMISSION_PLANNER;
   if (pillar === "what-is-a-cipd-reflective-account") return REFLECTIVE_MODEL_BANK;
   if (pillar === "how-to-structure-a-cipd-assignment") return COMMAND_VERB_CHEAT_SHEET;
+  if (pillar === "what-is-critical-analysis-in-cipd") return CRITICAL_ANALYSIS_SELF_CHECK;
   return undefined;
 }

@@ -76,6 +76,6 @@ The habits that keep writers descriptive are consistent: opening paragraphs with
 
 ## Go deeper
 
-This guide pairs with 7CO01 Assignment: The Complete Guide, the hub of the series, which covers the unit's themes, the referral patterns and a step-by-step approach from brief to submission. For quick answers on wider reading, contested topics and structure, see 7CO01 FAQs: Your Questions Answered, and for the underlying skill across all CIPD levels, What Is Critical Analysis in CIPD Assignments goes back to first principles.
+This guide pairs with 7CO01 Assignment: The Complete Guide, the hub of the series, which covers the unit's themes, the referral patterns and a step-by-step approach from brief to submission. For quick answers on wider reading, contested topics and structure, see 7CO01 FAQs: Your Questions Answered, and for the underlying skill across all CIPD levels, What Is Critical Analysis in CIPD? A Complete Guide goes back to first principles.
 
 If you would like ethical, tailored help with this unit, our 7CO01 support includes coaching on argument construction, structure and source use, referencing guidance and detailed review of your drafts. Coaching and review only: the positions you take and the writing you submit are always your own, which is precisely the judgement this unit exists to assess.

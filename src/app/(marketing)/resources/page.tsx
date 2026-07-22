@@ -93,6 +93,12 @@ export default function ResourcesPage() {
               blurb:
                 "Explain, analyse, evaluate and friends decoded, with an opening move for each and a quick guide per level.",
             },
+            {
+              href: "/resources/critical-analysis-self-check",
+              title: "Critical Analysis Self-Check",
+              blurb:
+                "Six draft-audit checks that catch descriptive writing before your assessor does, with a fix for each.",
+            },
           ].map((d) => (
             <Link key={d.href} href={d.href} className="card card-hover group flex items-start gap-4">
               <span className="mt-0.5 flex h-11 w-11 flex-none items-center justify-center rounded-xl bg-gold-100 text-gold-700">
