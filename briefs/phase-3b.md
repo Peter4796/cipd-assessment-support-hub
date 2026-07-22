@@ -52,13 +52,13 @@ remaining thickening rolls into the monthly refresh sweep.
 30. [x] reflective-writing-at-each-cipd-level · same pillar · kw "reflective writing CIPD levels"
     (magnet: reflective writing model bank — BUILT: landing page + download + pillars.ts map)
 
-## Batch 6 — Academic Writing core (5) + command verb magnet
-31. UPGRADE how-to-structure-a-cipd-assignment → Academic Writing PILLAR (2,500+, reviewed, keep slug)
-32. cipd-assignment-paragraph-structure · kw "assignment paragraph structure"
-33. academic-tone-in-cipd-assignments · kw "academic tone CIPD"
-34. using-evidence-in-cipd-assignments · kw "using evidence assignments"
-35. cipd-introductions-and-conclusions · kw "assignment introduction conclusion"
-    (magnet: command verb cheat sheet — build with this batch; 016 already in cluster)
+## Batch 6 — Academic Writing core (5) + command verb magnet — DONE (see git log)
+31. [x] UPGRADE how-to-structure-a-cipd-assignment → Academic Writing PILLAR (2,962 words, reviewed, slug kept)
+32. [x] cipd-assignment-paragraph-structure · kw "assignment paragraph structure"
+33. [x] academic-tone-in-cipd-assignments · kw "academic tone CIPD"
+34. [x] using-evidence-in-cipd-assignments · kw "using evidence assignments"
+35. [x] cipd-introductions-and-conclusions · kw "assignment introduction conclusion"
+    (magnet: command verb cheat sheet — BUILT: landing page + download + pillars.ts map)
 
 ## Batch 7 — Critical Analysis core (5) + self-check magnet
 36. UPGRADE what-is-critical-analysis-in-cipd → Critical Analysis PILLAR (2,500+, reviewed, keep slug)

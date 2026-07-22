@@ -87,6 +87,12 @@ export default function ResourcesPage() {
               blurb:
                 "Four reflective structures with sentence stems, from Driscoll to Schon, for genuine, well-evidenced reflection.",
             },
+            {
+              href: "/resources/cipd-command-verb-cheat-sheet",
+              title: "Command Verb Cheat Sheet",
+              blurb:
+                "Explain, analyse, evaluate and friends decoded, with an opening move for each and a quick guide per level.",
+            },
           ].map((d) => (
             <Link key={d.href} href={d.href} className="card card-hover group flex items-start gap-4">
               <span className="mt-0.5 flex h-11 w-11 flex-none items-center justify-center rounded-xl bg-gold-100 text-gold-700">

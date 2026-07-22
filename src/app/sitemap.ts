@@ -21,6 +21,7 @@ const staticRoutes = [
   "/resources/harvard-referencing-checklist",
   "/resources/cipd-resubmission-planner",
   "/resources/reflective-writing-model-bank",
+  "/resources/cipd-command-verb-cheat-sheet",
   "/blog",
   "/case-studies",
   "/cipd-units",

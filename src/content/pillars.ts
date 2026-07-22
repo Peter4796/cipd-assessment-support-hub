@@ -77,11 +77,19 @@ const REFLECTIVE_MODEL_BANK: Magnet = {
   href: "/resources/reflective-writing-model-bank",
 };
 
+const COMMAND_VERB_CHEAT_SHEET: Magnet = {
+  title: "Free CIPD Command Verb Cheat Sheet",
+  description:
+    "Every common command verb decoded, from explain to critically evaluate, with an opening move for each and a quick guide per level.",
+  href: "/resources/cipd-command-verb-cheat-sheet",
+};
+
 /** Cluster → magnet map (Part 9: one magnet per cluster, shown only there). */
 export function magnetForPillar(pillar: string): Magnet | undefined {
   if (unitByCode.has(pillar)) return PLANNING_CHECKLIST;
   if (pillar === "harvard-referencing-complete-guide") return REFERENCING_CHECKLIST;
   if (pillar === "/cipd-resubmission-support") return RESUBMISSION_PLANNER;
   if (pillar === "what-is-a-cipd-reflective-account") return REFLECTIVE_MODEL_BANK;
+  if (pillar === "how-to-structure-a-cipd-assignment") return COMMAND_VERB_CHEAT_SHEET;
   return undefined;
 }
