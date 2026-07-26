@@ -68,13 +68,13 @@ remaining thickening rolls into the monthly refresh sweep.
 40. [x] critical-analysis-self-check · kw "critical analysis checklist"
     (magnet: critical analysis self-check — BUILT: landing page + download + pillars.ts map)
 
-## Batch 8 — Study Skills core (3) + unit thickening wave 1 (3)
-41. UPGRADE managing-cipd-deadlines-while-working-full-time → Study Skills PILLAR (reviewed, keep slug)
-42. staying-motivated-through-cipd · kw "CIPD study motivation"
-43. cipd-exams-vs-assignments · kw "CIPD exams or assignments"
-44. 5co02-assignment-structure · pillar 5CO02
-45. 5co03-assignment-structure · pillar 5CO03
-46. 5hr02-assignment-structure · pillar 5HR02
+## Batch 8 — Study Skills core (3) + unit thickening wave 1 (3) — DONE (see git log)
+41. [x] UPGRADE managing-cipd-deadlines-while-working-full-time → Study Skills PILLAR (2,799 words, reviewed, slug kept)
+42. [x] staying-motivated-through-cipd · kw "CIPD study motivation"
+43. [x] cipd-exams-vs-assignments · kw "CIPD exams or assignments"
+44. [x] 5co02-assignment-structure · pillar 5CO02
+45. [x] 5co03-assignment-structure · pillar 5CO03
+46. [x] 5hr02-assignment-structure · pillar 5HR02
 
 ## Batch 9 — Level study guides (3) + choosing spokes (3)
 47. cipd-level-3-study-guide · pillar /cipd-level-3-support · kw "CIPD Level 3 study guide"
