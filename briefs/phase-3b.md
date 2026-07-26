@@ -84,17 +84,17 @@ remaining thickening rolls into the monthly refresh sweep.
 51. [x] is-cipd-level-7-worth-it · same pillar · kw "is CIPD Level 7 worth it"
 52. [x] how-long-does-cipd-take · same pillar · kw "how long does CIPD take"
 
-## Batch 10 — Country guides wave 1 (7)
-53. REFRESH studying-cipd-in-the-uae (update, add reviewed)
-54. studying-cipd-in-saudi-arabia · kw "CIPD Saudi Arabia"
-55. studying-cipd-in-qatar · kw "CIPD Qatar"
-56. studying-cipd-in-nigeria · kw "CIPD Nigeria"
-57. studying-cipd-in-kenya · kw "CIPD Kenya"
-58. studying-cipd-in-india · kw "CIPD India"
-59. studying-cipd-online-remotely · kw "study CIPD online"
-    All pillar complete-guide-to-cipd-qualifications. RULE: no invented
-    providers, prices, visa or accreditation claims; principle-level
-    guidance + pointers to official CIPD study-centre search only.
+## Batch 10 — Country guides wave 1 (7) — DONE (see git log)
+53. [x] REFRESH studying-cipd-in-the-uae (rewritten under the accuracy rule, reviewed, category aligned)
+54. [x] studying-cipd-in-saudi-arabia · kw "CIPD Saudi Arabia"
+55. [x] studying-cipd-in-qatar · kw "CIPD Qatar"
+56. [x] studying-cipd-in-nigeria · kw "CIPD Nigeria"
+57. [x] studying-cipd-in-kenya · kw "CIPD Kenya"
+58. [x] studying-cipd-in-india · kw "CIPD India" (honesty-forward: SHRM/local routes given equal weight)
+59. [x] studying-cipd-online-remotely · kw "study CIPD online"
+    All pillar complete-guide-to-cipd-qualifications. Accuracy rule held:
+    zero providers, prices, visa or accreditation claims; recognition via
+    the job-advert method; CIPD study centre search as the only pointer.
 
 ## Batch 11 — unit thickening wave 2 (6)
 60. 5hr03-assignment-structure · pillar 5HR03
