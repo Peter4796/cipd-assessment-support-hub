@@ -76,13 +76,13 @@ remaining thickening rolls into the monthly refresh sweep.
 45. [x] 5co03-assignment-structure · pillar 5CO03
 46. [x] 5hr02-assignment-structure · pillar 5HR02
 
-## Batch 9 — Level study guides (3) + choosing spokes (3)
-47. cipd-level-3-study-guide · pillar /cipd-level-3-support · kw "CIPD Level 3 study guide"
-48. cipd-level-5-study-guide · pillar /cipd-level-5-support · kw "CIPD Level 5 study guide"
-49. cipd-level-7-study-guide · pillar /cipd-level-7-support · kw "CIPD Level 7 study guide"
-50. cipd-vs-shrm-which-is-right · pillar complete-guide-to-cipd-qualifications · kw "CIPD vs SHRM"
-51. is-cipd-level-7-worth-it · same pillar · kw "is CIPD Level 7 worth it"
-52. how-long-does-cipd-take · same pillar · kw "how long does CIPD take"
+## Batch 9 — Level study guides (3) + choosing spokes (3) — DONE (see git log)
+47. [x] cipd-level-3-study-guide · pillar /cipd-level-3-support · kw "CIPD Level 3 study guide"
+48. [x] cipd-level-5-study-guide · pillar /cipd-level-5-support · kw "CIPD Level 5 study guide"
+49. [x] cipd-level-7-study-guide · pillar /cipd-level-7-support · kw "CIPD Level 7 study guide"
+50. [x] cipd-vs-shrm-which-is-right · pillar complete-guide-to-cipd-qualifications · kw "CIPD vs SHRM"
+51. [x] is-cipd-level-7-worth-it · same pillar · kw "is CIPD Level 7 worth it"
+52. [x] how-long-does-cipd-take · same pillar · kw "how long does CIPD take"
 
 ## Batch 10 — Country guides wave 1 (7)
 53. REFRESH studying-cipd-in-the-uae (update, add reviewed)
