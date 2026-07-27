@@ -96,14 +96,19 @@ remaining thickening rolls into the monthly refresh sweep.
     zero providers, prices, visa or accreditation claims; recognition via
     the job-advert method; CIPD study centre search as the only pointer.
 
-## Batch 11 — unit thickening wave 2 (6)
-60. 5hr03-assignment-structure · pillar 5HR03
-61. 3co04-assignment-structure · pillar 3CO04
-62. 5co02-theories-and-models · pillar 5CO02
-63. 5hr02-talent-management-explained · pillar 5HR02
-64. 5hr03-motivation-theories-applied · pillar 5HR03
-65. 7co03-business-acumen-explained · pillar 7CO03
-66. (buffer: owner may substitute per Search Console data)
+## Batch 11 — unit thickening wave 2 (6) — DONE (see git log)
+60. [x] 5hr03-assignment-structure · pillar 5HR03
+61. [x] 3co04-assignment-structure · pillar 3CO04
+62. [x] 5co02-theories-and-models · pillar 5CO02
+63. [x] 5hr02-talent-management-explained · pillar 5HR02
+64. [x] 5hr03-motivation-theories-applied · pillar 5HR03
+65. [x] 7co03-business-acumen-explained · pillar 7CO03
+66. (buffer: unused; owner may commission per Search Console data)
+
+PHASE 3B COMPLETE. 65 articles shipped or upgraded across 11 batches
+(posts 067-126 + upgrades to 006/008/010/017/019). Corpus: 126 posts.
+Next per CONTENT-BLUEPRINT Part 11: consolidation (monthly reviewed
+sweep, Search Console re-prioritisation), then the Phase 3C queue.
 
 Each article: `related` within cluster + one cross-cluster link; contextual
 CTA (unit prefill where unit-pillared, category otherwise); FAQs h3 pattern
