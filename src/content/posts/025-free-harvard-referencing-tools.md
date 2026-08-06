@@ -7,7 +7,8 @@ keyword: "free Harvard referencing tools"
 date: "2026-07-09"
 readMinutes: 4
 pillar: "harvard-referencing-complete-guide"
-related: ["how-to-use-harvard-referencing-in-cipd-assessments","how-many-references-should-a-cipd-assignment-have","finding-credible-sources-for-cipd-google-scholar"]
+tags: ["referencing","tools"]
+related: ["how-to-use-harvard-referencing-in-cipd-assessments","harvard-referencing-complete-guide","finding-credible-sources-for-cipd-google-scholar"]
 ---
 Referencing takes time, and free tools can speed it up. Used well, they help you format citations consistently. Used blindly, they introduce errors that cost marks. Here is how to use them sensibly.
 

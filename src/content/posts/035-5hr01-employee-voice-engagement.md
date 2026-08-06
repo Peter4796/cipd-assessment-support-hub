@@ -8,7 +8,8 @@ date: "2026-07-09"
 readMinutes: 6
 unit: "5HR01"
 pillar: "5HR01"
-related: ["5hr01-complete-guide","5hr01-conflict-dispute-resolution","5hr01-employment-law-essentials"]
+tags: ["level-5","5hr01","assignment-guides"]
+related: ["5hr01-complete-guide","5hr01-conflict-dispute-resolution","7hr01-employee-voice-perspectives"]
 ---
 A core part of 5HR01 is employee voice and engagement: how organisations give people a say, and how that supports better working lives and performance. Here is how to approach it, and remember to check your own brief for exact wording.
 

@@ -8,7 +8,8 @@ date: "2026-07-09"
 readMinutes: 7
 unit: "5HR01"
 pillar: "5HR01"
-related: ["5hr01-employee-voice-engagement","5hr01-common-mistakes","5hr01-assignment-structure"]
+tags: ["level-5","5hr01","assignment-guides"]
+related: ["5hr01-employee-voice-engagement","5hr01-common-mistakes","5hr02-complete-guide"]
 ---
 5HR01, Employment relationship management, is a popular CIPD Level 5 unit focused on how organisations build and maintain positive relationships with their people. This guide is the hub of our 5HR01 series: it gives the full picture, and the linked guides go deeper on each part. Always work from your own current brief for exact outcomes and criteria.
 

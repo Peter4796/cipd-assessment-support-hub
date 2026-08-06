@@ -8,7 +8,8 @@ date: "2026-07-09"
 readMinutes: 5
 unit: "5HR01"
 pillar: "5HR01"
-related: ["5hr01-complete-guide","5hr01-common-mistakes","how-to-structure-a-cipd-assignment"]
+tags: ["level-5","5hr01","assignment-structure"]
+related: ["5hr01-complete-guide","5hr02-assignment-structure","how-to-structure-a-cipd-assignment"]
 ---
 A clear structure keeps 5HR01 focused and makes it easy to mark. Organise your answer around the tasks and criteria in your brief, with headings that show where each point is addressed.
 

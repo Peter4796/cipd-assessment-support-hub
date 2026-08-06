@@ -7,7 +7,8 @@ keyword: "CIPD resubmission support"
 date: "2026-06-26"
 readMinutes: 5
 pillar: "/cipd-resubmission-support"
-related: ["how-to-respond-to-cipd-tutor-feedback","common-mistakes-in-cipd-level-5-assignments","how-to-understand-a-cipd-assessment-brief"]
+tags: ["resubmission","tutor-feedback"]
+related: ["how-to-respond-to-cipd-tutor-feedback","common-mistakes-in-cipd-level-5-assignments","resubmission-timeline-planning"]
 ---
 A referral is not a failure. It's a normal part of CIPD study and a clear opportunity to improve. Many strong professionals are referred at least once. The key is to approach the resubmission methodically rather than anxiously rewriting everything.
 

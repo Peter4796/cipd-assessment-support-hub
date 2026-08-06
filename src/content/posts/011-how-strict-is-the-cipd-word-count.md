@@ -7,7 +7,8 @@ keyword: "CIPD word count"
 date: "2026-07-03"
 readMinutes: 4
 pillar: "how-to-structure-a-cipd-assignment"
-related: ["how-to-structure-a-cipd-assignment","how-to-understand-a-cipd-assessment-brief","common-mistakes-in-cipd-level-5-assignments"]
+tags: ["academic-writing","word-count"]
+related: ["how-to-structure-a-cipd-assignment","how-to-understand-a-cipd-assessment-brief","resubmission-word-count-strategy"]
 ---
 CIPD word counts cause a lot of anxiety. Learners worry about going over and losing marks, or coming in short and missing the criteria. Here is how word counts usually work and how to manage them sensibly.
 

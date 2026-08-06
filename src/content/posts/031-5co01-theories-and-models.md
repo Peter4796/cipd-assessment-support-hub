@@ -8,7 +8,8 @@ date: "2026-07-09"
 readMinutes: 5
 unit: "5CO01"
 pillar: "5CO01"
-related: ["5co01-learning-outcome-1","5co01-learning-outcome-2","5co01-complete-guide"]
+tags: ["level-5","5co01","theories-models"]
+related: ["5co01-learning-outcome-1","evaluating-hr-theories-critically","5co01-complete-guide"]
 ---
 Using the right theories and models, and applying them well, is central to a strong 5CO01 answer. Here are the ones most relevant to the unit, grouped by theme. Choose a focused set and apply them to your organisation rather than listing many.
 

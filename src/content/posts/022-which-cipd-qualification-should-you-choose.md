@@ -7,7 +7,8 @@ keyword: "which CIPD level should I do"
 date: "2026-07-09"
 readMinutes: 5
 pillar: "complete-guide-to-cipd-qualifications"
-related: ["cipd-level-3-vs-5-vs-7-whats-the-difference","complete-guide-to-cipd-qualifications","how-difficult-is-cipd"]
+tags: ["choosing-cipd","careers"]
+related: ["cipd-level-3-vs-5-vs-7-whats-the-difference","complete-guide-to-cipd-qualifications","cipd-vs-shrm-which-is-right"]
 ---
 Choosing the right CIPD level matters. Start too low and you may be under-challenged; start too high and the academic demands can feel overwhelming. Here is how to pick the level that fits you.
 

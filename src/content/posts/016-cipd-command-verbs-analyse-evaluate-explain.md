@@ -2,12 +2,13 @@
 slug: "cipd-command-verbs-analyse-evaluate-explain"
 title: "CIPD Command Verbs: Analyse vs Evaluate vs Explain"
 description: "What CIPD command verbs mean and how to answer them. Understand the difference between explain, analyse and evaluate to match the depth your assessment needs."
-category: "Assessment writing"
+category: "Writing"
 keyword: "CIPD command verbs"
 date: "2026-07-09"
 readMinutes: 5
 pillar: "how-to-structure-a-cipd-assignment"
-related: ["how-to-understand-a-cipd-assessment-brief","what-is-critical-analysis-in-cipd","how-to-structure-a-cipd-assignment"]
+tags: ["academic-writing","command-verbs"]
+related: ["descriptive-vs-critical-writing-examples","what-is-critical-analysis-in-cipd","how-to-structure-a-cipd-assignment"]
 ---
 Command verbs are the small words in a brief that tell you how deep your answer needs to go. Misreading them is one of the most common reasons CIPD answers lose marks. Getting them right is one of the fastest ways to improve.
 

@@ -44,7 +44,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const blogEntries: MetadataRoute.Sitemap = posts.map((p) => ({
     url: `${site.url}/blog/${p.slug}`,
-    lastModified: new Date(p.date),
+    // An editorial review is the honest "last modified" signal when present.
+    lastModified: new Date(p.reviewed ?? p.date),
     changeFrequency: "monthly",
     priority: 0.6,
   }));

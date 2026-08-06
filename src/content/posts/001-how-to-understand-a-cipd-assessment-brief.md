@@ -7,7 +7,8 @@ keyword: "CIPD assessment brief guidance"
 date: "2026-07-08"
 readMinutes: 6
 pillar: "how-to-structure-a-cipd-assignment"
-related: ["how-to-structure-a-cipd-assignment","cipd-level-3-vs-5-vs-7-whats-the-difference","how-to-respond-to-cipd-tutor-feedback"]
+tags: ["academic-writing","academic-skills","assessment-briefs"]
+related: ["how-to-structure-a-cipd-assignment","cipd-level-3-vs-5-vs-7-whats-the-difference","interpreting-assessor-feedback-phrases"]
 ---
 The single biggest reason CIPD assignments lose marks isn't weak writing. It's answering a different question to the one that was asked. A CIPD assessment brief is a precise document, and learning to read it properly is the highest-value skill you can build. This guide walks you through how to decode a brief before you write a single word.
 

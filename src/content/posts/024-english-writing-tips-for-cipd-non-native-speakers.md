@@ -2,12 +2,13 @@
 slug: "english-writing-tips-for-cipd-non-native-speakers"
 title: "English Writing Tips for CIPD (Non-Native Speakers)"
 description: "Practical English writing tips for CIPD learners whose first language is not English, to help you write clear, professional, criteria-focused assignments."
-category: "Student guides"
+category: "Writing"
 keyword: "CIPD English writing tips"
 date: "2026-07-09"
 readMinutes: 5
 pillar: "how-to-structure-a-cipd-assignment"
-related: ["studying-cipd-in-the-uae","how-to-structure-a-cipd-assignment","how-strict-is-the-cipd-word-count"]
+tags: ["academic-writing","non-native-speakers"]
+related: ["academic-tone-in-cipd-assignments","how-to-structure-a-cipd-assignment","how-strict-is-the-cipd-word-count"]
 ---
 Many CIPD learners, especially in the UAE and internationally, study in English as a second or third language. Your HR knowledge is not the issue; clear academic English simply takes practice. These tips help your ideas come through clearly.
 

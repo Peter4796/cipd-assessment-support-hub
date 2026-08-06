@@ -7,7 +7,8 @@ keyword: "what is CIPD"
 date: "2026-07-09"
 readMinutes: 5
 pillar: "complete-guide-to-cipd-qualifications"
-related: ["cipd-level-3-vs-5-vs-7-whats-the-difference","is-cipd-worth-it","how-to-understand-a-cipd-assessment-brief"]
+tags: ["choosing-cipd","careers"]
+related: ["cipd-level-3-vs-5-vs-7-whats-the-difference","is-cipd-worth-it","cipd-vs-shrm-which-is-right"]
 ---
 If you are starting out in HR or people practice, you will hear CIPD mentioned everywhere. Understanding what it is, and why it carries weight, helps you decide whether it is the right step for your career.
 

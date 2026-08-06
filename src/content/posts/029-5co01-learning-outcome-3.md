@@ -8,7 +8,8 @@ date: "2026-07-09"
 readMinutes: 5
 unit: "5CO01"
 pillar: "5CO01"
-related: ["5co01-complete-guide","5co01-common-mistakes","5co01-learning-outcome-2"]
+tags: ["level-5","5co01","learning-outcomes"]
+related: ["5co01-complete-guide","5co01-common-mistakes","5co02-complete-guide"]
 ---
 The later part of 5CO01 usually asks you to show how people practices affect wider organisational systems, culture and performance. This is where the unit's threads come together. As always, work from your own brief for exact wording.
 

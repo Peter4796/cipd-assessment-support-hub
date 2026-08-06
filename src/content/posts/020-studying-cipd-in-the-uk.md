@@ -2,12 +2,13 @@
 slug: "studying-cipd-in-the-uk"
 title: "Studying CIPD in the UK: A Practical Guide"
 description: "A practical guide to studying CIPD in the UK, covering study centres, online and classroom options, costs, and balancing study with a full-time HR role."
-category: "Student guides"
+category: "Country guides"
 keyword: "studying CIPD in the UK"
 date: "2026-07-09"
 readMinutes: 5
 pillar: "complete-guide-to-cipd-qualifications"
-related: ["studying-cipd-in-the-uae","managing-cipd-deadlines-while-working-full-time","which-cipd-qualification-should-you-choose"]
+tags: ["country-guides","uk"]
+related: ["studying-cipd-in-the-uae","managing-cipd-deadlines-while-working-full-time","studying-cipd-online-remotely"]
 ---
 CIPD is the recognised HR qualification across the UK, and thousands of professionals study it every year while working. If you are considering CIPD in the UK, here is what to expect and how to set yourself up to succeed.
 

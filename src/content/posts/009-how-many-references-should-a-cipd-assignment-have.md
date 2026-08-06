@@ -7,7 +7,8 @@ keyword: "CIPD assignment references"
 date: "2026-07-07"
 readMinutes: 5
 pillar: "harvard-referencing-complete-guide"
-related: ["how-to-use-harvard-referencing-in-cipd-assessments","common-mistakes-in-cipd-level-5-assignments","how-to-structure-a-cipd-assignment"]
+tags: ["referencing","academic-skills"]
+related: ["how-to-use-harvard-referencing-in-cipd-assessments","harvard-referencing-complete-guide","how-to-structure-a-cipd-assignment"]
 ---
 One of the most common questions CIPD learners ask is how many references their assignment should have. The honest answer is that there is rarely a fixed number. What matters is that every key claim is supported by a credible source, and that your referencing is consistent and correct.
 

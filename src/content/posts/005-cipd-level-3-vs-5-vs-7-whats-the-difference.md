@@ -2,12 +2,13 @@
 slug: "cipd-level-3-vs-5-vs-7-whats-the-difference"
 title: "CIPD Level 3 vs Level 5 vs Level 7: What's the Difference?"
 description: "A clear comparison of CIPD Level 3, 5 and 7: who each is for, the depth expected, and how to choose the right qualification for your HR career stage."
-category: "Choosing a level"
+category: "Choosing CIPD"
 keyword: "CIPD levels explained"
 date: "2026-06-30"
 readMinutes: 6
 pillar: "complete-guide-to-cipd-qualifications"
-related: ["how-to-understand-a-cipd-assessment-brief","common-mistakes-in-cipd-level-5-assignments","how-to-structure-a-cipd-assignment"]
+tags: ["choosing-cipd","levels"]
+related: ["how-to-understand-a-cipd-assessment-brief","common-mistakes-in-cipd-level-5-assignments","how-long-does-cipd-take"]
 ---
 CIPD qualifications come in three levels, and choosing the right one, or understanding what your current level demands, matters for both your career and your assessments. Here's how Level 3, Level 5 and Level 7 differ.
 

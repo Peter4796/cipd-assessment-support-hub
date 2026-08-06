@@ -7,7 +7,8 @@ keyword: "CIPD Harvard referencing help"
 date: "2026-07-04"
 readMinutes: 6
 pillar: "harvard-referencing-complete-guide"
-related: ["common-mistakes-in-cipd-level-5-assignments","how-to-understand-a-cipd-assessment-brief","how-to-structure-a-cipd-assignment"]
+tags: ["referencing","academic-skills"]
+related: ["common-mistakes-in-cipd-level-5-assignments","harvard-referencing-complete-guide","how-to-structure-a-cipd-assignment"]
 ---
 Referencing is one of the easiest places to gain or lose marks in a CIPD assessment. Harvard is the style most CIPD centres expect, and the good news is that it's rule-based. Once you know the patterns, it becomes routine. Here's how to get it right.
 

@@ -8,7 +8,8 @@ date: "2026-07-09"
 readMinutes: 6
 unit: "5CO01"
 pillar: "5CO01"
-related: ["5co01-complete-guide","5co01-learning-outcome-2","5co01-theories-and-models"]
+tags: ["level-5","5co01","learning-outcomes"]
+related: ["5co01-complete-guide","5co01-learning-outcome-2","3co01-external-factors-explained"]
 ---
 The first part of 5CO01 typically focuses on the organisation itself: its structure, its strategy, and the external environment it operates in. The aim is to show how these connect and shape the way people practice works. Here is how to approach it. Always check your own brief for the exact wording of the outcomes and criteria.
 
