@@ -146,6 +146,7 @@ export function leadNotificationHtml(lead: Lead): string {
     : undefined;
   const acquisition = section("ACQUISITION", [
     ["Source Page", lead.acquisition.sourcePage],
+    ["Landing Page", lead.acquisition.landingPage ?? "(not captured)"],
     ["Source Page Type", lead.acquisition.sourcePageType],
     ["Entry CTA", lead.funnel?.entryCta],
     ["Form Completion", mins],

@@ -63,6 +63,8 @@ export const leads = pgTable(
 
     // ── Acquisition ──
     sourcePage: text("source_page").notNull(),
+    /** First-touch landing path (nullable: storage-blocked sessions). */
+    landingPage: text("landing_page"),
     sourcePageType: text("source_page_type").notNull(),
     referrer: text("referrer"),
     utmSource: text("utm_source"),

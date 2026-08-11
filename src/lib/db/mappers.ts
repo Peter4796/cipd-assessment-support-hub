@@ -47,6 +47,7 @@ export function leadToRow(lead: Lead): LeadInsertRow {
     classification: lead.classification,
 
     sourcePage: lead.acquisition.sourcePage,
+    landingPage: lead.acquisition.landingPage ?? null,
     sourcePageType: lead.acquisition.sourcePageType,
     referrer: lead.acquisition.referrer ?? null,
     utmSource: lead.acquisition.utmSource ?? null,
@@ -113,6 +114,7 @@ export function rowToLead(row: LeadRow, attachments: LeadAttachmentRow[] = []): 
         : undefined,
     acquisition: {
       sourcePage: row.sourcePage,
+      landingPage: row.landingPage ?? undefined,
       sourcePageType: row.sourcePageType as Lead["acquisition"]["sourcePageType"],
       referrer: row.referrer ?? undefined,
       utmSource: row.utmSource ?? undefined,

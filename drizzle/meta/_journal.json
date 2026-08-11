@@ -8,6 +8,13 @@
       "when": 1784123546584,
       "tag": "0000_p2_lead_persistence",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1786449475350,
+      "tag": "0001_little_gorilla_man",
+      "breakpoints": true
     }
   ]
 }

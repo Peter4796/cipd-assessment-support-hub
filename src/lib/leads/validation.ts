@@ -126,6 +126,7 @@ export function normaliseContext(raw: Partial<AcquisitionContext> | undefined): 
   const type = cleanText(raw?.sourcePageType, 20) as SourcePageType;
   return {
     sourcePage: normalisePath(raw?.sourcePage),
+    landingPage: raw?.landingPage ? normalisePath(raw.landingPage) : undefined,
     sourcePageType: (SOURCE_PAGE_TYPES as readonly string[]).includes(type) ? type : "other",
     referrer: cleanText(raw?.referrer, MAX.referrer) || undefined,
     utmSource: cleanText(raw?.utmSource, MAX.utm) || undefined,

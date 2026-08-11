@@ -113,6 +113,9 @@ export function buildAcquisitionContext(pathname: string) {
   const stored = readAttribution();
   return {
     sourcePage: pathname,
+    // First-touch attribution: the stored landing path wins; a direct
+    // arrival on the funnel is its own landing page.
+    landingPage: stored.landedOn || pathname,
     sourcePageType: derivePageType(stored.landedOn || pathname),
     referrer: stored.referrer,
     utmSource: stored.utmSource,

@@ -85,7 +85,14 @@ export type LeadClassification = (typeof LEAD_CLASSIFICATIONS)[number];
 
 // ─── Acquisition context (captured client-side, validated server-side) ───
 export type AcquisitionContext = {
-  sourcePage: string; // path only, e.g. "/cipd-units/5co01"
+  sourcePage: string; // CONVERSION page: path the form was submitted from
+  /**
+   * FIRST-TOUCH landing page: the first path of the session (sessionStorage,
+   * first touch wins — see captureAttribution). Never overwritten later in
+   * the journey. Optional because older clients / storage-blocked sessions
+   * may not supply it.
+   */
+  landingPage?: string;
   sourcePageType: SourcePageType;
   referrer?: string;
   utmSource?: string;

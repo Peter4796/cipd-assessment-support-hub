@@ -37,6 +37,33 @@ describe("validateLeadInput", () => {
     expect(r.value.acquisition.sourcePageType).toBe("unit");
   });
 
+  it("persists first-touch landing page, normalised to a bare path", () => {
+    const r = validateLeadInput({
+      ...validLead,
+      context: {
+        sourcePage: "/send-your-brief",
+        sourcePageType: "article",
+        landingPage: "/blog/5co02-complete-guide?utm_source=x#faq",
+      },
+    });
+    expect(r.ok).toBe(true);
+    if (!r.ok) return;
+    expect(r.value.acquisition.sourcePage).toBe("/send-your-brief");
+    expect(r.value.acquisition.landingPage).toBe("/blog/5co02-complete-guide");
+  });
+
+  it("leaves landing page undefined when absent and rejects non-path junk", () => {
+    const absent = validateLeadInput(validLead);
+    expect(absent.ok && absent.value.acquisition.landingPage).toBeUndefined();
+    const junk = validateLeadInput({
+      ...validLead,
+      context: { ...validLead.context, landingPage: "javascript:alert(1)" },
+    });
+    expect(junk.ok).toBe(true);
+    if (!junk.ok) return;
+    expect(junk.value.acquisition.landingPage).toBe("/");
+  });
+
   it("rejects non-object payloads", () => {
     expect(validateLeadInput(null)).toMatchObject({ ok: false, error: "invalid_payload" });
     expect(validateLeadInput("hi")).toMatchObject({ ok: false, error: "invalid_payload" });
