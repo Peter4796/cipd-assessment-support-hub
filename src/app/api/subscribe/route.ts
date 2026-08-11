@@ -3,6 +3,8 @@ import { validateSubscriberInput } from "@/lib/leads/validation";
 import { notifySubscriber } from "@/lib/leads/notify";
 import { addAudienceContact } from "@/lib/email/resend";
 import { clientKey, rateLimit } from "@/lib/leads/rate-limit";
+import { isDbConfigured } from "@/lib/db/client";
+import { insertSubscriber } from "@/lib/db/subscribers";
 import type { Subscriber } from "@/lib/leads/types";
 
 /**
@@ -45,13 +47,25 @@ export async function POST(request: Request) {
 
   const sub: Subscriber = { createdAt: new Date().toISOString(), ...validated.value };
 
-  // Persist to Resend Contacts (best-effort) + notify (the reliable channel).
-  const [stored, notified] = await Promise.all([
+  // Three parallel best-effort channels (P0.3): the DB is the first-party
+  // measurement record, Resend Contacts the audience, the notification email
+  // the owner alert. Any one succeeding counts as captured; the visitor's
+  // promise (the download) is unlocked client-side regardless.
+  const [persisted, stored, notified] = await Promise.all([
+    isDbConfigured()
+      ? insertSubscriber(sub).then(
+          () => ({ ok: true as const }),
+          (e: unknown) => ({ ok: false as const, error: e instanceof Error ? e.message : "db_error" })
+        )
+      : Promise.resolve({ ok: false as const, error: "db_unconfigured" }),
     addAudienceContact({ email: sub.email, firstName: sub.name?.split(" ")[0] }),
     notifySubscriber(sub),
   ]);
 
-  if (!stored.ok && !notified.ok) {
+  if (!persisted.ok && isDbConfigured()) {
+    console.error(`[subscribe] db persist failed (${persisted.error})`);
+  }
+  if (!persisted.ok && !stored.ok && !notified.ok) {
     console.error(`[subscribe] capture failed (contact=${stored.error}, notify=${notified.error})`);
     return NextResponse.json({ ok: false, error: "delivery_failed" }, { status: 503 });
   }

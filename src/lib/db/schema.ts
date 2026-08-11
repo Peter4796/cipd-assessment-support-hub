@@ -150,6 +150,42 @@ export const leadAttachments = pgTable(
   (t) => [index("lead_attachments_lead_id_idx").on(t.leadId)]
 );
 
+/**
+ * Lead-magnet subscribers (P0.3, 2026-08) — one row per submission event.
+ * Deliberately NOT leads: downloading a resource is a nurture signal, not an
+ * enquiry, and must never create a lead record. Grain is per-submission so
+ * magnet conversion is measurable; analysis dedupes by email where needed.
+ * Enquiry linkage happens at analysis time by email join — no cross-table
+ * foreign keys, no tracking identifiers. Resend remains the delivery and
+ * audience system; this table is the first-party measurement record.
+ */
+export const subscribers = pgTable(
+  "subscribers",
+  {
+    id: text("id").primaryKey(), // crypto.randomUUID()
+    createdAt: ts("created_at").notNull(),
+    name: text("name"),
+    email: text("email").notNull(),
+    level: text("level"),
+    country: text("country"),
+    /** Magnet identity: the resource slug, e.g. "cipd-resubmission-planner". */
+    resource: text("resource").notNull(),
+    // ── Acquisition (same model as leads; landing_page = first touch) ──
+    sourcePage: text("source_page").notNull(),
+    landingPage: text("landing_page"),
+    sourcePageType: text("source_page_type").notNull(),
+    referrer: text("referrer"),
+    utmSource: text("utm_source"),
+    utmMedium: text("utm_medium"),
+    utmCampaign: text("utm_campaign"),
+  },
+  (t) => [
+    index("subscribers_created_at_idx").on(t.createdAt),
+    index("subscribers_email_idx").on(t.email),
+    index("subscribers_resource_idx").on(t.resource),
+  ]
+);
+
 export const leadNotes = pgTable(
   "lead_notes",
   {

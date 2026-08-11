@@ -15,6 +15,13 @@
       "when": 1786449475350,
       "tag": "0001_little_gorilla_man",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1786452729336,
+      "tag": "0002_rare_shatterstar",
+      "breakpoints": true
     }
   ]
 }
