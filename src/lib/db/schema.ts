@@ -102,6 +102,17 @@ export const leads = pgTable(
     /** When the actual amount was recorded (quote_sent_at is the status milestone). */
     quotedAt: ts("quoted_at"),
 
+    // ── Realised revenue (P0.4) — conceptually DISTINCT from the quote ──
+    /**
+     * Actual amount received, recorded manually from admin today. Future
+     * payment automation must write these same three fields (plus its own
+     * provider metadata elsewhere) rather than redefining the model.
+     */
+    paidAmount: integer("paid_amount"),
+    paidCurrency: text("paid_currency"),
+    /** When payment was recorded (payment_confirmed_at remains the status milestone). */
+    paidAt: ts("paid_at"),
+
     // ── Notification alerting state (email is an alert, not the record) ──
     notifiedAt: ts("notified_at"),
     notifyError: text("notify_error"), // machine code only, never internals

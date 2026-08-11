@@ -14,7 +14,7 @@
 
 import { revalidatePath } from "next/cache";
 import { isDbConfigured } from "@/lib/db/client";
-import { addLeadNote, getLeadDetail, saveQuote, updateLeadStatus } from "@/lib/db/leads";
+import { addLeadNote, getLeadDetail, savePayment, saveQuote, updateLeadStatus } from "@/lib/db/leads";
 import { recommendQuoteForLead } from "@/lib/admin/quote";
 import type { CipdLevel, SupportType } from "@/lib/leads/types";
 
@@ -91,6 +91,28 @@ export async function recordQuote(formData: FormData): Promise<void> {
   });
 
   await saveQuote(id, { amount, currency, notes, recommendedMid: recommendation.mid });
+  revalidatePath(`/admin/leads/${id}`);
+  revalidatePath("/admin");
+}
+
+export async function recordPayment(formData: FormData): Promise<void> {
+  if (!isDbConfigured()) return;
+  const id = leadId(formData);
+  if (!id) return;
+
+  // Same hardening as recordQuote: separators tolerated, anything else
+  // rejected; a minus sign must never sanitise into a valid amount.
+  const amountRaw = cleanText(formData.get("amount"), 12).replace(/[,\s]/g, "");
+  if (!/^\d+$/.test(amountRaw)) return;
+  const amount = parseInt(amountRaw, 10);
+  if (amount < 1 || amount > 100000) return;
+
+  const currencyRaw = cleanText(formData.get("currency"), 3);
+  const currency = (QUOTE_CURRENCIES as readonly string[]).includes(currencyRaw)
+    ? currencyRaw
+    : "USD";
+
+  await savePayment(id, { amount, currency });
   revalidatePath(`/admin/leads/${id}`);
   revalidatePath("/admin");
 }

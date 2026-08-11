@@ -37,7 +37,7 @@ import {
   type LeadStatus,
   type SupportType,
 } from "@/lib/leads/types";
-import { addNote, changeLeadStatus, deleteAttachmentNow, recordQuote } from "./actions";
+import { addNote, changeLeadStatus, deleteAttachmentNow, recordPayment, recordQuote } from "./actions";
 
 export const dynamic = "force-dynamic";
 
@@ -265,6 +265,48 @@ export default async function AdminLeadDetailPage({ params }: { params: { id: st
               Internal only. The client never sees the recommendation; you send the actual quote
               on WhatsApp or email.
             </p>
+
+            {/* Realised revenue (P0.4) — distinct from the quote. */}
+            <div className="mt-6 border-t border-mist-200 pt-4">
+              <p className="text-xs font-semibold uppercase text-navy-400">Payment received</p>
+              {row.paidAmount != null && (
+                <div className="mt-2 rounded-xl bg-teal-50 p-4">
+                  <p className="text-2xl font-bold text-navy-900">
+                    {formatUsd(row.paidAmount, row.paidCurrency ?? "USD")}
+                  </p>
+                  <p className="mt-1 text-xs text-navy-500">Recorded {fmt(row.paidAt)}</p>
+                </div>
+              )}
+              <form action={recordPayment} className="mt-3 flex flex-wrap gap-3">
+                <input type="hidden" name="leadId" value={lead.id} />
+                <input
+                  name="amount"
+                  inputMode="numeric"
+                  defaultValue={row.paidAmount ?? ""}
+                  placeholder={row.quotedAmount != null ? String(row.quotedAmount) : "Amount"}
+                  aria-label="Paid amount"
+                  className={`${inputCls} w-32 flex-none`}
+                  required
+                />
+                <select
+                  name="currency"
+                  defaultValue={row.paidCurrency ?? row.quoteCurrency ?? "USD"}
+                  aria-label="Payment currency"
+                  className={`${inputCls} w-28 flex-none`}
+                >
+                  <option value="USD">USD</option>
+                  <option value="GBP">GBP</option>
+                  <option value="AED">AED</option>
+                </select>
+                <button type="submit" className="btn-primary px-5 py-2 text-sm">
+                  {row.paidAmount != null ? "Update payment" : "Record payment"}
+                </button>
+              </form>
+              <p className="mt-2 text-xs text-navy-400">
+                Actual amount received, kept separate from the quoted value. Recording a payment
+                does not change the lead status; advance the pipeline above as usual.
+              </p>
+            </div>
           </Section>
 
           <Section title={`Documents (${attachments.length})`}>

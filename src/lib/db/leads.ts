@@ -268,6 +268,22 @@ export async function saveQuote(
     .where(eq(leads.id, id));
 }
 
+/** Realised revenue (P0.4): manual today; automation writes the same fields. */
+export async function savePayment(
+  id: string,
+  payment: { amount: number; currency: string }
+): Promise<void> {
+  await db()
+    .update(leads)
+    .set({
+      paidAmount: payment.amount,
+      paidCurrency: payment.currency,
+      paidAt: new Date(),
+      updatedAt: new Date(),
+    })
+    .where(eq(leads.id, id));
+}
+
 export async function recordNotifyResult(leadId: string, result: SendResult): Promise<void> {
   await db()
     .update(leads)
