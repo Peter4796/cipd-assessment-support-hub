@@ -19,6 +19,8 @@ export const PILLAR_PAGES: Record<string, string> = {
   "/cipd-level-5-support": "CIPD Level 5 support",
   "/cipd-level-7-support": "CIPD Level 7 support",
   "/cipd-resubmission-support": "CIPD resubmission support",
+  "/harvard-referencing-support": "Harvard referencing support",
+  "/urgent-cipd-help": "urgent deadline support",
 };
 
 const unitByCode = new Map(units.map((u) => [u.code, u]));

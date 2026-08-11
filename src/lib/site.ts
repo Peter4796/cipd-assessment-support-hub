@@ -66,6 +66,8 @@ export const primaryNav: NavItem[] = [
       { label: "CIPD Level 5 Support", href: "/cipd-level-5-support" },
       { label: "CIPD Level 7 Support", href: "/cipd-level-7-support" },
       { label: "Resubmission Support", href: "/cipd-resubmission-support" },
+      { label: "Harvard Referencing Support", href: "/harvard-referencing-support" },
+      { label: "Urgent Deadline Help", href: "/urgent-cipd-help" },
       { label: "CIPD Units (by code)", href: "/cipd-units" },
     ],
   },
@@ -101,6 +103,8 @@ export const footerNav: { title: string; items: NavItem[] }[] = [
     items: [
       { label: "Services", href: "/services" },
       { label: "Resubmission Support", href: "/cipd-resubmission-support" },
+      { label: "Harvard Referencing Support", href: "/harvard-referencing-support" },
+      { label: "Urgent Deadline Help", href: "/urgent-cipd-help" },
       { label: "How It Works", href: "/how-it-works" },
       { label: "Pricing", href: "/pricing" },
       { label: "Samples & Work Quality", href: "/samples" },
