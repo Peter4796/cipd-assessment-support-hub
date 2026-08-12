@@ -65,6 +65,35 @@ export function serviceJsonLd(input: {
   };
 }
 
+/**
+ * Article schema for blog posts (P0.5 — moved here so it shares the tested
+ * builder module). Honesty rules: dateModified is emitted ONLY when an
+ * editorial review actually happened (`reviewed` frontmatter) — never
+ * fabricated. The image is the site's real OG image (the same 1200x630
+ * asset served for the page socially): deterministic and truthful rather
+ * than a meaningless generated per-article graphic.
+ */
+export function articleJsonLd(post: {
+  slug: string;
+  title: string;
+  description: string;
+  date: string;
+  reviewed?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.description,
+    datePublished: post.date,
+    ...(post.reviewed ? { dateModified: post.reviewed } : {}),
+    image: [absoluteUrl("/opengraph-image")],
+    author: { "@id": ORGANIZATION_ID },
+    publisher: { "@id": ORGANIZATION_ID },
+    mainEntityOfPage: { "@type": "WebPage", "@id": absoluteUrl(`/blog/${post.slug}`) },
+  };
+}
+
 export function faqJsonLd(pairs: Array<{ question: string; answer: string }>) {
   return {
     "@context": "https://schema.org",

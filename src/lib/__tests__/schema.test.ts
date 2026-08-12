@@ -1,12 +1,5 @@
 import { describe, expect, it } from "vitest";
-import {
-  breadcrumbJsonLd,
-  faqJsonLd,
-  faqPairsFromBlocks,
-  ORGANIZATION_ID,
-  organizationJsonLd,
-  serviceJsonLd,
-} from "@/lib/schema";
+import { ORGANIZATION_ID, articleJsonLd, breadcrumbJsonLd, faqJsonLd, faqPairsFromBlocks, organizationJsonLd, serviceJsonLd } from "@/lib/schema";
 import type { Block } from "@/content/types";
 
 describe("organizationJsonLd", () => {
@@ -104,5 +97,32 @@ describe("faqJsonLd", () => {
       name: "Q?",
       acceptedAnswer: { "@type": "Answer", text: "A." },
     });
+  });
+});
+
+describe("articleJsonLd", () => {
+  const base = {
+    slug: "5co02-complete-guide",
+    title: "5CO02 Assignment: The Complete Guide",
+    description: "A complete guide.",
+    date: "2026-07-18",
+  };
+
+  it("emits dateModified only when an editorial review exists (never fabricated)", () => {
+    const reviewed = articleJsonLd({ ...base, reviewed: "2026-07-22" });
+    expect(reviewed.dateModified).toBe("2026-07-22");
+    const unreviewed = articleJsonLd(base);
+    expect("dateModified" in unreviewed).toBe(false);
+    expect(unreviewed.datePublished).toBe("2026-07-18");
+  });
+
+  it("carries an absolute image URL and object-form mainEntityOfPage", () => {
+    const a = articleJsonLd(base);
+    expect(a.image[0]).toMatch(/^https:\/\/.+\/opengraph-image$/);
+    expect(a.mainEntityOfPage).toMatchObject({
+      "@type": "WebPage",
+      "@id": expect.stringContaining("/blog/5co02-complete-guide"),
+    });
+    expect(a.author).toEqual(a.publisher);
   });
 });

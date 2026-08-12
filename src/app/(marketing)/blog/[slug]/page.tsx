@@ -12,7 +12,7 @@ import { getUnit } from "@/content/units";
 import { enquiryUrl, type EnquiryContext } from "@/lib/leads/context";
 import { site } from "@/lib/site";
 import { JsonLd } from "@/components/JsonLd";
-import { breadcrumbJsonLd, faqJsonLd, faqPairsFromBlocks, ORGANIZATION_ID } from "@/lib/schema";
+import { articleJsonLd, breadcrumbJsonLd, faqJsonLd, faqPairsFromBlocks } from "@/lib/schema";
 
 export function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));
@@ -51,16 +51,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const pillarTarget = resolvePillar(post.pillar, (slug) => getPost(slug)?.title);
   const magnet = magnetForPillar(post.pillar);
 
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: post.title,
-    description: post.description,
-    datePublished: post.date,
-    author: { "@id": ORGANIZATION_ID },
-    publisher: { "@id": ORGANIZATION_ID },
-    mainEntityOfPage: `${site.url}/blog/${post.slug}`,
-  };
+  const articleData = articleJsonLd(post);
 
   // FAQ-pattern articles (### question / paragraph answers) earn FAQPage
   // rich-result markup; derivation returns [] for everything else.
@@ -76,7 +67,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         ])}
       />
       {faqPairs.length >= 3 && <JsonLd data={faqJsonLd(faqPairs)} />}
-      <JsonLd data={articleJsonLd} />
+      <JsonLd data={articleData} />
       <PageHero
         eyebrow={post.category}
         breadcrumb="Blog"
