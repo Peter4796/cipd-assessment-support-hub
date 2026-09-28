@@ -79,6 +79,6 @@ It depends on your level, your centre's delivery schedule and your own weekly ca
 
 ## Go deeper
 
-For the full map of levels and what each involves, start with A Complete Guide to CIPD Qualifications. Studying CIPD Online: How Remote Study Actually Works goes deeper on making remote study work well, and Studying CIPD in the UAE: A Practical Guide covers how these same decisions look for learners on the other side of the Gulf.
+For the full map of levels and what each involves, start with [A Complete Guide to CIPD Qualifications](/blog/complete-guide-to-cipd-qualifications). [Studying CIPD Online: How Remote Study Actually Works](/blog/studying-cipd-online-remotely) goes deeper on making remote study work well, and [Studying CIPD in the UAE: A Practical Guide](/blog/studying-cipd-in-the-uae) covers how these same decisions look for learners on the other side of the Gulf.
 
 Wherever in Saudi Arabia you are studying from, you do not have to puzzle through assessment briefs on your own. We work with learners across the Gulf, and our tutors can support you with guidance on interpreting briefs, structuring your analysis and finding your feet in UK-style academic writing, so distance from your centre never has to mean distance from help.

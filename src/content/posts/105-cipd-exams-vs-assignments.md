@@ -59,7 +59,7 @@ Others need to be consciously dropped, because they actively hurt assignment wor
 
 ## What this means for planning a unit
 
-The practical consequence of all this is simple: little and often beats intensity. An assignment built across six steady weeks, in two or three protected sessions a week, will nearly always beat the same hours spent in one heroic fortnight, because the format rewards revision, reflection and distance from your own draft. That rhythm, and how to defend it around a full-time job, is the whole subject of the pillar guide Managing CIPD Deadlines While Working Full-Time: The Complete Guide.
+The practical consequence of all this is simple: little and often beats intensity. An assignment built across six steady weeks, in two or three protected sessions a week, will nearly always beat the same hours spent in one heroic fortnight, because the format rewards revision, reflection and distance from your own draft. That rhythm, and how to defend it around a full-time job, is the whole subject of the pillar guide [Managing CIPD Deadlines While Working Full-Time: The Complete Guide](/blog/managing-cipd-deadlines-while-working-full-time).
 
 ## Adapting exam-honed habits: a method
 
@@ -90,6 +90,6 @@ The fix was reallocation, not more effort. She rebuilt her notes under the assig
 
 ## Go deeper
 
-Once you know what kind of assessment you are facing, the next question is how to fit it around a working life, and the pillar guide Managing CIPD Deadlines While Working Full-Time: The Complete Guide gives you the full planning method. For the long-haul psychology of a format with no adrenaline deadlines, Staying Motivated Through Your CIPD Qualification covers the dips and the restarts.
+Once you know what kind of assessment you are facing, the next question is how to fit it around a working life, and the pillar guide Managing CIPD Deadlines While Working Full-Time: The Complete Guide gives you the full planning method. For the long-haul psychology of a format with no adrenaline deadlines, [Staying Motivated Through Your CIPD Qualification](/blog/staying-motivated-through-cipd) covers the dips and the restarts.
 
 If the assignment format is new territory, our guidance and support make the transition quicker: coaching on decoding your brief and planning the unit, structure advice before you draft, and honest review of the draft you produce. The understanding and the writing stay entirely yours; you just settle into the format with someone beside you who knows it well.

@@ -112,6 +112,6 @@ Follow your brief every time. Task formats, word counts and requirements vary be
 
 ## Go deeper
 
-This guide is the hub of the 7CO02 series. When you are ready to go further, read Aligning People Strategy with Business Strategy in 7CO02 for a deep dive into vertical and horizontal fit, the three theoretical lenses and the measurement problem, and 7CO02 FAQs: Your Questions Answered for quick answers to the questions learners ask most.
+This guide is the hub of the 7CO02 series. When you are ready to go further, read [Aligning People Strategy with Business Strategy in 7CO02](/blog/7co02-aligning-people-strategy) for a deep dive into vertical and horizontal fit, the three theoretical lenses and the measurement problem, and [7CO02 FAQs: Your Questions Answered](/blog/7co02-faqs) for quick answers to the questions learners ask most.
 
 If you would like tailored, ethical help with this unit, our 7CO02 support covers brief analysis, argument and evaluation coaching, referencing guidance and detailed draft review. We coach and review; the analysis, the judgement and the writing remain yours, which is exactly what the unit is designed to assess.

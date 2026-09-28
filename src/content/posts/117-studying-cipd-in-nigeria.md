@@ -45,7 +45,7 @@ You will notice this guide quotes no fees, and that is deliberate. Programme cos
 
 ## Choosing your level
 
-CIPD offers qualifications at three levels, from the Foundation Certificate for those newer to people practice, through the Associate Diploma for practising professionals, to the Advanced Diploma for senior and strategic roles. The right level depends on your experience and your goals, not on ambition alone, and starting at the wrong level is one of the most common and costly mistakes international learners make. Which CIPD Qualification Should You Choose walks through that decision properly, and A Complete Guide to CIPD Qualifications explains how the levels fit together.
+CIPD offers qualifications at three levels, from the Foundation Certificate for those newer to people practice, through the Associate Diploma for practising professionals, to the Advanced Diploma for senior and strategic roles. The right level depends on your experience and your goals, not on ambition alone, and starting at the wrong level is one of the most common and costly mistakes international learners make. Which CIPD Qualification Should You Choose walks through that decision properly, and [A Complete Guide to CIPD Qualifications](/blog/complete-guide-to-cipd-qualifications) explains how the levels fit together.
 
 ## Getting started: a practical method
 
@@ -77,6 +77,6 @@ It depends on the employers you are targeting. Locally focused roles may expect 
 
 ## Go deeper
 
-A Complete Guide to CIPD Qualifications explains the levels and how they fit together. If you are comparing across the region, Studying CIPD in Kenya: A Practical Guide covers the same questions for the East African market, and Studying CIPD Online: How Remote Study Actually Works goes deep on the practical realities of remote study.
+A Complete Guide to CIPD Qualifications explains the levels and how they fit together. If you are comparing across the region, [Studying CIPD in Kenya: A Practical Guide](/blog/studying-cipd-in-kenya) covers the same questions for the East African market, and [Studying CIPD Online: How Remote Study Actually Works](/blog/studying-cipd-online-remotely) goes deep on the practical realities of remote study.
 
 If you do decide CIPD is your route, the qualification will be won or lost in the written assignments, and studying at a distance can make that feel lonely. It does not have to be: our tutors support CIPD learners worldwide, including across Nigeria, with guidance on understanding briefs, structuring answers and building the academic skills your level demands.

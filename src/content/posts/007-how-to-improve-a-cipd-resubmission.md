@@ -33,4 +33,4 @@ The most common resubmission mistake is rewriting large sections that were alrea
 
 Re-map your revised work against each referred criterion and confirm it's now clearly met. A final proofread for clarity and referencing consistency helps too.
 
-Our resubmission support interprets your referral feedback, identifies the exact criteria to target, and guides the improvements needed, so your next submission addresses every point with confidence.
+Our [resubmission support](/cipd-resubmission-support) interprets your referral feedback, identifies the exact criteria to target, and guides the improvements needed, so your next submission addresses every point with confidence.

@@ -65,7 +65,7 @@ For your assignment you do not need access to a real organisation's systems. You
 
 The heart of the unit is the move from a number to a decision. A useful pattern has three steps: say what the data shows, in one or two plain sentences; say what it might mean, offering a sensible interpretation rather than a certainty; and say what the organisation could do next. That pattern turns a table of figures into an answer a marker can credit.
 
-Presenting data matters too, and simple beats clever. A small table, a bar chart to compare groups, a line chart to show change over time or a pie chart to show shares of a whole are all you need, clearly labelled. The dedicated guide in this series, Using People Data in 3CO02, Explained, walks through all of this in detail.
+Presenting data matters too, and simple beats clever. A small table, a bar chart to compare groups, a line chart to show change over time or a pie chart to show shares of a whole are all you need, clearly labelled. The dedicated guide in this series, [Using People Data in 3CO02, Explained](/blog/3co02-using-people-data), walks through all of this in detail.
 
 ## Handling data ethically
 
@@ -120,6 +120,6 @@ That is fine, and it is what the qualification expects. You can ground your answ
 
 ## Go deeper
 
-This guide is the hub of the 3CO02 series. When you are ready for more, read Using People Data in 3CO02, Explained for the full method on making sense of numbers, choosing charts and turning data into decisions, and 3CO02 FAQs: Your Questions Answered for quick answers to the questions learners ask most.
+This guide is the hub of the 3CO02 series. When you are ready for more, read Using People Data in 3CO02, Explained for the full method on making sense of numbers, choosing charts and turning data into decisions, and [3CO02 FAQs: Your Questions Answered](/blog/3co02-faqs) for quick answers to the questions learners ask most.
 
 If you would like friendly, ethical help with this unit, our 3CO02 support covers brief analysis, help making sense of data tasks, structure coaching, referencing guidance and honest feedback on your drafts. We coach and review; the work you submit is always your own.

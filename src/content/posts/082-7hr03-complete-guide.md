@@ -114,6 +114,6 @@ Follow your brief every time. Task formats, word counts and question wording var
 
 ## Go deeper
 
-This guide is the hub of the 7HR03 series. When you are ready to go further, read Fairness and Transparency in 7HR03 Reward Strategy for a deep dive into the fairness questions markers probe hardest, and 7HR03 FAQs: Your Questions Answered for quick answers to the questions learners ask most. If you studied reward at Level 5, 5HR03 Assignment: The Complete Guide shows how far the postgraduate register moves beyond it.
+This guide is the hub of the 7HR03 series. When you are ready to go further, read [Fairness and Transparency in 7HR03 Reward Strategy](/blog/7hr03-reward-fairness-transparency) for a deep dive into the fairness questions markers probe hardest, and [7HR03 FAQs: Your Questions Answered](/blog/7hr03-faqs) for quick answers to the questions learners ask most. If you studied reward at Level 5, [5HR03 Assignment: The Complete Guide](/blog/5hr03-complete-guide) shows how far the postgraduate register moves beyond it.
 
 If you would like tailored, ethical help with this unit, our 7HR03 support covers brief analysis, evaluation and argument coaching, referencing guidance and detailed draft review. Coaching and review only: the reading, the judgements and the writing you submit are always your own.

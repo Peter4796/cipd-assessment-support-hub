@@ -28,4 +28,4 @@ Referencing generators take the details of a source, such as author, year and ti
 
 Generate the reference, then compare it against a reliable Harvard guide and correct anything that looks off. Make sure every in-text citation has a matching reference, and that formatting is consistent throughout.
 
-If you would rather be certain your referencing is right, our Harvard referencing support checks your citations and reference list and shows you exactly what to fix.
+If you would rather be certain your referencing is right, our [Harvard referencing support](/harvard-referencing-support) checks your citations and reference list and shows you exactly what to fix.

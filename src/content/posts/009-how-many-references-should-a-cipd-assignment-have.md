@@ -32,4 +32,4 @@ Most CIPD briefs do not state a required number of references. Assessors look fo
 
 Avoid leaning on unreferenced websites, blogs or AI tools as your main evidence. Every in-text citation must also appear in your reference list, formatted consistently in Harvard style.
 
-If you are unsure whether your referencing is strong enough, our Harvard referencing support reviews your citations and reference list and shows you exactly what to improve.
+If you are unsure whether your referencing is strong enough, our [Harvard referencing support](/harvard-referencing-support) reviews your citations and reference list and shows you exactly what to improve.

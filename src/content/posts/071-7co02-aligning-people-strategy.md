@@ -76,6 +76,6 @@ Three pitfalls recur in alignment writing. The first is treating alignment as au
 
 ## Go deeper
 
-This deep dive is part of the 7CO02 series. For the full picture of the unit, including the high-performance working debate and the strategic role of the people function, read 7CO02 Assignment: The Complete Guide, and for quick answers to the questions learners ask most, see 7CO02 FAQs: Your Questions Answered. If you want to see how strategy topics are handled at Level 5 for comparison, the 5HR02 complete guide covers the employment market and workforce planning end of the same territory.
+This deep dive is part of the 7CO02 series. For the full picture of the unit, including the high-performance working debate and the strategic role of the people function, read [7CO02 Assignment: The Complete Guide](/blog/7co02-complete-guide), and for quick answers to the questions learners ask most, see [7CO02 FAQs: Your Questions Answered](/blog/7co02-faqs). If you want to see how strategy topics are handled at Level 5 for comparison, the 5HR02 complete guide covers the employment market and workforce planning end of the same territory.
 
 If you would like tailored, ethical guidance on this unit, our 7CO02 support includes coaching on evaluation and argument, help stress-testing your analysis of fit and measurement, referencing guidance and detailed review of your drafts. The thinking and the writing stay yours; the unit is assessing your judgement, and that is what coaching is for.

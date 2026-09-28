@@ -98,6 +98,6 @@ A justified answer might recommend the development programme for Merrowfield's c
 
 ## Go deeper
 
-If you have not yet read it, 5HR03 Assignment: The Complete Guide is the hub of this series and covers the unit end to end, including how it is assessed and a step-by-step method. 5HR03 FAQs: Your Questions Answered handles the quick questions learners ask most. The wider guide to critical analysis in CIPD assignments is also worth your time, because the comparison and justification skills in this unit are critical analysis by another name.
+If you have not yet read it, [5HR03 Assignment: The Complete Guide](/blog/5hr03-complete-guide) is the hub of this series and covers the unit end to end, including how it is assessed and a step-by-step method. [5HR03 FAQs: Your Questions Answered](/blog/5hr03-faqs) handles the quick questions learners ask most. The wider guide to critical analysis in CIPD assignments is also worth your time, because the comparison and justification skills in this unit are critical analysis by another name.
 
 If you want ethical, expert help while you work on this unit, our 5HR03 support includes coaching on evaluation and structure, guidance on applying theory and referencing, and considered feedback on your drafts. Coaching and review only: the analysis you submit is always your own.

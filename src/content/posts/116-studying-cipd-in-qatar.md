@@ -79,6 +79,6 @@ Your timeline depends on your level, your centre's schedule and your own weekly 
 
 ## Go deeper
 
-For the full picture of the levels themselves, start with A Complete Guide to CIPD Qualifications. Studying CIPD in the UAE: A Practical Guide and Studying CIPD in Saudi Arabia: A Practical Guide show how these same decisions play out for your neighbours around the Gulf, which is useful if your career may move across the region.
+For the full picture of the levels themselves, start with [A Complete Guide to CIPD Qualifications](/blog/complete-guide-to-cipd-qualifications). [Studying CIPD in the UAE: A Practical Guide](/blog/studying-cipd-in-the-uae) and [Studying CIPD in Saudi Arabia: A Practical Guide](/blog/studying-cipd-in-saudi-arabia) show how these same decisions play out for your neighbours around the Gulf, which is useful if your career may move across the region.
 
 However your CIPD journey unfolds from Qatar, the assignments do not have to be a solo effort. We spend much of our week alongside Gulf-based learners, and our tutors can support you with guidance on decoding assessment briefs, structuring your arguments and settling into UK-style academic writing, at whatever pace your working life allows.

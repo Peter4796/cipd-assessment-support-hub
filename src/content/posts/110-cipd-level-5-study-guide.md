@@ -42,7 +42,7 @@ Four capabilities separate comfortable passes from referrals at this level, and 
 - Structure. Level 5 answers are longer and more layered than Level 3 ones, and structure is what keeps them coherent: a clear line of argument per task, signposted sections, and conclusions that actually conclude.
 - Referencing with depth. Not just more citations, but better ones: a spread of credible sources, used to support specific claims, cited consistently. Referencing done well quietly signals everything else was done well too.
 
-For the assessment-day version of this list, the companion article How to Pass CIPD Level 5: A Practical Guide distils what examiners consistently reward.
+For the assessment-day version of this list, the companion article [How to Pass CIPD Level 5: A Practical Guide](/blog/how-to-pass-cipd-level-5) distils what examiners consistently reward.
 
 ## The two units that surprise people
 
@@ -58,7 +58,7 @@ Neither unit is harder than the rest. They are just different in kind, and knowi
 
 ## Balancing Level 5 with a full-time job
 
-Most Level 5 learners study alongside demanding roles, and the qualification assumes it: assignment-based assessment exists precisely so that working professionals can study in their own hours. The method that works is unglamorous and reliable: plan each unit backwards from its deadline with dated milestones, protect two or three study blocks a week, match heavy drafting to your freshest hours, and keep a submission buffer for the week your job catches fire. Managing CIPD Deadlines While Working Full-Time: The Complete Guide sets out the whole system, and it pairs naturally with this guide.
+Most Level 5 learners study alongside demanding roles, and the qualification assumes it: assignment-based assessment exists precisely so that working professionals can study in their own hours. The method that works is unglamorous and reliable: plan each unit backwards from its deadline with dated milestones, protect two or three study blocks a week, match heavy drafting to your freshest hours, and keep a submission buffer for the week your job catches fire. [Managing CIPD Deadlines While Working Full-Time: The Complete Guide](/blog/managing-cipd-deadlines-while-working-full-time) sets out the whole system, and it pairs naturally with this guide.
 
 ## A study method for Level 5
 
@@ -89,7 +89,7 @@ It is a genuine step up, broadly undergraduate in register, and it asks for anal
 
 ### Do I need to have done Level 3 first?
 
-Not necessarily; many learners enter at Level 5 on the strength of their experience. Centres advise on suitability individually, so talk to your study centre, and see CIPD Level 3 vs Level 5 vs Level 7: What's the Difference? for how the levels compare.
+Not necessarily; many learners enter at Level 5 on the strength of their experience. Centres advise on suitability individually, so talk to your study centre, and see [CIPD Level 3 vs Level 5 vs Level 7: What's the Difference?](/blog/cipd-level-3-vs-5-vs-7-whats-the-difference) for how the levels compare.
 
 ### How long does the Associate Diploma take?
 
@@ -101,6 +101,6 @@ A referral at Level 5 is common, fixable and not recorded on your forehead. You 
 
 ## Go deeper
 
-The natural next reads are How to Pass CIPD Level 5: A Practical Guide for the examiner's-eye view of what earns a pass, and the core unit hubs for depth on each unit: the 5CO01 complete guide on organisational performance and culture, the 5CO02 complete guide on evidence-based practice, and the 5CO03 complete guide on professional behaviours and reflective writing. Common Mistakes in CIPD Level 5 Assignments is the cautionary companion piece.
+The natural next reads are How to Pass CIPD Level 5: A Practical Guide for the examiner's-eye view of what earns a pass, and the core unit hubs for depth on each unit: the 5CO01 complete guide on organisational performance and culture, the 5CO02 complete guide on evidence-based practice, and the 5CO03 complete guide on professional behaviours and reflective writing. [Common Mistakes in CIPD Level 5 Assignments](/blog/common-mistakes-in-cipd-level-5-assignments) is the cautionary companion piece.
 
 And when you want experienced eyes on your own work, our Level 5 support provides them: help interpreting briefs, coaching on analytical structure before you draft, and honest review of your drafts and referencing, with the thinking and the writing remaining entirely yours.

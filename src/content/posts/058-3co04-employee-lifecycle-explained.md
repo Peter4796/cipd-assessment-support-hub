@@ -103,6 +103,6 @@ The fixes follow from everything above: explain rather than label, attach an exa
 
 ## Go deeper
 
-This guide pairs with 3CO04 Assignment: The Complete Guide, which covers the whole unit, how it is assessed and how to plan your word count across a wide brief. For quick answers to common questions, see 3CO04 FAQs: Your Questions Answered, and for help arranging it all on the page, read the general guide to structuring a CIPD assignment.
+This guide pairs with [3CO04 Assignment: The Complete Guide](/blog/3co04-complete-guide), which covers the whole unit, how it is assessed and how to plan your word count across a wide brief. For quick answers to common questions, see [3CO04 FAQs: Your Questions Answered](/blog/3co04-faqs), and for help arranging it all on the page, read the general guide to structuring a CIPD assignment.
 
 If a guiding hand would help as you apply the lifecycle to your assignment, our 3CO04 support offers structure and example coaching, referencing guidance and careful draft review. The ideas and the words remain yours; that is the whole point of the qualification.

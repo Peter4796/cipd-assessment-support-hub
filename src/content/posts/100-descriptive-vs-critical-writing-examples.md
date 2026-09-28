@@ -87,6 +87,6 @@ Description is not a fault; misplaced description is. Every answer needs some: a
 
 ## Go deeper
 
-For the full account of the skill these examples demonstrate, What Is Critical Analysis in CIPD? A Complete Guide is the hub of this cluster, covering the reasoning moves, the description-to-evaluation ladder and a method for any task. The natural next step from paired examples is the counterarguments guide, which covers the single strongest critical move: bringing an opposing reading into your answer and answering it. And as ever, check your current brief and centre guidance for the depth your specific task requires.
+For the full account of the skill these examples demonstrate, [What Is Critical Analysis in CIPD? A Complete Guide](/blog/what-is-critical-analysis-in-cipd) is the hub of this cluster, covering the reasoning moves, the description-to-evaluation ladder and a method for any task. The natural next step from paired examples is the counterarguments guide, which covers the single strongest critical move: bringing an opposing reading into your answer and answering it. And as ever, check your current brief and centre guidance for the depth your specific task requires.
 
 If your drafts keep coming back marked too descriptive, our writing support includes coaching on exactly this conversion and honest review of your draft passages, pointing to the sentences that need to become claims, while the analysis and the writing stay entirely yours.

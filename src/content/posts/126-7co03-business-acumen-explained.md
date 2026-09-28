@@ -12,7 +12,7 @@ tags: ["level-7","7co03","business-acumen"]
 reviewed: "2026-07-24"
 related: ["7co03-complete-guide","7co03-faqs","7co02-complete-guide"]
 ---
-7CO03 Assignment: The Complete Guide identifies three patterns behind most referrals on this unit, and the third, thin commercial awareness, is the one experienced practitioners least expect to be caught by. You can write fluently about ethics and inclusion, evidence your influencing honestly, and still read as someone who has never looked at how the organisation makes and spends its money. At Level 7 that gap is visible, and it costs.
+[7CO03 Assignment: The Complete Guide](/blog/7co03-complete-guide) identifies three patterns behind most referrals on this unit, and the third, thin commercial awareness, is the one experienced practitioners least expect to be caught by. You can write fluently about ethics and inclusion, evidence your influencing honestly, and still read as someone who has never looked at how the organisation makes and spends its money. At Level 7 that gap is visible, and it costs.
 
 This article is the deep dive on that theme: what business acumen means at senior level, how to read a commercial context without an accounting qualification, how to translate people arguments into commercial ones, and how to evidence commercial judgement in reflective writing, with a worked example and a method.
 
@@ -103,6 +103,6 @@ The reframe changed no facts and abandoned no values; the duty of care is still 
 
 ## Go deeper
 
-7CO03 Assignment: The Complete Guide is the hub for this unit and puts commercial awareness alongside the other two referral drivers, descriptive reflection and unevidenced claims. 7CO03 Reflective Writing at Masters Level goes deep on the reflective register that carries much of the assessment weight. 7CO03 FAQs: Your Questions Answered deals quickly with the practical questions learners ask most.
+7CO03 Assignment: The Complete Guide is the hub for this unit and puts commercial awareness alongside the other two referral drivers, descriptive reflection and unevidenced claims. [7CO03 Reflective Writing at Masters Level](/blog/7co03-reflective-writing-masters-level) goes deep on the reflective register that carries much of the assessment weight. [7CO03 FAQs: Your Questions Answered](/blog/7co03-faqs) deals quickly with the practical questions learners ask most.
 
 If you want ethical, senior-level help with this unit, our 7CO03 support includes coaching on commercial framing, reflective structure and evidencing, with detailed and honest review of your drafts. We coach and challenge; the judgement, the reflection and the writing remain yours.

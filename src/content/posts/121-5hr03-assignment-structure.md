@@ -90,6 +90,6 @@ Here is how the shape can come together for a generic 5HR03-style brief. This is
 
 ## Go deeper
 
-This article is part of the 5HR03 cluster on this site. The 5HR03 complete guide covers the whole unit, from what reward is for to a full worked example. Reward Principles in 5HR03, Explained goes deeper on total reward, motivation theory and the factors behind pay decisions, and the 5HR03 FAQs give quick answers to the questions learners ask most.
+This article is part of the 5HR03 cluster on this site. The 5HR03 complete guide covers the whole unit, from what reward is for to a full worked example. [Reward Principles in 5HR03, Explained](/blog/5hr03-reward-principles-explained) goes deeper on total reward, motivation theory and the factors behind pay decisions, and the 5HR03 FAQs give quick answers to the questions learners ask most.
 
 If you would like tailored, ethical help with this unit, our 5HR03 support includes structure and planning coaching that maps the compare-and-justify spine onto your specific brief, along with evidence guidance and detailed draft review. The judgements and the writing stay yours; a clear structure simply gives them somewhere to land.

@@ -13,7 +13,7 @@ related: ["what-is-a-cipd-reflective-account","reflective-writing-at-each-cipd-l
 ---
 Sooner or later, every CIPD learner writing reflectively meets the same question: which model should I use? Briefs sometimes name one, tutors mention Kolb, Gibbs, Driscoll and Schön almost interchangeably, and the textbook summaries all sound equally plausible. This guide is a working reflective models comparison: what each of the four best-known models actually is, when it suits, where it tends to go wrong, and a simple method for choosing the right one for your situation, your level and the way you think.
 
-Two ground rules before the detail. First, a model is scaffolding for thinking, not a subject to write about, and no model can rescue an account with nothing genuine in it; the pillar guide What Is a CIPD Reflective Account and How to Write One covers those fundamentals, and this guide builds on them. Second, always check your current assessment brief and your study centre's guidance before you choose, because some units expect a named model, some leave the choice open, and requirements vary by centre and over time.
+Two ground rules before the detail. First, a model is scaffolding for thinking, not a subject to write about, and no model can rescue an account with nothing genuine in it; the pillar guide [What Is a CIPD Reflective Account and How to Write One](/blog/what-is-a-cipd-reflective-account) covers those fundamentals, and this guide builds on them. Second, always check your current assessment brief and your study centre's guidance before you choose, because some units expect a named model, some leave the choice open, and requirements vary by centre and over time.
 
 ## Driscoll: What, So what, Now what
 
@@ -49,7 +49,7 @@ A fictional example shows the loop working. Ines, an invented people partner at 
 
 Schön's contribution is a distinction rather than a cycle: reflection-in-action is the thinking you do while acting, and reflection-on-action is the examination you give the same events afterwards. Writing with Schön means reconstructing how you read a situation as it unfolded, then re-examining that live thinking with the benefit of distance.
 
-It suits experienced practitioners, because so much of senior practice is judgement exercised in the moment: adjusting an argument mid-meeting, reading a room, changing tack when a conversation turns. An account that captures both the in-flight adjustment and the honest afterthought produces naturally analytical material, which is why the distinction features prominently in 7CO03 Reflective Writing at Masters Level.
+It suits experienced practitioners, because so much of senior practice is judgement exercised in the moment: adjusting an argument mid-meeting, reading a room, changing tack when a conversation turns. An account that captures both the in-flight adjustment and the honest afterthought produces naturally analytical material, which is why the distinction features prominently in [7CO03 Reflective Writing at Masters Level](/blog/7co03-reflective-writing-masters-level).
 
 The risks run the other way from Driscoll's. There is no staged scaffold, so less experienced writers can drift, and reconstructing in-the-moment thinking honestly is genuinely hard, because hindsight quietly rewrites what you noticed at the time. Used carelessly, Schön becomes a licence to claim you were thinking things you were not.
 
@@ -90,6 +90,6 @@ The practical technique is to draft with the stages as private headings and then
 
 ## Go deeper
 
-This guide is a companion to the pillar What Is a CIPD Reflective Account and How to Write One, which covers the fundamentals every model exists to serve: honest first person, analysis over narrative, specific learning and checkable action. Its sister guide, Reflective Writing at CIPD Level 3, 5 and 7: What Changes, shows how the same skill deepens across the qualification. For unit-specific depth, see 5CO03 Reflective Writing: How to Evidence Your Examples and 7CO03 Reflective Writing at Masters Level.
+This guide is a companion to the pillar What Is a CIPD Reflective Account and How to Write One, which covers the fundamentals every model exists to serve: honest first person, analysis over narrative, specific learning and checkable action. Its sister guide, [Reflective Writing at CIPD Level 3, 5 and 7: What Changes](/blog/reflective-writing-at-each-cipd-level), shows how the same skill deepens across the qualification. For unit-specific depth, see [5CO03 Reflective Writing: How to Evidence Your Examples](/blog/5co03-reflective-examples-discussion) and 7CO03 Reflective Writing at Masters Level.
 
 Choosing a model takes five minutes; using one well takes practice, and an outside reader helps most with the gap between the two. Our reflective writing support includes help selecting and applying a model, coaching on structure, and honest review of your drafts, while the experience, the thinking and the words stay entirely yours.

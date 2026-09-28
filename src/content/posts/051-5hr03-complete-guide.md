@@ -53,7 +53,7 @@ Financial reward is anything with a direct monetary value to the employee: base 
 
 The two are not rivals. Most modern reward thinking, often described as total reward, treats them as one package, because people respond to the whole deal rather than the payslip alone. An organisation with modest salaries but genuine flexibility and strong development can compete for talent with a higher-paying rival, and the assignment expects you to reason about those trade-offs rather than assuming money always wins.
 
-This is a compressed summary of a rich topic. The dedicated guide Reward Principles in 5HR03, Explained goes much deeper, covering total reward, the main motivation theories and how to apply them without theory-dumping.
+This is a compressed summary of a rich topic. The dedicated guide [Reward Principles in 5HR03, Explained](/blog/5hr03-reward-principles-explained) goes much deeper, covering total reward, the main motivation theories and how to apply them without theory-dumping.
 
 ## What shapes pay and benefits decisions
 
@@ -119,6 +119,6 @@ Follow your brief every time. Centres word tasks differently and update them reg
 
 ## Go deeper
 
-This guide is the hub of the 5HR03 series. When you are ready to go further, read Reward Principles in 5HR03, Explained for a deeper treatment of total reward, motivation theory and the factors behind pay decisions, and 5HR03 FAQs: Your Questions Answered for quick answers to the questions that come up again and again. If you are working through the wider diploma, the 5HR01 complete guide covers the neighbouring employment relationship unit in the same way.
+This guide is the hub of the 5HR03 series. When you are ready to go further, read Reward Principles in 5HR03, Explained for a deeper treatment of total reward, motivation theory and the factors behind pay decisions, and [5HR03 FAQs: Your Questions Answered](/blog/5hr03-faqs) for quick answers to the questions that come up again and again. If you are working through the wider diploma, the 5HR01 complete guide covers the neighbouring employment relationship unit in the same way.
 
 If you would like tailored, ethical help with this unit, our 5HR03 support covers brief analysis, evaluation and structure coaching, referencing guidance and detailed draft review. We coach and review; the thinking and the writing remain yours, which is exactly what the unit is designed to develop.

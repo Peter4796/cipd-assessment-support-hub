@@ -114,6 +114,6 @@ Follow your brief every time. Task formats, word counts and question wording var
 
 ## Go deeper
 
-This guide is the hub of the 7HR01 series. When you are ready to go further, read Employee Voice in 7HR01: Perspectives and Critique for a deep dive into the topic markers probe hardest, and 7HR01 FAQs: Your Questions Answered for quick answers to the questions learners ask most. If you studied employment relations at Level 5, 5HR01 Assignment: The Complete Guide shows how far the postgraduate register moves beyond that foundation.
+This guide is the hub of the 7HR01 series. When you are ready to go further, read [Employee Voice in 7HR01: Perspectives and Critique](/blog/7hr01-employee-voice-perspectives) for a deep dive into the topic markers probe hardest, and [7HR01 FAQs: Your Questions Answered](/blog/7hr01-faqs) for quick answers to the questions learners ask most. If you studied employment relations at Level 5, [5HR01 Assignment: The Complete Guide](/blog/5hr01-complete-guide) shows how far the postgraduate register moves beyond that foundation.
 
 If you would like tailored, ethical help with this unit, our 7HR01 support covers brief analysis, perspective and argument coaching, referencing guidance and detailed draft review. Coaching and review only: the reading, the frame you choose and the writing you submit are always your own.

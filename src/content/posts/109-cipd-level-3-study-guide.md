@@ -17,7 +17,7 @@ One note before we start: centres deliver the qualification in different ways, w
 
 ## What the Foundation Certificate involves
 
-The Foundation Certificate covers the essentials of working in people practice. The site's comparison article, CIPD Level 3 vs Level 5 vs Level 7: What's the Difference?, places it alongside the higher qualifications; the short version is that Level 3 asks you to understand core ideas and explain them clearly, rather than to critique them.
+The Foundation Certificate covers the essentials of working in people practice. The site's comparison article, [CIPD Level 3 vs Level 5 vs Level 7: What's the Difference?](/blog/cipd-level-3-vs-5-vs-7-whats-the-difference), places it alongside the higher qualifications; the short version is that Level 3 asks you to understand core ideas and explain them clearly, rather than to critique them.
 
 The units you will meet are practical and connected. 3CO01 Business, culture and change in context looks at how organisations work, the external forces acting on them, and how change and culture affect people. 3CO02 Principles of analytics introduces evidence and data: what good evidence looks like and how people professionals use it to make better decisions. 3CO03 Core behaviours for people professionals is about ethics, values and professional behaviour, and it asks you to reflect on your own conduct and development. 3CO04 Essentials of people practice is the large practical unit, covering the employee lifecycle from recruitment through reward, performance and development.
 
@@ -98,6 +98,6 @@ It depends on your experience and confidence, and the comparison article CIPD Le
 
 ## Go deeper
 
-Each unit has its own complete guide hub on this site, and they are the natural next stop: the 3CO01 complete guide covers business, culture and change in context; the 3CO02 complete guide covers the principles of analytics; the 3CO03 complete guide covers core behaviours and reflective writing; and the 3CO04 complete guide covers the essentials of people practice. For fitting it all around a job, Managing CIPD Deadlines While Working Full-Time: The Complete Guide gives you the planning method in full.
+Each unit has its own complete guide hub on this site, and they are the natural next stop: the 3CO01 complete guide covers business, culture and change in context; the 3CO02 complete guide covers the principles of analytics; the 3CO03 complete guide covers core behaviours and reflective writing; and the 3CO04 complete guide covers the essentials of people practice. For fitting it all around a job, [Managing CIPD Deadlines While Working Full-Time: The Complete Guide](/blog/managing-cipd-deadlines-while-working-full-time) gives you the planning method in full.
 
 And if you would like an experienced guide alongside you for the journey, our Level 3 support offers exactly that: help decoding your briefs, feedback on structure and clarity before you submit, and referencing checks, all while the ideas, the writing and the qualification remain entirely yours.

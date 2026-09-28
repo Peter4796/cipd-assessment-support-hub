@@ -114,6 +114,6 @@ Notice what makes the example work: every action traces to a named gap, and ever
 
 ## Go deeper
 
-5HR02 Assignment: The Complete Guide is the hub for this unit and puts workforce planning alongside resourcing, talent management and retention. 5HR02 FAQs: Your Questions Answered deals quickly with the questions that come up again and again. And if you want to strengthen the data side of your work, 5CO02 Assignment: The Complete Guide covers evidence and analysis in depth.
+[5HR02 Assignment: The Complete Guide](/blog/5hr02-complete-guide) is the hub for this unit and puts workforce planning alongside resourcing, talent management and retention. [5HR02 FAQs: Your Questions Answered](/blog/5hr02-faqs) deals quickly with the questions that come up again and again. And if you want to strengthen the data side of your work, [5CO02 Assignment: The Complete Guide](/blog/5co02-complete-guide) covers evidence and analysis in depth.
 
 If you would like ethical, tailored help with this topic, our 5HR02 support offers coaching on planning tasks and structure, guidance on sources and referencing, and honest feedback on your drafts. We never produce work for you; the plan, the thinking and the words stay yours.

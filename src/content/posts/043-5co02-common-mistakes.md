@@ -105,6 +105,6 @@ The stronger version notes that the absence data shows the rise is concentrated 
 
 ## Go deeper
 
-Most of these mistakes come from method rather than ability, which is why they respond so well to a structured approach. For the full method, start with 5CO02 Assignment: The Complete Guide, and for quick answers to specific worries, see 5CO02 FAQs: Your Questions Answered. If sourcing is your weak spot, the guide to finding credible sources with Google Scholar is a good next read.
+Most of these mistakes come from method rather than ability, which is why they respond so well to a structured approach. For the full method, start with [5CO02 Assignment: The Complete Guide](/blog/5co02-complete-guide), and for quick answers to specific worries, see [5CO02 FAQs: Your Questions Answered](/blog/5co02-faqs). If sourcing is your weak spot, the guide to finding credible sources with Google Scholar is a good next read.
 
 If you would like an experienced eye on your work before you submit, our 5CO02 support offers coaching on evidence and analysis, structure and referencing checks, and honest, detailed draft review. You keep ownership of the writing; we help you make it as strong as it can be.

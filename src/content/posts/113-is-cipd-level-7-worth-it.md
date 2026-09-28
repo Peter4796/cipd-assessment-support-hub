@@ -81,6 +81,6 @@ If your answers are mostly confident, Level 7 is likely to reward you. If severa
 
 ## Go deeper
 
-For the broader value question across all levels, read Is CIPD Worth It. For what studying at this level actually involves week to week, the CIPD Level 7 Study Guide goes into depth. And for how the Advanced Diploma sits alongside the other qualifications, A Complete Guide to CIPD Qualifications is the place to start.
+For the broader value question across all levels, read Is CIPD Worth It. For what studying at this level actually involves week to week, the CIPD Level 7 Study Guide goes into depth. And for how the Advanced Diploma sits alongside the other qualifications, [A Complete Guide to CIPD Qualifications](/blog/complete-guide-to-cipd-qualifications) is the place to start.
 
 If you do decide Level 7 is your next step, go in with your eyes open and your plan written down. And when the critical evaluation, referencing and assignment structure start to feel like a foreign language, our tutors can support you in translating it, with honest feedback and guidance that helps you meet the masters-level standard yourself.

@@ -49,7 +49,7 @@ The difference is the reflective element. Part of your submission will usually a
 
 Strip away the terminology and the ethical side of 3CO03 comes down to familiar things: being honest, being fair, keeping confidences, doing what you said you would do, and speaking up politely when something does not sit right with you. The inclusive side is equally down to earth: making sure people are not left out or talked over, being respectful of differences, and noticing when a rota, a meeting habit or a turn of phrase quietly disadvantages someone.
 
-You do not need dramatic examples. Passing on a colleague's concern accurately, refusing to gossip about someone's personal situation, or making sure a quiet team member gets heard in a briefing are all valid evidence of these behaviours at Level 3. Because this topic carries real weight in the unit, there is a dedicated deep dive in this series, Professional Behaviours in 3CO03, Explained, which works through ethical principles, inclusion and professional values with small workplace examples and a method for answering behaviours tasks.
+You do not need dramatic examples. Passing on a colleague's concern accurately, refusing to gossip about someone's personal situation, or making sure a quiet team member gets heard in a briefing are all valid evidence of these behaviours at Level 3. Because this topic carries real weight in the unit, there is a dedicated deep dive in this series, [Professional Behaviours in 3CO03, Explained](/blog/3co03-professional-behaviours-explained), which works through ethical principles, inclusion and professional values with small workplace examples and a method for answering behaviours tasks.
 
 ## CPD basics: a simple, honest development plan
 
@@ -110,6 +110,6 @@ Only lightly. A simple structure such as what happened, what I learned, what nex
 
 ## Go deeper
 
-This guide is the hub of the 3CO03 series. When you are ready for more, read Professional Behaviours in 3CO03, Explained for a plain-English tour of ethical practice, inclusion and values with worked examples, and 3CO03 FAQs: Your Questions Answered for quick answers to the questions learners ask most. If the reflective element is the part that worries you, the site's general guide, What Is a CIPD Reflective Account, walks through reflective writing from a standing start.
+This guide is the hub of the 3CO03 series. When you are ready for more, read Professional Behaviours in 3CO03, Explained for a plain-English tour of ethical practice, inclusion and values with worked examples, and [3CO03 FAQs: Your Questions Answered](/blog/3co03-faqs) for quick answers to the questions learners ask most. If the reflective element is the part that worries you, the site's general guide, What Is a CIPD Reflective Account, walks through reflective writing from a standing start.
 
 If you would like friendly, ethical help with this unit, our 3CO03 support covers brief analysis, reflective structure coaching, CPD plan feedback and honest review of your drafts. We coach and review; the reflection and the assignment you submit are always your own.

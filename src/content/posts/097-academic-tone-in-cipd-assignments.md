@@ -43,7 +43,7 @@ The opposite habits both cost marks. Overclaiming, with proves, always, never an
 
 ## The first person: rules of thumb
 
-Whether you may write I is one of the most common tone questions in CIPD study, and the workable answer has two halves. For explanation, analysis and evaluation, a neutral register keeps attention on the evidence, so this analysis suggests generally serves better than I think, which substitutes your authority for your reasoning. For reflective work, the opposite holds: reflection is about your own behaviour and decisions, the first person is expected, and writing around yourself in the passive reads as evasive. The guide What Is a CIPD Reflective Account and How to Write One covers that register in full.
+Whether you may write I is one of the most common tone questions in CIPD study, and the workable answer has two halves. For explanation, analysis and evaluation, a neutral register keeps attention on the evidence, so this analysis suggests generally serves better than I think, which substitutes your authority for your reasoning. For reflective work, the opposite holds: reflection is about your own behaviour and decisions, the first person is expected, and writing around yourself in the passive reads as evasive. The guide [What Is a CIPD Reflective Account and How to Write One](/blog/what-is-a-cipd-reflective-account) covers that register in full.
 
 Between the two poles, follow your brief and your centre's guidance, because conventions vary by unit, by centre and over time. Where both are silent and the task is analytical, neutral is the safer default, held consistently rather than drifting between registers paragraph by paragraph.
 
@@ -53,7 +53,7 @@ Measured tone extends to the words you choose about people, organisations and id
 
 ## Tone for non-native speakers
 
-If English is your second or third language, register is one of the hardest things to acquire, but the priorities are on your side: short clear sentences in plain English are exactly what academic tone wants. Be especially wary of the false formality trap, since inflated phrasing borrowed from templates is a common way to sound wrong in two directions at once. The guide English Writing Tips for CIPD (Non-Native Speakers) offers focused, practical help.
+If English is your second or third language, register is one of the hardest things to acquire, but the priorities are on your side: short clear sentences in plain English are exactly what academic tone wants. Be especially wary of the false formality trap, since inflated phrasing borrowed from templates is a common way to sound wrong in two directions at once. The guide [English Writing Tips for CIPD (Non-Native Speakers)](/blog/english-writing-tips-for-cipd-non-native-speakers) offers focused, practical help.
 
 ## A self-edit pass for tone
 
@@ -92,6 +92,6 @@ The three versions contain the same idea. The first spends its credibility on re
 
 ## Go deeper
 
-Tone is one strand of a bigger craft, and the pillar guide How to Structure a CIPD Assignment: A Complete Guide for Every Level shows where it fits, from decoding the brief into a skeleton to introductions, conclusions and evidence. The closest companion is Paragraph Structure in CIPD Assignments: One Idea, Well Built, because a well-built paragraph and a measured register are the two habits assessors reward most consistently, and they reinforce each other.
+Tone is one strand of a bigger craft, and the pillar guide [How to Structure a CIPD Assignment: A Complete Guide for Every Level](/blog/how-to-structure-a-cipd-assignment) shows where it fits, from decoding the brief into a skeleton to introductions, conclusions and evidence. The closest companion is [Paragraph Structure in CIPD Assignments: One Idea, Well Built](/blog/cipd-assignment-paragraph-structure), because a well-built paragraph and a measured register are the two habits assessors reward most consistently, and they reinforce each other.
 
 If you can no longer hear your own register, an outside reader can: our writing support includes tone-focused coaching and honest draft review that flag where the voice slips into chat or fog, while the ideas, the argument and the words remain entirely yours.

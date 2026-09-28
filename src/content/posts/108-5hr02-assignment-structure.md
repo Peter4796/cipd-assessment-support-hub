@@ -85,6 +85,6 @@ Here is how the shape can come together for a generic 5HR02-style brief. This is
 
 ## Go deeper
 
-This article is part of the 5HR02 cluster on this site. The 5HR02 complete guide covers the whole unit, from assessment through to a full worked example. The workforce planning guide, Workforce Planning in 5HR02, Explained, goes deep on the unit's most important topic, and the 5HR02 FAQs give quick answers to the questions learners ask most.
+This article is part of the 5HR02 cluster on this site. The 5HR02 complete guide covers the whole unit, from assessment through to a full worked example. The workforce planning guide, [Workforce Planning in 5HR02, Explained](/blog/5hr02-workforce-planning-explained), goes deep on the unit's most important topic, and the 5HR02 FAQs give quick answers to the questions learners ask most.
 
 If you would like tailored, ethical help with this unit, our 5HR02 support includes structure and planning coaching mapped to your specific brief, along with evidence guidance and considered draft review. The analysis and the writing stay yours; a clear structure simply lets the marker see them.

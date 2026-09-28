@@ -51,7 +51,7 @@ Workforce planning is the process of making sure an organisation has the people 
 
 The labour market is the supply side of that equation. An organisation recruiting nurses, software engineers or drivers faces a very different market from one recruiting entry-level administrators, and a good plan reflects that. Useful analysis considers both the internal labour market, meaning the skills, potential and turnover patterns of the current workforce, and the external one, meaning the availability, cost and expectations of candidates outside. Official sources such as ONS labour market statistics give you credible external evidence to cite.
 
-Workforce planning is arguably the most important topic in the unit, and it deserves more space than a hub guide can give it. The companion article Workforce Planning in 5HR02, Explained works through the planning cycle, labour market analysis and a full worked example in detail.
+Workforce planning is arguably the most important topic in the unit, and it deserves more space than a hub guide can give it. The companion article [Workforce Planning in 5HR02, Explained](/blog/5hr02-workforce-planning-explained) works through the planning cycle, labour market analysis and a full worked example in detail.
 
 ## Resourcing, recruitment and talent management
 
@@ -125,6 +125,6 @@ Follow your brief every time. Centres word tasks differently and update them reg
 
 ## Go deeper
 
-This guide is the hub of the 5HR02 series. When you are ready to go further, read Workforce Planning in 5HR02, Explained for a full walkthrough of the planning cycle, labour market analysis and a worked example, and 5HR02 FAQs: Your Questions Answered for quick answers to the questions learners ask most. If you are working through the full diploma, the 5HR01 complete guide covers the neighbouring unit on employment relationship management.
+This guide is the hub of the 5HR02 series. When you are ready to go further, read Workforce Planning in 5HR02, Explained for a full walkthrough of the planning cycle, labour market analysis and a worked example, and [5HR02 FAQs: Your Questions Answered](/blog/5hr02-faqs) for quick answers to the questions learners ask most. If you are working through the full diploma, the 5HR01 complete guide covers the neighbouring unit on employment relationship management.
 
 If you would like tailored, ethical help with this unit, our 5HR02 support includes brief analysis, planning and structure coaching, referencing guidance and considered draft review. We coach and give feedback; the analysis and the writing remain yours, which is what the unit is designed to develop.

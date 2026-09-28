@@ -113,6 +113,6 @@ Follow your brief every time. Project formats, word counts, milestone dates and 
 
 ## Go deeper
 
-This guide is the hub of the 7CO04 series. When you are ready to go further, read Choosing Your 7CO04 Research Question for a deep dive into the decision that shapes the whole project, and 7CO04 FAQs: Your Questions Answered for quick answers to the questions learners ask most. If you want to strengthen the critical register that runs through the whole diploma, 7CO01 Assignment: The Complete Guide covers the unit where that standard is set.
+This guide is the hub of the 7CO04 series. When you are ready to go further, read [Choosing Your 7CO04 Research Question](/blog/7co04-choosing-research-question) for a deep dive into the decision that shapes the whole project, and [7CO04 FAQs: Your Questions Answered](/blog/7co04-faqs) for quick answers to the questions learners ask most. If you want to strengthen the critical register that runs through the whole diploma, [7CO01 Assignment: The Complete Guide](/blog/7co01-complete-guide) covers the unit where that standard is set.
 
 If you would like tailored, ethical help with this unit, our 7CO04 support covers question scoping, methods and structure coaching, referencing guidance and detailed review of your drafts. We coach and review; the research, the data and the writing remain yours, which is exactly what a research unit exists to assess.

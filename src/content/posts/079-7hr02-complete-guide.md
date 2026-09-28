@@ -114,6 +114,6 @@ Follow your brief every time. Task formats, word counts and question wording var
 
 ## Go deeper
 
-This guide is the hub of the 7HR02 series. When you are ready to go further, read Strategic Workforce Planning in 7HR02: Beyond the Cycle for a deep dive into planning under uncertainty, succession critique and the politics of workforce numbers, and 7HR02 FAQs: Your Questions Answered for quick answers to the questions learners ask most. If you studied resourcing at Level 5, 5HR02 Assignment: The Complete Guide shows the foundation this unit builds on and moves beyond.
+This guide is the hub of the 7HR02 series. When you are ready to go further, read [Strategic Workforce Planning in 7HR02: Beyond the Cycle](/blog/7hr02-strategic-workforce-planning) for a deep dive into planning under uncertainty, succession critique and the politics of workforce numbers, and [7HR02 FAQs: Your Questions Answered](/blog/7hr02-faqs) for quick answers to the questions learners ask most. If you studied resourcing at Level 5, [5HR02 Assignment: The Complete Guide](/blog/5hr02-complete-guide) shows the foundation this unit builds on and moves beyond.
 
 If you would like tailored, ethical help with this unit, our 7HR02 support covers brief analysis, evaluation and argument coaching, referencing guidance and detailed draft review. Coaching and review only: the reading, the judgements and the writing you submit are always your own.

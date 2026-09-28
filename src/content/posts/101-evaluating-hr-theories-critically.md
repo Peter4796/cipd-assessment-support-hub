@@ -13,7 +13,7 @@ related: ["what-is-critical-analysis-in-cipd","descriptive-vs-critical-writing-e
 ---
 Somewhere in almost every CIPD assignment, a theory arrives. Maslow's pyramid appears in an answer about engagement, Tuckman's stages in a question about teams, and the marker's interest fades a little, because the theory is usually recited rather than used. The learner proves they can remember it. What the assessment wanted was proof they can judge it.
 
-This guide covers evaluating HR theories: how to treat a theory as a tool with strengths and limits rather than a fact to be reported, the questions that reveal whether a theory fits your task, and how to write theory paragraphs that earn analysis marks. It applies the wider skill set out in What Is Critical Analysis in CIPD? A Complete Guide to the specific case of theory, which is where most learners meet critical writing for the first time.
+This guide covers evaluating HR theories: how to treat a theory as a tool with strengths and limits rather than a fact to be reported, the questions that reveal whether a theory fits your task, and how to write theory paragraphs that earn analysis marks. It applies the wider skill set out in [What Is Critical Analysis in CIPD? A Complete Guide](/blog/what-is-critical-analysis-in-cipd) to the specific case of theory, which is where most learners meet critical writing for the first time.
 
 ## A theory is a tool, not a truth
 
@@ -35,7 +35,7 @@ You will not have room to answer all five in every paragraph, and you do not nee
 
 ## Three familiar theories, treated critically
 
-The pattern is easiest to see on theories everyone knows. The three below are handled at the level of common knowledge: widely taught ideas and widely repeated criticisms, with no claims about particular studies or figures. In your own work, any specific claim about what research found needs a credited source, as Using Evidence in CIPD Assignments: From Claim to Credit explains in full.
+The pattern is easiest to see on theories everyone knows. The three below are handled at the level of common knowledge: widely taught ideas and widely repeated criticisms, with no claims about particular studies or figures. In your own work, any specific claim about what research found needs a credited source, as [Using Evidence in CIPD Assignments: From Claim to Credit](/blog/using-evidence-in-cipd-assignments) explains in full.
 
 ### Maslow's hierarchy of needs
 

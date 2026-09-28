@@ -82,6 +82,6 @@ At Level 5, and especially at Level 7, markers look for evidence of wider readin
 
 ## Go deeper
 
-For the whole referencing system in one place, start with CIPD Harvard Referencing: The Complete Guide, the hub of this series. Harvard Referencing Mistakes That Cost CIPD Marks turns the pitfalls above into a pre-submission checklist, and the guide to finding credible sources with Google Scholar shows you how to build the wider reading that higher levels expect around your CIPD material.
+For the whole referencing system in one place, start with [CIPD Harvard Referencing: The Complete Guide](/blog/harvard-referencing-complete-guide), the hub of this series. [Harvard Referencing Mistakes That Cost CIPD Marks](/blog/harvard-referencing-common-errors) turns the pitfalls above into a pre-submission checklist, and the guide to finding credible sources with Google Scholar shows you how to build the wider reading that higher levels expect around your CIPD material.
 
 If you would like reassurance that your CIPD citations, and the rest of your reference list, are accurate and consistent, our referencing support reviews every entry against your centre's style and highlights precisely what to change. The reading and writing remain entirely yours.

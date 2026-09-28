@@ -59,7 +59,7 @@ Two refinements make the hours count. First, deliberately seek sources that disa
 
 The time problem at Level 7 is qualitative as much as quantitative. Senior roles do not just consume hours; they consume exactly the deep-thinking capacity that critical evaluation and research design require, and a diary full of meetings leaves fragments in which masters-level work cannot be done.
 
-The response is to treat deep-work time as the scarce resource and schedule it first: a small number of protected blocks in your genuinely freshest hours for reading analytically and drafting arguments, with administrative study tasks, reference tidying, note organising and planning relegated to tired evenings and margins. Backwards planning, buffers and early conversations with your centre when work erupts all apply exactly as they do at other levels, and Managing CIPD Deadlines While Working Full-Time: The Complete Guide covers that machinery; the Level 7 addition is simple honesty about which hours are capable of postgraduate thinking, and ruthlessness in defending them.
+The response is to treat deep-work time as the scarce resource and schedule it first: a small number of protected blocks in your genuinely freshest hours for reading analytically and drafting arguments, with administrative study tasks, reference tidying, note organising and planning relegated to tired evenings and margins. Backwards planning, buffers and early conversations with your centre when work erupts all apply exactly as they do at other levels, and [Managing CIPD Deadlines While Working Full-Time: The Complete Guide](/blog/managing-cipd-deadlines-while-working-full-time) covers that machinery; the Level 7 addition is simple honesty about which hours are capable of postgraduate thinking, and ruthlessness in defending them.
 
 ## A study method for Level 7
 
@@ -86,7 +86,7 @@ The response is to treat deep-work time as the scarce resource and schedule it f
 
 ### How hard is CIPD Level 7 compared to Level 5?
 
-It is a substantial step, comparable to moving from undergraduate to postgraduate study: critical evaluation replaces analysis as the core currency, reading expectations widen considerably, and writing must be argument-led and evidenced throughout. CIPD Level 3 vs Level 5 vs Level 7: What's the Difference? sets out the full comparison.
+It is a substantial step, comparable to moving from undergraduate to postgraduate study: critical evaluation replaces analysis as the core currency, reading expectations widen considerably, and writing must be argument-led and evidenced throughout. [CIPD Level 3 vs Level 5 vs Level 7: What's the Difference?](/blog/cipd-level-3-vs-5-vs-7-whats-the-difference) sets out the full comparison.
 
 ### Do I need a degree to start Level 7?
 
@@ -98,7 +98,7 @@ It varies with your centre's schedule, your study mode and your own pace, and pr
 
 ### What happens if I get referred at Level 7?
 
-You will receive feedback identifying which criteria fell short, and you resubmit addressing exactly those points; in most cases the underlying issue is register rather than understanding, which makes it very fixable. How to Improve a CIPD Resubmission walks through turning referral feedback into a passing resubmission step by step.
+You will receive feedback identifying which criteria fell short, and you resubmit addressing exactly those points; in most cases the underlying issue is register rather than understanding, which makes it very fixable. [How to Improve a CIPD Resubmission](/blog/how-to-improve-a-cipd-resubmission) walks through turning referral feedback into a passing resubmission step by step.
 
 ## Go deeper
 

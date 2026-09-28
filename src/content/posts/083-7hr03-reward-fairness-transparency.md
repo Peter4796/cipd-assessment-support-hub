@@ -83,6 +83,6 @@ Two failures dominate this territory. The first is moralising without analysis: 
 
 ## Go deeper
 
-When you have this territory secure, return to 7HR03 Assignment: The Complete Guide for the full method across the unit, including reward philosophy, governance and the executive pay debate, and use 7HR03 FAQs: Your Questions Answered for quick answers to the questions learners ask most. If you want to revisit the foundations, 5HR03 Reward Principles Explained covers the building blocks this unit assumes.
+When you have this territory secure, return to [7HR03 Assignment: The Complete Guide](/blog/7hr03-complete-guide) for the full method across the unit, including reward philosophy, governance and the executive pay debate, and use [7HR03 FAQs: Your Questions Answered](/blog/7hr03-faqs) for quick answers to the questions learners ask most. If you want to revisit the foundations, 5HR03 Reward Principles Explained covers the building blocks this unit assumes.
 
 If you would like ethical, one-to-one help with this unit, our 7HR03 support includes coaching on fairness and transparency arguments, brief analysis, referencing guidance and detailed review of your drafts. Coaching and review only: the analysis, the judgements and the writing you submit are always your own.

@@ -52,7 +52,7 @@ One more essential habit: always work from your own current assessment brief and
 
 The employee lifecycle is the idea that ties the whole unit together. It describes the stages a person moves through with an organisation: attraction and recruitment, selection, induction and onboarding, development and performance, retention and reward, and finally the end of employment, whether through resignation, retirement, redundancy or dismissal.
 
-The lifecycle is useful in two ways. First, it gives you a mental filing system for everything in the unit, because every topic in 3CO04 belongs to one of its stages. Second, it gives you a ready-made structure for answers and examples: you can walk a marker through a stage, explain what happens there, and show why it matters to both the organisation and the person. The dedicated guide on this site, The Employee Lifecycle in 3CO04, Explained, takes each stage in turn with a full worked example, and is worth reading alongside this one.
+The lifecycle is useful in two ways. First, it gives you a mental filing system for everything in the unit, because every topic in 3CO04 belongs to one of its stages. Second, it gives you a ready-made structure for answers and examples: you can walk a marker through a stage, explain what happens there, and show why it matters to both the organisation and the person. The dedicated guide on this site, [The Employee Lifecycle in 3CO04, Explained](/blog/3co04-employee-lifecycle-explained), takes each stage in turn with a full worked example, and is worth reading alongside this one.
 
 ## Planning your word count across a wide brief
 
@@ -109,6 +109,6 @@ There is no universal figure, because word counts and task formats are set by yo
 
 ## Go deeper
 
-This guide is the hub of the 3CO04 series. When you are ready for more, read The Employee Lifecycle in 3CO04, Explained for a stage-by-stage tour of the concept that holds the unit together, and 3CO04 FAQs: Your Questions Answered for quick answers to the questions learners ask most. The general guide to understanding a CIPD assessment brief is also useful, since careful brief-reading is where every good 3CO04 answer starts.
+This guide is the hub of the 3CO04 series. When you are ready for more, read The Employee Lifecycle in 3CO04, Explained for a stage-by-stage tour of the concept that holds the unit together, and [3CO04 FAQs: Your Questions Answered](/blog/3co04-faqs) for quick answers to the questions learners ask most. The general guide to understanding a CIPD assessment brief is also useful, since careful brief-reading is where every good 3CO04 answer starts.
 
 If you would like friendly, ethical help with this unit, our 3CO04 support covers brief analysis, planning and structure coaching, referencing guidance and considered feedback on your drafts. We coach and review; the work you submit is always your own, which is exactly how it should be.

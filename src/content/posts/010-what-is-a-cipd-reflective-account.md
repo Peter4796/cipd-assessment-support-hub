@@ -29,11 +29,11 @@ Reflection runs through the whole CIPD qualification family, though the depth ex
 
 At Level 3, reflection typically appears where units ask you to consider your core behaviours and your own professional development. The expectation is honest description of real situations, simple and genuine learning, and clear next steps. Assessors at this level are looking for authenticity and clarity, not sophistication.
 
-At Level 5, the professional behaviours units ask for reflective accounts that analyse rather than describe. You are expected to connect your behaviour to its effects on others, to use a reflective model as light scaffolding, and to show evidence that your practice has actually changed. The dedicated guide 5CO03 Reflective Writing: How to Evidence Your Examples covers this in unit-specific depth.
+At Level 5, the professional behaviours units ask for reflective accounts that analyse rather than describe. You are expected to connect your behaviour to its effects on others, to use a reflective model as light scaffolding, and to show evidence that your practice has actually changed. The dedicated guide [5CO03 Reflective Writing: How to Evidence Your Examples](/blog/5co03-reflective-examples-discussion) covers this in unit-specific depth.
 
-At Level 7, personal effectiveness work expects critical reflection: assumptions questioned, theory used as a lens on your own behaviour, other perspectives considered, and change in practice that can be evidenced rather than merely claimed. The guide 7CO03 Reflective Writing at Masters Level explains what that standard looks like on the page.
+At Level 7, personal effectiveness work expects critical reflection: assumptions questioned, theory used as a lens on your own behaviour, other perspectives considered, and change in practice that can be evidenced rather than merely claimed. The guide [7CO03 Reflective Writing at Masters Level](/blog/7co03-reflective-writing-masters-level) explains what that standard looks like on the page.
 
-For a side-by-side view of how the same skill deepens from level to level, including one incident written acceptably at all three, see Reflective Writing at CIPD Level 3, 5 and 7: What Changes. And whatever level you are studying at, check your current assessment brief and your study centre's guidance before you write, because the precise requirements, word counts and formats vary by unit, by centre and over time.
+For a side-by-side view of how the same skill deepens from level to level, including one incident written acceptably at all three, see [Reflective Writing at CIPD Level 3, 5 and 7: What Changes](/blog/reflective-writing-at-each-cipd-level). And whatever level you are studying at, check your current assessment brief and your study centre's guidance before you write, because the precise requirements, word counts and formats vary by unit, by centre and over time.
 
 ## The anatomy of a good reflective account
 
@@ -137,6 +137,6 @@ Only if your brief asks for one, so check it. Even where a model is expected, it
 
 ## Go deeper
 
-This is the hub of the reflective writing cluster, and two companion guides take the ideas further. Reflective Models Compared: Kolb, Gibbs, Driscoll and Schön examines the main models in depth, with a method for choosing one and using it invisibly. Reflective Writing at CIPD Level 3, 5 and 7: What Changes shows how the same skill deepens across the qualification, with one incident written at all three levels. For unit-specific guidance, see 5CO03 Reflective Writing: How to Evidence Your Examples at Level 5 and 7CO03 Reflective Writing at Masters Level at Level 7.
+This is the hub of the reflective writing cluster, and two companion guides take the ideas further. [Reflective Models Compared: Kolb, Gibbs, Driscoll and Schön](/blog/reflective-models-compared) examines the main models in depth, with a method for choosing one and using it invisibly. Reflective Writing at CIPD Level 3, 5 and 7: What Changes shows how the same skill deepens across the qualification, with one incident written at all three levels. For unit-specific guidance, see 5CO03 Reflective Writing: How to Evidence Your Examples at Level 5 and 7CO03 Reflective Writing at Masters Level at Level 7.
 
 Reflection has to be your own genuine experience in your own words, and that is exactly where a second pair of eyes helps most: our reflective writing support offers structure coaching and honest draft review that sharpen the analysis while keeping the experience, the thinking and the words entirely yours.

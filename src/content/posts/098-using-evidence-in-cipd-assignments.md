@@ -13,7 +13,7 @@ related: ["how-to-structure-a-cipd-assignment","finding-credible-sources-for-cip
 ---
 Most marker feedback on CIPD assignments includes some version of the same comment: this point needs support. The learner has made a sensible claim, the claim may even be right, but nothing on the page shows the marker why it should be believed. Evidence is what turns a plausible opinion into a creditable answer, and using it well is a writing skill in its own right, separate from knowing how to format a citation or where to search for journal articles.
 
-This guide covers that writing skill. It is not about citation mechanics, which CIPD Harvard Referencing: The Complete Guide covers in full, and it is not about tracking sources down, which How to Find Credible Sources for CIPD (Using Google Scholar) handles. It is about what happens on the page: what counts as evidence, how to attach it to claims so the connection earns marks, and the habits that make well-researched work read as unsupported.
+This guide covers that writing skill. It is not about citation mechanics, which [CIPD Harvard Referencing: The Complete Guide](/blog/harvard-referencing-complete-guide) covers in full, and it is not about tracking sources down, which [How to Find Credible Sources for CIPD (Using Google Scholar)](/blog/finding-credible-sources-for-cipd-google-scholar) handles. It is about what happens on the page: what counts as evidence, how to attach it to claims so the connection earns marks, and the habits that make well-researched work read as unsupported.
 
 ## What counts as evidence in a people-practice assignment
 

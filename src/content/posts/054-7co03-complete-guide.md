@@ -61,7 +61,7 @@ None of these signals weak ability. They signal a register learned in profession
 
 Start by rereading your tutor feedback slowly, at least twice, and translating every comment into a specific action in a specific section. Almost every 7CO03 referral comment maps onto one of the three problems above, which means the repair is usually targeted rather than total: deepen the reflection, evidence the claims, sharpen the commercial reasoning. Resist the urge to rewrite everything from scratch before you have diagnosed exactly what the feedback is asking for.
 
-The guide How to Improve a CIPD Resubmission walks through this process in detail, from decoding feedback to planning and checking the revision, and it pairs well with this one. Resubmission is a normal part of postgraduate study. Treat it as a redraft with better information, not a verdict on your capability.
+The guide [How to Improve a CIPD Resubmission](/blog/how-to-improve-a-cipd-resubmission) walks through this process in detail, from decoding feedback to planning and checking the revision, and it pairs well with this one. Resubmission is a normal part of postgraduate study. Treat it as a redraft with better information, not a verdict on your capability.
 
 ## How to approach 7CO03, step by step
 
@@ -110,6 +110,6 @@ Follow your brief every time. Task formats, word counts and wording vary between
 
 ## Go deeper
 
-This guide is the hub of the 7CO03 series. When you are ready to go further, read 7CO03 Reflective Writing at Masters Level for a deep dive into the skill that carries most of the marks, and 7CO03 FAQs: Your Questions Answered for quick answers to the questions learners ask most. If you are preparing a second attempt, How to Improve a CIPD Resubmission gives you the process for turning feedback into a stronger submission.
+This guide is the hub of the 7CO03 series. When you are ready to go further, read [7CO03 Reflective Writing at Masters Level](/blog/7co03-reflective-writing-masters-level) for a deep dive into the skill that carries most of the marks, and [7CO03 FAQs: Your Questions Answered](/blog/7co03-faqs) for quick answers to the questions learners ask most. If you are preparing a second attempt, How to Improve a CIPD Resubmission gives you the process for turning feedback into a stronger submission.
 
 If you would like tailored, ethical help with this unit, whether it is your first attempt or a resubmission, our 7CO03 support covers feedback interpretation, reflective structure coaching, referencing guidance and detailed draft review. We coach and review; the reflection, the judgement and the writing remain yours, which is exactly what the unit is designed to assess.

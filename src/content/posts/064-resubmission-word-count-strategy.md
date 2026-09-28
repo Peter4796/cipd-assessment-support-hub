@@ -97,6 +97,6 @@ She then spent that budget on the referred task: a 150-word paragraph applying t
 
 ## Go deeper
 
-This guide covers one specific angle of resubmission work. For the full method of interpreting a referral and targeting the right criteria, read How to Improve a CIPD Resubmission, and for organising the work between feedback and deadline, read Planning Your CIPD Resubmission Timeline. If you want more on how limits and tolerances work in general, the guide to how strict the CIPD word count is covers the ground rules.
+This guide covers one specific angle of resubmission work. For the full method of interpreting a referral and targeting the right criteria, read [How to Improve a CIPD Resubmission](/blog/how-to-improve-a-cipd-resubmission), and for organising the work between feedback and deadline, read [Planning Your CIPD Resubmission Timeline](/blog/resubmission-timeline-planning). If you want more on how limits and tolerances work in general, the guide to how strict the CIPD word count is covers the ground rules.
 
-If you would like calm, experienced help with this, our resubmission support includes a word-level review of where your draft spends its allowance, guidance on what to cut and where to reinvest, and honest feedback on your redraft. You do the writing; you get a second pair of expert eyes on the plan.
+If you would like calm, experienced help with this, our [resubmission support](/cipd-resubmission-support) includes a word-level review of where your draft spends its allowance, guidance on what to cut and where to reinvest, and honest feedback on your redraft. You do the writing; you get a second pair of expert eyes on the plan.

@@ -92,7 +92,7 @@ The recommendation then follows the evidence: pilot a structured first-year indu
 
 ## Common mistakes to avoid
 
-Most referred 5CO02 submissions fail in predictable ways: opinion presented as fact, data described but never interpreted, recommendations that appear from nowhere, and thin answers to the calculation tasks. Each of these is avoidable once you can recognise it. The dedicated guide 5CO02 Common Mistakes (and How to Avoid Them) works through the full list, with what each mistake looks like on the page and what to do instead.
+Most referred 5CO02 submissions fail in predictable ways: opinion presented as fact, data described but never interpreted, recommendations that appear from nowhere, and thin answers to the calculation tasks. Each of these is avoidable once you can recognise it. The dedicated guide [5CO02 Common Mistakes (and How to Avoid Them)](/blog/5co02-common-mistakes) works through the full list, with what each mistake looks like on the page and what to do instead.
 
 ## 5CO02 FAQs
 
@@ -114,6 +114,6 @@ Follow your brief every time. Centres word tasks differently and update them reg
 
 ## Go deeper
 
-This guide is the hub of the 5CO02 series. When you are ready to go further, read 5CO02 Common Mistakes (and How to Avoid Them) to see the traps that catch most learners, and 5CO02 FAQs: Your Questions Answered for quick answers to the questions that come up again and again. The wider guide to critical analysis in CIPD assignments is also worth your time, since critical thinking carries so many of the marks in this unit.
+This guide is the hub of the 5CO02 series. When you are ready to go further, read 5CO02 Common Mistakes (and How to Avoid Them) to see the traps that catch most learners, and [5CO02 FAQs: Your Questions Answered](/blog/5co02-faqs) for quick answers to the questions that come up again and again. The wider guide to critical analysis in CIPD assignments is also worth your time, since critical thinking carries so many of the marks in this unit.
 
 If you would like tailored, ethical help with this unit, our 5CO02 support covers brief analysis, evidence and structure coaching, referencing guidance and detailed draft review. We coach and review; the thinking and the writing remain yours, which is exactly what the unit is designed to develop.

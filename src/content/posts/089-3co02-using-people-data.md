@@ -93,6 +93,6 @@ The traps to avoid: restating numbers without interpreting them; using a pie cha
 
 ## Go deeper
 
-When you have the method down, 3CO02 Assignment: The Complete Guide puts it in the context of the whole unit, including how it is assessed and a full worked scenario, and 3CO02 FAQs: Your Questions Answered deals quickly with the questions learners ask most, from maths anxiety to word counts. As always, check your own current brief and your centre's guidance, since formats and word counts vary.
+When you have the method down, [3CO02 Assignment: The Complete Guide](/blog/3co02-complete-guide) puts it in the context of the whole unit, including how it is assessed and a full worked scenario, and [3CO02 FAQs: Your Questions Answered](/blog/3co02-faqs) deals quickly with the questions learners ask most, from maths anxiety to word counts. As always, check your own current brief and your centre's guidance, since formats and word counts vary.
 
 If you would like calm, ethical help with the data side of this unit, our 3CO02 support includes coaching on interpreting and presenting figures, structure guidance, referencing help and honest feedback on your drafts. Coaching and review only: the work you submit is always your own.

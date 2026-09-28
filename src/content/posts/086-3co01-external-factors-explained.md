@@ -97,6 +97,6 @@ The classic pitfall is listing factors without examples: naming all six PESTLE l
 
 ## Go deeper
 
-For the full picture of the unit, go back to the hub guide, 3CO01 Assignment: The Complete Guide, which covers assessment style, first-assignment basics and a complete worked scenario. For quick answers on culture, change, referencing and word counts, read 3CO01 FAQs: Your Questions Answered. And as always, check your own current assessment brief and your study centre's guidance, since task wording and word counts vary between centres.
+For the full picture of the unit, go back to the hub guide, [3CO01 Assignment: The Complete Guide](/blog/3co01-complete-guide), which covers assessment style, first-assignment basics and a complete worked scenario. For quick answers on culture, change, referencing and word counts, read [3CO01 FAQs: Your Questions Answered](/blog/3co01-faqs). And as always, check your own current assessment brief and your study centre's guidance, since task wording and word counts vary between centres.
 
 If you would like calm, ethical help with this unit, our 3CO01 support includes coaching on brief analysis, framing strong examples, first-time referencing and honest feedback on your drafts. We coach and review only; the work you submit is always your own.

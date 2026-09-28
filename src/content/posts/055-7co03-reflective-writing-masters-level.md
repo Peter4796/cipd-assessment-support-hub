@@ -92,6 +92,6 @@ Notice the differences. The critical version questions an assumption instead of 
 
 ## Go deeper
 
-For the wider context on this unit, read 7CO03 Assignment: The Complete Guide, which covers the full method, the commercial and ethical themes, and what to do after a referral. 7CO03 FAQs: Your Questions Answered handles the quick questions, including first-person conventions and literature levels. If you want to see how the same skill looks a level down, the 5CO03 guide to reflective examples and discussion makes an instructive comparison with the standard expected here.
+For the wider context on this unit, read [7CO03 Assignment: The Complete Guide](/blog/7co03-complete-guide), which covers the full method, the commercial and ethical themes, and what to do after a referral. [7CO03 FAQs: Your Questions Answered](/blog/7co03-faqs) handles the quick questions, including first-person conventions and literature levels. If you want to see how the same skill looks a level down, the 5CO03 guide to reflective examples and discussion makes an instructive comparison with the standard expected here.
 
 If you would like ethical, tailored help with the reflective elements of this unit, our 7CO03 support includes coaching on reflective structure and criticality, guidance on evidencing and referencing, and considered feedback on your drafts. The experience, the thinking and the writing are always your own.

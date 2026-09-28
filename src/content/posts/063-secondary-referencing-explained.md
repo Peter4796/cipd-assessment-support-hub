@@ -78,6 +78,6 @@ Strip away the formatting and secondary referencing is simply telling the truth 
 
 ## Go deeper
 
-Secondary referencing is one corner of a bigger system. CIPD Harvard Referencing: The Complete Guide, the hub of this series, covers the whole method from in-text citations to the finished reference list. How to Reference CIPD Factsheets, Reports and the Profession Map handles the corporate-author sources you will cite most often, and the guide to critical analysis in CIPD assignments shows what to do with your sources once you can cite them cleanly.
+Secondary referencing is one corner of a bigger system. [CIPD Harvard Referencing: The Complete Guide](/blog/harvard-referencing-complete-guide), the hub of this series, covers the whole method from in-text citations to the finished reference list. [How to Reference CIPD Factsheets, Reports and the Profession Map](/blog/referencing-cipd-sources) handles the corporate-author sources you will cite most often, and the guide to critical analysis in CIPD assignments shows what to do with your sources once you can cite them cleanly.
 
 If a second pair of expert eyes would help before you submit, our referencing support checks your cited in constructions along with the accuracy and consistency of your whole reference list, so you hand in knowing it holds up. Every word of the assignment stays your own.

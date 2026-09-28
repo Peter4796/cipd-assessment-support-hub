@@ -63,7 +63,7 @@ Cite the path you actually took. If you read about one writer's work inside anot
 
 The mechanical version of the previous mistake. Suppose a textbook by an invented author, Mensah, summarises an earlier model by another invented author, Virtanen. The error is citing Virtanen directly, with a full reference list entry, when you only ever read Mensah. The original may not say quite what the summary claims, and your list now points the reader to a work you cannot vouch for.
 
-Use the cited in construction, shaped like (Virtanen, 1998, cited in Mensah, 2024), and list only Mensah. The companion guide Secondary Referencing in Harvard Style, Explained covers the convention in full, including when it is acceptable and how to track down originals.
+Use the cited in construction, shaped like (Virtanen, 1998, cited in Mensah, 2024), and list only Mensah. The companion guide [Secondary Referencing in Harvard Style, Explained](/blog/secondary-referencing-explained) covers the convention in full, including when it is acceptable and how to track down originals.
 
 ## 8. References dumped at the ends of paragraphs
 
@@ -81,7 +81,7 @@ Build your list around peer-reviewed journal articles, CIPD publications, respec
 
 Everything above becomes more likely when referencing is treated as a formatting job for the night before submission. Sources get reconstructed from memory, page numbers get guessed, accessed dates get invented, and the two-way check never happens because there is no time left.
 
-Reference as you write. Capture full source details at the moment of reading, insert citations while drafting, and grow the list alongside the text. The pillar guide CIPD Harvard Referencing: The Complete Guide sets out this workflow step by step.
+Reference as you write. Capture full source details at the moment of reading, insert citations while drafting, and grow the list alongside the text. The pillar guide [CIPD Harvard Referencing: The Complete Guide](/blog/harvard-referencing-complete-guide) sets out this workflow step by step.
 
 ## A five-minute pre-submission check
 
@@ -95,4 +95,4 @@ Reference as you write. Capture full source details at the moment of reading, in
 
 If you want the whole system in one place, read CIPD Harvard Referencing: The Complete Guide, the hub of this series, which covers citations, reference lists and the workflow that prevents these mistakes arising at all. Secondary Referencing in Harvard Style, Explained goes deeper on mistakes six and seven, and if you are writing in English as an additional language, the guide to English writing tips for CIPD learners pairs well with this checklist.
 
-If you would like certainty rather than hope before you submit, our Harvard referencing support goes through your draft citation by citation, checking accuracy, consistency and coverage, and flags exactly what to fix. The writing itself stays yours throughout.
+If you would like certainty rather than hope before you submit, our [Harvard referencing support](/harvard-referencing-support) goes through your draft citation by citation, checking accuracy, consistency and coverage, and flags exactly what to fix. The writing itself stays yours throughout.

@@ -14,7 +14,7 @@ related: ["5hr03-complete-guide","5hr03-reward-principles-explained","evaluating
 ---
 Learners preparing 5HR03, Reward for performance and contribution, usually know the motivation theories well enough. The trouble starts when the assignment asks them to use that knowledge on a scenario, and the recitation instinct takes over: paragraphs of textbook summary, followed by recommendations the theory never touches. Knowing a theory and applying one are different skills, and the marks sit almost entirely with the second.
 
-If the theories themselves are hazy, start with Reward Principles in 5HR03, Explained, which introduces Herzberg's two-factor theory, Adams' equity theory and Vroom's expectancy theory and shows what each says about reward. This article assumes that grounding and deals with the harder skill: putting the theories to work inside answers, so they earn marks instead of filling space.
+If the theories themselves are hazy, start with [Reward Principles in 5HR03, Explained](/blog/5hr03-reward-principles-explained), which introduces Herzberg's two-factor theory, Adams' equity theory and Vroom's expectancy theory and shows what each says about reward. This article assumes that grounding and deals with the harder skill: putting the theories to work inside answers, so they earn marks instead of filling space.
 
 ## In this guide you'll learn
 
@@ -66,7 +66,7 @@ Not every task wants theory. Descriptive and explanatory tasks, such as setting 
 
 ## Critique at Level 5: one clause is enough
 
-Level 7 asks for sustained critical engagement with theory; Level 5 does not. What Level 5 rewards is a signal that you know a theory is a model rather than a law, and a single clause carries that signal. Acknowledging in passing that Herzberg's methodology has been contested, or that expectancy theory assumes more deliberate calculation than most people consciously perform, is enough. Say it once, briefly, and return to the scenario. A page of critique in a Level 5 answer is not depth but displacement, and if you want to build the fuller skill for later study, How to Evaluate HR Theories Critically in CIPD Assignments covers it properly.
+Level 7 asks for sustained critical engagement with theory; Level 5 does not. What Level 5 rewards is a signal that you know a theory is a model rather than a law, and a single clause carries that signal. Acknowledging in passing that Herzberg's methodology has been contested, or that expectancy theory assumes more deliberate calculation than most people consciously perform, is enough. Say it once, briefly, and return to the scenario. A page of critique in a Level 5 answer is not depth but displacement, and if you want to build the fuller skill for later study, [How to Evaluate HR Theories Critically in CIPD Assignments](/blog/evaluating-hr-theories-critically) covers it properly.
 
 ## Planning theory across a whole assignment
 
@@ -91,6 +91,6 @@ Level 7 asks for sustained critical engagement with theory; Level 5 does not. Wh
 
 ## Go deeper
 
-5HR03 Assignment: The Complete Guide is the hub for this unit and covers assessment, structure and method end to end. Reward Principles in 5HR03, Explained gives you the theories themselves and the reward principles they serve. How to Evaluate HR Theories Critically in CIPD Assignments takes the critique skill further when you are ready for it.
+[5HR03 Assignment: The Complete Guide](/blog/5hr03-complete-guide) is the hub for this unit and covers assessment, structure and method end to end. Reward Principles in 5HR03, Explained gives you the theories themselves and the reward principles they serve. How to Evaluate HR Theories Critically in CIPD Assignments takes the critique skill further when you are ready for it.
 
 If you would like ethical, expert help while you practise this, our 5HR03 support offers coaching on theory application, guidance on structure and referencing, and considered feedback on your drafts. We coach and review; the analysis and the words you submit are always your own.

@@ -73,6 +73,6 @@ The recurring faults on planning tasks are faithful description of the cycle wit
 
 ## Go deeper
 
-This deep dive is part of the 7HR02 series. For the full unit method, including the debates markers expect you to enter and a worked talent programme example, read 7HR02 Assignment: The Complete Guide, and for quick answers to common questions see 7HR02 FAQs: Your Questions Answered. If you want the planning mechanics refreshed first, the 5HR02 workforce planning guide covers the cycle this article deliberately moved beyond.
+This deep dive is part of the 7HR02 series. For the full unit method, including the debates markers expect you to enter and a worked talent programme example, read [7HR02 Assignment: The Complete Guide](/blog/7hr02-complete-guide), and for quick answers to common questions see [7HR02 FAQs: Your Questions Answered](/blog/7hr02-faqs). If you want the planning mechanics refreshed first, the 5HR02 workforce planning guide covers the cycle this article deliberately moved beyond.
 
 If you would like ethical, one-to-one help with this unit, our 7HR02 support includes brief analysis, coaching on planning and evaluation arguments, referencing guidance and careful review of your drafts. Coaching and review only: the analysis, the judgements and the writing you submit are always your own.

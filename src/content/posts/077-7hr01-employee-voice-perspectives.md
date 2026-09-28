@@ -79,6 +79,6 @@ The recurring faults on voice questions are listing mechanisms without evaluatin
 
 ## Go deeper
 
-This deep dive pairs with the rest of the 7HR01 series. Read 7HR01 Assignment: The Complete Guide for the full method, including the frames of reference in detail, the unit's recurring debates and a worked example built around a unionisation scenario, and 7HR01 FAQs: Your Questions Answered for quick answers to common questions. If you studied the Level 5 version of this territory, Employee Voice and Engagement in 5HR01 covers the operational foundations this unit teaches you to critique.
+This deep dive pairs with the rest of the 7HR01 series. Read [7HR01 Assignment: The Complete Guide](/blog/7hr01-complete-guide) for the full method, including the frames of reference in detail, the unit's recurring debates and a worked example built around a unionisation scenario, and [7HR01 FAQs: Your Questions Answered](/blog/7hr01-faqs) for quick answers to common questions. If you studied the Level 5 version of this territory, Employee Voice and Engagement in 5HR01 covers the operational foundations this unit teaches you to critique.
 
 If employee voice is the part of 7HR01 you are wrestling with, our 7HR01 support includes coaching on perspectives and critique, help sharpening your evaluation questions, referencing guidance and detailed review of your drafts. The analysis, the judgements and the writing stay yours throughout, which is exactly as it should be.

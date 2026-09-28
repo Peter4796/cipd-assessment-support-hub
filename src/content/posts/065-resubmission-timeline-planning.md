@@ -39,7 +39,7 @@ Second, everything downstream depends on the diagnosis. If you misread what the 
 
 A resubmission has a natural sequence, and each phase protects the one after it.
 
-Phase one is decode and diagnose. Read the feedback twice, once to absorb it and once to annotate it. List every criterion marked as not met, translate each comment into plain English, and ask your tutor about anything unclear. The guide How to Respond to CIPD Tutor Feedback covers this translation step in depth.
+Phase one is decode and diagnose. Read the feedback twice, once to absorb it and once to annotate it. List every criterion marked as not met, translate each comment into plain English, and ask your tutor about anything unclear. The guide [How to Respond to CIPD Tutor Feedback](/blog/how-to-respond-to-cipd-tutor-feedback) covers this translation step in depth.
 
 Phase two is plan the revision. Turn the diagnosis into a written action list: which sections change, what each change involves, and roughly how many words each needs. Decide what you will not touch, because protecting the sections that passed is as much a part of the plan as fixing the ones that did not.
 
@@ -92,6 +92,6 @@ The revision itself took five of those blocks. He left the draft alone for two d
 
 ## Go deeper
 
-For the substance of what to change once your timeline is set, read How to Improve a CIPD Resubmission, and if your revisions need more space than your word limit seems to allow, the guide to resubmission word count strategy shows how to make room. If juggling study and a job is the wider struggle, the guide to managing CIPD deadlines while working full-time takes a broader look.
+For the substance of what to change once your timeline is set, read [How to Improve a CIPD Resubmission](/blog/how-to-improve-a-cipd-resubmission), and if your revisions need more space than your word limit seems to allow, the guide to resubmission word count strategy shows how to make room. If juggling study and a job is the wider struggle, the guide to managing CIPD deadlines while working full-time takes a broader look.
 
-If a steady, experienced hand would help, our resubmission support covers feedback interpretation, building a phased revision plan around your real diary, and honest review of your redraft before you submit. The deadlines stay yours, but you stop facing them alone.
+If a steady, experienced hand would help, our [resubmission support](/cipd-resubmission-support) covers feedback interpretation, building a phased revision plan around your real diary, and honest review of your redraft before you submit. The deadlines stay yours, but you stop facing them alone.

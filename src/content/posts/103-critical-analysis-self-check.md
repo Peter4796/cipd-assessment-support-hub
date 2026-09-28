@@ -83,6 +83,6 @@ Jonah's repaired version: Merrow and Vale's hybrid policy has held staff satisfa
 
 ## Go deeper
 
-The self-check tells you where a draft falls short; the rest of this cluster teaches the skill itself. What Is Critical Analysis in CIPD? A Complete Guide is the hub, covering the reasoning moves behind all six checks and a method for building criticality in from the start. Descriptive vs Critical Writing: Side-by-Side CIPD Examples shows exactly what passing and failing paragraphs look like next to each other, and is the natural companion to the verbs check in particular.
+The self-check tells you where a draft falls short; the rest of this cluster teaches the skill itself. [What Is Critical Analysis in CIPD? A Complete Guide](/blog/what-is-critical-analysis-in-cipd) is the hub, covering the reasoning moves behind all six checks and a method for building criticality in from the start. [Descriptive vs Critical Writing: Side-by-Side CIPD Examples](/blog/descriptive-vs-critical-writing-examples) shows exactly what passing and failing paragraphs look like next to each other, and is the natural companion to the verbs check in particular.
 
 If you run the checks and cannot see how to make the repairs, our analysis support offers coaching on these exact techniques and a straight-talking review of your draft against them, while every judgement, sentence and submission remains your own work.

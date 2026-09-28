@@ -14,7 +14,7 @@ related: ["5hr02-complete-guide","5hr02-workforce-planning-explained","7hr02-com
 ---
 Talent management is the part of 5HR02, Talent management and workforce planning, where vague answers are easiest to write and hardest to mark well. Everyone has an intuition about what talent means, and that is exactly the problem: intuitions differ, briefs expect you to pin the word down, and an answer built on an unexamined definition wobbles from its first paragraph.
 
-5HR02 Assignment: The Complete Guide introduces talent management as one theme among several. This article is the deep dive: the two competing definitions of talent, the pipeline from attraction to retention, the identification tools and their limits, and how to turn it all into an answer that explains, applies and evaluates.
+[5HR02 Assignment: The Complete Guide](/blog/5hr02-complete-guide) introduces talent management as one theme among several. This article is the deep dive: the two competing definitions of talent, the pipeline from attraction to retention, the identification tools and their limits, and how to turn it all into an answer that explains, applies and evaluates.
 
 ## In this guide you'll learn
 
@@ -68,7 +68,7 @@ The useful insight is that the proposition can be tuned to the people the organi
 
 ## How talent links to workforce planning
 
-The two halves of 5HR02 are one discipline seen from different angles, and Workforce Planning in 5HR02, Explained walks through the planning side in full. The connections are practical: workforce planning identifies the future gaps, talent management is the build response that develops internal people rather than buying externally, succession is planning applied to critical roles, and retention reduces the future demand a plan must otherwise meet through hiring.
+The two halves of 5HR02 are one discipline seen from different angles, and [Workforce Planning in 5HR02, Explained](/blog/5hr02-workforce-planning-explained) walks through the planning side in full. The connections are practical: workforce planning identifies the future gaps, talent management is the build response that develops internal people rather than buying externally, succession is planning applied to critical roles, and retention reduces the future demand a plan must otherwise meet through hiring.
 
 ## How to answer a talent task, step by step
 
@@ -102,6 +102,6 @@ The evaluation follows because every choice was justified along the way: the ble
 
 ## Go deeper
 
-5HR02 Assignment: The Complete Guide is the hub for this unit and places talent management alongside planning, resourcing and retention. Workforce Planning in 5HR02, Explained covers the planning side that every talent decision should connect to. 5HR02 FAQs: Your Questions Answered answers the questions learners raise most often.
+5HR02 Assignment: The Complete Guide is the hub for this unit and places talent management alongside planning, resourcing and retention. Workforce Planning in 5HR02, Explained covers the planning side that every talent decision should connect to. [5HR02 FAQs: Your Questions Answered](/blog/5hr02-faqs) answers the questions learners raise most often.
 
 If you would like ethical, tailored help with this topic, our 5HR02 support includes coaching on talent tasks, guidance on structure and referencing, and honest feedback on your drafts. We coach and review only; the definitions, the judgements and the words you submit remain yours.

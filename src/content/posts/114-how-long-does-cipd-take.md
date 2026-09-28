@@ -79,6 +79,6 @@ It is tempting to treat the shortest possible duration as the goal, but speed ha
 
 ## Go deeper
 
-For the full picture of the levels themselves, start with A Complete Guide to CIPD Qualifications. If you have not settled on a level yet, Which CIPD Qualification Should You Choose will get you there, and Managing CIPD Deadlines While Working Full-Time covers the week-to-week reality of studying alongside a job.
+For the full picture of the levels themselves, start with [A Complete Guide to CIPD Qualifications](/blog/complete-guide-to-cipd-qualifications). If you have not settled on a level yet, Which CIPD Qualification Should You Choose will get you there, and Managing CIPD Deadlines While Working Full-Time covers the week-to-week reality of studying alongside a job.
 
 However long your CIPD journey turns out to be, you do not have to navigate the assignments alone. When a brief feels opaque or a deadline looms larger than your confidence, our tutors can support you with guidance on understanding what is being asked and structuring your response, so steady progress stays steady all the way to the finish.

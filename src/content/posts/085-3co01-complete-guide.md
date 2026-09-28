@@ -57,7 +57,7 @@ The third is referencing, which is usually Harvard style at CIPD centres and is 
 
 A large part of 3CO01 asks you to explain the external factors and trends that affect organisations. The friendliest tool for this is PESTLE, a checklist of six types of external factor: political, economic, social, technological, legal and environmental. There is no theory to memorise; you use it to scan the outside world and ask, factor type by factor type, what is going on out there that this organisation should care about.
 
-The skill the unit rewards is connecting a factor to an effect. Saying that the economy affects organisations earns almost nothing; explaining that rising food costs push a supermarket to hold down prices, which squeezes what it can spend on pay, earns real credit. Because external factors carry so much weight, there is a dedicated guide in this series, External Factors in 3CO01, Explained, which takes each PESTLE category in turn with everyday examples and a method for answering external-factors tasks.
+The skill the unit rewards is connecting a factor to an effect. Saying that the economy affects organisations earns almost nothing; explaining that rising food costs push a supermarket to hold down prices, which squeezes what it can spend on pay, earns real credit. Because external factors carry so much weight, there is a dedicated guide in this series, [External Factors in 3CO01, Explained](/blog/3co01-external-factors-explained), which takes each PESTLE category in turn with everyday examples and a method for answering external-factors tasks.
 
 ## Culture and change basics
 
@@ -112,6 +112,6 @@ The content is genuinely introductory, so most learners find the ideas approacha
 
 ## Go deeper
 
-This guide is the hub of the 3CO01 series. When you are ready for more, read External Factors in 3CO01, Explained for a plain-English tour of PESTLE with worked examples, and 3CO01 FAQs: Your Questions Answered for quick answers to the questions learners ask most, since careful brief-reading and steady habits are where every good first assignment starts.
+This guide is the hub of the 3CO01 series. When you are ready for more, read External Factors in 3CO01, Explained for a plain-English tour of PESTLE with worked examples, and [3CO01 FAQs: Your Questions Answered](/blog/3co01-faqs) for quick answers to the questions learners ask most, since careful brief-reading and steady habits are where every good first assignment starts.
 
 If you would like friendly, ethical help with this unit, our 3CO01 support covers brief analysis, structure coaching, first-time referencing guidance and considered feedback on your drafts. We coach and review; the assignment you submit is always your own work.

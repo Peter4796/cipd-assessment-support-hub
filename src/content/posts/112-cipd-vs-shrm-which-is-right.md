@@ -84,6 +84,6 @@ Both bodies update their offerings, criteria and fees over time, so verify speci
 
 ## Go deeper
 
-If the CIPD route looks like your answer, A Complete Guide to CIPD Qualifications walks through the three levels and how they fit together, and Is CIPD Worth It gives an honest view of the value question before you commit.
+If the CIPD route looks like your answer, [A Complete Guide to CIPD Qualifications](/blog/complete-guide-to-cipd-qualifications) walks through the three levels and how they fit together, and Is CIPD Worth It gives an honest view of the value question before you commit.
 
 Whichever body you choose, choose it with open eyes. And if your decision lands on CIPD and the assignment-based assessment feels like the intimidating part, that is exactly where our tutors can support you, with guidance on understanding briefs, structuring answers and building the academic skills your level demands, so the qualification you chose on solid reasoning gets finished on solid work.

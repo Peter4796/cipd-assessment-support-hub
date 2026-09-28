@@ -89,6 +89,6 @@ Fewer than you think. A submission that runs evidence-based practice as its spin
 
 ## Go deeper
 
-This article is part of the 5CO02 cluster on this site. The 5CO02 complete guide covers the whole unit, from what evidence-based practice means to a full worked example. The 5CO02 common mistakes guide shows the traps that most often lead to referrals, and How to Evaluate HR Theories Critically in CIPD Assignments shows how to weigh any theory or model on its merits rather than accepting it at face value.
+This article is part of the 5CO02 cluster on this site. The 5CO02 complete guide covers the whole unit, from what evidence-based practice means to a full worked example. The 5CO02 common mistakes guide shows the traps that most often lead to referrals, and [How to Evaluate HR Theories Critically in CIPD Assignments](/blog/evaluating-hr-theories-critically) shows how to weigh any theory or model on its merits rather than accepting it at face value.
 
 If you would like tailored, ethical help with this unit, our 5CO02 support includes evidence and concept coaching that helps you choose and apply the right toolkit for your specific brief, along with detailed draft review. The thinking stays yours; the right concepts, applied well, simply make it easier to see.

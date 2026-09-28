@@ -39,4 +39,4 @@ List sources alphabetically by author surname. The exact format depends on the s
 
 Build your reference list as you write. Every time you cite something, add it to the list immediately. It's far easier than reconstructing sources afterwards, and it prevents the mismatches that cost marks.
 
-Not sure your referencing is consistent? Our Harvard referencing support checks your in-text citations and reference list against the rules and shows you exactly what to fix.
+Not sure your referencing is consistent? Our [Harvard referencing support](/harvard-referencing-support) checks your in-text citations and reference list against the rules and shows you exactly what to fix.

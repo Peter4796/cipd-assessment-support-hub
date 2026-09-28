@@ -13,7 +13,7 @@ related: ["what-is-critical-analysis-in-cipd","descriptive-vs-critical-writing-e
 ---
 There is a moment in many CIPD assignments where the writer glimpses the opposing view and looks away. Acknowledging it feels dangerous, as though admitting that anyone disagrees will weaken the answer. The instinct is exactly backwards. An unopposed claim is not a strong claim; it is an assertion, and markers credit assertions lightly no matter how confidently they are written.
 
-This guide covers counterarguments in CIPD assignments: why engaging with opposition raises marks, where to find a counterargument when nobody hands you one, the concede-and-respond pattern that handles opposition without surrendering to it, and a worked example showing a one-sided passage repaired. It applies the wider skill set out in What Is Critical Analysis in CIPD? A Complete Guide to the single most mark-rich move in critical writing.
+This guide covers counterarguments in CIPD assignments: why engaging with opposition raises marks, where to find a counterargument when nobody hands you one, the concede-and-respond pattern that handles opposition without surrendering to it, and a worked example showing a one-sided passage repaired. It applies the wider skill set out in [What Is Critical Analysis in CIPD? A Complete Guide](/blog/what-is-critical-analysis-in-cipd) to the single most mark-rich move in critical writing.
 
 ## Why counterarguments raise marks
 
@@ -50,7 +50,7 @@ A strawman is a weakened version of the opposing view, built to be knocked down,
 
 ## Counterarguments at each level
 
-In general terms, the expectation climbs with level. At Level 3, counterarguments are optional polish: a brief acknowledgement that another view exists can lift an answer, but the priority is accurate, applied understanding. At Level 5, they are expected wherever a task asks you to evaluate, because evaluation without opposition is description with a verdict attached. At Level 7, they are compulsory throughout, with every substantial claim tested against the strongest available opposition; Building Critical Arguments in 7CO01 covers that postgraduate treatment in depth. These are broad patterns rather than rules, so check your current assessment brief and your centre's guidance for what your unit requires.
+In general terms, the expectation climbs with level. At Level 3, counterarguments are optional polish: a brief acknowledgement that another view exists can lift an answer, but the priority is accurate, applied understanding. At Level 5, they are expected wherever a task asks you to evaluate, because evaluation without opposition is description with a verdict attached. At Level 7, they are compulsory throughout, with every substantial claim tested against the strongest available opposition; [Building Critical Arguments in 7CO01](/blog/7co01-building-critical-arguments) covers that postgraduate treatment in depth. These are broad patterns rather than rules, so check your current assessment brief and your centre's guidance for what your unit requires.
 
 ## Keeping your own position
 

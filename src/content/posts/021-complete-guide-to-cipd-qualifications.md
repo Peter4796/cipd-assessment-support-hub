@@ -26,7 +26,7 @@ Rather than exams, CIPD uses written assignments marked against learning outcome
 
 ## Membership and progression
 
-CIPD qualifications link to professional membership. Completing Level 5 supports Associate membership, while Level 7 can lead towards Chartered membership, the profession's senior standard. You do not have to complete every level in sequence, but each builds useful foundations for the next.
+CIPD qualifications link to professional membership. Completing Level 5 supports Associate membership, while Level 7 can lead towards Chartered membership, the profession's senior standard. You do not have to complete every level in sequence, but each builds useful foundations for the next. If you are weighing whether the top level justifies its cost and workload, [Is CIPD Level 7 Worth It? An Honest Assessment](/blog/is-cipd-level-7-worth-it) works through that decision honestly.
 
 > Think of the levels as a ladder: Foundation for starting out, Associate for practising professionals, and Advanced for strategic leaders.
 

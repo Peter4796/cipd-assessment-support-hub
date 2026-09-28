@@ -60,7 +60,7 @@ Use company well, though. The point is accountability and morale, not comparing 
 
 The referral dip deserves its own word, because it is the one that ends qualifications. A referred assignment feels like a verdict on your ability, and the natural response is to avoid the feedback, which turns a fixable list of criteria into a growing monument of dread.
 
-A referral is feedback, not a verdict. It is a finite list of specific things to change, attached to a piece of work that was mostly acceptable, and learners pass resubmissions routinely. The motivational move is to shrink the first action: do not rewrite anything this week, just read the feedback once and list the criteria mentioned. That single small session drains most of the dread. For what to change and how, the guide How to Improve a CIPD Resubmission takes over from there.
+A referral is feedback, not a verdict. It is a finite list of specific things to change, attached to a piece of work that was mostly acceptable, and learners pass resubmissions routinely. The motivational move is to shrink the first action: do not rewrite anything this week, just read the feedback once and list the criteria mentioned. That single small session drains most of the dread. For what to change and how, the guide [How to Improve a CIPD Resubmission](/blog/how-to-improve-a-cipd-resubmission) takes over from there.
 
 ## Celebrate milestones deliberately
 
@@ -96,6 +96,6 @@ The following week he booked two evening blocks and used the two-minute rule to 
 
 ## Go deeper
 
-Motivation and structure hold each other up, so pair this guide with the pillar Managing CIPD Deadlines While Working Full-Time: The Complete Guide, which builds the planning rhythm that makes motivation less necessary. And if part of your dread is uncertainty about the assessment itself, CIPD Exams vs Assignments: How CIPD Assessment Actually Works clears up what you are actually preparing for.
+Motivation and structure hold each other up, so pair this guide with the pillar [Managing CIPD Deadlines While Working Full-Time: The Complete Guide](/blog/managing-cipd-deadlines-while-working-full-time), which builds the planning rhythm that makes motivation less necessary. And if part of your dread is uncertainty about the assessment itself, [CIPD Exams vs Assignments: How CIPD Assessment Actually Works](/blog/cipd-exams-vs-assignments) clears up what you are actually preparing for.
 
 Motivation is easier to hold when the plan feels possible, and that is where our support earns its keep: coaching on planning and structure when a unit feels shapeless, and honest review of your draft so you always know where you stand. The effort, the words and the qualification remain yours; you simply stop carrying them alone.

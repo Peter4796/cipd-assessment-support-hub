@@ -14,7 +14,7 @@ related: ["3co03-complete-guide","3co03-faqs","what-is-a-cipd-reflective-account
 ---
 3CO03, Core behaviours for people professionals, is the unit where your assignment stops asking what you know and starts asking how you act. Tasks about professional behaviours can feel slippery for exactly that reason: there is no model to memorise and no procedure to describe, just you, your everyday conduct, and the challenge of writing about it convincingly.
 
-This guide is the deep dive on that challenge. It unpacks what professional behaviours actually means at Level 3, translates ethical practice and inclusion into plain everyday terms, and gives you a repeatable pattern for turning ordinary working life into the specific, believable evidence that behaviours tasks reward. It sits alongside the hub for this unit, 3CO03 Assignment: The Complete Guide, which covers the whole assignment from first read of the brief to final check.
+This guide is the deep dive on that challenge. It unpacks what professional behaviours actually means at Level 3, translates ethical practice and inclusion into plain everyday terms, and gives you a repeatable pattern for turning ordinary working life into the specific, believable evidence that behaviours tasks reward. It sits alongside the hub for this unit, [3CO03 Assignment: The Complete Guide](/blog/3co03-complete-guide), which covers the whole assignment from first read of the brief to final check.
 
 ## What professional behaviours means at Level 3
 
@@ -78,6 +78,6 @@ The third is the perfect-person account, in which every behaviour is fully forme
 
 ## Go deeper
 
-This deep dive is one branch of the 3CO03 series. For the whole assignment in one place, including the reflective element and a simple approach to CPD planning, read 3CO03 Assignment: The Complete Guide, the hub for this unit. For quick answers to the questions learners ask most, from first-person writing to managing the word count, read 3CO03 FAQs: Your Questions Answered.
+This deep dive is one branch of the 3CO03 series. For the whole assignment in one place, including the reflective element and a simple approach to CPD planning, read 3CO03 Assignment: The Complete Guide, the hub for this unit. For quick answers to the questions learners ask most, from first-person writing to managing the word count, read [3CO03 FAQs: Your Questions Answered](/blog/3co03-faqs).
 
 If you would like calm, ethical backup while you tackle this unit, our 3CO03 support includes brief analysis, help choosing and shaping your behaviour examples, and honest feedback on your drafts. Coaching and review only: the examples, the reflection and the assignment are always genuinely yours.

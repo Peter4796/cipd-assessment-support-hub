@@ -55,7 +55,7 @@ A source with two authors names both, shaped like (Mensah and Okafor, 2023). Wit
 
 ### Corporate authors
 
-Many of the most useful sources in people practice are published by organisations rather than named individuals: professional bodies, government departments, research institutes. In Harvard, the organisation is the author, so a citation is shaped like (CIPD, 2025) or (Acas, 2024). Citing the CIPD's own factsheets, reports and the Profession Map raises some specific questions about dates, updates and abbreviations, and the companion guide How to Reference CIPD Factsheets, Reports and the Profession Map covers them in full.
+Many of the most useful sources in people practice are published by organisations rather than named individuals: professional bodies, government departments, research institutes. In Harvard, the organisation is the author, so a citation is shaped like (CIPD, 2025) or (Acas, 2024). Citing the CIPD's own factsheets, reports and the Profession Map raises some specific questions about dates, updates and abbreviations, and the companion guide [How to Reference CIPD Factsheets, Reports and the Profession Map](/blog/referencing-cipd-sources) covers them in full.
 
 ### Sources with no date
 
@@ -85,7 +85,7 @@ Save direct quotation for the rare cases where the exact wording matters: a prec
 
 A quiet rule sits underneath the whole system: your citations should record the path you actually took to each idea. If you read about one writer's model inside another author's textbook, citing the original writer as though you read their work first-hand misrepresents your reading, and it can trip you up if a marker probes.
 
-Harvard handles this situation with secondary referencing, using a cited in construction in the text and listing only the source you actually read. It has its own conventions and its own pitfalls, and the companion guide Secondary Referencing in Harvard Style, Explained covers when to use it, when to avoid it, and how to track down originals so you rarely need it.
+Harvard handles this situation with secondary referencing, using a cited in construction in the text and listing only the source you actually read. It has its own conventions and its own pitfalls, and the companion guide [Secondary Referencing in Harvard Style, Explained](/blog/secondary-referencing-explained) covers when to use it, when to avoid it, and how to track down originals so you rarely need it.
 
 ## Consistency, and why your centre's guide wins
 
@@ -115,7 +115,7 @@ Notice what the citations are doing. Each one is attached to a specific claim ra
 
 ## Common errors at a glance
 
-The same referencing errors appear in CIPD submissions year after year: citations with no matching entry, entries that are never cited, inconsistent formatting, missing accessed dates, websites cited by address rather than author, and over-quoting. Each is avoidable once you can recognise it. The companion guide Harvard Referencing Mistakes That Cost CIPD Marks works through the full list, with what each error looks like on the page, why it costs marks and how to fix it.
+The same referencing errors appear in CIPD submissions year after year: citations with no matching entry, entries that are never cited, inconsistent formatting, missing accessed dates, websites cited by address rather than author, and over-quoting. Each is avoidable once you can recognise it. The companion guide [Harvard Referencing Mistakes That Cost CIPD Marks](/blog/harvard-referencing-common-errors) works through the full list, with what each error looks like on the page, why it costs marks and how to fix it.
 
 ## Harvard referencing FAQs
 
@@ -129,7 +129,7 @@ Yes. They are published sources like any other, with the CIPD as a corporate aut
 
 ### Can I use a referencing generator to build my list?
 
-Yes, as a starting point. Generators and reference managers save time, but they routinely get capitalisation, editions and accessed dates wrong, so check every entry against your centre's guide before submission. The guide Free Harvard Referencing Tools for CIPD reviews the main options and how to use them safely.
+Yes, as a starting point. Generators and reference managers save time, but they routinely get capitalisation, editions and accessed dates wrong, so check every entry against your centre's guide before submission. The guide [Free Harvard Referencing Tools for CIPD](/blog/free-harvard-referencing-tools) reviews the main options and how to use them safely.
 
 ### Is Harvard the only referencing style CIPD centres use?
 
@@ -137,6 +137,6 @@ It is by far the most common, but not universal, and centres also differ in whic
 
 ## Go deeper
 
-This guide is the hub of the referencing series, and the spokes take each hard part further. Read Harvard Referencing Mistakes That Cost CIPD Marks as a pre-submission checklist, How to Reference CIPD Factsheets, Reports and the Profession Map for the sources you will cite most often, and Secondary Referencing in Harvard Style, Explained for the cited in convention. The earlier overview How to Use Harvard Referencing in CIPD Assessments condenses the basics onto one page, and Free Harvard Referencing Tools for CIPD covers software that can speed up the mechanics.
+This guide is the hub of the referencing series, and the spokes take each hard part further. Read Harvard Referencing Mistakes That Cost CIPD Marks as a pre-submission checklist, How to Reference CIPD Factsheets, Reports and the Profession Map for the sources you will cite most often, and Secondary Referencing in Harvard Style, Explained for the cited in convention. The earlier overview [How to Use Harvard Referencing in CIPD Assessments](/blog/how-to-use-harvard-referencing-in-cipd-assessments) condenses the basics onto one page, and Free Harvard Referencing Tools for CIPD covers software that can speed up the mechanics.
 
-If you would like an expert eye on your citations before you submit, our Harvard referencing support checks accuracy, consistency and coverage across your whole draft and shows you exactly what to correct. The reading, thinking and writing remain yours.
+If you would like an expert eye on your citations before you submit, our [Harvard referencing support](/harvard-referencing-support) checks accuracy, consistency and coverage across your whole draft and shows you exactly what to correct. The reading, thinking and writing remain yours.

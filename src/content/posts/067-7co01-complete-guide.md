@@ -102,6 +102,6 @@ Follow your brief every time. Task formats, word counts and question wording var
 
 ## Go deeper
 
-This guide is the hub of the 7CO01 series. When you are ready to go further, read Building Critical Arguments in 7CO01 for a deep dive into the skill this unit assesses hardest, and 7CO01 FAQs: Your Questions Answered for quick answers to the questions learners ask most. If you are also planning ahead across the diploma, 7CO03 Assignment: The Complete Guide covers the reflective unit that pairs naturally with this one.
+This guide is the hub of the 7CO01 series. When you are ready to go further, read [Building Critical Arguments in 7CO01](/blog/7co01-building-critical-arguments) for a deep dive into the skill this unit assesses hardest, and [7CO01 FAQs: Your Questions Answered](/blog/7co01-faqs) for quick answers to the questions learners ask most. If you are also planning ahead across the diploma, [7CO03 Assignment: The Complete Guide](/blog/7co03-complete-guide) covers the reflective unit that pairs naturally with this one.
 
 If you would like tailored, ethical help with this unit, our 7CO01 support covers brief analysis, argument and structure coaching, referencing guidance and detailed draft review. We coach and review; the reading, the argument and the writing remain yours, which is exactly what a unit about critical judgement is designed to assess.

@@ -13,25 +13,25 @@ related: ["what-is-a-cipd-reflective-account","reflective-models-compared","7co0
 ---
 Reflective writing is the one skill every CIPD learner carries through the whole qualification. The units change, the briefs change, the expected depth changes, but the core act stays the same: examining your own real experience honestly and converting it into learning and action. What trips learners up is pitching that skill at the wrong altitude, writing Level 3 description in a Level 7 unit, or dressing a Level 3 account in postgraduate vocabulary it cannot carry.
 
-This guide maps how reflective writing at CIPD levels 3, 5 and 7 differs, what stays constant, and how to check your own pitch, including one fictional incident written acceptably at all three depths. It assumes the fundamentals covered in the pillar guide What Is a CIPD Reflective Account and How to Write One, and as ever, your current assessment brief and your study centre's guidance are the final word on what your unit actually requires.
+This guide maps how reflective writing at CIPD levels 3, 5 and 7 differs, what stays constant, and how to check your own pitch, including one fictional incident written acceptably at all three depths. It assumes the fundamentals covered in the pillar guide [What Is a CIPD Reflective Account and How to Write One](/blog/what-is-a-cipd-reflective-account), and as ever, your current assessment brief and your study centre's guidance are the final word on what your unit actually requires.
 
 ## Level 3: honest description plus genuine learning
 
 At Level 3, assessors want genuineness and clarity. The expectation is honest first-person description of a real situation, simple learning stated plainly, and clear next steps. Nobody is looking for named models, theory or sophisticated self-analysis; they are looking for evidence that you noticed something true about your own practice and intend to act on it.
 
-The best Level 3 reflection uses small, real examples: a task that went wrong, a conversation that landed badly, feedback you did not expect. Write what happened, what you felt and noticed, what you learned in plain words, and what you will do next. The commonest failure at this level is not lack of depth but lack of genuineness, accounts that sound copied from a textbook rather than lived. For the wider Level 3 context, including how the foundation units are assessed, see 3CO03 Assignment: The Complete Guide.
+The best Level 3 reflection uses small, real examples: a task that went wrong, a conversation that landed badly, feedback you did not expect. Write what happened, what you felt and noticed, what you learned in plain words, and what you will do next. The commonest failure at this level is not lack of depth but lack of genuineness, accounts that sound copied from a textbook rather than lived. For the wider Level 3 context, including how the foundation units are assessed, see [3CO03 Assignment: The Complete Guide](/blog/3co03-complete-guide).
 
 ## Level 5: analysis and evidence of change
 
 Level 5 keeps everything Level 3 asked for and adds analysis. Description alone is no longer enough: your behaviour must be connected to its outcomes, so that every choice you describe is traced to its effect on other people and on results. Why did you act that way, what assumption was driving you, what did your choice do to the room, and how do you know?
 
-A reflective model earns its place here as light scaffolding, shaping paragraphs without becoming their subject, and assessors expect evidence that your practice actually changed: something you now do differently, described concretely, with honest observation of the difference it made. The dedicated guide 5CO03 Reflective Writing: How to Evidence Your Examples covers this standard in unit-specific detail.
+A reflective model earns its place here as light scaffolding, shaping paragraphs without becoming their subject, and assessors expect evidence that your practice actually changed: something you now do differently, described concretely, with honest observation of the difference it made. The dedicated guide [5CO03 Reflective Writing: How to Evidence Your Examples](/blog/5co03-reflective-examples-discussion) covers this standard in unit-specific detail.
 
 ## Level 7: critical reflection
 
 Level 7 keeps the analysis and turns it on your own thinking. Critical reflection questions the assumptions beneath your actions: not just why did I do that, but why did I frame the situation that way at all, what was I taking for granted, and whose perspective is missing from my account. Theory enters as a lens brought to bear on your own behaviour at the moment it explains or challenges something, never as decoration.
 
-Two further expectations mark the postgraduate standard: change in practice that can be evidenced rather than merely claimed, and a degree of self-scepticism, meaning the account doubts its own first reading of events and says so on the page. 7CO03 Reflective Writing at Masters Level shows what this looks like in practice, including how to hold first person and academic rigour together.
+Two further expectations mark the postgraduate standard: change in practice that can be evidenced rather than merely claimed, and a degree of self-scepticism, meaning the account doubts its own first reading of events and says so on the page. [7CO03 Reflective Writing at Masters Level](/blog/7co03-reflective-writing-masters-level) shows what this looks like in practice, including how to hold first person and academic rigour together.
 
 ## One incident, three levels
 
@@ -81,6 +81,6 @@ Notice what moves and what does not. All three accounts describe the same honest
 
 ## Go deeper
 
-The pillar guide What Is a CIPD Reflective Account and How to Write One covers the fundamentals beneath all three levels, including structure, evidence and a step-by-step method. Its companion, Reflective Models Compared: Kolb, Gibbs, Driscoll and Schön, will help you choose scaffolding suited to your level and your material. For unit-level depth, see 3CO03 Assignment: The Complete Guide, 5CO03 Reflective Writing: How to Evidence Your Examples and 7CO03 Reflective Writing at Masters Level.
+The pillar guide What Is a CIPD Reflective Account and How to Write One covers the fundamentals beneath all three levels, including structure, evidence and a step-by-step method. Its companion, [Reflective Models Compared: Kolb, Gibbs, Driscoll and Schön](/blog/reflective-models-compared), will help you choose scaffolding suited to your level and your material. For unit-level depth, see 3CO03 Assignment: The Complete Guide, 5CO03 Reflective Writing: How to Evidence Your Examples and 7CO03 Reflective Writing at Masters Level.
 
 Pitching reflection at the right depth is far easier with an experienced outside reader, and that is exactly what our reflective writing support offers: level-aware coaching on structure and analysis, plus honest review of your drafts, with the experience and every word of the account remaining your own.

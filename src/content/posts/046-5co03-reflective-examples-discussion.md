@@ -83,6 +83,6 @@ The weak version describes a process and ends on a cliché; Sam barely appears i
 
 ## Go deeper
 
-This guide is part of the 5CO03 cluster. For the full picture of the unit, including how it is assessed and a step-by-step approach, start with 5CO03 Assignment: The Complete Guide. For quick answers on first person writing, models and evidence, see 5CO03 FAQs: Your Questions Answered, and for the fundamentals that apply across qualifications, read the guide on what a CIPD reflective account is.
+This guide is part of the 5CO03 cluster. For the full picture of the unit, including how it is assessed and a step-by-step approach, start with [5CO03 Assignment: The Complete Guide](/blog/5co03-complete-guide). For quick answers on first person writing, models and evidence, see [5CO03 FAQs: Your Questions Answered](/blog/5co03-faqs), and for the fundamentals that apply across qualifications, read the guide on what a CIPD reflective account is.
 
 Reflective accounts must always be your own genuine experience in your own words, and that is exactly where coaching helps most: our 5CO03 support includes reflective structure coaching and draft review that strengthen your account while keeping it authentically yours.

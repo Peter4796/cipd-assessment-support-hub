@@ -81,7 +81,7 @@ Second, spend the buffer you built when you planned backwards. This is exactly w
 
 Third, and most important: if the deadline itself is genuinely at risk, talk to your study centre early. Centres work with full-time professionals constantly, extension and deferral policies exist for precisely these situations, and a request made weeks out is received very differently from a plea on deadline day. Explain plainly what has happened, say what you can realistically deliver and when, and ask what options exist.
 
-If the pressure follows a referral rather than a first submission, resubmission windows have their own rules and rhythm, and the guide Planning Your CIPD Resubmission Timeline covers that case step by step.
+If the pressure follows a referral rather than a first submission, resubmission windows have their own rules and rhythm, and the guide [Planning Your CIPD Resubmission Timeline](/blog/resubmission-timeline-planning) covers that case step by step.
 
 ## Rest is part of the plan
 
@@ -152,6 +152,6 @@ Yes. The qualification is designed for working professionals, and people complet
 
 ## Go deeper
 
-This pillar covers the planning and rhythm of studying while working, and two companion guides take it further. Staying Motivated Through Your CIPD Qualification tackles the long-haul side: why motivation dips are predictable and how to restart when you stall. CIPD Exams vs Assignments: How CIPD Assessment Actually Works explains what kind of assessment you are planning for, which matters if your habits were formed in an exam hall. And if you are planning around a referral, Planning Your CIPD Resubmission Timeline deals with that specific window.
+This pillar covers the planning and rhythm of studying while working, and two companion guides take it further. [Staying Motivated Through Your CIPD Qualification](/blog/staying-motivated-through-cipd) tackles the long-haul side: why motivation dips are predictable and how to restart when you stall. [CIPD Exams vs Assignments: How CIPD Assessment Actually Works](/blog/cipd-exams-vs-assignments) explains what kind of assessment you are planning for, which matters if your habits were formed in an exam hall. And if you are planning around a referral, Planning Your CIPD Resubmission Timeline deals with that specific window.
 
 If you would like experienced eyes on the plan itself, our study support offers planning coaching that maps a unit backwards around your real diary, structure guidance before you draft, and honest review of your draft before you submit. The thinking, the writing and the qualification stay entirely yours; the deadline simply stops being something you face alone.

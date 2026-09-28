@@ -92,6 +92,6 @@ A page of comments processed this way becomes a short, ordered task list, which 
 
 ## Go deeper
 
-This guide decodes the phrases; for the wider process of responding to them, read How to Respond to CIPD Tutor Feedback, and for turning your decoded list into a successful revision, read How to Improve a CIPD Resubmission. When you are ready to schedule the work, Planning Your CIPD Resubmission Timeline shows how to phase it before the deadline.
+This guide decodes the phrases; for the wider process of responding to them, read [How to Respond to CIPD Tutor Feedback](/blog/how-to-respond-to-cipd-tutor-feedback), and for turning your decoded list into a successful revision, read [How to Improve a CIPD Resubmission](/blog/how-to-improve-a-cipd-resubmission). When you are ready to schedule the work, [Planning Your CIPD Resubmission Timeline](/blog/resubmission-timeline-planning) shows how to phase it before the deadline.
 
-If you would rather not decode alone, our feedback and resubmission support translates your specific assessor comments into a plain-English action plan and gives you honest review of your revised draft. The interpretation gets easier with an experienced reader alongside you, and the work you submit remains entirely your own.
+If you would rather not decode alone, our feedback and [resubmission support](/cipd-resubmission-support) translates your specific assessor comments into a plain-English action plan and gives you honest review of your revised draft. The interpretation gets easier with an experienced reader alongside you, and the work you submit remains entirely your own.

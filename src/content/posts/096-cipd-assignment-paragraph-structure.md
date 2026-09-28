@@ -92,6 +92,6 @@ The rebuilt pair says nothing the original did not contain, but each idea now ha
 
 ## Go deeper
 
-Paragraphs are one layer of a structure that starts with the brief, and the pillar guide How to Structure a CIPD Assignment: A Complete Guide for Every Level shows the whole frame, from decoding tasks and criteria into a skeleton to budgeting words across sections. Introductions and Conclusions in CIPD Assignments covers the two sections where paragraph habits differ most from the body.
+Paragraphs are one layer of a structure that starts with the brief, and the pillar guide [How to Structure a CIPD Assignment: A Complete Guide for Every Level](/blog/how-to-structure-a-cipd-assignment) shows the whole frame, from decoding tasks and criteria into a skeleton to budgeting words across sections. [Introductions and Conclusions in CIPD Assignments](/blog/cipd-introductions-and-conclusions) covers the two sections where paragraph habits differ most from the body.
 
 If tutor feedback keeps circling structure and clarity, a second pair of eyes helps most at exactly this level: our writing support offers paragraph-level coaching and honest draft review that show you where an idea is overloaded or unbacked, while the ideas, the argument and the words stay entirely yours.

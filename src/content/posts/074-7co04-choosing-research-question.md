@@ -79,6 +79,6 @@ A learner in learning and development drafts how should the organisation redesig
 
 ## Where to go next
 
-Once your question is settled, the hub article, 7CO04 Assignment: The Complete Guide, walks through the rest of the project, from literature and design through ethics, analysis and recommendations, and 7CO04 FAQs: Your Questions Answered deals quickly with the questions learners ask most. For building the reading base your question deserves, Finding Credible Sources for CIPD Assignments with Google Scholar covers the practical craft of literature searching.
+Once your question is settled, the hub article, [7CO04 Assignment: The Complete Guide](/blog/7co04-complete-guide), walks through the rest of the project, from literature and design through ethics, analysis and recommendations, and [7CO04 FAQs: Your Questions Answered](/blog/7co04-faqs) deals quickly with the questions learners ask most. For building the reading base your question deserves, Finding Credible Sources for CIPD Assignments with Google Scholar covers the practical craft of literature searching.
 
 If you would like tailored, ethical help at this stage, our 7CO04 support includes question scoping and feasibility coaching, methods guidance and careful review of your proposal drafts. The question you choose, and the research you build on it, are always your own.

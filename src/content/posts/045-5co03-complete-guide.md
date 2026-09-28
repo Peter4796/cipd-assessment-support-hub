@@ -106,6 +106,6 @@ Word counts vary by centre and by brief, so no external guide can give you a rel
 
 ## Go deeper
 
-This hub is the starting point for the 5CO03 cluster. For the hardest part of the unit, read 5CO03 Reflective Writing: How to Evidence Your Examples, which works through models, structure and a weak-versus-strong example paragraph. For quick answers to specific questions, see 5CO03 FAQs: Your Questions Answered, and for the fundamentals of reflective accounts across CIPD qualifications, see the guide on what a CIPD reflective account is.
+This hub is the starting point for the 5CO03 cluster. For the hardest part of the unit, read [5CO03 Reflective Writing: How to Evidence Your Examples](/blog/5co03-reflective-examples-discussion), which works through models, structure and a weak-versus-strong example paragraph. For quick answers to specific questions, see [5CO03 FAQs: Your Questions Answered](/blog/5co03-faqs), and for the fundamentals of reflective accounts across CIPD qualifications, see the guide on what a CIPD reflective account is.
 
 If you would like tailored, ethical help with this unit, our 5CO03 support covers brief analysis, reflective structure coaching, referencing and draft review. The reflection and the writing stay yours; the guidance makes them stronger.
