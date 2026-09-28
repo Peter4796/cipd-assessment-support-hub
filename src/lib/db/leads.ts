@@ -10,7 +10,7 @@
  * event either all commit or none do.
  */
 
-import { and, asc, desc, eq, gt, gte, ilike, isNotNull, lt, lte, or, sql } from "drizzle-orm";
+import { and, asc, desc, eq, gt, gte, ilike, inArray, isNotNull, isNull, lt, lte, notInArray, or, sql } from "drizzle-orm";
 import { db } from "@/lib/db/client";
 import {
   leadAttachments,
@@ -25,7 +25,7 @@ import {
 import { planStatusChange, type StatusChangeError } from "@/lib/leads/status";
 import { attachmentRowsForLead, leadToRow, rowToLead } from "@/lib/db/mappers";
 import { urgencyDeadlineRange, type LeadListFilters } from "@/lib/admin/filters";
-import type { Lead } from "@/lib/leads/types";
+import { TERMINAL_LEAD_STATUSES, type Lead } from "@/lib/leads/types";
 import type { SendResult } from "@/lib/email/resend";
 
 /**
@@ -282,6 +282,62 @@ export async function savePayment(
       updatedAt: new Date(),
     })
     .where(eq(leads.id, id));
+}
+
+/**
+ * Operational sweep inputs (Escalation P1): every non-terminal, non-archived
+ * lead with its status-event history, note count and last-event instant —
+ * exactly what the pure planner (src/lib/leads/operations.ts) consumes for
+ * escalations, the digest and Needs Attention. Three bounded queries.
+ */
+export type OperationalLead = {
+  row: LeadRow;
+  eventStatuses: string[];
+  notesCount: number;
+  lastEventAt: Date;
+};
+
+export async function listOperationalLeads(cap = 200): Promise<OperationalLead[]> {
+  const rows = await db()
+    .select()
+    .from(leads)
+    .where(
+      and(
+        isNull(leads.archivedAt),
+        notInArray(leads.status, [...TERMINAL_LEAD_STATUSES])
+      )
+    )
+    .orderBy(desc(leads.createdAt))
+    .limit(cap);
+  if (rows.length === 0) return [];
+  const ids = rows.map((r) => r.id);
+  const events = await db()
+    .select({
+      leadId: leadStatusEvents.leadId,
+      toStatus: leadStatusEvents.toStatus,
+      at: leadStatusEvents.at,
+    })
+    .from(leadStatusEvents)
+    .where(inArray(leadStatusEvents.leadId, ids));
+  const notes = await db()
+    .select({ leadId: leadNotes.leadId, n: sql<number>`count(*)::int` })
+    .from(leadNotes)
+    .where(inArray(leadNotes.leadId, ids))
+    .groupBy(leadNotes.leadId);
+  const noteCount = new Map(notes.map((n) => [n.leadId, n.n]));
+  return rows.map((row) => {
+    const evs = events.filter((e) => e.leadId === row.id);
+    const lastEventAt = evs.reduce(
+      (max, e) => (e.at > max ? e.at : max),
+      row.createdAt
+    );
+    return {
+      row,
+      eventStatuses: evs.map((e) => e.toStatus),
+      notesCount: noteCount.get(row.id) ?? 0,
+      lastEventAt,
+    };
+  });
 }
 
 export async function recordNotifyResult(leadId: string, result: SendResult): Promise<void> {

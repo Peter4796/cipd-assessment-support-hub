@@ -191,3 +191,107 @@ export function subscriberNotificationHtml(sub: Subscriber): string {
     `<p style="margin:16px 0 0;font-size:11px;color:${GREY};">Nurture-stage contact — no action required. Received ${esc(sub.createdAt)}</p>`;
   return shell("New resource subscriber", "nurture", body);
 }
+
+// ─── Escalation alerts (Escalation P1) ───
+
+export type EscalationView = {
+  id: string;
+  level: string;
+  unitCode?: string | null;
+  supportType: string;
+  submissionType?: string | null;
+  classification: string;
+  deadline?: string | null;
+  bandLabel?: string; // e.g. "Due today" — omitted when no meaningful band
+  createdAt: Date;
+  /** Accurate state description, e.g. "NEW" or "REVIEWING, no contact recorded". */
+  stateLabel: string;
+  ageLabel: string; // e.g. "34 min"
+};
+
+export function escalationSubject(kind: "escalation_1" | "escalation_2", v: EscalationView): string {
+  const n = kind === "escalation_2" ? "2" : "1";
+  const parts = [v.id, `untouched ${v.ageLabel}`];
+  if (v.bandLabel) parts.push(v.bandLabel.toLowerCase());
+  return `ESCALATION ${n}: ${parts.join(" — ")}`;
+}
+
+export function escalationHtml(kind: "escalation_1" | "escalation_2", v: EscalationView): string {
+  const n = kind === "escalation_2" ? "2" : "1";
+  const unit = v.unitCode ? getUnit(v.unitCode.toLowerCase()) : undefined;
+  const rows = section("Lead", [
+    ["Reference", v.id],
+    ["Classification", classificationLabel(v.classification as never) || v.classification],
+    ["Level", `Level ${v.level}`],
+    ["Unit", v.unitCode ? `${v.unitCode}${unit ? ` — ${unit.title}` : ""}` : undefined],
+    ["Support", SUPPORT_TYPES[v.supportType as keyof typeof SUPPORT_TYPES] ?? v.supportType],
+    ["Submission", v.submissionType === "resubmission" ? "Resubmission" : v.submissionType ? "First submission" : undefined],
+    ["Deadline", v.deadline ? `${v.deadline}${v.bandLabel ? ` (${v.bandLabel})` : ""}` : undefined],
+    ["Current state", v.stateLabel],
+    ["Received", `${v.createdAt.toISOString().slice(0, 16).replace("T", " ")} UTC (${v.ageLabel} ago)`],
+  ]);
+  const cta = `<p style="margin:20px 0 4px;"><a href="${esc(absoluteUrl(`/admin/leads/${v.id}`))}" style="display:inline-block;background:${NAVY};color:${GOLD};padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:700;font-size:13px;">Open ${esc(v.id)} in admin</a></p>`;
+  const note = `<p style="margin:14px 0 0;font-size:12px;color:${GREY};">This is automated escalation ${n}: no contact, note or status progression beyond REVIEWING has been recorded for this lead. It stops as soon as the lead is handled.</p>`;
+  return shell(`Unhandled ${v.classification === "PRIORITY" ? "priority" : "high-intent"} lead`, `ESCALATION ${n}`, rows + cta + note);
+}
+
+// ─── Daily operational digest (Escalation P1) ───
+
+export type DigestItemView = {
+  id: string;
+  level: string;
+  status: string;
+  classification: string;
+  bandLabel?: string;
+  ageLabel: string;
+};
+
+export type DigestView = {
+  dateLabel: string; // owner-local date
+  untouched: DigestItemView[];
+  deadlines: DigestItemView[];
+  staleQuotes: DigestItemView[];
+  staleProgress: DigestItemView[];
+};
+
+export function digestSubject(v: DigestView): string {
+  const n = v.untouched.length + v.deadlines.length + v.staleQuotes.length + v.staleProgress.length;
+  return `Leads needing action (${n}) — ${v.dateLabel}`;
+}
+
+function digestList(heading: string, items: DigestItemView[]): string {
+  if (items.length === 0) return "";
+  const lis = items
+    .map(
+      (i) =>
+        `<li style="margin:6px 0;font-size:13px;"><a href="${esc(absoluteUrl(`/admin/leads/${i.id}`))}" style="color:${NAVY};font-weight:700;">${esc(i.id)}</a> · L${esc(i.level)} · ${esc(i.status)}${i.bandLabel ? ` · <strong>${esc(i.bandLabel)}</strong>` : ""} · ${esc(i.ageLabel)}</li>`
+    )
+    .join("");
+  return `<p style="margin:18px 0 6px;font-size:11px;font-weight:700;letter-spacing:.1em;color:${GOLD};">${esc(heading)}</p><ul style="margin:0;padding-left:18px;">${lis}</ul>`;
+}
+
+export function digestHtml(v: DigestView): string {
+  const body =
+    digestList("UNTOUCHED", v.untouched) +
+    digestList("DEADLINES ≤72H / OVERDUE", v.deadlines) +
+    digestList("QUOTES AWAITING FOLLOW-UP", v.staleQuotes) +
+    digestList("STALE REVIEWING / CONTACTED", v.staleProgress) +
+    `<p style="margin:16px 0 0;font-size:12px;color:${GREY};">Sent only on days with actionable leads. Ages are time since the lead arrived.</p>`;
+  return shell(`Operational digest — ${v.dateLabel}`, "DAILY DIGEST", body);
+}
+
+// ─── Client acknowledgement (Escalation P1; owner-approved wording) ───
+
+export function acknowledgementSubject(reference: string): string {
+  return `We received your CIPD Guidance enquiry — ${reference}`;
+}
+
+export function acknowledgementHtml(firstName: string, reference: string): string {
+  const body = `
+    <p style="margin:0 0 14px;font-size:14px;">Hi ${esc(firstName)},</p>
+    <p style="margin:0 0 14px;font-size:14px;">Thanks for sending your CIPD assessment enquiry. We&#39;ve received your details and will review them shortly.</p>
+    <p style="margin:0 0 14px;font-size:14px;">Your enquiry reference is <strong>${esc(reference)}</strong>.</p>
+    <p style="margin:0 0 14px;font-size:14px;">If there is anything important you forgot to include, you can reply to this email.</p>
+    <p style="margin:0;font-size:14px;">CIPD Guidance</p>`;
+  return shell("Enquiry received", "CONFIRMATION", body);
+}
