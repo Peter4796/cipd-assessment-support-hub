@@ -63,6 +63,12 @@ export default async function AdminLeadsPage({
             {total} captured {total === 1 ? "lead" : "leads"} · database is the system of record.
           </p>
         </div>
+        <Link
+          href="/admin/attention"
+          className="rounded-xl bg-navy-900 px-4 py-2 text-sm font-semibold text-gold-400 hover:bg-navy-800"
+        >
+          Needs attention →
+        </Link>
       </div>
 
       {/* Status pills — links, so they compose with the other filters */}
