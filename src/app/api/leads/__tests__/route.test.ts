@@ -19,6 +19,7 @@ vi.mock("@/lib/db/leads", () => ({
 }));
 vi.mock("@/lib/leads/notify", () => ({
   notifyLead: vi.fn(async () => ({ ok: true })),
+  sendClientAcknowledgement: vi.fn(async () => undefined),
 }));
 vi.mock("@/lib/leads/rate-limit", () => ({
   rateLimit: vi.fn(() => ({ allowed: true })),
@@ -32,7 +33,7 @@ import {
   insertLead,
   recordNotifyResult,
 } from "@/lib/db/leads";
-import { notifyLead } from "@/lib/leads/notify";
+import { notifyLead, sendClientAcknowledgement } from "@/lib/leads/notify";
 
 const validBody = {
   name: "Test Client",
@@ -178,5 +179,26 @@ describe("POST /api/leads — unchanged guards", () => {
     expect(res.status).toBe(400);
     expect((await res.json()).error).toBe("invalid_email");
     expect(insertLead).not.toHaveBeenCalled();
+  });
+});
+
+describe("client acknowledgement orchestration (Escalation P1)", () => {
+  it("acknowledges after successful persistence", async () => {
+    const res = await post(validBody);
+    expect(res.status).toBe(201);
+    expect(sendClientAcknowledgement).toHaveBeenCalledTimes(1);
+  });
+
+  it("never acknowledges in the [NOT PERSISTED] fallback", async () => {
+    vi.mocked(insertLead).mockRejectedValue(new Error("db down"));
+    const res = await post(validBody);
+    expect(res.status).toBe(201);
+    expect(sendClientAcknowledgement).not.toHaveBeenCalled();
+  });
+
+  it("an acknowledgement crash never affects the capture response", async () => {
+    vi.mocked(sendClientAcknowledgement).mockRejectedValue(new Error("boom"));
+    const res = await post(validBody);
+    expect(res.status).toBe(201);
   });
 });

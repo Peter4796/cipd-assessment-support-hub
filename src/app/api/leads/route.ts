@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { randomBytes } from "node:crypto";
 import { validateLeadInput } from "@/lib/leads/validation";
 import { scoreLead } from "@/lib/leads/scoring";
-import { notifyLead } from "@/lib/leads/notify";
+import { notifyLead, sendClientAcknowledgement } from "@/lib/leads/notify";
 import { clientKey, rateLimit } from "@/lib/leads/rate-limit";
 import { DEDUP_WINDOW_MS, leadFingerprint } from "@/lib/leads/fingerprint";
 import { isDbConfigured } from "@/lib/db/client";
@@ -131,6 +131,14 @@ export async function POST(request: Request) {
     }
     if (!sent.ok) {
       console.error(`[leads] alert email failed (${sent.error}) ref=${lead.id} — lead persisted`);
+    }
+    // Client acknowledgement: best-effort, cutover-gated, ledger-recorded.
+    // Persisted leads only — the [NOT PERSISTED] fallback has no durable
+    // record to reference, so no ack is sent there (approved §7).
+    try {
+      await sendClientAcknowledgement(lead);
+    } catch {
+      console.error(`[leads] acknowledgement errored ref=${lead.id} — lead unaffected`);
     }
     return NextResponse.json({ ok: true, reference: lead.id }, { status: 201 });
   }

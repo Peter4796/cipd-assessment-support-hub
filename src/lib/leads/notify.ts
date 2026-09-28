@@ -11,11 +11,16 @@
 import type { Lead, Subscriber } from "@/lib/leads/types";
 import { emailConfigured, notifyRecipient, sendEmail, type SendResult } from "@/lib/email/resend";
 import {
+  acknowledgementHtml,
+  acknowledgementSubject,
   leadNotificationHtml,
   leadNotificationSubject,
   subscriberNotificationHtml,
   subscriberNotificationSubject,
 } from "@/lib/email/templates";
+import { channelFor } from "@/lib/notify/channels";
+import { getAutomationCutover } from "@/lib/leads/operations";
+import { claimNotification, completeNotification } from "@/lib/db/notifications";
 
 export { emailConfigured };
 
@@ -59,4 +64,38 @@ export async function notifySubscriber(sub: Subscriber): Promise<SendResult> {
     html: subscriberNotificationHtml(sub),
     replyTo: sub.email,
   });
+}
+
+/**
+ * Client acknowledgement (Escalation P1, owner-approved wording §7):
+ * transactional receipt of the enquiry, sent ONLY after successful
+ * persistence, best-effort, ledger-recorded, and gated by the automation
+ * cutover (unset cutover or a pre-cutover lead sends nothing — the §13
+ * historical-lead protection). Never adds the client to any audience;
+ * reply-to is the owner's notify address so replies land operationally.
+ * A failure here must never affect the capture response — callers wrap.
+ */
+export async function sendClientAcknowledgement(lead: Lead): Promise<void> {
+  const cutover = getAutomationCutover();
+  if (!cutover || new Date(lead.createdAt) < cutover) return;
+  const email = channelFor("email");
+  if (!email.configured()) return;
+
+  const claim = await claimNotification({
+    dedupeKey: `${lead.id}:ack`,
+    leadId: lead.id,
+    kind: "ack",
+    channel: "email",
+  });
+  if (!claim) return; // already acknowledged (or in flight)
+
+  const firstName = lead.name.trim().split(/\s+/)[0] || "there";
+  const sent = await email.send({
+    to: lead.email,
+    subject: acknowledgementSubject(lead.id),
+    html: acknowledgementHtml(firstName, lead.id),
+    replyTo: notifyRecipient(),
+  });
+  await completeNotification(claim, sent);
+  if (!sent.ok) console.error(`[leads] acknowledgement failed (${sent.error}) ref=${lead.id}`);
 }
