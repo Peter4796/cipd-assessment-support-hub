@@ -1,0 +1,27 @@
+# Minimal CI (P1.6): vitest + TypeScript + lint on every push and PR.
+# Vercel runs `next build` on deploy (which also validates the content
+# corpus at module load), so the build is deliberately not repeated here;
+# these are the gates a deploy would otherwise skip.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Tests
+        run: npx vitest run
+      - name: TypeScript
+        run: npx tsc --noEmit
+      - name: Lint
+        run: npx next lint
