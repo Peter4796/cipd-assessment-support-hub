@@ -10,6 +10,7 @@
 import { site } from "@/lib/site";
 import { absoluteUrl } from "@/lib/urls";
 import type { Block } from "@/content/types";
+import { stripInlineLinks } from "@/lib/content/inline";
 
 /** Stable @id so every page's schema references one Organization node. */
 export const ORGANIZATION_ID = `${site.url}/#organization`;
@@ -117,7 +118,8 @@ export function faqPairsFromBlocks(blocks: Block[]): Array<{ question: string; a
   let question: string | null = null;
   let answer: string[] = [];
   const flush = () => {
-    if (question && answer.length > 0) pairs.push({ question, answer: answer.join(" ") });
+    if (question && answer.length > 0)
+      pairs.push({ question: stripInlineLinks(question), answer: stripInlineLinks(answer.join(" ")) });
     question = null;
     answer = [];
   };

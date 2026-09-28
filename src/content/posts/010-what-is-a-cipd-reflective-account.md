@@ -59,7 +59,7 @@ So what is the analysis stage, and it deserves the bulk of your words. What did 
 
 Now what is the action stage. What will you do differently, how, and how will you know it is working? Tie this to your development plan where the unit has one, so the reflection and the plan clearly belong to the same person.
 
-Fuller models exist, and for some situations they are worth the extra machinery. Gibbs adds explicit stages for feelings and evaluation, Kolb frames reflection as a learning loop you test in later practice, and Schön distinguishes thinking in the moment from thinking afterwards. The companion guide Reflective Models Compared: Kolb, Gibbs, Driscoll and Schön walks through all four, when each suits, and how to choose. But no assessor has ever failed an account for being built on three honest questions, and many have failed accounts that recited a six-stage cycle mechanically.
+Fuller models exist, and for some situations they are worth the extra machinery. Gibbs adds explicit stages for feelings and evaluation, Kolb frames reflection as a learning loop you test in later practice, and Schön distinguishes thinking in the moment from thinking afterwards. The companion guide [Reflective Models Compared: Kolb, Gibbs, Driscoll and Schön](/blog/reflective-models-compared) walks through all four, when each suits, and how to choose. But no assessor has ever failed an account for being built on three honest questions, and many have failed accounts that recited a six-stage cycle mechanically.
 
 ## Evidence in reflection
 

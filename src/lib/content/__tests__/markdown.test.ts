@@ -97,6 +97,13 @@ describe("block markdown codec", () => {
     ).toThrow(/unknown frontmatter key/);
   });
 
+  it("round-trips a paragraph containing an inline link verbatim (P1.1)", () => {
+    const linked = [
+      { type: "p" as const, text: "Start with [the pillar](/blog/harvard-referencing-complete-guide), then practise." },
+    ];
+    expect(markdownToBlocks(blocksToMarkdown(linked))).toEqual(linked);
+  });
+
   it("rejects multi-line text at serialisation time", () => {
     expect(() => blocksToMarkdown([{ type: "p", text: "two\nlines" }])).toThrow(/multi-line/);
   });

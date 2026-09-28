@@ -1,5 +1,26 @@
+import Link from "next/link";
 import type { Block } from "@/content/types";
 import { Icon } from "@/components/Icon";
+import { splitInline } from "@/lib/content/inline";
+
+/** Text with [Label](/path) parsed to internal links (P1.1). Headings stay plain. */
+function InlineText({ text }: { text: string }) {
+  const segments = splitInline(text);
+  if (segments.length === 1 && segments[0].kind === "text") return <>{text}</>;
+  return (
+    <>
+      {segments.map((seg, i) =>
+        seg.kind === "link" ? (
+          <Link key={i} href={seg.href} className="font-semibold text-teal-700 underline decoration-gold-400 decoration-2 underline-offset-2 hover:text-gold-600">
+            {seg.label}
+          </Link>
+        ) : (
+          <span key={i}>{seg.text}</span>
+        )
+      )}
+    </>
+  );
+}
 
 /** Renders a typed block array (blog posts, case studies) as styled long-form content. */
 export function RichContent({ blocks }: { blocks: Block[] }) {
@@ -12,12 +33,12 @@ export function RichContent({ blocks }: { blocks: Block[] }) {
           case "h3":
             return <h3 key={i}>{block.text}</h3>;
           case "p":
-            return <p key={i}>{block.text}</p>;
+            return <p key={i}><InlineText text={block.text} /></p>;
           case "ul":
             return (
               <ul key={i}>
                 {block.items.map((item, j) => (
-                  <li key={j}>{item}</li>
+                  <li key={j}><InlineText text={item} /></li>
                 ))}
               </ul>
             );
@@ -25,7 +46,7 @@ export function RichContent({ blocks }: { blocks: Block[] }) {
             return (
               <ol key={i} className="mt-4 list-decimal space-y-2 pl-5 text-navy-600 marker:font-semibold marker:text-gold-500">
                 {block.items.map((item, j) => (
-                  <li key={j}>{item}</li>
+                  <li key={j}><InlineText text={item} /></li>
                 ))}
               </ol>
             );
@@ -39,7 +60,7 @@ export function RichContent({ blocks }: { blocks: Block[] }) {
                   <Icon name="check" className="h-4 w-4" />
                 </span>
                 <p className="!mt-0 text-[15px] font-medium leading-relaxed text-navy-700">
-                  {block.text}
+                  <InlineText text={block.text} />
                 </p>
               </div>
             );

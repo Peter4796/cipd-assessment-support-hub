@@ -13,7 +13,9 @@ import {
   postsForUnit,
   relatedWithClusterFallback,
 } from "@/content/posts";
-import { resolvePillar } from "@/content/pillars";
+import { PILLAR_PAGES, resolvePillar } from "@/content/pillars";
+import { extractInlineLinks, INLINE_LINK_RE } from "@/lib/content/inline";
+import { units } from "@/content/units";
 import { faqPairsFromBlocks } from "@/lib/schema";
 import type { Post } from "@/content/types";
 
@@ -137,5 +139,70 @@ describe("editorial machine gates (Blueprint Part 10)", () => {
       expect(post.related.length, post.slug).toBeGreaterThanOrEqual(2);
       expect(post.tags?.length ?? 0, post.slug).toBeGreaterThanOrEqual(1);
     }
+  });
+});
+
+// ── Inline internal links (P1.1) ──
+// Non-blog routes a body link may target. Keep in sync with the sitemap's
+// static list; the gate fails loudly when a link names a route this list
+// and the derived sets don't know.
+const LINKABLE_STATIC = new Set([
+  "/", "/about", "/services", "/how-it-works", "/pricing", "/samples",
+  "/faq", "/contact", "/resources", "/blog", "/case-studies", "/cipd-units",
+  "/send-your-brief",
+  "/resources/cipd-assessment-planning-checklist",
+  "/resources/harvard-referencing-checklist",
+  "/resources/cipd-resubmission-planner",
+  "/resources/reflective-writing-model-bank",
+  "/resources/cipd-command-verb-cheat-sheet",
+  "/resources/critical-analysis-self-check",
+  ...Object.keys(PILLAR_PAGES),
+]);
+
+describe("inline internal links (P1.1)", () => {
+  const slugs = new Set(posts.map((p) => p.slug));
+  const unitPaths = new Set(units.map((u) => `/cipd-units/${u.slug}`));
+
+  it("every inline link is internal, well-formed and resolves to a real page", () => {
+    for (const post of posts) {
+      for (const block of post.body) {
+        const texts =
+          block.type === "ul" || block.type === "ol" ? block.items : [block.text];
+        for (const text of texts) {
+          for (const { label, href } of extractInlineLinks(text)) {
+            expect(label.trim().length, `${post.slug}: empty link label`).toBeGreaterThan(0);
+            expect(href, `${post.slug}: link must be a bare internal path (${href})`).toMatch(
+              /^\/[a-z0-9\-\/]*$/
+            );
+            const resolves = href.startsWith("/blog/")
+              ? slugs.has(href.slice("/blog/".length))
+              : LINKABLE_STATIC.has(href) || unitPaths.has(href);
+            expect(resolves, `${post.slug}: link target does not resolve: ${href}`).toBe(true);
+          }
+        }
+      }
+    }
+  });
+
+  it("headings, titles and descriptions carry no link syntax", () => {
+    for (const post of posts) {
+      expect(post.title).not.toMatch(INLINE_LINK_RE);
+      expect(post.description).not.toMatch(INLINE_LINK_RE);
+      for (const block of post.body) {
+        if (block.type === "h2" || block.type === "h3") {
+          expect(block.text, `${post.slug}: link in heading`).not.toMatch(INLINE_LINK_RE);
+        }
+      }
+    }
+  });
+
+  it("FAQ schema derivation strips link syntax from answers", () => {
+    const pairs = faqPairsFromBlocks([
+      { type: "h3", text: "Where can I read more?" },
+      { type: "p", text: "See [the full guide](/blog/harvard-referencing-complete-guide) for detail." },
+      { type: "p", text: "It covers every source type." },
+    ]);
+    expect(pairs[0].answer).toBe("See the full guide for detail. It covers every source type.");
+    expect(pairs[0].answer).not.toContain("](");
   });
 });
