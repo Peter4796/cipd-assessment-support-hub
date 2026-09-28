@@ -26,6 +26,7 @@ import {
   smallint,
   text,
   timestamp,
+  uniqueIndex,
 } from "drizzle-orm/pg-core";
 
 const ts = (name: string) => timestamp(name, { withTimezone: true, mode: "date" });
@@ -223,6 +224,42 @@ export const leadStatusEvents = pgTable(
   },
   (t) => [index("lead_status_events_lead_id_idx").on(t.leadId)]
 );
+
+/**
+ * Notifications ledger (Escalation P1, 2026-09) — one row per one-shot
+ * outbound notification, the idempotency and observability record for the
+ * lead response system. The UNIQUE dedupe_key is the whole contract:
+ * "<leadId>:ack", "<leadId>:escalation_1", "<leadId>:escalation_2",
+ * "digest:<owner-local YYYY-MM-DD>". Claim/attempt semantics live in
+ * src/lib/db/notifications.ts. Stores machine codes and provider ids only —
+ * never message bodies, assessment content or document URLs. Rows cascade
+ * with their lead, inheriting the retention policy; digest rows have no
+ * lead and are trivially small.
+ */
+export const notifications = pgTable(
+  "notifications",
+  {
+    id: integer("id").primaryKey().generatedAlwaysAsIdentity(),
+    /** Null for non-lead kinds (daily digest). */
+    leadId: text("lead_id").references(() => leads.id, { onDelete: "cascade" }),
+    dedupeKey: text("dedupe_key").notNull(),
+    kind: text("kind").notNull(), // "ack" | "escalation_1" | "escalation_2" | "digest"
+    channel: text("channel").notNull(), // "email" | "sms"
+    /** "claimed" (in flight) | "sent" | "failed" | "skipped". */
+    status: text("status").notNull(),
+    attempts: smallint("attempts").notNull().default(0),
+    providerId: text("provider_id"),
+    errorCode: text("error_code"), // machine code only
+    createdAt: ts("created_at").notNull().defaultNow(),
+    updatedAt: ts("updated_at").notNull().defaultNow(),
+  },
+  (t) => [
+    uniqueIndex("notifications_dedupe_key_idx").on(t.dedupeKey),
+    index("notifications_lead_id_idx").on(t.leadId),
+  ]
+);
+
+export type NotificationRow = typeof notifications.$inferSelect;
 
 export type LeadRow = typeof leads.$inferSelect;
 export type LeadInsertRow = typeof leads.$inferInsert;

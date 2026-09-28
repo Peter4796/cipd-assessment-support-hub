@@ -29,6 +29,13 @@
       "when": 1786468254672,
       "tag": "0003_curvy_nekra",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1790604048510,
+      "tag": "0004_perpetual_purple_man",
+      "breakpoints": true
     }
   ]
 }
