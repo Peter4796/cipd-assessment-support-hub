@@ -29,7 +29,6 @@ const staticRoutes = [
   "/cipd-resubmission-support",
   "/harvard-referencing-support",
   "/urgent-cipd-help",
-  "/send-your-brief",
   "/privacy",
 ];
 

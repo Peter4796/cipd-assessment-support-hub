@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   description:
     "Send your CIPD assessment brief for a fast, confidential quote. Tell us your level, unit and deadline, upload your documents, and we'll respond with the right support option.",
   alternates: { canonical: "/send-your-brief" },
+  // P0.6 decision: conversion funnel step, ~60 crawlable words, duplicates
+  // /contact's enquiry intent. noindex removes the thin/duplicate signal;
+  // follow preserves link equity through the site's most-linked URL.
+  robots: { index: false, follow: true },
 };
 
 const reassurance = [
