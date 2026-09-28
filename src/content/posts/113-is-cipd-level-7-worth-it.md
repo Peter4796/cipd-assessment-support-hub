@@ -1,7 +1,7 @@
 ---
 slug: "is-cipd-level-7-worth-it"
 title: "Is CIPD Level 7 Worth It? An Honest Assessment"
-description: "Is CIPD Level 7 worth it? An honest look at what the Advanced Diploma can and cannot deliver, who benefits most, and how to decide before you enrol."
+description: "Is CIPD Level 7 worth it? An honest assessment of the cost, workload and career payoff, who benefits most, who should wait, and how to decide before enrolling."
 category: "Choosing CIPD"
 keyword: "is CIPD Level 7 worth it"
 date: "2026-07-24"

@@ -1,7 +1,7 @@
 ---
 slug: "cipd-vs-shrm-which-is-right"
-title: "CIPD vs SHRM: Which Is Right for Your HR Career?"
-description: "CIPD vs SHRM explained honestly: how the two bodies differ in structure, geography and career fit, plus a step-by-step framework for choosing between them."
+title: "CIPD vs SHRM: Which Fits Your HR Career? (UK, US and Gulf)"
+description: "CIPD vs SHRM compared honestly: where each is recognised, what study and membership involve, and a clear framework for choosing the right one for your region."
 category: "Choosing CIPD"
 keyword: "CIPD vs SHRM"
 date: "2026-07-24"

@@ -85,7 +85,7 @@ Save direct quotation for the rare cases where the exact wording matters: a prec
 
 A quiet rule sits underneath the whole system: your citations should record the path you actually took to each idea. If you read about one writer's model inside another author's textbook, citing the original writer as though you read their work first-hand misrepresents your reading, and it can trip you up if a marker probes.
 
-Harvard handles this situation with secondary referencing, using a cited in construction in the text and listing only the source you actually read. It has its own conventions and its own pitfalls, and the companion guide [Secondary Referencing in Harvard Style, Explained](/blog/secondary-referencing-explained) covers when to use it, when to avoid it, and how to track down originals so you rarely need it.
+Harvard handles this situation with secondary referencing, using a cited in construction in the text and listing only the source you actually read. It has its own conventions and its own pitfalls, and the companion guide [Secondary Referencing in Harvard: Citing a Source Within a Source](/blog/secondary-referencing-explained) covers when to use it, when to avoid it, and how to track down originals so you rarely need it.
 
 ## Consistency, and why your centre's guide wins
 
@@ -137,6 +137,6 @@ It is by far the most common, but not universal, and centres also differ in whic
 
 ## Go deeper
 
-This guide is the hub of the referencing series, and the spokes take each hard part further. Read Harvard Referencing Mistakes That Cost CIPD Marks as a pre-submission checklist, How to Reference CIPD Factsheets, Reports and the Profession Map for the sources you will cite most often, and Secondary Referencing in Harvard Style, Explained for the cited in convention. The earlier overview [How to Use Harvard Referencing in CIPD Assessments](/blog/how-to-use-harvard-referencing-in-cipd-assessments) condenses the basics onto one page, and Free Harvard Referencing Tools for CIPD covers software that can speed up the mechanics.
+This guide is the hub of the referencing series, and the spokes take each hard part further. Read Harvard Referencing Mistakes That Cost CIPD Marks as a pre-submission checklist, How to Reference CIPD Factsheets, Reports and the Profession Map for the sources you will cite most often, and Secondary Referencing in Harvard: Citing a Source Within a Source for the cited in convention. The earlier overview [How to Use Harvard Referencing in CIPD Assessments](/blog/how-to-use-harvard-referencing-in-cipd-assessments) condenses the basics onto one page, and Free Harvard Referencing Tools for CIPD covers software that can speed up the mechanics.
 
 If you would like an expert eye on your citations before you submit, our [Harvard referencing support](/harvard-referencing-support) checks accuracy, consistency and coverage across your whole draft and shows you exactly what to correct. The reading, thinking and writing remain yours.

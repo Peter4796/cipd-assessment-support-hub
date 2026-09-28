@@ -1,9 +1,9 @@
 ---
 slug: "3co04-employee-lifecycle-explained"
-title: "The Employee Lifecycle in 3CO04, Explained"
-description: "The 3CO04 employee lifecycle explained stage by stage: what happens at each point, why it matters, the key policies involved, and how to use it in answers."
+title: "The Employee Lifecycle in CIPD: Every Stage Explained (3CO04)"
+description: "The employee lifecycle in CIPD explained stage by stage for 3CO04: what happens at each point, the policies involved, and how to use the model in answers."
 category: "3CO04"
-keyword: "3CO04 employee lifecycle"
+keyword: "employee lifecycle in CIPD"
 date: "2026-07-18"
 readMinutes: 9
 unit: "3CO04"

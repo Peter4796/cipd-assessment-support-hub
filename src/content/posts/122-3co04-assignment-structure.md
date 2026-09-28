@@ -86,6 +86,6 @@ Here is how the shape can come together for a generic 3CO04-style brief. This is
 
 ## Go deeper
 
-This article is part of the 3CO04 cluster on this site. The 3CO04 complete guide covers the whole unit, from what it includes to a full worked example. [The Employee Lifecycle in 3CO04, Explained](/blog/3co04-employee-lifecycle-explained) walks through every stage of the model that holds this unit together, and the 3CO04 FAQs give quick answers to the questions learners ask most.
+This article is part of the 3CO04 cluster on this site. The 3CO04 complete guide covers the whole unit, from what it includes to a full worked example. [The Employee Lifecycle in CIPD: Every Stage Explained (3CO04)](/blog/3co04-employee-lifecycle-explained) walks through every stage of the model that holds this unit together, and the 3CO04 FAQs give quick answers to the questions learners ask most.
 
 If you would like friendly, ethical help with this unit, our 3CO04 support includes planning and structure coaching that turns your specific brief into a section-by-section plan with word budgets, plus considered feedback on your drafts. The answers stay yours; a good structure simply makes sure every one of them gets the room it needs.

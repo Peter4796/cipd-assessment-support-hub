@@ -1,9 +1,9 @@
 ---
 slug: "secondary-referencing-explained"
-title: "Secondary Referencing in Harvard Style, Explained"
-description: "Secondary referencing in Harvard style explained: the cited in convention, which source goes in your reference list, and when to track down the original."
+title: "Secondary Referencing in Harvard: Citing a Source Within a Source"
+description: "Secondary referencing in Harvard, explained with examples: the cited in convention, which source goes in your reference list, and when to find the original."
 category: "Referencing"
-keyword: "secondary referencing Harvard"
+keyword: "secondary referencing in Harvard"
 date: "2026-07-18"
 readMinutes: 7
 pillar: "harvard-referencing-complete-guide"

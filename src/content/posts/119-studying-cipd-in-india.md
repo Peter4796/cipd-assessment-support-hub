@@ -29,7 +29,7 @@ Now the other side, stated plainly. India's HR profession does not need an impor
 
 The way to cut through this is not opinion, it is evidence, and the evidence is free. Open current job adverts for the HR roles you actually want, in the market you actually want them, and read what they ask for. Count the mentions of CIPD, SHRM and local credentials across ten adverts and you will know more about your real answer than any article can tell you. For target organisations, ask their HR teams directly which credentials they value; employers answer this question happily and their answers are the only ones that count.
 
-If your decision is genuinely between the two international bodies, [CIPD vs SHRM: Which Is Right for Your HR Career?](/blog/cipd-vs-shrm-which-is-right) works through that comparison honestly, including the structural difference between a qualification you study and a certification you sit, and why geography usually decides the question before anything else does.
+If your decision is genuinely between the two international bodies, [CIPD vs SHRM: Which Fits Your HR Career? (UK, US and Gulf)](/blog/cipd-vs-shrm-which-is-right) works through that comparison honestly, including the structural difference between a qualification you study and a certification you sit, and why geography usually decides the question before anything else does.
 
 > Tutor tip: write down your single most likely employer three years from now, then check what that type of employer asks for in its current HR job adverts. Decide for that future, not for a generic one.
 
@@ -50,7 +50,7 @@ No fees are quoted here, deliberately. Programme costs vary by centre, level and
 1. Write down where you realistically want to be working in three to five years: India-focused, Gulf-bound, UK-linked or multinational.
 2. Collect ten current job adverts for your target role in that market and tally mentions of CIPD, SHRM and local credentials.
 3. Ask one or two target employers directly which qualifications they value in HR hires.
-4. If the evidence points away from CIPD, take that seriously: read CIPD vs SHRM: Which Is Right for Your HR Career? and weigh local routes with equal respect before deciding anything.
+4. If the evidence points away from CIPD, take that seriously: read CIPD vs SHRM: Which Fits Your HR Career? (UK, US and Gulf) and weigh local routes with equal respect before deciding anything.
 5. If the evidence points to CIPD, choose your level with honest reference to your experience, using [A Complete Guide to CIPD Qualifications](/blog/complete-guide-to-cipd-qualifications) as your map.
 6. Use the CIPD's study centre search on cipd.org to shortlist approved centres offering online delivery you can study from India.
 7. Ask each centre about delivery format, live session timings, written fees, submission arrangements and resubmission processes, then enrol where the answers fit your life.
@@ -63,7 +63,7 @@ It depends entirely on the employer, which is why the job-advert method matters 
 
 ### Should I choose CIPD or SHRM in India?
 
-Neither is better in the abstract, and geography usually decides. US-linked employers tend towards SHRM, UK-linked and Middle East employers tend towards CIPD, and the Indian market includes plenty of both. CIPD vs SHRM: Which Is Right for Your HR Career? gives you a full framework, and your target market's job adverts give you the data.
+Neither is better in the abstract, and geography usually decides. US-linked employers tend towards SHRM, UK-linked and Middle East employers tend towards CIPD, and the Indian market includes plenty of both. CIPD vs SHRM: Which Fits Your HR Career? (UK, US and Gulf) gives you a full framework, and your target market's job adverts give you the data.
 
 ### Can I study CIPD online from India?
 
@@ -75,6 +75,6 @@ Sometimes, and honestly, sometimes not. If your career will stay focused on empl
 
 ## Go deeper
 
-A Complete Guide to CIPD Qualifications explains the three levels and how they fit together. CIPD vs SHRM: Which Is Right for Your HR Career? is the essential companion read for the Indian market, and [Studying CIPD Online: How Remote Study Actually Works](/blog/studying-cipd-online-remotely) covers the practical realities of remote study once you have decided.
+A Complete Guide to CIPD Qualifications explains the three levels and how they fit together. CIPD vs SHRM: Which Fits Your HR Career? (UK, US and Gulf) is the essential companion read for the Indian market, and [Studying CIPD Online: How Remote Study Actually Works](/blog/studying-cipd-online-remotely) covers the practical realities of remote study once you have decided.
 
 If your evidence points to CIPD and you take the leap, the assignments are where the qualification is really earned, and they reward good guidance. Our tutors support CIPD learners worldwide, India included, with help understanding briefs, structuring answers and writing to the standard your level demands, so a decision made on solid evidence gets finished on solid work.

@@ -1,6 +1,6 @@
 ---
 slug: "critical-analysis-self-check"
-title: "A Critical Analysis Self-Check for CIPD Assignments"
+title: "Critical Analysis Checklist for CIPD: 6 Checks Before You Submit"
 description: "A six-part critical analysis checklist for CIPD assignments: audit your draft for verbs, judgement, counterviews, evidence weight, assumptions and so-what."
 category: "Writing"
 keyword: "critical analysis checklist"

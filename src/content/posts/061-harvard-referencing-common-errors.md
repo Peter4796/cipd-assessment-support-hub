@@ -63,7 +63,7 @@ Cite the path you actually took. If you read about one writer's work inside anot
 
 The mechanical version of the previous mistake. Suppose a textbook by an invented author, Mensah, summarises an earlier model by another invented author, Virtanen. The error is citing Virtanen directly, with a full reference list entry, when you only ever read Mensah. The original may not say quite what the summary claims, and your list now points the reader to a work you cannot vouch for.
 
-Use the cited in construction, shaped like (Virtanen, 1998, cited in Mensah, 2024), and list only Mensah. The companion guide [Secondary Referencing in Harvard Style, Explained](/blog/secondary-referencing-explained) covers the convention in full, including when it is acceptable and how to track down originals.
+Use the cited in construction, shaped like (Virtanen, 1998, cited in Mensah, 2024), and list only Mensah. The companion guide [Secondary Referencing in Harvard: Citing a Source Within a Source](/blog/secondary-referencing-explained) covers the convention in full, including when it is acceptable and how to track down originals.
 
 ## 8. References dumped at the ends of paragraphs
 
@@ -93,6 +93,6 @@ Reference as you write. Capture full source details at the moment of reading, in
 
 ## Go deeper
 
-If you want the whole system in one place, read CIPD Harvard Referencing: The Complete Guide, the hub of this series, which covers citations, reference lists and the workflow that prevents these mistakes arising at all. Secondary Referencing in Harvard Style, Explained goes deeper on mistakes six and seven, and if you are writing in English as an additional language, the guide to English writing tips for CIPD learners pairs well with this checklist.
+If you want the whole system in one place, read CIPD Harvard Referencing: The Complete Guide, the hub of this series, which covers citations, reference lists and the workflow that prevents these mistakes arising at all. Secondary Referencing in Harvard: Citing a Source Within a Source goes deeper on mistakes six and seven, and if you are writing in English as an additional language, the guide to English writing tips for CIPD learners pairs well with this checklist.
 
 If you would like certainty rather than hope before you submit, our [Harvard referencing support](/harvard-referencing-support) goes through your draft citation by citation, checking accuracy, consistency and coverage, and flags exactly what to fix. The writing itself stays yours throughout.
