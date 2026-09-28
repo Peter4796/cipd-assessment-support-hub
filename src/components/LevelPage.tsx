@@ -4,6 +4,8 @@ import { Section, SectionHeading, CheckList, ButtonLink } from "@/components/ui"
 import { Icon } from "@/components/Icon";
 import { CtaBand } from "@/components/Cta";
 import { levels, type Level } from "@/content/levels";
+import { units } from "@/content/units";
+import { postsForPillar } from "@/content/posts";
 import { enquiryUrl } from "@/lib/leads/context";
 import { cta } from "@/lib/site";
 import { JsonLd } from "@/components/JsonLd";
@@ -113,6 +115,47 @@ export function LevelPage({ level }: { level: Level }) {
           </div>
           <CheckList items={level.help} className="rounded-3xl border border-mist-200 bg-mist-50 p-6" />
         </div>
+      </Section>
+
+      {/* Down-links (P1.3): the units and guides this level page anchors.
+          Level pages are pillar targets; without these links authority
+          arrived here and stopped. */}
+      <Section tone="white">
+        <SectionHeading
+          eyebrow={`Level ${level.number} in depth`}
+          title={`Your Level ${level.number} units and guides`}
+          intro="Unit-by-unit support pages and free study guidance for this level."
+        />
+        <div className="flex flex-wrap gap-3">
+          {units
+            .filter((u) => u.level === level.number)
+            .map((u) => (
+              <Link
+                key={u.slug}
+                href={`/cipd-units/${u.slug}`}
+                className="group inline-flex items-center gap-2 rounded-full border border-mist-300 bg-white px-4 py-2 text-sm font-semibold text-navy-800 transition-colors hover:border-gold-400 hover:text-gold-600"
+              >
+                <span className="font-mono text-xs text-teal-600">{u.code}</span>
+                {u.title}
+                <Icon name="arrow" className="h-3.5 w-3.5 text-navy-400 group-hover:text-gold-600" />
+              </Link>
+            ))}
+        </div>
+        {postsForPillar(`/${level.slug}`).length > 0 && (
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            {postsForPillar(`/${level.slug}`).map((post) => (
+              <Link key={post.slug} href={`/blog/${post.slug}`} className="card card-hover group flex flex-col">
+                <span className="chip border-mist-300 bg-white text-navy-600">{post.category}</span>
+                <h3 className="mt-3 text-base font-bold text-navy-900 group-hover:text-gold-600">
+                  {post.title}
+                </h3>
+                <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-navy-700">
+                  Read the guide <Icon name="arrow" className="h-4 w-4" />
+                </span>
+              </Link>
+            ))}
+          </div>
+        )}
       </Section>
 
       {/* Other levels */}
