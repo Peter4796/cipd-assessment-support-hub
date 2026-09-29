@@ -14,7 +14,7 @@ import {
   relatedWithClusterFallback,
 } from "@/content/posts";
 import { PILLAR_PAGES, resolvePillar } from "@/content/pillars";
-import { extractInlineLinks, INLINE_LINK_RE } from "@/lib/content/inline";
+import { extractInlineLinks, INLINE_LINK_RE, isCitationHref } from "@/lib/content/inline";
 import { units } from "@/content/units";
 import { faqPairsFromBlocks } from "@/lib/schema";
 import type { Post } from "@/content/types";
@@ -171,6 +171,14 @@ describe("inline internal links (P1.1)", () => {
         for (const text of texts) {
           for (const { label, href } of extractInlineLinks(text)) {
             expect(label.trim().length, `${post.slug}: empty link label`).toBeGreaterThan(0);
+            if (href.startsWith("https://")) {
+              // External links exist only as primary-source citations.
+              expect(
+                isCitationHref(href),
+                `${post.slug}: external link not an allowlisted citation host: ${href}`
+              ).toBe(true);
+              continue;
+            }
             expect(href, `${post.slug}: link must be a bare internal path (${href})`).toMatch(
               /^\/[a-z0-9\-\/]*$/
             );

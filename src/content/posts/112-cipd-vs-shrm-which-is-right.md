@@ -17,11 +17,11 @@ Before we start, a note on independence. This site is independent of both the CI
 
 ## What the CIPD is
 
-The CIPD is the UK-based professional body for HR and people development, operating under a royal charter. It awards qualifications at three levels: the Level 3 Foundation Certificate in People Practice, the Level 5 Associate Diploma in People Management, and the Level 7 Advanced Diploma in Strategic People Management. These are studied through approved study centres and assessed through written assignments rather than exams. Completing a qualification is associated with a corresponding level of CIPD professional membership, with the criteria set by the CIPD itself. Recognition is strongest in the UK, Ireland, the Middle East and many Commonwealth countries.
+The [CIPD](https://www.cipd.org/) is the UK-based professional body for HR and people development, operating under a royal charter. As of 2026, it awards qualifications at three levels: the Level 3 Foundation Certificate in People Practice, the Level 5 Associate Diploma in People Management, and the Level 7 Advanced Diploma in Strategic People Management. These are studied through approved study centres and assessed through written assignments rather than exams. Completing a qualification is associated with a corresponding level of CIPD professional membership, with the criteria set by the CIPD itself. Recognition is strongest in the UK, Ireland, the Middle East and many Commonwealth countries.
 
 ## What SHRM is
 
-SHRM is the US-based professional body for HR. Rather than qualifications studied over time, it offers two certifications: the SHRM-CP and the SHRM-SCP. These are assessed by exam, and SHRM sets eligibility criteria that determine which certification you can sit and when. Recognition is strongest in the United States and with US-headquartered employers. If you have seen either credential listed in a job advert, it was very likely a US company or a multinational with American roots.
+[SHRM](https://www.shrm.org/) is the US-based professional body for HR. Rather than qualifications studied over time, it offers two certifications: the SHRM-CP and the SHRM-SCP. These are assessed by exam, and SHRM sets eligibility criteria that determine which certification you can sit and when. Recognition is strongest in the United States and with US-headquartered employers. If you have seen either credential listed in a job advert, it was very likely a US company or a multinational with American roots.
 
 ## The structural difference: qualifications versus certifications
 

@@ -14,8 +14,25 @@ export type InlineSegment =
   | { kind: "text"; text: string }
   | { kind: "link"; label: string; href: string };
 
-/** [label](/path) — label has no brackets/newlines; href is a bare site path. */
-export const INLINE_LINK_RE = /\[([^\[\]\n]+)\]\((\/[^)\s]*)\)/g;
+/**
+ * [label](/path) or [label](https://allowed-host/...) — label has no
+ * brackets/newlines. Internal paths link freely; external hrefs exist ONLY
+ * for primary-source citations and must match CITATION_HOSTS (enforced by
+ * the corpus gate). Nothing else external is ever linkable from a body.
+ */
+export const INLINE_LINK_RE = /\[([^\[\]\n]+)\]\(((?:\/|https:\/\/)[^)\s]*)\)/g;
+
+/** Primary-source hosts bodies may cite (AI-P1.2). Extend deliberately. */
+export const CITATION_HOSTS = new Set(["cipd.org", "www.cipd.org", "shrm.org", "www.shrm.org"]);
+
+export function isCitationHref(href: string): boolean {
+  if (!href.startsWith("https://")) return false;
+  try {
+    return CITATION_HOSTS.has(new URL(href).hostname.toLowerCase());
+  } catch {
+    return false;
+  }
+}
 
 /** Split a block's text into text and link segments, in order. */
 export function splitInline(text: string): InlineSegment[] {

@@ -14,7 +14,7 @@ CIPD offers a clear pathway of qualifications for people professionals, from tho
 
 ## The three levels
 
-CIPD qualifications are structured into three levels, each building on the last. All are awarded by the CIPD and taught through approved study centres, and all are assessed by written assignments.
+CIPD qualifications are structured into three levels, each building on the last. All are awarded by the CIPD and taught through approved study centres, and all are assessed by written assignments; the CIPD's own [qualifications pages](https://www.cipd.org/en/learn/qualifications/) carry the current official specifications (accurate as of 2026).
 
 - Level 3 Foundation Certificate: the entry point, roughly equivalent to A-level, for those new to people practice.
 - Level 5 Associate Diploma: undergraduate-level study for practising HR professionals, the most popular qualification.
@@ -26,7 +26,7 @@ Rather than exams, CIPD uses written assignments marked against learning outcome
 
 ## Membership and progression
 
-CIPD qualifications link to professional membership. Completing Level 5 supports Associate membership, while Level 7 can lead towards Chartered membership, the profession's senior standard. You do not have to complete every level in sequence, but each builds useful foundations for the next. If you are weighing whether the top level justifies its cost and workload, [Is CIPD Level 7 Worth It? An Honest Assessment](/blog/is-cipd-level-7-worth-it) works through that decision honestly.
+CIPD qualifications link to [professional membership](https://www.cipd.org/en/membership/). Completing Level 5 supports Associate membership, while Level 7 can lead towards Chartered membership, the profession's senior standard. You do not have to complete every level in sequence, but each builds useful foundations for the next. If you are weighing whether the top level justifies its cost and workload, [Is CIPD Level 7 Worth It? An Honest Assessment](/blog/is-cipd-level-7-worth-it) works through that decision honestly.
 
 > Think of the levels as a ladder: Foundation for starting out, Associate for practising professionals, and Advanced for strategic leaders.
 

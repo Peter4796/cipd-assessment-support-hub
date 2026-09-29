@@ -11,7 +11,7 @@ tags: ["referencing","academic-skills","cipd-sources"]
 reviewed: "2026-07-18"
 related: ["harvard-referencing-complete-guide","harvard-referencing-common-errors","finding-credible-sources-for-cipd-google-scholar"]
 ---
-CIPD factsheets, reports and the Profession Map are the sources CIPD learners cite more than any others, yet they cause a surprising share of referencing errors. There is no individual author on the page, the content gets reviewed and updated over time, and sometimes there is no obvious publication date at all. None of that fits the author-and-year pattern most learners are taught first, so people improvise, and improvised references leak marks.
+CIPD factsheets, reports and the Profession Map are the sources CIPD learners cite more than any others, yet they cause a surprising share of referencing errors. There is no individual author on the page, the content gets reviewed and updated over time, and sometimes there is no obvious publication date at all. None of that fits the author-and-year pattern most learners are taught first, so people improvise, and improvised references leak marks. The originals live on the [CIPD knowledge hub](https://www.cipd.org/en/knowledge/), which is also where you confirm a factsheet's current title and latest review date before citing it.
 
 The good news is that Harvard handles all of it through a small set of conventions for corporate authors and online sources. This guide walks through referencing CIPD factsheets, reports, web pages and the Profession Map, with illustrative examples of each shape. As with everything in this series, referencing conventions vary in fine detail between centres and style guides, and your own centre's referencing guide always has the final say.
 

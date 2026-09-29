@@ -14,7 +14,7 @@ One of the most common questions CIPD learners ask is how many references their 
 
 ## There is usually no set number
 
-Most CIPD briefs do not state a required number of references. Assessors look for whether your arguments are properly supported, not whether you hit a target. That said, there are sensible ranges that reflect the depth each level expects.
+Most CIPD briefs do not state a required number of references, and as of 2026 the CIPD publishes no universal reference-count requirement; expectations come from your study centre and the individual brief. Assessors look for whether your arguments are properly supported, not whether you hit a target. That said, there are sensible ranges that reflect the depth each level expects.
 
 ## A sensible guide by level
 

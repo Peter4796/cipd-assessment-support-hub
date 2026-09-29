@@ -25,7 +25,7 @@ Handled well, Level 7 delivers real and lasting value.
 
 - Credibility for senior and strategic roles. When shortlists for HR director and senior business partner roles are drawn up in markets that know the CIPD, the Advanced Diploma signals that your thinking operates at strategic level.
 - A postgraduate register of thinking. The step up to critical evaluation changes how you read evidence, challenge proposals and construct arguments, and that change outlasts the qualification itself.
-- Progress towards senior professional membership. Completing Level 7 is associated with progress towards Chartered membership, with the criteria set by the CIPD, and Chartered status remains a respected marker in the profession.
+- Progress towards senior professional membership. Completing Level 7 is associated with progress towards Chartered membership, with the [criteria set by the CIPD](https://www.cipd.org/en/membership/), and Chartered status remains a respected marker in the profession.
 - Structured deep expertise. Working systematically through strategic people management, employment relations, evidence-based practice and the rest builds a breadth that piecemeal experience rarely provides.
 
 ## What Level 7 cannot deliver

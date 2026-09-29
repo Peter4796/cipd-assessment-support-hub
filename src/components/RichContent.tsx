@@ -11,9 +11,16 @@ function InlineText({ text }: { text: string }) {
     <>
       {segments.map((seg, i) =>
         seg.kind === "link" ? (
-          <Link key={i} href={seg.href} className="font-semibold text-teal-700 underline decoration-gold-400 decoration-2 underline-offset-2 hover:text-gold-600">
-            {seg.label}
-          </Link>
+          seg.href.startsWith("https://") ? (
+            // Primary-source citation (allowlisted hosts only, gated in tests).
+            <a key={i} href={seg.href} target="_blank" rel="noopener noreferrer" className="font-semibold text-teal-700 underline decoration-gold-400 decoration-2 underline-offset-2 hover:text-gold-600">
+              {seg.label}
+            </a>
+          ) : (
+            <Link key={i} href={seg.href} className="font-semibold text-teal-700 underline decoration-gold-400 decoration-2 underline-offset-2 hover:text-gold-600">
+              {seg.label}
+            </Link>
+          )
         ) : (
           <span key={i}>{seg.text}</span>
         )
