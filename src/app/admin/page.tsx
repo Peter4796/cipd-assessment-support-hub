@@ -63,12 +63,20 @@ export default async function AdminLeadsPage({
             {total} captured {total === 1 ? "lead" : "leads"} · database is the system of record.
           </p>
         </div>
-        <Link
-          href="/admin/attention"
-          className="rounded-xl bg-navy-900 px-4 py-2 text-sm font-semibold text-gold-400 hover:bg-navy-800"
-        >
-          Needs attention →
-        </Link>
+        <div className="flex gap-2">
+          <Link
+            href="/admin/insights"
+            className="rounded-xl border border-mist-300 bg-white px-4 py-2 text-sm font-semibold text-navy-700 hover:border-gold-400 hover:text-gold-600"
+          >
+            Insights
+          </Link>
+          <Link
+            href="/admin/attention"
+            className="rounded-xl bg-navy-900 px-4 py-2 text-sm font-semibold text-gold-400 hover:bg-navy-800"
+          >
+            Needs attention →
+          </Link>
+        </div>
       </div>
 
       {/* Status pills — links, so they compose with the other filters */}

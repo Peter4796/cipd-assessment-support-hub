@@ -340,6 +340,25 @@ export async function listOperationalLeads(cap = 200): Promise<OperationalLead[]
   });
 }
 
+/** Insights rollup input (AI Discovery P0): every lead incl. terminal. */
+export async function listLeadAcquisition() {
+  return db()
+    .select({
+      utmSource: leads.utmSource,
+      utmMedium: leads.utmMedium,
+      referrer: leads.referrer,
+      landingPage: leads.landingPage,
+      classification: leads.classification,
+      status: leads.status,
+      quotedAmount: leads.quotedAmount,
+      quoteCurrency: leads.quoteCurrency,
+      paidAmount: leads.paidAmount,
+      paidCurrency: leads.paidCurrency,
+      paymentConfirmedAt: leads.paymentConfirmedAt,
+    })
+    .from(leads);
+}
+
 export async function recordNotifyResult(leadId: string, result: SendResult): Promise<void> {
   await db()
     .update(leads)

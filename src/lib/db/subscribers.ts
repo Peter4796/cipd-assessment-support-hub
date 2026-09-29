@@ -31,3 +31,16 @@ export async function insertSubscriber(sub: Subscriber): Promise<void> {
       utmCampaign: sub.acquisition.utmCampaign ?? null,
     });
 }
+
+/** Insights rollup input (AI Discovery P0). */
+export async function listSubscriberAcquisition() {
+  return db()
+    .select({
+      utmSource: subscribers.utmSource,
+      utmMedium: subscribers.utmMedium,
+      referrer: subscribers.referrer,
+      landingPage: subscribers.landingPage,
+      resource: subscribers.resource,
+    })
+    .from(subscribers);
+}
