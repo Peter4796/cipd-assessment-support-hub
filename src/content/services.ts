@@ -7,6 +7,8 @@ export type Service = {
   title: string;
   short: string; // one-line for home overview
   description: string; // fuller copy for services page
+  /** Dedicated commercial page for this service, rendered as a card link. */
+  dedicatedHref?: string;
   icon: IconName;
 };
 
@@ -80,6 +82,7 @@ export const services: Service[] = [
   },
   {
     slug: "harvard-referencing-support",
+    dedicatedHref: "/harvard-referencing-support",
     title: "Harvard referencing support",
     short: "Accurate in-text citations and reference lists.",
     description:
@@ -88,6 +91,7 @@ export const services: Service[] = [
   },
   {
     slug: "resubmission-support",
+    dedicatedHref: "/cipd-resubmission-support",
     title: "Resubmission support",
     short: "Turn a referral into a confident resubmission.",
     description:

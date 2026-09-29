@@ -69,8 +69,31 @@ export default function ServicesPage() {
                 </div>
               </div>
               <p className="mt-4 body-copy text-sm">{service.description}</p>
+              {service.dedicatedHref && (
+                <Link
+                  href={service.dedicatedHref}
+                  className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-teal-700 hover:text-gold-600"
+                >
+                  Dedicated {service.title.toLowerCase()} page
+                  <Icon name="arrow" className="h-4 w-4" />
+                </Link>
+              )}
             </article>
           ))}
+        </div>
+      </Section>
+
+      {/* Ethics boundaries (AI-P1.1, additive): the same honest-support
+          block the dedicated support pages carry, in compact form. */}
+      <Section tone="white">
+        <div className="mx-auto max-w-3xl rounded-3xl border border-teal-200 bg-white p-8 shadow-card">
+          <h2 className="text-2xl font-bold text-navy-900">Honest, ethical support</h2>
+          <ul className="mt-4 space-y-2.5 text-sm leading-relaxed text-navy-600">
+            <li>• We guide, review, coach and edit. We never write assignments, and no service on this page produces work for you to submit as your own.</li>
+            <li>• No guaranteed grades or passes, at any price. Anyone promising them is putting your enrolment at risk.</li>
+            <li>• Your work and documents stay yours and are handled confidentially.</li>
+            <li>• Deadline very close? See our <Link href="/urgent-cipd-help" className="font-semibold text-teal-700 underline decoration-gold-400 decoration-2 underline-offset-2 hover:text-gold-600">urgent deadline help</Link> for what is realistic at short notice.</li>
+          </ul>
         </div>
       </Section>
 
