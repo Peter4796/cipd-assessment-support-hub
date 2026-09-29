@@ -7,7 +7,7 @@
  * engines). All URLs are canonical HTTPS via src/lib/urls.ts.
  */
 
-import { site } from "@/lib/site";
+import { site, socialProfiles } from "@/lib/site";
 import { absoluteUrl } from "@/lib/urls";
 import type { Block } from "@/content/types";
 import { stripInlineLinks } from "@/lib/content/inline";
@@ -26,6 +26,13 @@ export function organizationJsonLd() {
     description:
       "Ethical CIPD assessment support: guidance, coaching, draft review, editing, Harvard referencing and resubmission support for Level 3, 5 and 7 learners.",
     email: site.contact.email,
+    // Online service, globally accessible (strongest markets UK + Gulf are a
+    // positioning matter, not a schema restriction — never portray the
+    // business as geographically limited).
+    areaServed: "Worldwide",
+    // External identity anchors; omitted entirely while no official profile
+    // exists (empty/fake sameAs would be worse than none).
+    ...(socialProfiles.length > 0 ? { sameAs: socialProfiles } : {}),
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer support",
@@ -33,6 +40,19 @@ export function organizationJsonLd() {
       email: site.contact.email,
       availableLanguage: "English",
     },
+  };
+}
+
+/** WebSite node (AI-P0.3): names the site itself and ties it to the
+ * Organization publisher — the standard entity anchor answer engines and
+ * Google use to connect pages to the site to the org. */
+export function websiteJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: site.name,
+    url: site.url,
+    publisher: { "@id": ORGANIZATION_ID },
   };
 }
 

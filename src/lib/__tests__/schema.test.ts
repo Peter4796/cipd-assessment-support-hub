@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { ORGANIZATION_ID, articleJsonLd, breadcrumbJsonLd, faqJsonLd, faqPairsFromBlocks, organizationJsonLd, serviceJsonLd } from "@/lib/schema";
+import { ORGANIZATION_ID, articleJsonLd, breadcrumbJsonLd, faqJsonLd, faqPairsFromBlocks, organizationJsonLd, serviceJsonLd, websiteJsonLd } from "@/lib/schema";
 import type { Block } from "@/content/types";
 
 describe("organizationJsonLd", () => {
@@ -124,5 +124,20 @@ describe("articleJsonLd", () => {
       "@id": expect.stringContaining("/blog/5co02-complete-guide"),
     });
     expect(a.author).toEqual(a.publisher);
+  });
+});
+
+describe("entity nodes (AI-P0.3)", () => {
+  it("WebSite names the site and links the Organization publisher", () => {
+    const w = websiteJsonLd();
+    expect(w["@type"]).toBe("WebSite");
+    expect(w.url).toMatch(/^https:\/\/www\.cipdguidance\.com/);
+    expect(w.publisher).toEqual({ "@id": expect.stringContaining("cipdguidance.com") });
+  });
+
+  it("Organization declares Worldwide service and omits sameAs while no real profile exists", () => {
+    const o = organizationJsonLd();
+    expect(o.areaServed).toBe("Worldwide");
+    expect("sameAs" in o).toBe(false); // never publish empty/fake profiles
   });
 });

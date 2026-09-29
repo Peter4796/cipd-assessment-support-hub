@@ -52,6 +52,14 @@ export function emailLink(
 }
 
 // ─── Primary navigation ───
+/**
+ * Official CIPD Guidance profiles for Organization sameAs (AI-P0.3).
+ * EMPTY until the owner creates/supplies real profile URLs (LinkedIn
+ * company page first). Never add placeholder or aspirational URLs: an
+ * empty list simply omits sameAs from the schema.
+ */
+export const socialProfiles: string[] = [];
+
 export type NavItem = { label: string; href: string; children?: NavItem[] };
 
 export const primaryNav: NavItem[] = [
